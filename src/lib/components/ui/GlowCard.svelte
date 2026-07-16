@@ -1,9 +1,11 @@
-<!-- GlowCard — Card with cursor-following animated border glow -->
+<!-- GlowCard — Card with cursor-following animated border glow + ambient pulse -->
 <script>
 	import { cn } from '$lib/utils';
+	import { onMount, onDestroy } from 'svelte';
+	import { browser } from '$app/environment';
 
 	let {
-		glowColor = 'rgba(117, 194, 246, 0.4)',
+		glowColor = 'rgba(117, 194, 246, 0.5)',
 		glowSize = 200,
 		className = '',
 		children
@@ -11,6 +13,20 @@
 
 	let card = $state(null);
 	let isHovering = $state(false);
+	let pulseOpacity = $state(0);
+
+	// Ambient pulse animation
+	let pulseAnimId = 0;
+	onMount(() => {
+		function pulse() {
+			pulseOpacity = 0.15 + Math.sin(Date.now() / 1000) * 0.1;
+			pulseAnimId = requestAnimationFrame(pulse);
+		}
+		pulse();
+	});
+	onDestroy(() => {
+		if (browser) cancelAnimationFrame(pulseAnimId);
+	});
 
 	function onMouseMove(e) {
 		if (!card) return;
@@ -38,23 +54,32 @@
 <div
 	bind:this={card}
 	class={cn(
-		'glow-card group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-slate-900/50 p-6',
-		'transition-colors duration-300',
-		isHovering && 'border-white/[0.12]',
+		'glow-card group relative overflow-hidden rounded-2xl border p-6 text-white',
+		'transition-all duration-300',
+		'backdrop-blur-xl',
+		'bg-white/10 border-white/20',
+		isHovering && 'bg-white/15 border-white/30 shadow-xl',
+		isHovering && 'shadow-glow-sky',
 		className
 	)}
-	style="--glow-x: -1000px; --glow-y: -1000px; --glow-color: {glowColor}; --glow-size: {glowSize}px;"
+	style="--glow-x: -1000px; --glow-y: -1000px; --glow-color: {glowColor}; --glow-size: {glowSize}px; --pulse-opacity: {pulseOpacity};"
 	onmousemove={onMouseMove}
 	onmouseenter={onMouseEnter}
 	onmouseleave={onMouseLeave}
 >
-	<!-- Glow layer -->
+	<!-- Ambient pulse glow - subtle alive feel -->
+	<div
+		class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700"
+		style="background: radial-gradient(circle var(--glow-size) at 50% 50%, var(--glow-color), transparent 100%); opacity: var(--pulse-opacity); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; -webkit-mask-composite: xor; padding: 1px;"
+	></div>
+
+	<!-- Cursor-following glow layer -->
 	<div
 		class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 [mask-image:radial-gradient(circle_var(--glow-size)_at_var(--glow-x)_var(--glow-y),black_0%,transparent_100%)] group-hover:opacity-100"
 		style="background: radial-gradient(circle var(--glow-size) at var(--glow-x) var(--glow-y), var(--glow-color), transparent 100%)"
 	></div>
 
-	<!-- Border glow -->
+	<!-- Border glow - stronger -->
 	<div
 		class="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 		style="background: radial-gradient(circle var(--glow-size) at var(--glow-x) var(--glow-y), var(--glow-color), transparent 100%); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; -webkit-mask-composite: xor; padding: 1px;"

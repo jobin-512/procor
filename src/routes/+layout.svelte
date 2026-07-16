@@ -1,16 +1,26 @@
 <script>
 	import '../app.css';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
 	import Lenis from 'lenis';
 	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
 	let isMenuOpen = $state(false);
 
-	onMount(() => {
+	afterNavigate(() => {
+		const lenis = window.__lenis;
+		if (lenis) {
+			lenis.scrollTo(0, { immediate: true });
+		} else {
+			window.scrollTo(0, 0);
+		}
+	});
+
+	onMount(async () => {
 		gsap.registerPlugin(ScrollTrigger);
 
 		const lenis = new Lenis({
@@ -24,6 +34,8 @@
 			touchMultiplier: 2,
 			infinite: false
 		});
+
+		window.__lenis = lenis;
 
 		// Synchronize Lenis with GSAP ScrollTrigger
 		lenis.on('scroll', ScrollTrigger.update);
@@ -41,6 +53,7 @@
 		});
 
 		// Global reveal animations using fromTo for reliable opacity
+		await tick();
 		const revealElements = document.querySelectorAll('[data-reveal]');
 		revealElements.forEach((el) => {
 			gsap.fromTo(
@@ -60,6 +73,11 @@
 			);
 		});
 
+		// Ensure all ScrollTrigger instances recalculate positions
+		requestAnimationFrame(() => {
+			ScrollTrigger.refresh();
+		});
+
 		return () => {
 			lenis.destroy();
 			gsap.ticker.remove(lenisRaf);
@@ -75,7 +93,7 @@
 	/>
 </svelte:head>
 
-<div class="antialiased">
+<div class="antialiased bg-[#080c15]">
 	<Header bind:isMenuOpen />
 	{@render children()}
 	<Footer />
@@ -84,7 +102,11 @@
 <style>
 	:global(html) {
 		scroll-behavior: initial;
-		background-color: var(--color-procor-light);
+		background-color: #080c15;
+	}
+
+	:global(body) {
+		background-color: #080c15;
 	}
 
 	:global(.lenis.lenis-smooth) {
