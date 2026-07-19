@@ -60,8 +60,8 @@
 
 <section class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 px-6 md:px-12 bg-[#030408] overflow-hidden">
 	<FloatingOrb color="rgba(117, 194, 246, 0.2)" size="40rem" speed={22} className="top-[-10%] right-[-10%]" />
-	<FloatingOrb color="rgba(139, 92, 246, 0.15)" size="35rem" speed={28} className="bottom-[-10%] left-[-10%]" />
-	<FloatingOrb color="rgba(244, 63, 94, 0.1)" size="30rem" speed={18} className="top-[40%] left-[60%]" />
+	<FloatingOrb color="rgba(37, 59, 218, 0.15)" size="35rem" speed={28} className="bottom-[-10%] left-[-10%]" />
+	<FloatingOrb color="rgba(59, 91, 255, 0.1)" size="30rem" speed={18} className="top-[40%] left-[60%]" />
 
 	<div class="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
 		{#each floatingIcons as iconItem, i}
@@ -79,14 +79,14 @@
 	<div class="absolute inset-0 z-[3] pointer-events-none opacity-[0.06] grid-overlay"></div>
 
 	<div class="max-w-7xl mx-auto w-full relative z-10 text-center">
-		<div class="solutions-hero-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/25 via-violet-500/25 to-indigo-500/25 border border-white/[0.2] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35),inset_0_1px_0_rgba(255,255,255,0.1)]">
+		<div class="solutions-hero-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/25 via-procor-blue/25 to-procor-blue-light/25 border border-white/[0.2] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35),inset_0_1px_0_rgba(255,255,255,0.1)]">
 			<Sparkles size={16} class="text-sky-300" />
 			<span class="text-white" style="text-shadow: 0px 0px 20px rgba(255,255,255,0.4);">Industry-Specific Solutions</span>
 		</div>
 
 		<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] font-black text-white leading-[0.9] font-display mb-8 tracking-tight">
 			<span class="solutions-hero-title block">Solutions Built for</span>
-			<span class="solutions-hero-title block bg-gradient-to-r from-sky-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent italic min-h-[1.2em]">
+			<span class="solutions-hero-title block bg-gradient-to-r from-sky-400 via-procor-blue to-procor-blue-light bg-clip-text text-transparent italic min-h-[1.2em]">
 				Your Industry
 			</span>
 		</h1>

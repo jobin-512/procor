@@ -1,13 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	import { Menu, X, ArrowRight } from '@lucide/svelte';
+	import Menu from '@lucide/svelte/icons/menu';
+	import X from '@lucide/svelte/icons/x';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import logo from '$lib/assets/image.webp';
 
 	let { isMenuOpen = $bindable() } = $props();
 	let isScrolled = $state(false);
-
-	let navEl = $state(null);
 
 	const navLinks = [
 		{ label: 'Features', href: '/features' },
@@ -23,8 +23,8 @@
 		window.addEventListener('scroll', onScroll, { passive: true });
 
 		gsap.fromTo('.nav-container',
-			{ y: -80, opacity: 0 },
-			{ y: 0, opacity: 1, duration: 0.8, ease: 'expo.out', delay: 0.1 }
+			{ y: -60, opacity: 0 },
+			{ y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', delay: 0.1 }
 		);
 
 		return () => {
@@ -37,21 +37,19 @@
 	}
 </script>
 
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 <nav
-	bind:this={navEl}
 	class="fixed w-full z-50 px-4 sm:px-6 md:px-10 transition-all duration-500
-		{isScrolled ? 'py-3 bg-[#080c15]/80 backdrop-blur-2xl border-b border-white/[0.06] shadow-lg shadow-black/20' : 'py-5 bg-transparent'}"
+		{isScrolled ? 'py-3 bg-[#080c15]/90 backdrop-blur-2xl border-b border-white/[0.06]' : 'py-5 bg-transparent'}"
 >
-	<div class="max-w-7xl mx-auto flex justify-between items-center nav-container relative z-10">
+	<div class="max-w-7xl mx-auto flex justify-between items-center nav-container">
 		<!-- Logo -->
-		<a href="/" class="flex items-center gap-3 group cursor-pointer">
+		<a href="/" class="flex items-center gap-3 group">
 			<div class="relative w-10 h-10 flex items-center justify-center">
 				<img src={logo} alt="PROCOR HRMS" class="h-9 w-auto" />
 			</div>
 			<div class="hidden sm:flex flex-col">
-				<span class="text-xl font-black tracking-tight text-white font-display leading-none uppercase group-hover:text-sky-400 transition-colors duration-300">PROCOR</span>
-				<span class="text-[9px] font-bold tracking-[0.35em] text-sky-400 uppercase leading-none mt-0.5">HRMS</span>
+				<span class="text-xl font-extrabold tracking-tight text-white font-display leading-none uppercase group-hover:text-blue-400 transition-colors duration-300">PROCOR</span>
+				<span class="text-[9px] font-semibold tracking-[0.3em] text-blue-400 uppercase leading-none mt-0.5">HRMS</span>
 			</div>
 		</a>
 
@@ -60,15 +58,16 @@
 			{#each navLinks as link}
 				<a
 					href={link.href}
-					class="px-4 py-2 text-sm font-semibold text-white/50 hover:text-white rounded-lg hover:bg-white/[0.06] transition-all duration-300"
+					class="relative px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-colors duration-300 group"
 				>
 					{link.label}
+					<span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-blue-400 group-hover:w-4/5 transition-all duration-300 rounded-full"></span>
 				</a>
 			{/each}
 
 			<a
 				href="/demo"
-				class="ml-4 inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-sky-500 to-violet-500 text-white rounded-xl font-bold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20 active:scale-[0.98] group"
+				class="ml-6 inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-[0.98] group"
 			>
 				Get Started
 				<ArrowRight size={15} class="group-hover:translate-x-0.5 transition-transform" />
@@ -77,7 +76,7 @@
 
 		<!-- Mobile Toggle -->
 		<button
-			class="md:hidden relative w-10 h-10 flex items-center justify-center rounded-xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.08] transition-all duration-300"
+			class="md:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] transition-all duration-300"
 			onclick={toggleMenu}
 			aria-label="Toggle menu"
 		>
@@ -92,20 +91,20 @@
 
 <!-- Mobile Menu -->
 {#if isMenuOpen}
-	<div class="fixed inset-0 z-[60] flex flex-col md:hidden overflow-hidden mobile-menu-backdrop">
-		<div class="flex-1 flex flex-col items-center justify-center gap-2 relative z-10">
-			{#each navLinks as link, i}
-				<a
-					href={link.href}
-					class="mobile-menu-item text-3xl font-black text-white hover:text-sky-400 transition-all duration-300 cursor-pointer py-3"
-					onclick={() => (isMenuOpen = false)}
-				>
+	<div class="fixed inset-0 z-[60] flex flex-col md:hidden bg-[#080c15]/98 backdrop-blur-xl">
+		<div class="flex-1 flex flex-col items-center justify-center gap-3 px-6">
+			{#each navLinks as link}
+<a
+				href={link.href}
+				class="text-3xl font-bold text-white/80 hover:text-blue-400 transition-colors duration-300 py-3"
+				onclick={() => (isMenuOpen = false)}
+			>
 					{link.label}
 				</a>
 			{/each}
 			<a
 				href="/demo"
-				class="mobile-menu-item mt-6 px-8 py-4 bg-gradient-to-r from-sky-500 to-violet-500 text-white rounded-2xl text-lg font-black shadow-xl transition-all cursor-pointer"
+				class="mt-8 px-10 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl text-lg font-bold shadow-xl"
 				onclick={() => (isMenuOpen = false)}
 			>
 				Get Started
@@ -114,18 +113,10 @@
 
 		<button
 			onclick={() => (isMenuOpen = false)}
-			class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center bg-white/[0.08] border border-white/[0.12] rounded-full text-white hover:bg-white/[0.15] transition-all z-20"
+			class="absolute top-6 right-6 w-11 h-11 flex items-center justify-center bg-white/[0.05] border border-white/[0.1] rounded-xl text-white hover:bg-white/[0.1] transition-all"
 			aria-label="Close menu"
 		>
 			<X size={20} />
 		</button>
 	</div>
 {/if}
-
-<style>
-	.mobile-menu-backdrop {
-		background: rgba(8, 12, 21, 0.98);
-		backdrop-filter: blur(20px);
-		-webkit-backdrop-filter: blur(20px);
-	}
-</style>

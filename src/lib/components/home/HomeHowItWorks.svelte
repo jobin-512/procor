@@ -28,7 +28,7 @@
 			<SectionBadge variant="emerald">How It Works</SectionBadge>
 			<h2 class="text-4xl md:text-6xl font-black text-procor-navy font-display leading-tight mb-8 mt-8">
 				From onboarding to
-				<span class="bg-gradient-to-r from-procor-blue to-violet-500 bg-clip-text text-transparent">optimization</span> in four steps
+				<span class="bg-gradient-to-r from-procor-blue to-procor-blue-dark bg-clip-text text-transparent">optimization</span> in four steps
 			</h2>
 			<p class="text-lg text-slate-500 font-medium leading-relaxed">
 				We've streamlined the entire journey so your team starts realizing value within days, not months.

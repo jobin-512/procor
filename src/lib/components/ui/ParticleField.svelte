@@ -5,7 +5,7 @@
 
 	let {
 		count = 80,
-		colors = ['#75c2f6', '#8b5cf6', '#6366f1', '#38bdf8'],
+		colors = ['#253BDA', '#3B5BFF', '#4A6BFF', '#38bdf8'],
 		speed = 1,
 		connectionDistance = 120,
 		mouseInteraction = 'repel',

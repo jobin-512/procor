@@ -4,7 +4,7 @@
 
 	const variants = {
 		primary:
-			'bg-gradient-to-r from-procor-blue to-violet-600 text-white shadow-lg hover:shadow-xl hover:shadow-procor-blue/20 hover:scale-[1.02] active:scale-[0.98]',
+			'bg-gradient-to-r from-procor-blue to-procor-blue-dark text-white shadow-lg hover:shadow-xl hover:shadow-procor-blue/20 hover:scale-[1.02] active:scale-[0.98]',
 		secondary:
 			'bg-white border-2 border-slate-200 text-procor-navy hover:border-procor-blue/40 hover:shadow-xl hover:-translate-y-0.5',
 		ghost: 'bg-white/[0.06] border border-white/10 text-white hover:bg-white/[0.1]',

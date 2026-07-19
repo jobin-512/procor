@@ -41,11 +41,11 @@
 		const sizes = new Float32Array(PARTICLE_COUNT);
 
 		const palette = [
-			new THREE.Color(0x75c2f6), // sky
-			new THREE.Color(0x8b5cf6), // violet
-			new THREE.Color(0x6366f1), // indigo
-			new THREE.Color(0x38bdf8), // sky-400
-			new THREE.Color(0x4aadee) // sky-dark
+			new THREE.Color(0x38bdf8), // sky
+			new THREE.Color(0x253BDA), // procor blue
+			new THREE.Color(0x3B5BFF), // procor blue light
+			new THREE.Color(0x4A6BFF), // procor blue lighter
+			new THREE.Color(0x1A2BA0) // procor blue dark
 		];
 
 		for (let i = 0; i < PARTICLE_COUNT; i++) {
@@ -105,7 +105,7 @@
 		// ── Floating Wireframe Geometry ──
 		const torusGeometry = new THREE.TorusKnotGeometry(80, 25, 128, 16, 2, 3);
 		const torusMaterial = new THREE.MeshBasicMaterial({
-			color: 0x75c2f6,
+			color: 0x253BDA,
 			wireframe: true,
 			transparent: true,
 			opacity: 0.08
@@ -117,7 +117,7 @@
 		// Second geometry — smaller icosahedron
 		const icoGeometry = new THREE.IcosahedronGeometry(50, 0);
 		const icoMaterial = new THREE.MeshBasicMaterial({
-			color: 0x8b5cf6,
+			color: 0x3B5BFF,
 			wireframe: true,
 			transparent: true,
 			opacity: 0.06
@@ -210,7 +210,7 @@
 						lp[l3 + 4] = pos[j3 + 1];
 						lp[l3 + 5] = pos[j3 + 2];
 
-						const lineColor = new THREE.Color(0x75c2f6);
+						const lineColor = new THREE.Color(0x253BDA);
 						lc[l3] = lineColor.r * alpha;
 						lc[l3 + 1] = lineColor.g * alpha;
 						lc[l3 + 2] = lineColor.b * alpha;

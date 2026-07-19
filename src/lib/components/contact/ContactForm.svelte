@@ -61,7 +61,7 @@
 				<div class="mb-10">
 					<SectionBadge variant="dark">Contact Us</SectionBadge>
 					<h2 class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4 tracking-tight">
-						Send us a <span class="bg-gradient-to-r from-procor-sky to-violet-400 bg-clip-text text-transparent">message</span>
+						Send us a <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">message</span>
 					</h2>
 					<p class="text-neutral-500 font-medium">Fill out the form and we'll get back to you within 2 hours.</p>
 				</div>

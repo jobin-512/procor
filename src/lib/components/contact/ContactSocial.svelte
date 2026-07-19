@@ -34,7 +34,7 @@
 		<div class="text-center mb-16">
 			<SectionBadge variant="dark">Follow Us</SectionBadge>
 			<h2 class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4 tracking-tight">
-				Join the <span class="bg-gradient-to-r from-procor-sky to-violet-400 bg-clip-text text-transparent">community</span>
+				Join the <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">community</span>
 			</h2>
 			<p class="text-neutral-500 font-medium max-w-lg mx-auto">Stay connected and follow our journey on social media.</p>
 		</div>

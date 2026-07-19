@@ -7,9 +7,9 @@
 
 	let {
 		offices = [
-			{ city: 'New Delhi', tag: 'HQ', address: 'Connaught Place', phone: '+91 11 2345 6789', gradient: 'from-sky-500/30 to-violet-500/30' },
+			{ city: 'New Delhi', tag: 'HQ', address: 'Connaught Place', phone: '+91 11 2345 6789', gradient: 'from-sky-500/30 to-procor-blue/30' },
 			{ city: 'London', tag: null, address: '45 Canary Wharf', phone: '+44 20 7946 0958', gradient: 'from-indigo-500/30 to-blue-500/30' },
-			{ city: 'Singapore', tag: null, address: '88 Marina Bay', phone: '+65 6123 4567', gradient: 'from-violet-500/30 to-fuchsia-500/30' },
+			{ city: 'Singapore', tag: null, address: '88 Marina Bay', phone: '+65 6123 4567', gradient: 'from-procor-blue/30 to-procor-blue-light/30' },
 			{ city: 'Sydney', tag: null, address: '120 George St', phone: '+61 2 9876 5432', gradient: 'from-emerald-500/30 to-cyan-500/30' }
 		]
 	} = $props();
@@ -30,14 +30,14 @@
 
 <section class="relative py-20 md:py-32 px-6 md:px-12 bg-[var(--surface-dark)]">
 	<div class="absolute inset-0 pointer-events-none">
-		<div class="absolute top-[20%] right-[-10%] w-[40rem] h-[40rem] bg-violet-600/5 rounded-full blur-[180px]"></div>
+		<div class="absolute top-[20%] right-[-10%] w-[40rem] h-[40rem] bg-procor-blue/5 rounded-full blur-[180px]"></div>
 	</div>
 
 	<div class="max-w-7xl mx-auto relative z-10">
 		<div class="text-center mb-16">
 			<SectionBadge variant="dark">Our Offices</SectionBadge>
 			<h2 class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4 tracking-tight">
-				Find us <span class="bg-gradient-to-r from-procor-sky to-violet-400 bg-clip-text text-transparent">worldwide</span>
+				Find us <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">worldwide</span>
 			</h2>
 			<p class="text-neutral-500 font-medium max-w-lg mx-auto">Four offices across three continents, one unified team.</p>
 		</div>

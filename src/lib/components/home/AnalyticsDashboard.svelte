@@ -51,8 +51,8 @@
 			value: '99.97%',
 			change: '+0.12%',
 			up: true,
-			color: 'text-violet-400',
-			bg: 'bg-violet-500/10'
+			color: 'text-procor-blue',
+			bg: 'bg-procor-blue/10'
 		},
 		{
 			icon: Activity,
@@ -67,7 +67,7 @@
 
 	const barData = [
 		{ label: 'Recruitment', value: 87, color: 'from-sky-500 to-sky-400' },
-		{ label: 'Onboarding', value: 94, color: 'from-violet-500 to-violet-400' },
+		{ label: 'Onboarding', value: 94, color: 'from-procor-blue to-procor-blue-light' },
 		{ label: 'Payroll', value: 99, color: 'from-emerald-500 to-emerald-400' },
 		{ label: 'Compliance', value: 96, color: 'from-indigo-500 to-indigo-400' },
 		{ label: 'Analytics', value: 82, color: 'from-rose-500 to-rose-400' },
@@ -130,7 +130,7 @@
 			class="absolute top-0 right-1/4 w-[40rem] h-[40rem] bg-sky-600/5 rounded-full blur-[200px]"
 		></div>
 		<div
-			class="absolute bottom-0 left-1/4 w-[35rem] h-[35rem] bg-violet-600/5 rounded-full blur-[180px]"
+			class="absolute bottom-0 left-1/4 w-[35rem] h-[35rem] bg-procor-blue/5 rounded-full blur-[180px]"
 		></div>
 	</div>
 
@@ -141,7 +141,7 @@
 				class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white font-display leading-[1.1] mb-6 mt-8"
 			>
 				Your workforce,<br />
-				<span class="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent"
+				<span class="bg-gradient-to-r from-sky-400 to-procor-blue bg-clip-text text-transparent"
 					>decoded.</span
 				>
 			</h2>
@@ -206,7 +206,7 @@
 				class="p-6 md:p-8 rounded-2xl bg-[var(--surface-card)] border border-[var(--border-subtle)]"
 			>
 				<div class="flex items-center gap-3 mb-8">
-					<TrendingUp size={20} class="text-violet-400" />
+					<TrendingUp size={20} class="text-procor-blue" />
 					<h3 class="text-lg font-black text-white">Employee Growth Trend</h3>
 				</div>
 				<div class="relative">
@@ -260,7 +260,7 @@
 								y2="0"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop offset="0%" stop-color="#8b5cf6" />
+								<stop offset="0%" stop-color="#253BDA" />
 								<stop offset="100%" stop-color="#38bdf8" />
 							</linearGradient>
 							<linearGradient
@@ -271,8 +271,8 @@
 								y2={chartH}
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop offset="0%" stop-color="rgba(139,92,246,0.2)" />
-								<stop offset="100%" stop-color="rgba(139,92,246,0)" />
+								<stop offset="0%" stop-color="rgba(37,59,218,0.2)" />
+								<stop offset="100%" stop-color="rgba(37,59,218,0)" />
 							</linearGradient>
 						</defs>
 					</svg>

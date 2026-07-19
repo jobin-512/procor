@@ -32,7 +32,7 @@
 		<div class="faq-header mb-20 text-center max-w-2xl mx-auto">
 			<SectionBadge variant="dark">FAQ</SectionBadge>
 			<h2 class="text-4xl md:text-6xl font-black text-white font-display leading-tight mb-8 mt-6">
-				Got <span class="bg-gradient-to-r from-procor-sky to-violet-400 bg-clip-text text-transparent">questions?</span>
+				Got <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">questions?</span>
 			</h2>
 			<p class="text-lg text-neutral-500 font-medium leading-relaxed">Everything you need to know about PROCOR.</p>
 		</div>
@@ -65,7 +65,7 @@
 
 		<div class="text-center mt-16 bg-white/[0.02] rounded-[var(--radius-xl)] border border-[var(--border-subtle)] p-10">
 			<p class="text-white font-bold text-lg mb-4">Still have questions?</p>
-			<button class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-procor-blue to-violet-600 text-white rounded-2xl font-black text-base transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] shadow-lg cursor-pointer group">
+			<button class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-procor-blue to-procor-blue-dark text-white rounded-2xl font-black text-base transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] shadow-lg cursor-pointer group">
 				Talk to our team <ArrowRight size={18} class="group-hover:translate-x-1 transition-transform" />
 			</button>
 		</div>

@@ -91,7 +91,7 @@
 				class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-procor-navy font-display leading-[1.1] mb-6 mt-8"
 			>
 				See how we<br />
-				<span class="bg-gradient-to-r from-procor-blue to-violet-500 bg-clip-text text-transparent"
+				<span class="bg-gradient-to-r from-procor-blue to-procor-blue-dark bg-clip-text text-transparent"
 					>compare.</span
 				>
 			</h2>
@@ -107,7 +107,7 @@
 				{#each competitors as comp, i}
 					<div
 						class="p-5 text-center {i === 3
-							? 'bg-gradient-to-b from-procor-blue to-violet-600'
+							? 'bg-gradient-to-b from-procor-blue to-procor-blue-dark'
 							: ''}"
 					>
 						<span class="font-black text-sm {i === 3 ? 'text-white' : 'text-procor-navy'}"

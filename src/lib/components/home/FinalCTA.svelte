@@ -47,7 +47,7 @@
 		>
 			Start building your <br class="hidden md:block" />
 			<span
-				class="bg-gradient-to-r from-procor-blue via-violet-500 to-indigo-600 bg-clip-text text-transparent"
+				class="bg-gradient-to-r from-procor-blue to-procor-blue-dark bg-clip-text text-transparent"
 				>dream workforce</span
 			> today
 		</h2>
@@ -81,7 +81,7 @@
 
 	<!-- Decorative orbs -->
 	<div
-		class="absolute bottom-[-20rem] right-[-10rem] w-[40rem] h-[40rem] bg-violet-100/30 rounded-full blur-[180px] pointer-events-none"
+		class="absolute bottom-[-20rem] right-[-10rem] w-[40rem] h-[40rem] bg-procor-blue/30 rounded-full blur-[180px] pointer-events-none"
 	></div>
 	<div
 		class="absolute top-[-20rem] left-[-10rem] w-[40rem] h-[40rem] bg-sky-100/30 rounded-full blur-[180px] pointer-events-none"

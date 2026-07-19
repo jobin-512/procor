@@ -35,14 +35,14 @@
 <section bind:this={container} class="relative min-h-[70vh] md:min-h-[80vh] flex flex-col items-center justify-center pt-28 pb-16 px-6 md:px-12 overflow-hidden">
 	<div class="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
 		<div class="contact-parallax absolute top-[-15%] right-[-10%] w-[50rem] h-[50rem] bg-sky-600/20 rounded-full blur-[180px]" style="animation: float-orb 20s ease-in-out infinite alternate;"></div>
-		<div class="contact-parallax absolute bottom-[-15%] left-[-10%] w-[45rem] h-[45rem] bg-violet-600/15 rounded-full blur-[180px]" style="animation: float-orb 25s ease-in-out infinite alternate-reverse;"></div>
-		<div class="absolute top-[25%] left-[30%] w-[25rem] h-[25rem] bg-fuchsia-600/10 rounded-full blur-[140px]" style="animation: float-orb 18s ease-in-out infinite alternate;"></div>
+		<div class="contact-parallax absolute bottom-[-15%] left-[-10%] w-[45rem] h-[45rem] bg-procor-blue/15 rounded-full blur-[180px]" style="animation: float-orb 25s ease-in-out infinite alternate-reverse;"></div>
+		<div class="absolute top-[25%] left-[30%] w-[25rem] h-[25rem] bg-procor-blue-light/10 rounded-full blur-[140px]" style="animation: float-orb 18s ease-in-out infinite alternate;"></div>
 	</div>
 
 	<div class="absolute inset-0 pointer-events-none z-[2] overflow-hidden">
 		<div class="absolute top-[20%] left-[10%] w-24 h-24 border border-white/[0.06] rounded-2xl rotate-45" style="animation: float-orb 15s ease-in-out infinite alternate;"></div>
 		<div class="absolute top-[60%] right-[15%] w-16 h-16 border border-sky-400/10 rounded-full" style="animation: float-orb 12s ease-in-out infinite alternate-reverse;"></div>
-		<div class="absolute bottom-[25%] left-[20%] w-12 h-12 border border-violet-400/10 rounded-lg rotate-12" style="animation: float-orb 18s ease-in-out infinite alternate;"></div>
+		<div class="absolute bottom-[25%] left-[20%] w-12 h-12 border border-procor-blue/10 rounded-lg rotate-12" style="animation: float-orb 18s ease-in-out infinite alternate;"></div>
 	</div>
 
 	<div class="absolute inset-0 z-[3] pointer-events-none" style="background: radial-gradient(ellipse at center, transparent 0%, var(--surface-dark) 75%);"></div>
@@ -50,7 +50,7 @@
 	<div class="absolute inset-0 z-[3] pointer-events-none opacity-[0.06] grid-overlay"></div>
 
 	<div class="max-w-5xl mx-auto w-full relative z-10 text-center" style="perspective: 1000px;">
-		<div class="contact-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/20 via-violet-500/20 to-indigo-500/20 border border-white/[0.15] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-12 shadow-[0_0_40px_-10px_rgba(56,189,248,0.3)]">
+		<div class="contact-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/20 via-procor-blue/20 to-procor-blue-light/20 border border-white/[0.15] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-12 shadow-[0_0_40px_-10px_rgba(37,59,218,0.3)]">
 			<MessageSquare size={14} class="text-sky-300" />
 			<span class="text-white">Get in Touch</span>
 		</div>
@@ -59,7 +59,7 @@
 			{#each headlineWords as word, i}
 				<span
 					class="hero-word inline-block {i === 3 || i === 4
-						? 'bg-gradient-to-r from-sky-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent'
+						? 'bg-gradient-to-r from-sky-400 via-procor-blue to-procor-blue-light bg-clip-text text-transparent'
 						: ''}"
 				>{word}</span>
 				{i < headlineWords.length - 1 ? ' ' : ''}

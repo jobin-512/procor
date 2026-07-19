@@ -4,11 +4,11 @@
 
 	const variants = {
 		sky: 'bg-sky-500/10 border-sky-500/20 text-sky-400',
-		violet: 'bg-violet-500/10 border-violet-500/20 text-violet-400',
+		blue: 'bg-blue-500/10 border-blue-500/20 text-blue-400',
 		emerald: 'bg-emerald-50 border-emerald-100 text-emerald-600',
 		slate: 'bg-slate-100 border-transparent text-slate-400',
 		gradient:
-			'bg-gradient-to-r from-procor-blue/10 to-violet-500/10 border-procor-blue/20 text-procor-blue',
+			'bg-gradient-to-r from-procor-blue/10 to-blue-500/10 border-procor-blue/20 text-procor-blue',
 		dark: 'bg-slate-800 border-slate-700 text-neutral-400'
 	};
 </script>

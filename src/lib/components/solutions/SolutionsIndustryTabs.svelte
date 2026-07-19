@@ -106,8 +106,8 @@
 			],
 			stat: { value: '45%', label: 'Lower Turnover' },
 			caseStudy: 'RetailPro reduced seasonal hiring time from 3 weeks to 5 days across 200+ stores.',
-			gradient: 'from-violet-500/20 via-purple-600/20 to-fuchsia-700/20',
-			accentColor: 'violet'
+			gradient: 'from-procor-blue/20 via-procor-blue-dark/20 to-procor-blue-lighter/20',
+			accentColor: 'blue'
 		}
 	];
 

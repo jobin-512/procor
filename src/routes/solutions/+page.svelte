@@ -1,200 +1,461 @@
 <script>
-	import { ArrowRight, Building2, Heart, Factory, Landmark, ShoppingBag, Check, Users, TrendingUp, Globe, Shield, Zap, Clock } from '@lucide/svelte';
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	import PageWebGL from '$lib/components/ui/PageWebGL.svelte';
+	import Sparkles from '@lucide/svelte/icons/sparkles';
+	import Building2 from '@lucide/svelte/icons/building-2';
+	import Heart from '@lucide/svelte/icons/heart';
+	import Factory from '@lucide/svelte/icons/factory';
+	import Landmark from '@lucide/svelte/icons/landmark';
+	import ShoppingBag from '@lucide/svelte/icons/shopping-bag';
+	import Cpu from '@lucide/svelte/icons/cpu';
+	import Check from '@lucide/svelte/icons/check';
+	import Users from '@lucide/svelte/icons/users';
+	import TrendingUp from '@lucide/svelte/icons/trending-up';
+	import Globe from '@lucide/svelte/icons/globe';
+	import Shield from '@lucide/svelte/icons/shield';
+	import Zap from '@lucide/svelte/icons/zap';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import Play from '@lucide/svelte/icons/play';
+	import Rocket from '@lucide/svelte/icons/rocket';
+	import Quote from '@lucide/svelte/icons/quote';
+	import Star from '@lucide/svelte/icons/star';
+	import Calculator from '@lucide/svelte/icons/calculator';
+
+	let pageEl = $state(null);
+	let activeIndustry = $state(0);
+	let employeeCount = $state(500);
+	let roiResult = $state(null);
 
 	const industries = [
 		{
-			icon: Building2,
+			icon: Cpu,
 			name: 'Technology',
-			desc: 'Scale your engineering teams with AI-powered hiring and performance tracking built for fast-moving tech companies.',
-			features: ['Remote workforce management', 'Equity & vesting tracking', 'Sprint-based performance reviews', 'Integration with Jira, GitHub, Slack'],
-			accent: 'text-sky-400',
-			glow: 'rgba(56,189,248,0.15)'
+			description: 'Scale your engineering teams while maintaining culture.',
+			gradient: 'from-blue-500 to-blue-600',
+			challenges: ['Rapid headcount growth', 'Global hiring', 'Retention'],
+			benefits: ['40% faster hiring', 'AI-powered matching', 'Equity management'],
+			caseStudy: {
+				company: 'TechScale Inc.',
+				logo: 'T',
+				quote: 'PROCOR helped us scale from 200 to 2,000 employees in 18 months.',
+				author: 'Sarah Chen',
+				role: 'VP of People',
+				result: '40% faster time-to-hire'
+			}
 		},
 		{
 			icon: Heart,
 			name: 'Healthcare',
-			desc: 'HIPAA-compliant HR management with shift scheduling, credential tracking, and compliance automation.',
-			features: ['Credential expiry alerts', 'Shift swap automation', 'Compliance dashboards', '24/7 workforce scheduling'],
-			accent: 'text-emerald-400',
-			glow: 'rgba(16,185,129,0.15)'
+			description: 'Compliant workforce management for healthcare providers.',
+			gradient: 'from-rose-500 to-pink-500',
+			challenges: ['Compliance requirements', 'Credentialing', 'Shift scheduling'],
+			benefits: ['100% compliance', 'Automated credentialing', 'Smart scheduling'],
+			caseStudy: {
+				company: 'HealthFirst',
+				logo: 'H',
+				quote: 'Zero compliance violations since implementing PROCOR.',
+				author: 'Dr. James Wilson',
+				role: 'CHRO',
+				result: '100% compliance rate'
+			}
 		},
 		{
 			icon: Factory,
 			name: 'Manufacturing',
-			desc: 'Manage floor workers, track attendance with biometric integration, and automate shift scheduling.',
-			features: ['Biometric attendance', 'Multi-shift management', 'Safety compliance tracking', 'Overtime automation'],
-			accent: 'text-amber-400',
-			glow: 'rgba(245,158,11,0.15)'
+			description: 'Streamline workforce operations across facilities.',
+			gradient: 'from-amber-500 to-orange-500',
+			challenges: ['Multi-site management', 'Shift workers', 'Union compliance'],
+			benefits: ['Unified workforce view', 'Time & attendance', 'Union rules engine'],
+			caseStudy: {
+				company: 'Global Manufacturing Co.',
+				logo: 'G',
+				quote: 'Reduced payroll errors by 99% across 12 facilities.',
+				author: 'Mike Thompson',
+				role: 'HR Director',
+				result: '99% payroll accuracy'
+			}
 		},
 		{
 			icon: Landmark,
 			name: 'Financial Services',
-			desc: 'SOC 2 certified platform with multi-entity payroll, regulatory compliance, and audit-ready reporting.',
-			features: ['Multi-entity payroll', 'Regulatory compliance', 'Audit trail', 'SOX compliance tools'],
-			accent: 'text-violet-400',
-			glow: 'rgba(139,92,246,0.15)'
+			description: 'Enterprise-grade security for regulated industries.',
+			gradient: 'from-emerald-500 to-green-500',
+			challenges: ['Regulatory compliance', 'Audit trails', 'Data security'],
+			benefits: ['SOC 2 certified', 'Full audit logs', 'Bank-grade encryption'],
+			caseStudy: {
+				company: 'FinanceFirst Bank',
+				logo: 'F',
+				quote: 'Passed every audit with flying colors since day one.',
+				author: 'Elena Rodriguez',
+				role: 'Chief Compliance Officer',
+				result: '100% audit success'
+			}
 		},
 		{
 			icon: ShoppingBag,
 			name: 'Retail',
-			desc: 'Handle seasonal workforce spikes, multi-location attendance, and commission-based payroll effortlessly.',
-			features: ['Seasonal hiring automation', 'Multi-location sync', 'Commission calculations', 'Floor-level analytics'],
-			accent: 'text-rose-400',
-			glow: 'rgba(244,63,94,0.15)'
+			description: 'Manage seasonal workforce at scale.',
+			gradient: 'from-sky-500 to-cyan-500',
+			challenges: ['Seasonal hiring', 'High turnover', 'Multi-location'],
+			benefits: ['Rapid onboarding', 'Predictive attrition', 'Store analytics'],
+			caseStudy: {
+				company: 'RetailMax',
+				logo: 'R',
+				quote: 'Cut seasonal hiring time from 3 weeks to 3 days.',
+				author: 'David Kim',
+				role: 'VP Operations',
+				result: '85% faster hiring'
+			}
 		}
 	];
 
-	const useCases = [
-		{ icon: Users, title: 'Enterprise', desc: 'Multi-country payroll, advanced compliance, and custom workflows for 1,000+ employee organizations.', accent: 'text-sky-400' },
-		{ icon: TrendingUp, title: 'Mid-Market', desc: 'Scalable HR suite with performance management, recruitment, and employee engagement tools.', accent: 'text-violet-400' },
-		{ icon: Zap, title: 'Startups', desc: 'Quick onboarding, basic HR, payroll, and leave management for teams of 10-200.', accent: 'text-emerald-400' }
+	const companySizes = [
+		{ 
+			range: '50-200', 
+			name: 'Startup',
+			description: 'Build your HR foundation right from the start.',
+			features: ['Core HR', 'Basic Payroll', 'Recruitment', 'Self-service Portal']
+		},
+		{ 
+			range: '200-1,000', 
+			name: 'Scale-up',
+			description: 'Scale your people operations without scaling your team.',
+			features: ['Everything in Startup', 'Performance Management', 'Learning', 'Analytics']
+		},
+		{ 
+			range: '1,000-5,000', 
+			name: 'Mid-Market',
+			description: 'Enterprise features at mid-market pricing.',
+			features: ['Everything in Scale-up', 'Global Payroll', 'Advanced Compliance', 'Custom Workflows']
+		},
+		{ 
+			range: '5,000+', 
+			name: 'Enterprise',
+			description: 'Full-scale transformation for global organizations.',
+			features: ['Everything in Mid-Market', 'Dedicated CSM', 'Custom Integrations', 'SLA Guarantee']
+		}
 	];
 
-	let activeIndustry = $state(0);
+	const stats = [
+		{ value: '2,500+', label: 'Clients', icon: Building2 },
+		{ value: '150+', label: 'Countries', icon: Globe },
+		{ value: '99.9%', label: 'Uptime', icon: Shield },
+		{ value: '40%', label: 'Cost Savings', icon: TrendingUp }
+	];
+
+	function calculateROI() {
+		const hrCost = employeeCount * 150; // $150 per employee HR cost
+		const savings = hrCost * 0.4; // 40% savings
+		const implementation = 5000;
+		const annualCost = employeeCount * 8 * 12; // $8 per employee per month
+		const netSavings = savings - annualCost;
+		roiResult = {
+			currentCost: hrCost,
+			procorCost: annualCost,
+			savings: netSavings,
+			roi: Math.round((netSavings / annualCost) * 100)
+		};
+	}
+
+	onMount(() => {
+		const ctx = gsap.context(() => {
+			gsap.fromTo('.hero-content > *', 
+				{ y: 50, opacity: 0 },
+				{ y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
+			);
+
+			gsap.utils.toArray('.reveal-section').forEach((section) => {
+				gsap.fromTo(section, 
+					{ y: 60, opacity: 0 },
+					{ 
+						y: 0, 
+						opacity: 1, 
+						duration: 0.8,
+						scrollTrigger: {
+							trigger: section,
+							start: 'top 80%'
+						}
+					}
+				);
+			});
+		}, pageEl);
+
+		return () => ctx.revert();
+	});
 </script>
 
-<svelte:head>
-	<title>Solutions — PROCOR HRMS</title>
-	<meta name="description" content="PROCOR solutions tailored for Technology, Healthcare, Manufacturing, Financial Services, and Retail industries." />
-</svelte:head>
+<div bind:this={pageEl} class="min-h-screen bg-[#050810] selection:bg-emerald-500/30 overflow-hidden">
+	<!-- WebGL Background -->
+	<PageWebGL theme="emerald" intensity={0.8} particleCount={800} />
 
-<div class="min-h-screen bg-[#080c15] overflow-hidden">
-
-	<section class="pt-32 pb-20 px-6 md:px-12 relative overflow-hidden">
-		<div class="absolute inset-0 pointer-events-none">
-			<div class="absolute top-[-10%] right-[-5%] w-[40rem] h-[40rem] bg-violet-600/8 rounded-full blur-[120px]"></div>
-		</div>
-		<div class="max-w-7xl mx-auto text-center relative z-10">
-			<div class="inline-flex items-center gap-2 px-5 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-8">
-				<span class="text-violet-300">Solutions</span>
+	<!-- HERO -->
+	<section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 md:px-12">
+		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050810]/50 to-[#050810] z-[1]"></div>
+		
+		<div class="hero-content max-w-5xl mx-auto text-center relative z-10">
+			<div class="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-sm font-semibold text-emerald-300 mb-10 backdrop-blur-xl">
+				<Sparkles size={18} class="text-emerald-400" />
+				<span>Industry Solutions</span>
 			</div>
-			<h1 class="text-4xl sm:text-5xl md:text-6xl font-black font-display leading-[1.1] mb-6">
-				<span class="text-white">Built for </span>
-				<span class="bg-gradient-to-r from-sky-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent">your industry</span>
+
+			<h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] font-display mb-8">
+				<span class="block">Solutions for</span>
+				<span class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
+					every industry
+				</span>
 			</h1>
-			<p class="text-lg text-white/50 font-medium max-w-2xl mx-auto leading-relaxed">
-				Tailored workforce management solutions for every sector. PROCOR adapts to your industry's unique requirements.
+
+			<p class="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-12 leading-relaxed">
+				Tailored HR solutions designed for your industry's unique challenges. From healthcare to tech, we've got you covered.
 			</p>
+
+			<!-- Stats -->
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+				{#each stats as stat}
+					<div class="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl">
+						<svelte:component this={stat.icon} size={24} class="text-emerald-400 mb-3" />
+						<div class="text-3xl font-black text-white mb-1">{stat.value}</div>
+						<div class="text-sm text-white/50">{stat.label}</div>
+					</div>
+				{/each}
+			</div>
 		</div>
 	</section>
 
-	<section class="py-20 md:py-28 px-6 md:px-12 bg-[#0b1120] border-y border-white/[0.06]">
+	<!-- INDUSTRY TABS -->
+	<section class="relative py-32 px-6 md:px-12">
 		<div class="max-w-7xl mx-auto">
-			<div class="flex flex-wrap justify-center gap-3 mb-12">
-				{#each industries as ind, i}
+			<div class="reveal-section text-center mb-16">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+					Find your <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">industry</span>
+				</h2>
+			</div>
+
+			<!-- Industry Tabs -->
+			<div class="reveal-section flex flex-wrap justify-center gap-3 mb-12">
+				{#each industries as industry, i}
 					<button
-						class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer {activeIndustry === i ? 'bg-gradient-to-r from-sky-500/20 to-violet-500/20 text-white border border-sky-500/30 shadow-lg shadow-sky-500/10' : 'bg-white/[0.04] text-white/40 border border-white/[0.08] hover:border-white/[0.15] hover:text-white/60'}"
 						onclick={() => activeIndustry = i}
+						class="group flex items-center gap-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300 {activeIndustry === i ? 'bg-gradient-to-r ' + industry.gradient + ' text-white shadow-lg scale-105' : 'bg-white/[0.05] text-white/60 hover:bg-white/[0.1] hover:text-white'}"
 					>
-						<ind.icon size={16} />
-						{ind.name}
+						<svelte:component this={industry.icon} size={20} />
+						{industry.name}
 					</button>
 				{/each}
 			</div>
 
-			<div class="grid lg:grid-cols-2 gap-12 items-start">
-				<div class="p-8 rounded-2xl bg-white/[0.05] border border-white/[0.08] backdrop-blur-sm">
-					<div class="w-14 h-14 rounded-2xl bg-white/[0.08] border border-white/[0.12] flex items-center justify-center mb-6">
-						{#if activeIndustry === 0}<Building2 size={26} class={industries[activeIndustry].accent} />
-						{:else if activeIndustry === 1}<Heart size={26} class={industries[activeIndustry].accent} />
-						{:else if activeIndustry === 2}<Factory size={26} class={industries[activeIndustry].accent} />
-						{:else if activeIndustry === 3}<Landmark size={26} class={industries[activeIndustry].accent} />
-						{:else}<ShoppingBag size={26} class={industries[activeIndustry].accent} />
-						{/if}
+			<!-- Active Industry Content -->
+			<div class="reveal-section grid lg:grid-cols-2 gap-12">
+				<!-- Left: Details -->
+				<div>
+					<div class="w-16 h-16 rounded-2xl bg-gradient-to-br {industries[activeIndustry].gradient} flex items-center justify-center mb-6 shadow-lg">
+						<svelte:component this={industries[activeIndustry].icon} size={32} class="text-white" />
 					</div>
-					<h3 class="text-2xl font-black text-white mb-4">{industries[activeIndustry].name}</h3>
-					<p class="text-white/50 font-medium leading-relaxed mb-8">{industries[activeIndustry].desc}</p>
-					<ul class="space-y-3">
-						{#each industries[activeIndustry].features as f}
-							<li class="flex items-center gap-3 text-sm text-white/60 font-medium">
-								<span class="w-5 h-5 rounded-full bg-emerald-500/15 flex items-center justify-center shrink-0">
-									<Check size={12} class="text-emerald-400" />
-								</span>
-								{f}
-							</li>
-						{/each}
-					</ul>
-				</div>
-				<div class="space-y-3">
-					{#each industries as ind, i}
-						<button
-							class="w-full text-left p-5 rounded-xl bg-white/[0.04] border {activeIndustry === i ? 'border-sky-500/30 bg-white/[0.07] shadow-lg shadow-sky-500/5' : 'border-white/[0.08] hover:border-white/[0.15]'} transition-all duration-300 cursor-pointer"
-							onclick={() => activeIndustry = i}
-						>
-							<div class="flex items-center gap-3">
-								<div class="w-10 h-10 rounded-lg bg-white/[0.08] flex items-center justify-center shrink-0">
-									<ind.icon size={18} class={ind.accent} />
+					<h3 class="text-3xl md:text-4xl font-black text-white mb-4">{industries[activeIndustry].name}</h3>
+					<p class="text-xl text-white/60 mb-8">{industries[activeIndustry].description}</p>
+
+					<!-- Challenges & Benefits -->
+					<div class="grid sm:grid-cols-2 gap-6 mb-8">
+						<div>
+							<h4 class="text-sm font-bold text-white/40 uppercase tracking-wider mb-4">Challenges We Solve</h4>
+							{#each industries[activeIndustry].challenges as challenge}
+								<div class="flex items-center gap-3 mb-3">
+									<div class="w-6 h-6 rounded bg-white/10 flex items-center justify-center">
+										<Zap size={14} class="text-amber-400" />
+									</div>
+									<span class="text-white/70">{challenge}</span>
 								</div>
-								<div>
-									<p class="font-bold text-white/80 text-sm">{ind.name}</p>
-									<p class="text-xs text-white/30 font-medium line-clamp-1">{ind.desc}</p>
+							{/each}
+						</div>
+						<div>
+							<h4 class="text-sm font-bold text-white/40 uppercase tracking-wider mb-4">Key Benefits</h4>
+							{#each industries[activeIndustry].benefits as benefit}
+								<div class="flex items-center gap-3 mb-3">
+									<div class="w-6 h-6 rounded bg-emerald-500/20 flex items-center justify-center">
+										<Check size={14} class="text-emerald-400" />
+									</div>
+									<span class="text-white/70">{benefit}</span>
+								</div>
+							{/each}
+						</div>
+					</div>
+
+					<a href="/demo" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r {industries[activeIndustry].gradient} text-white rounded-xl font-semibold hover:shadow-lg transition-all group">
+						See {industries[activeIndustry].name} Demo
+						<ArrowRight size={18} class="group-hover:translate-x-1 transition-transform" />
+					</a>
+				</div>
+
+				<!-- Right: Case Study -->
+				<div class="relative">
+					<div class="absolute -inset-1 rounded-3xl bg-gradient-to-r {industries[activeIndustry].gradient} opacity-30 blur-2xl"></div>
+					<div class="relative p-8 rounded-3xl bg-white/[0.03] border border-white/[0.1] backdrop-blur-xl h-full">
+						<div class="flex items-center gap-4 mb-6">
+							<div class="w-14 h-14 rounded-xl bg-gradient-to-br {industries[activeIndustry].gradient} flex items-center justify-center text-2xl font-black text-white">
+								{industries[activeIndustry].caseStudy.logo}
+							</div>
+							<div>
+								<div class="text-sm text-white/40 uppercase tracking-wider">Case Study</div>
+								<div class="text-lg font-bold text-white">{industries[activeIndustry].caseStudy.company}</div>
+							</div>
+						</div>
+
+						<Quote size={32} class="text-white/10 mb-4" />
+						
+						<blockquote class="text-xl text-white/80 mb-8 leading-relaxed">
+							"{industries[activeIndustry].caseStudy.quote}"
+						</blockquote>
+
+						<div class="flex items-center justify-between pt-6 border-t border-white/[0.06]">
+							<div>
+								<div class="font-semibold text-white">{industries[activeIndustry].caseStudy.author}</div>
+								<div class="text-sm text-white/50">{industries[activeIndustry].caseStudy.role}</div>
+							</div>
+							<div class="text-right">
+								<div class="text-2xl font-black bg-gradient-to-r {industries[activeIndustry].gradient} bg-clip-text text-transparent">
+									{industries[activeIndustry].caseStudy.result}
 								</div>
 							</div>
-						</button>
-					{/each}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="py-20 md:py-28 px-6 md:px-12 bg-[#080c15]">
-		<div class="max-w-7xl mx-auto">
-			<div class="text-center mb-16">
-				<h2 class="text-3xl sm:text-4xl md:text-5xl font-black font-display leading-[1.1] mb-4">
-					<span class="text-white">Solutions for every </span>
-					<span class="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">company size</span>
+	<!-- COMPANY SIZE -->
+	<section class="relative py-32 px-6 md:px-12">
+		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent"></div>
+		
+		<div class="max-w-6xl mx-auto relative z-10">
+			<div class="reveal-section text-center mb-16">
+				<div class="inline-flex items-center gap-2 px-5 py-2 bg-blue-500/20 border border-blue-500/20 rounded-full text-sm font-semibold text-blue-300 mb-8">
+					<Users size={16} />
+					<span>Company Size</span>
+				</div>
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+					Right-sized for <span class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">your team</span>
 				</h2>
-				<p class="text-lg text-white/50 font-medium max-w-2xl mx-auto">
-					Whether you are a startup or an enterprise, PROCOR scales with you.
-				</p>
 			</div>
-			<div class="grid md:grid-cols-3 gap-5">
-				{#each useCases as uc}
-					<div class="group relative p-7 rounded-2xl bg-white/[0.05] border border-white/[0.08] hover:border-white/[0.18] hover:bg-white/[0.08] transition-all duration-500 cursor-default overflow-hidden backdrop-blur-sm">
-						<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-[inherit]" style="background: radial-gradient(400px circle at 50% 50%, rgba(56,189,248,0.1), transparent 40%);"></div>
-						<div class="w-12 h-12 rounded-2xl bg-white/[0.08] border border-white/[0.12] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 relative z-10">
-							<uc.icon size={22} class={uc.accent} />
+
+			<div class="reveal-section grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+				{#each companySizes as size, i}
+					<div class="group p-6 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-500">
+						<div class="text-3xl font-black text-white mb-2">{size.range}</div>
+						<div class="text-blue-400 font-semibold mb-3">{size.name}</div>
+						<p class="text-white/50 text-sm mb-6">{size.description}</p>
+						
+						<div class="space-y-2">
+							{#each size.features as feature}
+								<div class="flex items-center gap-2 text-sm text-white/60">
+									<Check size={14} class="text-emerald-400" />
+									<span>{feature}</span>
+								</div>
+							{/each}
 						</div>
-						<h3 class="text-lg font-black text-white mb-3 relative z-10">{uc.title}</h3>
-						<p class="text-white/45 leading-relaxed font-medium text-sm relative z-10">{uc.desc}</p>
-						<div class="w-10 h-[2px] bg-white/10 group-hover:w-full transition-all duration-700 mt-5 rounded-full relative z-10"></div>
 					</div>
 				{/each}
 			</div>
 		</div>
 	</section>
 
-	<section class="py-20 md:py-28 px-6 md:px-12 bg-[#0b1120] border-y border-white/[0.06]">
-		<div class="max-w-5xl mx-auto">
-			<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-				{#each [{ val: '2,500+', label: 'Companies', icon: Users }, { val: '150+', label: 'Countries', icon: Globe }, { val: '$2M', label: 'Penalties Saved', icon: Shield }, { val: '14', label: 'Days to Go Live', icon: Clock }] as stat}
-					<div class="text-center group">
-						<div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 mb-5 group-hover:bg-sky-500/15 group-hover:border-sky-500/30 transition-all duration-300">
-							<stat.icon size={24} class="text-sky-400" />
+	<!-- ROI CALCULATOR -->
+	<section class="relative py-32 px-6 md:px-12">
+		<div class="max-w-4xl mx-auto">
+			<div class="reveal-section text-center mb-16">
+				<div class="inline-flex items-center gap-2 px-5 py-2 bg-amber-500/20 border border-amber-500/20 rounded-full text-sm font-semibold text-amber-300 mb-8">
+					<Calculator size={16} />
+					<span>ROI Calculator</span>
+				</div>
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+					Calculate your <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">savings</span>
+				</h2>
+			</div>
+
+			<div class="reveal-section">
+				<div class="relative">
+					<div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-amber-500/30 to-orange-500/30 blur-2xl"></div>
+					<div class="relative p-8 md:p-12 rounded-3xl bg-white/[0.03] border border-white/[0.1] backdrop-blur-xl">
+						<div class="mb-8">
+							<label class="block text-white font-semibold mb-4">Number of Employees</label>
+							<div class="flex items-center gap-6">
+								<input
+									type="range"
+									bind:value={employeeCount}
+									min="50"
+									max="10000"
+									step="50"
+									class="flex-1 h-2 bg-white/10 rounded-full appearance-none cursor-pointer accent-amber-500"
+								/>
+								<div class="text-3xl font-black text-white min-w-[100px] text-right">
+									{employeeCount.toLocaleString()}
+								</div>
+							</div>
 						</div>
-						<p class="text-3xl font-black bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent font-display mb-2">{stat.val}</p>
-						<p class="text-[10px] font-bold text-white/35 uppercase tracking-[0.2em]">{stat.label}</p>
+
+						<button
+							onclick={calculateROI}
+							class="w-full py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-amber-500/30 transition-all"
+						>
+							Calculate ROI
+						</button>
+
+						{#if roiResult}
+							<div class="mt-8 pt-8 border-t border-white/[0.06]">
+								<div class="grid md:grid-cols-3 gap-6 text-center">
+									<div>
+										<div class="text-sm text-white/50 mb-2">Current HR Cost (Est.)</div>
+										<div class="text-2xl font-bold text-white">${roiResult.currentCost.toLocaleString()}/yr</div>
+									</div>
+									<div>
+										<div class="text-sm text-white/50 mb-2">PROCOR Cost</div>
+										<div class="text-2xl font-bold text-white">${roiResult.procorCost.toLocaleString()}/yr</div>
+									</div>
+									<div>
+										<div class="text-sm text-white/50 mb-2">Net Savings</div>
+										<div class="text-2xl font-bold text-emerald-400">${roiResult.savings.toLocaleString()}/yr</div>
+									</div>
+								</div>
+								<div class="mt-6 text-center">
+									<div class="text-5xl font-black bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+										{roiResult.roi}% ROI
+									</div>
+								</div>
+							</div>
+						{/if}
 					</div>
-				{/each}
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="py-20 md:py-28 px-6 md:px-12 bg-[#080c15]">
-		<div class="max-w-4xl mx-auto text-center">
-			<h2 class="text-3xl sm:text-4xl md:text-5xl font-black font-display leading-[1.1] mb-6">
-				<span class="text-white">Find your </span>
-				<span class="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">perfect solution</span>
+	<!-- FINAL CTA -->
+	<section class="relative py-32 px-6 md:px-12">
+		<div class="absolute inset-0">
+			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-emerald-600/20 to-transparent rounded-full blur-[150px]"></div>
+		</div>
+
+		<div class="reveal-section max-w-4xl mx-auto text-center relative z-10">
+			<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-8">
+				Ready to transform
+				<span class="block bg-gradient-to-r from-emerald-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
+					your industry?
+				</span>
 			</h2>
-			<p class="text-lg text-white/50 font-medium max-w-xl mx-auto mb-10">
-				Talk to our team about your industry-specific needs.
+			
+			<p class="text-xl text-white/50 mb-12 max-w-2xl mx-auto">
+				Join thousands of organizations in your industry that trust PROCOR.
 			</p>
-			<div class="flex flex-wrap justify-center gap-4">
-				<a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-sky-500 to-violet-500 text-white rounded-2xl font-bold text-base transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/20 active:scale-[0.98] group">
-					Get in Touch <ArrowRight size={18} class="group-hover:translate-x-1 transition-transform" />
+
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/demo" class="group relative px-10 py-5 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:shadow-xl hover:shadow-emerald-500/30 transition-all">
+					<Rocket size={22} />
+					Start Free Trial
+					<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 				</a>
-				<a href="/demo" class="inline-flex items-center gap-2 px-8 py-4 bg-white/[0.06] border border-white/[0.12] text-white rounded-2xl font-bold text-base hover:bg-white/[0.1] hover:border-white/[0.2] transition-all duration-300">
-					Book a Demo
+				<a href="/contact" class="px-10 py-5 bg-white/[0.05] border border-white/[0.1] text-white rounded-2xl font-semibold text-lg hover:bg-white/[0.1] transition-all">
+					Talk to an Expert
 				</a>
 			</div>
 		</div>

@@ -61,7 +61,7 @@
 			<SectionBadge variant="dark">FAQ</SectionBadge>
 			<h2 class="text-4xl md:text-6xl font-black text-white font-display leading-tight mb-8 mt-6">
 				Got
-				<span class="bg-gradient-to-r from-procor-sky to-violet-400 bg-clip-text text-transparent"
+				<span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent"
 					>questions?</span
 				>
 			</h2>

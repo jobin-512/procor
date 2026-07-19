@@ -60,7 +60,7 @@
 				<div class="absolute inset-0 bg-white/[0.06]"></div>
 				<div
 					bind:this={timelineLine}
-					class="absolute top-0 left-0 w-full bg-gradient-to-b from-sky-500 via-violet-500 to-indigo-600 origin-top"
+					class="absolute top-0 left-0 w-full bg-gradient-to-b from-sky-500 via-blue-500 to-blue-600 origin-top"
 					style="height: 100%;"
 				></div>
 			</div>

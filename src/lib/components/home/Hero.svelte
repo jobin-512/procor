@@ -113,11 +113,11 @@
 			style="animation: float-orb 20s ease-in-out infinite alternate;"
 		></div>
 		<div
-			class="parallax-orb-rev absolute bottom-[-15%] left-[-10%] w-[45rem] h-[45rem] bg-violet-600/15 rounded-full blur-[180px]"
+			class="parallax-orb-rev absolute bottom-[-15%] left-[-10%] w-[45rem] h-[45rem] bg-procor-blue/15 rounded-full blur-[180px]"
 			style="animation: float-orb 25s ease-in-out infinite alternate-reverse;"
 		></div>
 		<div
-			class="absolute top-[30%] left-[20%] w-[30rem] h-[30rem] bg-fuchsia-600/10 rounded-full blur-[140px]"
+			class="absolute top-[30%] left-[20%] w-[30rem] h-[30rem] bg-procor-blue-light/10 rounded-full blur-[140px]"
 			style="animation: float-orb 18s ease-in-out infinite alternate;"
 		></div>
 	</div>
@@ -145,29 +145,29 @@
 
 	<div class="max-w-7xl mx-auto w-full relative z-10">
 		<div class="text-center">
-			<div
-				class="hero-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/25 via-violet-500/25 to-indigo-500/25 border border-white/[0.2] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-14 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35),inset_0_1px_0_rgba(255,255,255,0.1)] hover:shadow-[0_0_70px_-10px_rgba(56,189,248,0.55)] transition-all duration-500"
-			>
+<div
+			class="hero-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/25 via-procor-blue/25 to-procor-blue-light/25 border border-white/[0.2] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-14 shadow-[0_0_40px_-10px_rgba(37,59,218,0.35),inset_0_1px_0_rgba(255,255,255,0.1)] hover:shadow-[0_0_70px_-10px_rgba(37,59,218,0.55)] transition-all duration-500"
+		>
 				<Sparkles size={16} class="text-sky-300" />
 				<span class="text-white" style="text-shadow: 0px 0px 20px rgba(255,255,255,0.4);"
 					>Next-Gen Human Capital Management</span
 				>
 			</div>
 
-			<h1
-				class="text-4xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-black text-white leading-[0.85] font-display mb-12 tracking-tight"
-			>
-				{#each headlineParts as part, i}
-					{#if i === 1}
-						<span
-							class="title-word block bg-gradient-to-r from-sky-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent italic min-h-12 md:min-h-18 lg:min-h-30"
-							>{part}</span
-						>
-					{:else}
-						<span class="title-word block">{part}</span>
-					{/if}
-				{/each}
-			</h1>
+<h1
+			class="text-4xl sm:text-5xl md:text-7xl lg:text-[7.5rem] font-black text-white leading-[0.85] font-display mb-12 tracking-tight"
+		>
+			{#each headlineParts as part, i}
+				{#if i === 1}
+					<span
+						class="title-word block bg-gradient-to-r from-sky-400 via-procor-blue to-procor-blue-light bg-clip-text text-transparent italic min-h-12 md:min-h-18 lg:min-h-30"
+						>{part}</span
+					>
+				{:else}
+					<span class="title-word block">{part}</span>
+				{/if}
+			{/each}
+		</h1>
 
 			<p
 				class="hero-desc text-lg md:text-xl text-white/85 mb-14 max-w-2xl mx-auto leading-relaxed font-medium"

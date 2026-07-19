@@ -9,7 +9,7 @@
 
 <section class="final-cta-section relative py-24 md:py-32 px-6 md:px-12 bg-[#030408] overflow-hidden">
 	<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
-		<div class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-gradient-to-r from-sky-600/15 via-violet-600/15 to-indigo-600/15 rounded-full blur-[200px]"></div>
+		<div class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-gradient-to-r from-sky-600/15 via-procor-blue/15 to-procor-blue-light/15 rounded-full blur-[200px]"></div>
 	</div>
 
 	<div class="max-w-4xl mx-auto relative z-10 text-center">
@@ -21,7 +21,7 @@
 		<h2 class="text-4xl md:text-6xl lg:text-7xl font-black text-white font-display leading-[0.9] mb-6">
 			Ready to Transform
 			<br />
-			<span class="bg-gradient-to-r from-sky-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent italic">
+			<span class="bg-gradient-to-r from-sky-400 via-procor-blue to-procor-blue-light bg-clip-text text-transparent italic">
 				Your Industry?
 			</span>
 		</h2>

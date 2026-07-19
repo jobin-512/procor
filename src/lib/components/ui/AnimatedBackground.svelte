@@ -4,7 +4,7 @@
 	import { cn } from '$lib/utils';
 
 	let {
-		colors = ['#75c2f6', '#8b5cf6', '#6366f1'],
+		colors = ['#253BDA', '#3B5BFF', '#4A6BFF'],
 		speed = 1,
 		orbCount = 3,
 		blur = 180,

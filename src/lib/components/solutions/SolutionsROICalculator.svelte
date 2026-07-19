@@ -66,7 +66,7 @@
 							max="200000"
 							step="1000"
 							bind:value={avgSalary}
-							class="w-full h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-violet-500 slider"
+							class="w-full h-2 rounded-full appearance-none cursor-pointer bg-white/10 accent-procor-blue slider"
 						/>
 						<div class="flex justify-between mt-2">
 							<span class="text-white/30 text-xs">$25k</span>
@@ -76,9 +76,9 @@
 				</div>
 
 				<div class="space-y-6">
-					<div class="text-center p-8 rounded-2xl bg-gradient-to-br from-sky-500/10 to-violet-600/10 border border-white/[0.08]">
+					<div class="text-center p-8 rounded-2xl bg-gradient-to-br from-sky-500/10 to-procor-blue/10 border border-white/[0.08]">
 						<p class="text-white/50 text-xs font-bold uppercase tracking-[0.2em] mb-2">Estimated Annual Savings</p>
-						<p class="text-5xl md:text-6xl font-black font-display bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+						<p class="text-5xl md:text-6xl font-black font-display bg-gradient-to-r from-sky-400 to-procor-blue bg-clip-text text-transparent">
 							${calculatedSavings.annual >= 1000000
 								? (calculatedSavings.annual / 1000000).toFixed(1) + 'M'
 								: (calculatedSavings.annual / 1000).toFixed(0) + 'K'}

@@ -51,7 +51,7 @@
 		<div class="text-center mb-16">
 			<SectionBadge variant="dark">FAQ</SectionBadge>
 			<h2 class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4 tracking-tight">
-				Contact <span class="bg-gradient-to-r from-procor-sky to-violet-400 bg-clip-text text-transparent">questions</span>
+				Contact <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">questions</span>
 			</h2>
 			<p class="text-neutral-500 font-medium">Quick answers to common inquiries.</p>
 		</div>

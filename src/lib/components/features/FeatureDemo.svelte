@@ -26,7 +26,7 @@
 		{
 			title: 'Talent Pipeline',
 			icon: UserPlus,
-			color: '#8b5cf6',
+			color: '#253BDA',
 			description: 'From candidate sourcing to offer letter generation — manage your entire recruitment workflow in one place.',
 			items: ['AI candidate matching', 'Automated screening', 'Interview scheduling', 'Offer letter builder', 'Analytics & funnel metrics']
 		},
@@ -75,7 +75,7 @@
 		{
 			title: 'Document Intelligence',
 			icon: FileText,
-			color: '#a855f7',
+			color: '#3B5BFF',
 			description: 'Automate document workflows with AI-powered extraction, smart templates, and secure digital signatures.',
 			items: ['AI data extraction', 'Smart document templates', 'E-signature workflows', 'Version control & audit', 'Auto-fill from profiles']
 		},
@@ -92,13 +92,13 @@
 
 <section id="demo" class="relative py-20 md:py-32 surface-dark overflow-hidden">
 	<FloatingOrb color="rgba(117, 194, 246, 0.25)" size="45rem" className="-top-48 right-0" blur="200px" speed={18} />
-	<FloatingOrb color="rgba(139, 92, 246, 0.2)" size="35rem" className="bottom-24 -left-40" blur="180px" speed={22} />
-	<FloatingOrb color="rgba(244, 63, 94, 0.15)" size="28rem" className="top-1/3 left-1/3" blur="150px" speed={28} parallax={false} />
-	<ParticleField count={50} color="rgba(117, 194, 246, 0.5)" className="pointer-events-none" />
+	<FloatingOrb color="rgba(37, 59, 218, 0.2)" size="35rem" className="bottom-24 -left-40" blur="180px" speed={22} />
+	<FloatingOrb color="rgba(59, 91, 255, 0.15)" size="28rem" className="top-1/3 left-1/3" blur="150px" speed={28} parallax={false} />
+	<ParticleField count={50} color="rgba(37, 59, 218, 0.5)" className="pointer-events-none" />
 
 	<div class="max-w-7xl mx-auto px-6 relative z-10">
 		<div class="text-center mb-14" data-reveal>
-			<SectionBadge variant="violet">Interactive Demo</SectionBadge>
+			<SectionBadge variant="blue">Interactive Demo</SectionBadge>
 			<h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-black text-white font-display">
 				See It In Action
 			</h2>

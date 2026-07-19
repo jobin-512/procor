@@ -13,7 +13,7 @@
 				{ icon: Users, title: 'Employee Management', description: 'Complete employee lifecycle management from hire to retire with automated workflows.', color: '#75c2f6' },
 				{ icon: Building2, title: 'Organization Charts', description: 'Dynamic org charts that auto-update as your company evolves. Drag-and-drop restructuring.', color: '#1d5d9b' },
 				{ icon: FileText, title: 'Document Management', description: 'Centralized document repository with version control, e-signatures, and compliance tracking.', color: '#002d5b' },
-				{ icon: Shield, title: 'Access Control', description: 'Role-based permissions with granular access control across all modules and data.', color: '#8b5cf6' }
+				{ icon: Shield, title: 'Access Control', description: 'Role-based permissions with granular access control across all modules and data.', color: '#253BDA' }
 			]
 		},
 		{
@@ -30,7 +30,7 @@
 			name: 'Talent Management',
 			icon: Briefcase,
 			features: [
-				{ icon: UserPlus, title: 'Recruitment', description: 'AI-powered candidate sourcing, screening, and interview scheduling pipeline.', color: '#8b5cf6' },
+				{ icon: UserPlus, title: 'Recruitment', description: 'AI-powered candidate sourcing, screening, and interview scheduling pipeline.', color: '#3B5BFF' },
 				{ icon: Award, title: 'Onboarding', description: 'Personalized onboarding journeys with task automation and buddy matching.', color: '#10b981' },
 				{ icon: BarChart3, title: 'Performance Reviews', description: 'Continuous feedback loops, 360-degree reviews, and goal alignment frameworks.', color: '#1d5d9b' },
 				{ icon: Target, title: 'Learning & Development', description: 'LMS integration, skill gap analysis, and personalized learning paths.', color: '#f59e0b' }
@@ -41,7 +41,7 @@
 			icon: BarChart3,
 			features: [
 				{ icon: LayoutDashboard, title: 'Custom Dashboards', description: 'Drag-and-drop dashboard builder with 100+ widgets and real-time data feeds.', color: '#75c2f6' },
-				{ icon: Brain, title: 'Predictive Analytics', description: 'ML-powered workforce insights for turnover prediction and capacity planning.', color: '#8b5cf6' },
+				{ icon: Brain, title: 'Predictive Analytics', description: 'ML-powered workforce insights for turnover prediction and capacity planning.', color: '#4A6BFF' },
 				{ icon: ClipboardCheck, title: 'Compliance Reports', description: 'Auto-generated regulatory reports for EEOC, OSHA, GDPR, and local requirements.', color: '#10b981' },
 				{ icon: PieChart, title: 'Workforce Analytics', description: 'Deep-dive into headcount, demographics, compensation benchmarks, and trends.', color: '#f43f5e' }
 			]

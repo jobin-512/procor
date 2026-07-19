@@ -24,7 +24,7 @@
 		gsap.registerPlugin(ScrollTrigger);
 
 		const lenis = new Lenis({
-			duration: 1.5,
+			duration: 1.4,
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 			orientation: 'vertical',
 			gestureOrientation: 'vertical',
@@ -37,28 +37,26 @@
 
 		window.__lenis = lenis;
 
-		// Synchronize Lenis with GSAP ScrollTrigger
 		lenis.on('scroll', ScrollTrigger.update);
 
-		// Drive Lenis from GSAP ticker (single raf loop — no duplicate)
 		const lenisRaf = (time) => {
 			lenis.raf(time * 1000);
 		};
 		gsap.ticker.add(lenisRaf);
 		gsap.ticker.lagSmoothing(0);
 
-		// Ensure ScrollTrigger recalculates after Lenis is ready
 		requestAnimationFrame(() => {
 			ScrollTrigger.refresh();
 		});
 
-		// Global reveal animations using fromTo for reliable opacity
 		await tick();
+
+		// Reveal animations
 		const revealElements = document.querySelectorAll('[data-reveal]');
 		revealElements.forEach((el) => {
 			gsap.fromTo(
 				el,
-				{ y: 30, opacity: 0 },
+				{ y: 40, opacity: 0 },
 				{
 					scrollTrigger: {
 						trigger: el,
@@ -67,13 +65,12 @@
 					},
 					y: 0,
 					opacity: 1,
-					duration: 1,
+					duration: 0.8,
 					ease: 'power3.out'
 				}
 			);
 		});
 
-		// Ensure all ScrollTrigger instances recalculate positions
 		requestAnimationFrame(() => {
 			ScrollTrigger.refresh();
 		});
@@ -87,10 +84,10 @@
 
 <svelte:head>
 	<title>PROCOR HRMS - The Future of Workforce Management</title>
-	<meta
-		name="description"
-		content="Empowering Human Resources for Organisational Growth through intelligent automation."
-	/>
+	<meta name="description" content="Empowering Human Resources for Organisational Growth through intelligent automation and modern design." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 </svelte:head>
 
 <div class="antialiased bg-[#080c15]">

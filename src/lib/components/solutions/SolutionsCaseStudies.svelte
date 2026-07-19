@@ -87,7 +87,7 @@
 						</div>
 
 						<div class="px-7 pb-4">
-							<p class="text-2xl font-black text-white font-display bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+							<p class="text-2xl font-black text-white font-display bg-gradient-to-r from-sky-400 to-procor-blue bg-clip-text text-transparent">
 								{cs.metric}
 							</p>
 						</div>

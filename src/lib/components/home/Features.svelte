@@ -19,9 +19,9 @@
 			icon: Brain,
 			title: 'AI-Powered Matching',
 			desc: 'Neural algorithms that connect the right talent to the right roles — automatically.',
-			color: 'from-violet-500/20 to-violet-600/5',
-			accent: 'text-violet-400',
-			borderHover: 'hover:border-violet-500/30'
+			color: 'from-procor-blue/20 to-procor-blue/5',
+			accent: 'text-procor-blue',
+			borderHover: 'hover:border-procor-blue/30'
 		},
 		{
 			icon: Zap,
@@ -77,19 +77,19 @@
 			class="absolute top-0 left-1/4 w-[50rem] h-[50rem] bg-procor-blue/10 rounded-full blur-[160px]"
 		></div>
 		<div
-			class="absolute bottom-0 right-1/4 w-[40rem] h-[40rem] bg-violet-600/8 rounded-full blur-[140px]"
+			class="absolute bottom-0 right-1/4 w-[40rem] h-[40rem] bg-procor-blue/8 rounded-full blur-[140px]"
 		></div>
 	</div>
 
 	<div class="max-w-7xl mx-auto relative z-10">
 		<!-- Header -->
 		<div class="features-header mb-24 text-center max-w-3xl mx-auto">
-			<SectionBadge variant="violet">Core Capabilities</SectionBadge>
+			<SectionBadge variant="blue">Core Capabilities</SectionBadge>
 			<h2
 				class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white font-display leading-[1.1] mb-8 mt-8"
 			>
 				Precision Engineered for
-				<span class="bg-gradient-to-r from-procor-sky to-violet-400 bg-clip-text text-transparent"
+				<span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent"
 					>People.</span
 				>
 			</h2>

@@ -40,16 +40,16 @@
 <section class="py-20 md:py-32 px-6 md:px-12 bg-[var(--surface-dark-alt)] overflow-hidden">
 	<div class="absolute inset-0 pointer-events-none">
 		<div class="absolute top-0 right-1/4 w-[40rem] h-[40rem] bg-sky-600/5 rounded-full blur-[200px]"></div>
-		<div class="absolute bottom-0 left-1/4 w-[35rem] h-[35rem] bg-violet-600/5 rounded-full blur-[180px]"></div>
+		<div class="absolute bottom-0 left-1/4 w-[35rem] h-[35rem] bg-procor-blue/5 rounded-full blur-[180px]"></div>
 	</div>
 
 	<div class="max-w-7xl mx-auto relative z-10">
 		<div class="dash-header mb-20 text-center max-w-3xl mx-auto">
 			<SectionBadge variant="sky">Real-Time Analytics</SectionBadge>
-			<h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white font-display leading-[1.1] mb-6 mt-8">
-				Your workforce, <br class="hidden sm:block" />
-				<span class="bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">decoded.</span>
-			</h2>
+<h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white font-display leading-[1.1] mb-6 mt-8">
+			Your workforce,<br />
+			<span class="bg-gradient-to-r from-sky-400 to-procor-blue bg-clip-text text-transparent">decoded.</span>
+		</h2>
 			<p class="text-lg text-neutral-400 font-medium leading-relaxed">Every metric, every trend, every insight — updated in real-time.</p>
 		</div>
 
@@ -91,8 +91,8 @@
 
 			<div class="p-6 md:p-8 rounded-2xl bg-[var(--surface-card)] border border-[var(--border-subtle)]">
 				<div class="flex items-center gap-3 mb-8">
-					<TrendingUp size={20} class="text-violet-400" />
-					<h3 class="text-lg font-black text-white">Employee Growth Trend</h3>
+					<BarChart3 size={20} class="text-sky-400" />
+					<h3 class="text-lg font-black text-white">Module Adoption Rate</h3>
 				</div>
 				<div class="relative">
 					<svg viewBox="0 0 {chartW} {chartH}" class="w-full h-48" preserveAspectRatio="none">
@@ -106,12 +106,12 @@
 						{/each}
 						<defs>
 							<linearGradient id="lineGrad" x1="0" y1="0" x2={chartW} y2="0" gradientUnits="userSpaceOnUse">
-								<stop offset="0%" stop-color="#8b5cf6" />
+								<stop offset="0%" stop-color="#253BDA" />
 								<stop offset="100%" stop-color="#38bdf8" />
 							</linearGradient>
 							<linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2={chartH} gradientUnits="userSpaceOnUse">
-								<stop offset="0%" stop-color="rgba(139,92,246,0.2)" />
-								<stop offset="100%" stop-color="rgba(139,92,246,0)" />
+								<stop offset="0%" stop-color="rgba(37,59,218,0.2)" />
+								<stop offset="100%" stop-color="rgba(37,59,218,0)" />
 							</linearGradient>
 						</defs>
 					</svg>

@@ -13,8 +13,8 @@
 	let particles = $state([]);
 
 	const previewCards = [
-		{ icon: Users, label: 'Employee Hub', color: '#75c2f6' },
-		{ icon: BarChart3, label: 'Analytics', color: '#8b5cf6' },
+		{ icon: Users, label: 'Employee Hub', color: '#253BDA' },
+		{ icon: BarChart3, label: 'Analytics', color: '#3B5BFF' },
 		{ icon: Shield, label: 'Compliance', color: '#10b981' }
 	];
 
@@ -50,7 +50,7 @@
 				if (p.y < 0 || p.y > h) p.vy *= -1;
 				ctx.beginPath();
 				ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-				ctx.fillStyle = `rgba(117, 194, 246, ${p.alpha})`;
+				ctx.fillStyle = `rgba(37, 59, 218, ${p.alpha})`;
 				ctx.fill();
 			}
 			for (let i = 0; i < particles.length; i++) {
@@ -62,7 +62,7 @@
 						ctx.beginPath();
 						ctx.moveTo(particles[i].x, particles[i].y);
 						ctx.lineTo(particles[j].x, particles[j].y);
-						ctx.strokeStyle = `rgba(117, 194, 246, ${0.14 * (1 - dist / 140)})`;
+						ctx.strokeStyle = `rgba(37, 59, 218, ${0.14 * (1 - dist / 140)})`;
 						ctx.lineWidth = 0.6;
 						ctx.stroke();
 					}
@@ -87,10 +87,10 @@
 <section class="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden surface-dark">
 	<canvas bind:this={canvas} class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
 
-	<FloatingOrb color="rgba(117, 194, 246, 0.35)" size="45rem" className="-top-24 -right-48" blur="200px" speed={18} />
-	<FloatingOrb color="rgba(139, 92, 246, 0.3)" size="35rem" className="bottom-24 -left-40" blur="200px" speed={22} />
+	<FloatingOrb color="rgba(37, 59, 218, 0.35)" size="45rem" className="-top-24 -right-48" blur="200px" speed={18} />
+	<FloatingOrb color="rgba(59, 91, 255, 0.3)" size="35rem" className="bottom-24 -left-40" blur="200px" speed={22} />
 	<FloatingOrb color="rgba(16, 185, 129, 0.2)" size="25rem" className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" blur="180px" speed={30} parallax={false} />
-	<ParticleField count={60} color="rgba(117, 194, 246, 0.5)" className="pointer-events-none" connectionDistance={150} />
+	<ParticleField count={60} color="rgba(37, 59, 218, 0.5)" className="pointer-events-none" connectionDistance={150} />
 
 	<div class="absolute inset-0 pointer-events-none grid-overlay opacity-[0.06]"></div>
 	<div class="absolute inset-0 pointer-events-none gradient-overlay"></div>
