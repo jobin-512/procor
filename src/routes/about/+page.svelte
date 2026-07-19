@@ -12,9 +12,8 @@
 	import Award from '@lucide/svelte/icons/award';
 	import TrendingUp from '@lucide/svelte/icons/trending-up';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import MapPin from '@lucide/svelte/icons/map-pin';
-	import Linkedin from '@lucide/svelte/icons/linkedin';
-	import Calendar from '@lucide/svelte/icons/calendar';
+import MapPin from '@lucide/svelte/icons/map-pin';
+import Calendar from '@lucide/svelte/icons/calendar';
 	import CheckCircle from '@lucide/svelte/icons/check-circle';
 	import Zap from '@lucide/svelte/icons/zap';
 	import Shield from '@lucide/svelte/icons/shield';
