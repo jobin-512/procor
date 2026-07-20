@@ -294,7 +294,7 @@ import Calendar from '@lucide/svelte/icons/calendar';
 								<img 
 									src={member.image} 
 									alt={member.name}
-									class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
+									class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
 								/>
 								<div class="absolute inset-0 bg-gradient-to-t from-[#050810] via-transparent to-transparent"></div>
 							</div>
