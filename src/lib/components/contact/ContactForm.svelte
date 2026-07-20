@@ -8,8 +8,8 @@
 
 	let {
 		contactInfo = [
-			{ icon: Mail, label: 'Email', value: 'hello@procor.io', href: 'mailto:hello@procor.io', glow: 'rgba(117, 194, 246, 0.4)' },
-			{ icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567', glow: 'rgba(139, 92, 246, 0.4)' },
+			{ icon: Mail, label: 'Email', value: 'info@procorhrms.com', href: 'mailto:info@procorhrms.com', glow: 'rgba(117, 194, 246, 0.4)' },
+			{ icon: Phone, label: 'Phone', value: 'xxxxx', href: 'tel:xxxxx', glow: 'rgba(139, 92, 246, 0.4)' },
 			{ icon: MapPin, label: 'Address', value: 'Connaught Place, New Delhi 110001', href: '#', glow: 'rgba(16, 185, 129, 0.4)' },
 			{ icon: Clock, label: 'Hours', value: 'Mon - Fri 9am - 6pm PST', href: '#', glow: 'rgba(245, 158, 11, 0.4)' }
 		]
@@ -18,16 +18,45 @@
 	let formState = $state('idle');
 	let formEl = $state(null);
 
-	function handleSubmit(e) {
+	async function handleSubmit(e) {
 		e.preventDefault();
+		if (!formEl) return;
+		
 		formState = 'loading';
-		setTimeout(() => {
-			formState = 'success';
-			setTimeout(() => {
+		
+		const formData = new FormData(formEl);
+		const data = {
+			name: formData.get('name'),
+			email: formData.get('email'),
+			company: formData.get('company'),
+			phone: formData.get('phone'),
+			subject: formData.get('subject'),
+			message: formData.get('message')
+		};
+
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(data)
+			});
+
+			const result = await response.json();
+
+			if (response.ok && result.success) {
+				formState = 'success';
+				setTimeout(() => {
+					formState = 'idle';
+					formEl.reset();
+				}, 3000);
+			} else {
 				formState = 'idle';
-				if (formEl) formEl.reset();
-			}, 3000);
-		}, 2000);
+				alert(result.error || 'Failed to send message');
+			}
+		} catch (error) {
+			formState = 'idle';
+			alert('Failed to send message. Please try again.');
+		}
 	}
 
 	onMount(() => {

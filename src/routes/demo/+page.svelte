@@ -102,8 +102,26 @@
 	async function handleSubmit(e) {
 		e.preventDefault();
 		formStatus = 'loading';
-		await new Promise(resolve => setTimeout(resolve, 2000));
-		formStatus = 'success';
+		
+		try {
+			const response = await fetch('/api/demo', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData)
+			});
+
+			const result = await response.json();
+
+			if (response.ok && result.success) {
+				formStatus = 'success';
+			} else {
+				formStatus = 'idle';
+				alert(result.error || 'Failed to submit request');
+			}
+		} catch (error) {
+			formStatus = 'idle';
+			alert('Failed to submit request. Please try again.');
+		}
 	}
 
 	onMount(() => {

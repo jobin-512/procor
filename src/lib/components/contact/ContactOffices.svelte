@@ -7,10 +7,10 @@
 
 	let {
 		offices = [
-			{ city: 'New Delhi', tag: 'HQ', address: 'Connaught Place', phone: '+91 11 2345 6789', gradient: 'from-sky-500/30 to-procor-blue/30' },
-			{ city: 'London', tag: null, address: '45 Canary Wharf', phone: '+44 20 7946 0958', gradient: 'from-indigo-500/30 to-blue-500/30' },
-			{ city: 'Singapore', tag: null, address: '88 Marina Bay', phone: '+65 6123 4567', gradient: 'from-procor-blue/30 to-procor-blue-light/30' },
-			{ city: 'Sydney', tag: null, address: '120 George St', phone: '+61 2 9876 5432', gradient: 'from-emerald-500/30 to-cyan-500/30' }
+			{ city: 'New Delhi', tag: 'HQ', address: 'Connaught Place', phone: 'xxxxx', gradient: 'from-sky-500/30 to-procor-blue/30' },
+			{ city: 'London', tag: null, address: '45 Canary Wharf', phone: 'xxxxx', gradient: 'from-indigo-500/30 to-blue-500/30' },
+			{ city: 'Singapore', tag: null, address: '88 Marina Bay', phone: 'xxxxx', gradient: 'from-procor-blue/30 to-procor-blue-light/30' },
+			{ city: 'Sydney', tag: null, address: '120 George St', phone: 'xxxxx', gradient: 'from-emerald-500/30 to-cyan-500/30' }
 		]
 	} = $props();
 

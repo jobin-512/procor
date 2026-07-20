@@ -120,11 +120,11 @@
 		<div class="flex flex-wrap gap-6 mb-10 text-sm text-white/40">
 			<div class="flex items-center gap-2">
 				<Mail size={16} class="text-blue-400/60" />
-				<span>hello@procor.io</span>
+				<span>info@procorhrms.com</span>
 			</div>
 			<div class="flex items-center gap-2">
 				<Phone size={16} class="text-blue-400/60" />
-				<span>+91 11 2345 6789</span>
+				<span>xxxxx</span>
 			</div>
 			<div class="flex items-center gap-2">
 				<MapPin size={16} class="text-blue-400/60" />

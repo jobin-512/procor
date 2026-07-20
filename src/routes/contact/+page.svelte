@@ -36,18 +36,18 @@
 		{
 			icon: Mail,
 			title: 'Email Us',
-			value: 'hello@procor.io',
+			value: 'info@procorhrms.com',
 			description: 'We respond within 24 hours',
 			gradient: 'from-sky-500 to-cyan-500',
-			action: 'mailto:hello@procor.io'
+			action: 'mailto:info@procorhrms.com'
 		},
 		{
 			icon: Phone,
 			title: 'Call Us',
-			value: '+1 (888) 555-0123',
+			value: 'xxxxx',
 			description: 'Mon-Fri, 9am-6pm EST',
 			gradient: 'from-blue-500 to-blue-600',
-			action: 'tel:+18885550123'
+			action: 'tel:xxxxx'
 		},
 		{
 			icon: MessageSquare,
@@ -68,10 +68,10 @@
 	];
 
 	const offices = [
-		{ city: 'San Francisco', country: 'USA', address: '123 Market Street, Suite 400', timezone: 'PST', phone: '+1 (415) 555-0123' },
-		{ city: 'London', country: 'UK', address: '45 Canary Wharf, Floor 12', timezone: 'GMT', phone: '+44 20 7123 4567' },
-		{ city: 'Singapore', country: 'Singapore', address: '88 Marina Bay Sands, Tower 2', timezone: 'SGT', phone: '+65 6123 4567' },
-		{ city: 'Dubai', country: 'UAE', address: 'DIFC Tower 5, Level 8', timezone: 'GST', phone: '+971 4 123 4567' }
+		{ city: 'San Francisco', country: 'USA', address: '123 Market Street, Suite 400', timezone: 'PST', phone: 'xxxxx' },
+		{ city: 'London', country: 'UK', address: '45 Canary Wharf, Floor 12', timezone: 'GMT', phone: 'xxxxx' },
+		{ city: 'Singapore', country: 'Singapore', address: '88 Marina Bay Sands, Tower 2', timezone: 'SGT', phone: 'xxxxx' },
+		{ city: 'Dubai', country: 'UAE', address: 'DIFC Tower 5, Level 8', timezone: 'GST', phone: 'xxxxx' }
 	];
 
 	const faqs = [
@@ -101,10 +101,25 @@
 		e.preventDefault();
 		formStatus = 'loading';
 		
-		// Simulate API call
-		await new Promise(resolve => setTimeout(resolve, 2000));
-		
-		formStatus = 'success';
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData)
+			});
+
+			const result = await response.json();
+
+			if (response.ok && result.success) {
+				formStatus = 'success';
+			} else {
+				formStatus = 'idle';
+				alert(result.error || 'Failed to send message');
+			}
+		} catch (error) {
+			formStatus = 'idle';
+			alert('Failed to send message. Please try again.');
+		}
 	}
 
 	onMount(() => {
@@ -364,7 +379,7 @@
 							<MessageSquare size={20} />
 							Start Live Chat
 						</a>
-						<a href="tel:+18885550123" class="px-8 py-4 bg-white/[0.05] border border-white/[0.1] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/[0.1] transition-all">
+						<a href="tel:xxxxx" class="px-8 py-4 bg-white/[0.05] border border-white/[0.1] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/[0.1] transition-all">
 							<Phone size={20} />
 							Call Support
 						</a>

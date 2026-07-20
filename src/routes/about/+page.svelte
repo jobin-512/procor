@@ -78,12 +78,8 @@ import Calendar from '@lucide/svelte/icons/calendar';
 	];
 
 	const team = [
-		{ name: 'Sarah Chen', role: 'CEO & Co-Founder', image: 'https://i.pravatar.cc/300?img=32', bio: 'Former VP at Workday. Stanford MBA.' },
-		{ name: 'Marcus Williams', role: 'CTO & Co-Founder', image: 'https://i.pravatar.cc/300?img=12', bio: 'Ex-Google engineer. MIT PhD in AI.' },
-		{ name: 'Elena Rodriguez', role: 'Chief People Officer', image: 'https://i.pravatar.cc/300?img=47', bio: '20+ years in HR leadership.' },
-		{ name: 'David Okonkwo', role: 'Chief Revenue Officer', image: 'https://i.pravatar.cc/300?img=59', bio: 'Scaled 3 unicorns to IPO.' },
-		{ name: 'Yuki Tanaka', role: 'VP of Engineering', image: 'https://i.pravatar.cc/300?img=26', bio: 'Former Netflix architect.' },
-		{ name: 'James Mitchell', role: 'VP of Product', image: 'https://i.pravatar.cc/300?img=68', bio: 'Built products used by 100M+.' }
+		{ name: 'Abhishek Kumar', role: 'SEO & Founder', image: 'https://i.pravatar.cc/300?img=32', bio: 'Visionary leader driving the future of HR technology with AI-first approach.' },
+		{ name: 'Paras Kumar', role: 'CFO & Founder', image: 'https://i.pravatar.cc/300?img=12', bio: 'Financial strategist building sustainable growth for global HR transformation.' }
 	];
 
 	const offices = [
