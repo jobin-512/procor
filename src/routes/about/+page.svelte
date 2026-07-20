@@ -81,8 +81,8 @@ import Calendar from '@lucide/svelte/icons/calendar';
 	import parasImg from '$lib/assets/about/2.webp';
 
 	const team = [
-		{ name: 'Abhishek Kumar Jha', role: 'SEO & Founder', image: abhishekImg, bio: 'Visionary leader driving the future of HR technology with AI-first approach.', linkedin: 'https://www.linkedin.com/in/abhishek-kumar-jha-06347b101' },
-		{ name: 'Paras Kumar', role: 'CFO & Founder', image: parasImg, bio: 'Financial strategist building sustainable growth for global HR transformation.' }
+		{ name: 'Abhishek Kumar Jha', role: 'CEO & Founder', image: abhishekImg, bio: 'Visionary leader driving the future of HR technology with AI-first approach.', linkedin: 'https://www.linkedin.com/in/abhishek-kumar-jha-06347b101' },
+		{ name: 'Paras Kumar', role: 'CFO & Founder', image: parasImg, bio: 'Financial strategist building sustainable growth for global HR transformation.', linkedin: 'https://www.linkedin.com/in/paras-kumar-a78633264?utm_source=share_via&utm_content=profile&utm_medium=member_ios' }
 	];
 
 	const offices = [
