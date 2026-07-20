@@ -77,9 +77,12 @@ import Calendar from '@lucide/svelte/icons/calendar';
 		{ year: '2024', title: 'The Future', description: 'Expanding to 150+ countries with autonomous HR capabilities.', icon: Star }
 	];
 
+	import abhishekImg from '$lib/assets/about/1.webp';
+	import parasImg from '$lib/assets/about/2.webp';
+
 	const team = [
-		{ name: 'Abhishek Kumar', role: 'SEO & Founder', image: 'https://i.pravatar.cc/300?img=32', bio: 'Visionary leader driving the future of HR technology with AI-first approach.' },
-		{ name: 'Paras Kumar', role: 'CFO & Founder', image: 'https://i.pravatar.cc/300?img=12', bio: 'Financial strategist building sustainable growth for global HR transformation.' }
+		{ name: 'Abhishek Kumar Jha', role: 'SEO & Founder', image: abhishekImg, bio: 'Visionary leader driving the future of HR technology with AI-first approach.', linkedin: 'https://www.linkedin.com/in/abhishek-kumar-jha-06347b101' },
+		{ name: 'Paras Kumar', role: 'CFO & Founder', image: parasImg, bio: 'Financial strategist building sustainable growth for global HR transformation.' }
 	];
 
 	const offices = [
@@ -291,7 +294,7 @@ import Calendar from '@lucide/svelte/icons/calendar';
 								<img 
 									src={member.image} 
 									alt={member.name}
-									class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+									class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
 								/>
 								<div class="absolute inset-0 bg-gradient-to-t from-[#050810] via-transparent to-transparent"></div>
 							</div>
@@ -300,13 +303,13 @@ import Calendar from '@lucide/svelte/icons/calendar';
 							<div class="relative p-6 -mt-12">
 								<h3 class="text-xl font-bold text-white mb-1">{member.name}</h3>
 								<p class="text-sky-400 font-semibold text-sm mb-3">{member.role}</p>
-								<p class="text-white/50 text-sm">{member.bio}</p>
-								
-								<!-- Social link -->
-								<a href="/" class="inline-flex items-center gap-2 mt-4 text-white/40 hover:text-sky-400 transition-colors">
-									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-									<span class="text-sm">Connect</span>
-								</a>
+							<p class="text-white/50 text-sm">{member.bio}</p>
+							
+							<!-- Social link -->
+							<a href={member.linkedin || '/'} target={member.linkedin ? '_blank' : undefined} rel={member.linkedin ? 'noopener noreferrer' : undefined} class="inline-flex items-center gap-2 mt-4 text-white/40 hover:text-sky-400 transition-colors">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+								<span class="text-sm">Connect</span>
+							</a>
 							</div>
 						</div>
 					</div>
