@@ -4,11 +4,11 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { Shield, Lock, Globe } from '@lucide/svelte';
 
-	let {
+		let {
 		trustBadges = [
-			{ icon: Shield, text: 'SOC 2 Type II' },
-			{ icon: Lock, text: 'GDPR Compliant' },
-			{ icon: Globe, text: 'ISO 27001' }
+			{ icon: Globe, text: 'ISO 27001' },
+			{ icon: Lock, text: 'Encrypted by Default' },
+			{ icon: Shield, text: 'Zero-Trust Architecture' }
 		]
 	} = $props();
 

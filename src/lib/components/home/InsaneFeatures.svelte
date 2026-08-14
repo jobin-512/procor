@@ -28,7 +28,7 @@
 		{
 			icon: ShieldCheck,
 			title: 'Bank-Grade Security',
-			desc: 'SOC 2 Type II certified with end-to-end encryption and zero-trust architecture.',
+			desc: 'Protected with end-to-end encryption and a zero-trust architecture.',
 			gradient: 'from-emerald-500 to-green-500',
 			stat: 'Encrypted',
 			statLabel: 'Security'

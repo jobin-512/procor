@@ -36,18 +36,18 @@
 		{
 			icon: Mail,
 			title: 'Email Us',
-			value: 'info@procorhrms.com',
+			value: 'info@procor.co.in',
 			description: 'We respond within 24 hours',
 			gradient: 'from-sky-500 to-cyan-500',
-			action: 'mailto:info@procorhrms.com'
+			action: 'mailto:info@procor.co.in'
 		},
 		{
 			icon: Phone,
 			title: 'Call Us',
-			value: '9871420148',
+			value: '9999954416',
 			description: 'Mon-Fri, 9am-6pm EST',
 			gradient: 'from-blue-500 to-blue-600',
-			action: 'tel:9871420148'
+			action: 'tel:9999954416'
 		},
 		{
 			icon: MessageSquare,
@@ -68,10 +68,10 @@
 	];
 
 	const offices = [
-		{ city: 'San Francisco', country: 'USA', address: '123 Market Street, Suite 400', timezone: 'PST', phone: '9871420148' },
-		{ city: 'London', country: 'UK', address: '45 Canary Wharf, Floor 12', timezone: 'GMT', phone: '9871420148' },
-		{ city: 'Singapore', country: 'Singapore', address: '88 Marina Bay Sands, Tower 2', timezone: 'SGT', phone: '9871420148' },
-		{ city: 'Dubai', country: 'UAE', address: 'DIFC Tower 5, Level 8', timezone: 'GST', phone: '9871420148' }
+		{ city: 'San Francisco', country: 'USA', address: '123 Market Street, Suite 400', timezone: 'PST', phone: '9999954416' },
+		{ city: 'London', country: 'UK', address: '45 Canary Wharf, Floor 12', timezone: 'GMT', phone: '9999954416' },
+		{ city: 'Singapore', country: 'Singapore', address: '88 Marina Bay Sands, Tower 2', timezone: 'SGT', phone: '9999954416' },
+		{ city: 'Dubai', country: 'UAE', address: 'DIFC Tower 5, Level 8', timezone: 'GST', phone: '9999954416' }
 	];
 
 	const faqs = [
@@ -93,7 +93,7 @@
 		},
 		{ 
 			q: 'Is my data secure?', 
-			a: "We're SOC 2 Type II certified, use AES-256 encryption, and maintain a zero-trust architecture. Your data is protected by bank-grade security."
+			a: "We use AES-256 encryption and maintain a zero-trust architecture, with regular third-party penetration testing. Your data is protected by bank-grade security."
 		}
 	];
 
@@ -379,7 +379,7 @@
 							<MessageSquare size={20} />
 							Start Live Chat
 						</a>
-						<a href="tel:9871420148" class="px-8 py-4 bg-white/[0.05] border border-white/[0.1] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/[0.1] transition-all">
+						<a href="tel:9999954416" class="px-8 py-4 bg-white/[0.05] border border-white/[0.1] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/[0.1] transition-all">
 							<Phone size={20} />
 							Call Support
 						</a>

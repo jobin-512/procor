@@ -9,6 +9,7 @@
 	import BarChart3 from '@lucide/svelte/icons/bar-chart-3';
 	import Globe from '@lucide/svelte/icons/globe';
 	import Shield from '@lucide/svelte/icons/shield';
+	import Lock from '@lucide/svelte/icons/lock';
 	import Zap from '@lucide/svelte/icons/zap';
 	import Clock from '@lucide/svelte/icons/clock';
 	import TrendingUp from '@lucide/svelte/icons/trending-up';
@@ -55,7 +56,7 @@
 		{
 			icon: Shield,
 			title: 'Enterprise Security',
-			description: 'SOC 2 Type II certified with bank-grade encryption.',
+			description: 'Protected with bank-grade encryption and a zero-trust architecture.',
 			gradient: 'from-amber-500 to-orange-500'
 		},
 		{
@@ -94,8 +95,8 @@
 	];
 
 	const trustBadges = [
-		{ icon: Shield, label: 'SOC 2 Certified' },
-		{ icon: Globe, label: 'GDPR Compliant' },
+		{ icon: Shield, label: 'Bank-Grade Encryption' },
+		{ icon: Lock, label: 'Zero-Trust Architecture' },
 		{ icon: Clock, label: 'Built to Stay Up' }
 	];
 

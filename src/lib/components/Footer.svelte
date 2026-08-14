@@ -14,10 +14,9 @@
 	let showBackToTop = $state(false);
 
 	const linkGroups = [
-		{ title: 'Product', links: ['Features', 'Solutions', 'Demo', 'Security'], hrefs: ['/features', '/solutions', '/demo', '/'] },
-		{ title: 'Company', links: ['About Us', 'Careers', 'Contact', 'Blog'], hrefs: ['/about', '/', '/contact', '/'] },
-		{ title: 'Resources', links: ['Help Center', 'API Docs', 'Partners', 'Status'], hrefs: ['/', '/', '/', '/'] },
-		{ title: 'Legal', links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'SLA'], hrefs: ['/', '/', '/', '/'] }
+		{ title: 'Product', links: ['Features', 'Solutions', 'Demo'], hrefs: ['/features', '/solutions', '/demo'] },
+		{ title: 'Company', links: ['About Us', 'Careers', 'Contact'], hrefs: ['/about', '/about', '/contact'] },
+		{ title: 'Legal', links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'SLA'], hrefs: ['/privacy', '/terms', '/cookie', '/sla'] }
 	];
 
 	function handleSubscribe() {
@@ -99,7 +98,7 @@
 		</div>
 
 		<!-- Link columns -->
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+		<div class="grid grid-cols-2 md:grid-cols-3 gap-8 mb-16">
 			{#each linkGroups as group}
 				<div>
 					<h5 class="font-semibold text-white/60 text-xs uppercase tracking-wider mb-5">{group.title}</h5>
@@ -118,14 +117,14 @@
 
 		<!-- Contact row -->
 		<div class="flex flex-wrap gap-6 mb-10 text-sm text-white/40">
-			<div class="flex items-center gap-2">
-				<Mail size={16} class="text-blue-400/60" />
-				<span>info@procorhrms.com</span>
-			</div>
-			<div class="flex items-center gap-2">
-				<Phone size={16} class="text-blue-400/60" />
-				<span>9871420148</span>
-			</div>
+		<div class="flex items-center gap-2">
+			<Mail size={16} class="text-blue-400/60" />
+			<span>info@procor.co.in</span>
+		</div>
+		<div class="flex items-center gap-2">
+			<Phone size={16} class="text-blue-400/60" />
+			<span>9999954416</span>
+		</div>
 			<div class="flex items-center gap-2">
 				<MapPin size={16} class="text-blue-400/60" />
 				<span>New Delhi, India</span>
@@ -135,7 +134,7 @@
 		<!-- Bottom Bar -->
 		<div class="pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4">
 			<p class="text-white/30 text-xs">
-				© 2024 PROCOR HRMS. All rights reserved.
+				© 2026 PROCOR HRMS. All rights reserved.
 			</p>
 			<div class="flex items-center gap-2 text-white/30">
 				<span class="relative flex h-2 w-2">

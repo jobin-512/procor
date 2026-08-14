@@ -8,8 +8,8 @@
 
 	let {
 		contactInfo = [
-			{ icon: Mail, label: 'Email', value: 'info@procorhrms.com', href: 'mailto:info@procorhrms.com', glow: 'rgba(117, 194, 246, 0.4)' },
-			{ icon: Phone, label: 'Phone', value: '9871420148', href: 'tel:9871420148', glow: 'rgba(139, 92, 246, 0.4)' },
+			{ icon: Mail, label: 'Email', value: 'info@procor.co.in', href: 'mailto:info@procor.co.in', glow: 'rgba(117, 194, 246, 0.4)' },
+			{ icon: Phone, label: 'Phone', value: '9999954416', href: 'tel:9999954416', glow: 'rgba(139, 92, 246, 0.4)' },
 			{ icon: MapPin, label: 'Address', value: 'Connaught Place, New Delhi 110001', href: '#', glow: 'rgba(16, 185, 129, 0.4)' },
 			{ icon: Clock, label: 'Hours', value: 'Mon - Fri 9am - 6pm PST', href: '#', glow: 'rgba(245, 158, 11, 0.4)' }
 		]

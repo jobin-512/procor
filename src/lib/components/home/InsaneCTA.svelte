@@ -14,9 +14,9 @@
 	];
 
 	const trustBadges = [
-		{ icon: ShieldCheck, label: 'SOC 2 Type II', color: 'text-emerald-400' },
-		{ icon: ShieldCheck, label: 'GDPR Compliant', color: 'text-sky-400' },
-		{ icon: Zap, label: 'Here When You Need Us', color: 'text-violet-400' }
+		{ icon: Zap, label: 'Here When You Need Us', color: 'text-violet-400' },
+		{ icon: ShieldCheck, label: 'Bank-Grade Encryption', color: 'text-emerald-400' },
+		{ icon: CheckCircle, label: 'Trusted Worldwide', color: 'text-sky-400' }
 	];
 </script>
 

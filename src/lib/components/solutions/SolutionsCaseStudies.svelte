@@ -2,10 +2,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-	import {
-		ArrowRight,
-		Quote
-	} from '@lucide/svelte';
+	import { ArrowRight } from '@lucide/svelte';
 	import GlowCard from '$lib/components/ui/GlowCard.svelte';
 	import SectionBadge from '$lib/components/ui/SectionBadge.svelte';
 	import TextReveal from '$lib/components/ui/TextReveal.svelte';
@@ -15,24 +12,18 @@
 			company: 'TechCorp Industries',
 			industry: 'Technology',
 			metric: '3.2x Faster Onboarding',
-			quote: 'PROCOR transformed our hiring pipeline. We went from 14-day onboarding to under 5 days with full automation.',
-			author: 'Sarah Chen, VP People',
 			gradient: 'from-sky-600 to-indigo-700'
 		},
 		{
 			company: 'MedCare Health Systems',
 			industry: 'Healthcare',
 			metric: '95% Fewer Violations',
-			quote: 'Credential tracking used to be our biggest headache. Now it runs on autopilot with zero manual intervention.',
-			author: 'Dr. James Wilson, COO',
 			gradient: 'from-rose-600 to-pink-700'
 		},
 		{
 			company: 'AutoMfg Corp',
 			industry: 'Manufacturing',
 			metric: '$2.4M Annual Savings',
-			quote: 'The workforce analytics gave us visibility we never had. We optimized shifts and cut overtime by 60%.',
-			author: 'Maria Rodriguez, CHRO',
 			gradient: 'from-amber-600 to-orange-700'
 		}
 	];
@@ -90,14 +81,6 @@
 							<p class="text-2xl font-black text-white font-display bg-gradient-to-r from-sky-400 to-procor-blue bg-clip-text text-transparent">
 								{cs.metric}
 							</p>
-						</div>
-
-						<div class="px-7 pb-4 flex-1">
-							<div class="flex gap-2 mb-3">
-								<Quote size={18} class="text-sky-400/50 flex-shrink-0 mt-0.5" />
-								<p class="text-white/65 text-sm leading-relaxed italic">{cs.quote}</p>
-							</div>
-							<p class="text-white/40 text-xs font-bold ml-7">— {cs.author}</p>
 						</div>
 
 						<div class="px-7 pb-7 mt-auto">

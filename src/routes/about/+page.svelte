@@ -72,7 +72,7 @@ import Calendar from '@lucide/svelte/icons/calendar';
 		{ year: '2019', title: 'Solving Compliance Services', description: 'We took on the market’s toughest compliance-service challenges, turning fragmented, manual processes into one trusted system.', icon: CheckCircle },
 		{ year: '2020', title: 'First 100 Clients', description: 'Achieved product-market fit and reached our first 100 clients.', icon: TrendingUp },
 		{ year: '2021', title: 'Global Expansion', description: 'Expanded into London, Singapore, and Dubai.', icon: Globe },
-		{ year: '2022', title: 'The HRMS Revolution', description: 'Launched PROCOR HRMS — reimagining workforce management with AI at its core.', icon: Rocket }
+		{ year: '2026', title: 'The HRMS Revolution', description: 'Launched PROCOR HRMS — reimagining workforce management with AI at its core.', icon: Rocket }
 	];
 
 	import abhishekImg from '$lib/assets/about/1.webp';

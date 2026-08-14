@@ -18,7 +18,6 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import Play from '@lucide/svelte/icons/play';
 	import Rocket from '@lucide/svelte/icons/rocket';
-	import Quote from '@lucide/svelte/icons/quote';
 	import Star from '@lucide/svelte/icons/star';
 	import Calculator from '@lucide/svelte/icons/calculator';
 
@@ -35,14 +34,6 @@
 			gradient: 'from-blue-500 to-blue-600',
 			challenges: ['Rapid headcount growth', 'Global hiring', 'Retention'],
 			benefits: ['40% faster hiring', 'AI-powered matching', 'Equity management'],
-			caseStudy: {
-				company: 'TechScale Inc.',
-				logo: 'T',
-				quote: 'PROCOR helped us scale from 200 to 2,000 employees in 18 months.',
-				author: 'Sarah Chen',
-				role: 'VP of People',
-				result: '40% faster time-to-hire'
-			}
 		},
 		{
 			icon: Heart,
@@ -51,14 +42,6 @@
 			gradient: 'from-rose-500 to-pink-500',
 			challenges: ['Compliance requirements', 'Credentialing', 'Shift scheduling'],
 			benefits: ['100% compliance', 'Automated credentialing', 'Smart scheduling'],
-			caseStudy: {
-				company: 'HealthFirst',
-				logo: 'H',
-				quote: 'Zero compliance violations since implementing PROCOR.',
-				author: 'Dr. James Wilson',
-				role: 'CHRO',
-				result: '100% compliance rate'
-			}
 		},
 		{
 			icon: Factory,
@@ -67,14 +50,6 @@
 			gradient: 'from-amber-500 to-orange-500',
 			challenges: ['Multi-site management', 'Shift workers', 'Union compliance'],
 			benefits: ['Unified workforce view', 'Time & attendance', 'Union rules engine'],
-			caseStudy: {
-				company: 'Global Manufacturing Co.',
-				logo: 'G',
-				quote: 'Reduced payroll errors by 99% across 12 facilities.',
-				author: 'Mike Thompson',
-				role: 'HR Director',
-				result: '99% payroll accuracy'
-			}
 		},
 		{
 			icon: Landmark,
@@ -82,15 +57,7 @@
 			description: 'Enterprise-grade security for regulated industries.',
 			gradient: 'from-emerald-500 to-green-500',
 			challenges: ['Regulatory compliance', 'Audit trails', 'Data security'],
-			benefits: ['SOC 2 certified', 'Full audit logs', 'Bank-grade encryption'],
-			caseStudy: {
-				company: 'FinanceFirst Bank',
-				logo: 'F',
-				quote: 'Passed every audit with flying colors since day one.',
-				author: 'Elena Rodriguez',
-				role: 'Chief Compliance Officer',
-				result: '100% audit success'
-			}
+			benefits: ['Independent audits', 'Full audit logs', 'Bank-grade encryption'],
 		},
 		{
 			icon: ShoppingBag,
@@ -99,14 +66,6 @@
 			gradient: 'from-sky-500 to-cyan-500',
 			challenges: ['Seasonal hiring', 'High turnover', 'Multi-location'],
 			benefits: ['Rapid onboarding', 'Predictive attrition', 'Store analytics'],
-			caseStudy: {
-				company: 'RetailMax',
-				logo: 'R',
-				quote: 'Cut seasonal hiring time from 3 weeks to 3 days.',
-				author: 'David Kim',
-				role: 'VP Operations',
-				result: '85% faster hiring'
-			}
 		}
 	];
 
@@ -246,7 +205,7 @@
 			</div>
 
 			<!-- Active Industry Content -->
-			<div class="reveal-section grid lg:grid-cols-2 gap-12">
+			<div class="reveal-section grid gap-12">
 				<!-- Left: Details -->
 				<div>
 					<div class="w-16 h-16 rounded-2xl bg-gradient-to-br {industries[activeIndustry].gradient} flex items-center justify-center mb-6 shadow-lg">
@@ -287,39 +246,6 @@
 					</a>
 				</div>
 
-				<!-- Right: Case Study -->
-				<div class="relative">
-					<div class="absolute -inset-1 rounded-3xl bg-gradient-to-r {industries[activeIndustry].gradient} opacity-30 blur-2xl"></div>
-					<div class="relative p-8 rounded-3xl bg-white/[0.03] border border-white/[0.1] backdrop-blur-xl h-full">
-						<div class="flex items-center gap-4 mb-6">
-							<div class="w-14 h-14 rounded-xl bg-gradient-to-br {industries[activeIndustry].gradient} flex items-center justify-center text-2xl font-black text-white">
-								{industries[activeIndustry].caseStudy.logo}
-							</div>
-							<div>
-								<div class="text-sm text-white/40 uppercase tracking-wider">Case Study</div>
-								<div class="text-lg font-bold text-white">{industries[activeIndustry].caseStudy.company}</div>
-							</div>
-						</div>
-
-						<Quote size={32} class="text-white/10 mb-4" />
-						
-						<blockquote class="text-xl text-white/80 mb-8 leading-relaxed">
-							"{industries[activeIndustry].caseStudy.quote}"
-						</blockquote>
-
-						<div class="flex items-center justify-between pt-6 border-t border-white/[0.06]">
-							<div>
-								<div class="font-semibold text-white">{industries[activeIndustry].caseStudy.author}</div>
-								<div class="text-sm text-white/50">{industries[activeIndustry].caseStudy.role}</div>
-							</div>
-							<div class="text-right">
-								<div class="text-2xl font-black bg-gradient-to-r {industries[activeIndustry].gradient} bg-clip-text text-transparent">
-									{industries[activeIndustry].caseStudy.result}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>

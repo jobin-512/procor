@@ -22,12 +22,6 @@
 	let openFaq = $state(null);
 	let barsAnimated = $state(false);
 
-	const brands = [
-		'Standard Chartered', 'Deloitte', 'Accenture', 'Salesforce',
-		'NVIDIA', 'Shopify', 'Stripe', 'Google', 'Microsoft', 'Adobe',
-		'Meta', 'Amazon', 'Netflix', 'Uber', 'Airbnb', 'Spotify'
-	];
-
 	const steps = [
 		{
 			icon: Rocket,
@@ -62,7 +56,7 @@
 	const faqs = [
 		{ q: 'How does implementation work?', a: 'Every rollout begins with a discovery call, followed by a tailored configuration of your PROCOR workspace. We migrate your existing records, train your teams, and go live when you are ready — with hands-on guidance throughout.' },
 		{ q: 'Can I start with one module and add more later?', a: 'Absolutely. PROCOR is fully modular — begin with Core HR or Payroll, then unlock additional modules whenever you need them. Every module shares the same data layer, so there is never any re-integration required.' },
-		{ q: 'Is my data secure?', a: 'Security is foundational to everything we build. We are SOC 2 Type II certified, use strong encryption at rest and in transit, maintain a zero-trust architecture, and undergo regular third-party penetration testing.' },
+		{ 			q: 'Is my data secure?', a: 'Security is foundational to everything we build. We use strong encryption at rest and in transit, maintain a zero-trust architecture, and undergo regular third-party penetration testing.' },
 		{ q: 'Do you support multi-currency and multi-country payroll?', a: 'Yes — PROCOR handles payroll across many currencies and jurisdictions with automated tax calculations, local compliance updates, and direct bank integrations so you can focus on your people instead of paperwork.' },
 		{ q: 'What kind of support do you offer?', a: 'All plans include email and chat support. Growth tier receives priority responses, and Enterprise is paired with a dedicated Customer Success Manager and proactive quarterly business reviews.' },
 		{ q: 'Can I migrate from another HRMS?', a: 'Yes! Our migration team handles the import of employee records, payroll history, benefits, and performance reviews — no manual re-entry required. We have moved customers over from every major HR platform.' }
@@ -104,24 +98,6 @@
 
 <div class="relative min-h-screen bg-[#080c15] text-white">
 	<HomeHero />
-
-	<!-- TRUSTED BY -->
-	<section class="border-y border-white/[0.06] px-6 py-14 md:px-12" data-reveal>
-		<div class="mx-auto max-w-7xl">
-			<p class="mb-9 text-center text-xs font-semibold uppercase tracking-[0.3em] text-white/30">
-				Trusted by teams at leading organizations
-			</p>
-			<div class="relative overflow-hidden">
-				<div class="absolute left-0 top-0 bottom-0 z-10 w-40 bg-gradient-to-r from-[#080c15] to-transparent"></div>
-				<div class="absolute right-0 top-0 bottom-0 z-10 w-40 bg-gradient-to-l from-[#080c15] to-transparent"></div>
-				<div class="flex w-max items-center gap-16 animate-scroll-x">
-					{#each [...brands, ...brands, ...brands] as brand}
-						<span class="whitespace-nowrap text-lg font-bold text-white/20 transition-colors duration-500 hover:text-white/40">{brand}</span>
-					{/each}
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<InsanePrinciples />
 

@@ -86,7 +86,7 @@
 			features: [
 				{ icon: Scale, title: 'Regulatory Compliance', desc: 'Automated SOX, FINRA, and SEC compliance tracking with immutable audit logs and document management.' },
 				{ icon: BarChart3, title: 'Performance Management', desc: 'Multi-rater feedback, goal cascading, and compensation benchmarking for regulated environments.' },
-				{ icon: Shield, title: 'Data Security Controls', desc: 'SOC 2 compliant HR data management with role-based access and encrypted PII handling.' }
+				{ icon: Shield, title: 'Data Security Controls', desc: 'Compliant HR data management with role-based access and encrypted PII handling.' }
 			],
 			stat: { value: 'Strong', label: 'Audit Pass Rate' },
 			caseStudy: 'FinServ Corp achieved perfect audit scores for 3 consecutive years with PROCOR.',

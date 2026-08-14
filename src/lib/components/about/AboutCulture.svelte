@@ -2,20 +2,10 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-	import { Quote, ChevronDown } from '@lucide/svelte';
 	import TiltCard from '$lib/components/ui/TiltCard.svelte';
 	import SectionBadge from '$lib/components/ui/SectionBadge.svelte';
 
-	let { culturePillars = [], testimonials = [] } = $props();
-	let activeTestimonial = $state(0);
-
-	function nextTestimonial() {
-		activeTestimonial = (activeTestimonial + 1) % testimonials.length;
-	}
-	function prevTestimonial() {
-		activeTestimonial =
-			(activeTestimonial - 1 + testimonials.length) % testimonials.length;
-	}
+	let { culturePillars = [] } = $props();
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -62,58 +52,6 @@
 					</TiltCard>
 				</div>
 			{/each}
-		</div>
-
-		<div class="max-w-3xl mx-auto text-center">
-			<div class="relative min-h-[200px] flex items-center justify-center">
-				{#each testimonials as t, i}
-					{#if i === activeTestimonial}
-						<div class="animate-fade-in">
-							<Quote size={32} class="text-sky-500/30 mx-auto mb-6" />
-							<blockquote
-								class="text-xl md:text-2xl font-bold text-white/90 leading-relaxed mb-8 italic"
-							>
-								"{t.quote}"
-							</blockquote>
-							<div>
-								<p class="text-white font-black font-display">{t.name}</p>
-								<p class="text-sky-400/60 text-sm font-bold">
-									{t.role} · {t.tenure}
-								</p>
-							</div>
-						</div>
-					{/if}
-				{/each}
-			</div>
-
-			<div class="flex items-center justify-center gap-4 mt-10">
-				<button
-					onclick={prevTestimonial}
-					class="w-10 h-10 rounded-full border border-white/10 bg-white/[0.03] flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 hover:bg-white/[0.08] transition-all duration-300 cursor-pointer"
-					aria-label="Previous testimonial"
-				>
-					<ChevronDown size={18} class="rotate-90" />
-				</button>
-				<div class="flex gap-2">
-					{#each testimonials as _, i}
-						<button
-							onclick={() => (activeTestimonial = i)}
-							class="w-2 h-2 rounded-full transition-all duration-300 cursor-pointer {i ===
-							activeTestimonial
-								? 'bg-sky-400 w-6'
-								: 'bg-white/20 hover:bg-white/40'}"
-							aria-label="Go to testimonial {i + 1}"
-						></button>
-					{/each}
-				</div>
-				<button
-					onclick={nextTestimonial}
-					class="w-10 h-10 rounded-full border border-white/10 bg-white/[0.03] flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 hover:bg-white/[0.08] transition-all duration-300 cursor-pointer"
-					aria-label="Next testimonial"
-				>
-					<ChevronDown size={18} class="-rotate-90" />
-				</button>
-			</div>
 		</div>
 	</div>
 </section>
