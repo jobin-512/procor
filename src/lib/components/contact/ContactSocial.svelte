@@ -8,10 +8,10 @@
 
 	let {
 		socials = [
-			{ icon: Link, label: 'LinkedIn', handle: '@procor', followers: '12.4K', href: '#', color: 'hover:text-sky-400 hover:border-sky-400/30 hover:shadow-sky-400/10' },
-			{ icon: AtSign, label: 'X / Twitter', handle: '@procorhr', followers: '8.2K', href: '#', color: 'hover:text-sky-300 hover:border-sky-300/30 hover:shadow-sky-300/10' },
-			{ icon: Code, label: 'GitHub', handle: 'procor', followers: '3.1K', href: '#', color: 'hover:text-white hover:border-white/30 hover:shadow-white/10' },
-			{ icon: Video, label: 'YouTube', handle: '@procor', followers: '5.6K', href: '#', color: 'hover:text-rose-400 hover:border-rose-400/30 hover:shadow-rose-400/10' }
+			{ icon: Link, label: 'LinkedIn', handle: '@procor', href: '#', color: 'hover:text-sky-400 hover:border-sky-400/30 hover:shadow-sky-400/10' },
+			{ icon: AtSign, label: 'X / Twitter', handle: '@procorhr', href: '#', color: 'hover:text-sky-300 hover:border-sky-300/30 hover:shadow-sky-300/10' },
+			{ icon: Code, label: 'GitHub', handle: 'procor', href: '#', color: 'hover:text-white hover:border-white/30 hover:shadow-white/10' },
+			{ icon: Video, label: 'YouTube', handle: '@procor', href: '#', color: 'hover:text-rose-400 hover:border-rose-400/30 hover:shadow-rose-400/10' }
 		]
 	} = $props();
 
@@ -51,10 +51,6 @@
 						</div>
 						<p class="text-sm font-bold text-white mb-1">{social.label}</p>
 						<p class="text-xs text-neutral-600 font-medium mb-4">{social.handle}</p>
-						<div class="flex items-center justify-center gap-2 mb-5">
-							<span class="text-lg font-black text-white">{social.followers}</span>
-							<span class="text-[9px] font-bold text-neutral-500 uppercase tracking-wider">followers</span>
-						</div>
 						<MagneticButton variant="secondary" size="sm" className="w-full">
 							Follow
 						</MagneticButton>

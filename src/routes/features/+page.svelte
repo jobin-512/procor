@@ -28,6 +28,7 @@
 	let pageEl = $state(null);
 	let activeCategory = $state(0);
 	let activeDemoTab = $state(0);
+	let imgFailed = $state(false);
 
 	const categories = [
 		{
@@ -117,15 +118,17 @@
 	];
 
 	const demoTabs = [
-		{ label: 'Dashboard', description: 'Unified view of all HR metrics' },
-		{ label: 'Employee Profiles', description: 'Complete employee information' },
-		{ label: 'Payroll Run', description: 'One-click global payroll' },
-		{ label: 'AI Matching', description: 'Smart candidate recommendations' }
+		{ label: 'Login', slug: 'login', description: 'Secure single sign-on for every employee', type: 'image' },
+		{ label: 'Dashboard', slug: 'dashboard', description: 'Unified view of all HR metrics', type: 'image' },
+		{ label: 'Profile', slug: 'profile', description: 'Complete employee information', type: 'image' },
+		{ label: 'Reimbursement', slug: 'reimbursement', description: 'Submit and track expense claims', type: 'image' },
+		{ label: 'Attendance', slug: 'attendance', description: 'Time tracking and attendance', type: 'image' },
+		{ label: 'Leave', slug: 'leave', description: 'Request and approve time off', type: 'image' }
 	];
 
 	const comparison = [
 		{ feature: 'AI-Powered Matching', procor: true, competitor1: false, competitor2: false },
-		{ feature: 'Global Payroll (150+ countries)', procor: true, competitor1: true, competitor2: false },
+		{ feature: 'Global Payroll (many countries)', procor: true, competitor1: true, competitor2: false },
 		{ feature: 'Predictive Analytics', procor: true, competitor1: false, competitor2: true },
 		{ feature: 'Mobile App', procor: true, competitor1: true, competitor2: true },
 		{ feature: 'Custom Workflows', procor: true, competitor1: true, competitor2: false },
@@ -227,69 +230,57 @@
 			</div>
 
 			<!-- Active Category Content -->
-			<div class="reveal-section grid lg:grid-cols-2 gap-12 items-center">
-				<div>
-					<div class="w-16 h-16 rounded-2xl bg-gradient-to-br {categories[activeCategory].gradient} flex items-center justify-center mb-6 shadow-lg">
-						<svelte:component this={categories[activeCategory].icon} size={32} class="text-white" />
-					</div>
-					<h3 class="text-3xl md:text-4xl font-black text-white mb-4">{categories[activeCategory].title}</h3>
-					<p class="text-xl text-white/60 mb-8">{categories[activeCategory].description}</p>
-					
-					<div class="grid sm:grid-cols-2 gap-4">
-						{#each categories[activeCategory].features as feature}
-							<div class="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
-								<div class="w-8 h-8 rounded-lg bg-gradient-to-br {categories[activeCategory].gradient} flex items-center justify-center">
-									<Check size={16} class="text-white" />
-								</div>
-								<span class="text-white/80 font-medium">{feature}</span>
-							</div>
-						{/each}
-					</div>
-
-					<a href="/demo" class="inline-flex items-center gap-2 mt-8 text-sky-400 font-semibold hover:text-sky-300 transition-colors group">
-						<span>See it in action</span>
-						<ChevronRight size={18} class="group-hover:translate-x-1 transition-transform" />
-					</a>
+			<div class="reveal-section max-w-3xl mx-auto">
+				<div class="w-16 h-16 rounded-2xl bg-gradient-to-br {categories[activeCategory].gradient} flex items-center justify-center mb-6 shadow-lg">
+					<svelte:component this={categories[activeCategory].icon} size={32} class="text-white" />
 				</div>
+				<h3 class="text-3xl md:text-4xl font-black text-white mb-4">{categories[activeCategory].title}</h3>
+				<p class="text-xl text-white/60 mb-8">{categories[activeCategory].description}</p>
 
-				<!-- Feature Preview Card -->
-				<div class="relative">
-					<div class="absolute -inset-1 rounded-3xl bg-gradient-to-r {categories[activeCategory].gradient} opacity-30 blur-2xl"></div>
-					<div class="relative p-8 rounded-3xl bg-white/[0.03] border border-white/[0.1] backdrop-blur-xl">
-						<div class="aspect-video rounded-2xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] flex items-center justify-center">
-							<div class="text-center">
-								<svelte:component this={categories[activeCategory].icon} size={64} class="text-white/20 mx-auto mb-4" />
-								<p class="text-white/30 text-sm">Interactive demo preview</p>
+				<div class="grid sm:grid-cols-2 gap-4">
+					{#each categories[activeCategory].features as feature}
+						<div class="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
+							<div class="w-8 h-8 rounded-lg bg-gradient-to-br {categories[activeCategory].gradient} flex items-center justify-center">
+								<Check size={16} class="text-white" />
 							</div>
+							<span class="text-white/80 font-medium">{feature}</span>
 						</div>
-					</div>
+					{/each}
 				</div>
+
+				<a href="/demo" class="inline-flex items-center gap-2 mt-8 text-sky-400 font-semibold hover:text-sky-300 transition-colors group">
+					<span>See it in action</span>
+					<ChevronRight size={18} class="group-hover:translate-x-1 transition-transform" />
+				</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- INTERACTIVE DEMO -->
+	<!-- SEE IT IN ACTION -->
 	<section class="relative py-32 px-6 md:px-12">
 		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-sky-950/20 to-transparent"></div>
-		
+
 		<div class="max-w-6xl mx-auto relative z-10">
 			<div class="reveal-section text-center mb-16">
 				<div class="inline-flex items-center gap-2 px-5 py-2 bg-blue-500/20 border border-blue-500/20 rounded-full text-sm font-semibold text-blue-300 mb-8">
 					<Play size={16} />
-					<span>Interactive Demo</span>
+					<span>See it in action</span>
 				</div>
 				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
-					See it in <span class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">action</span>
+					A tour of the <span class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">product</span>
 				</h2>
+				<p class="text-white/50 max-w-2xl mx-auto">
+					Explore real product screens — login, dashboard, profile, reimbursement, attendance and leave.
+				</p>
 			</div>
 
 			<!-- Demo Tabs -->
 			<div class="reveal-section">
-				<div class="flex flex-wrap justify-center gap-4 mb-8">
+				<div class="flex flex-wrap justify-center gap-3 mb-8">
 					{#each demoTabs as tab, i}
 						<button
-							onclick={() => activeDemoTab = i}
-							class="px-6 py-3 rounded-xl transition-all duration-300 {activeDemoTab === i ? 'bg-blue-500/20 border border-blue-500/30 text-white' : 'text-white/50 hover:text-white hover:bg-white/[0.05]'}"
+							onclick={() => { activeDemoTab = i; imgFailed = false; }}
+							class="px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-300 {activeDemoTab === i ? 'bg-blue-500/20 border border-blue-500/30 text-white' : 'text-white/50 hover:text-white hover:bg-white/[0.05]'}"
 						>
 							{tab.label}
 						</button>
@@ -309,20 +300,32 @@
 							</div>
 							<div class="flex-1 flex justify-center">
 								<div class="px-4 py-1.5 rounded-lg bg-white/[0.05] border border-white/[0.08]">
-									<span class="text-xs font-mono text-white/40">app.procor.io/{demoTabs[activeDemoTab].label.toLowerCase().replace(' ', '-')}</span>
+									<span class="text-xs font-mono text-white/40">app.procor.io/{demoTabs[activeDemoTab].slug}</span>
 								</div>
 							</div>
 						</div>
-						
+
 						<!-- Demo Content -->
-						<div class="aspect-video p-8 flex items-center justify-center">
-							<div class="text-center">
-								<div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center mx-auto mb-6 border border-white/10">
-									<Play size={40} class="text-white/40 ml-1" />
+						<div class="aspect-video bg-[#050810] flex items-center justify-center overflow-hidden">
+							{#if !imgFailed}
+								<img
+									src={`/see-it-in-action/${demoTabs[activeDemoTab].slug}.png`}
+									alt={demoTabs[activeDemoTab].label}
+									class="w-full h-full object-cover"
+									onerror={() => (imgFailed = true)}
+									onload={() => (imgFailed = false)}
+								/>
+							{:else}
+								<div class="text-center px-6">
+									<div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] flex items-center justify-center mx-auto mb-6 border border-white/10">
+										<Play size={32} class="text-white/30" />
+									</div>
+									<h3 class="text-xl font-bold text-white mb-2">{demoTabs[activeDemoTab].label}</h3>
+									<p class="text-white/40 text-sm">
+										Add screenshot at <code class="text-sky-400">static/see-it-in-action/{demoTabs[activeDemoTab].slug}.png</code>
+									</p>
 								</div>
-								<h3 class="text-2xl font-bold text-white mb-2">{demoTabs[activeDemoTab].label}</h3>
-								<p class="text-white/50">{demoTabs[activeDemoTab].description}</p>
-							</div>
+							{/if}
 						</div>
 					</div>
 				</div>

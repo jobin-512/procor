@@ -20,7 +20,7 @@
 			name: 'Payroll & Benefits',
 			icon: DollarSign,
 			features: [
-				{ icon: Globe, title: 'Global Payroll', description: 'Process payroll in 140+ countries with local tax compliance and multi-currency support.', color: '#10b981' },
+				{ icon: Globe, title: 'Global Payroll', 			description: 'Process payroll in many countries with local tax compliance and multi-currency support.', color: '#10b981' },
 				{ icon: Heart, title: 'Benefits Administration', description: 'Self-service benefits portal with enrollment automation and carrier integrations.', color: '#f43f5e' },
 				{ icon: BadgePercent, title: 'Tax Compliance', description: 'Automated tax calculations, filing, and reporting across all jurisdictions.', color: '#f59e0b' },
 				{ icon: Clock, title: 'Time & Attendance', description: 'Time tracking, shift scheduling, and PTO management with biometric integration.', color: '#6366f1' }

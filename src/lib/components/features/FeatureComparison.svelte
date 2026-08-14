@@ -6,7 +6,7 @@
 	import { Check, X, Star, ArrowRight } from '@lucide/svelte';
 
 	const comparisonData = [
-		{ feature: 'Global Payroll (140+ countries)', procor: true, competitor1: false, competitor2: true },
+		{ feature: 'Global Payroll (many countries)', procor: true, competitor1: false, competitor2: true },
 		{ feature: 'AI-Powered Analytics', procor: true, competitor1: true, competitor2: false },
 		{ feature: 'Real-Time Dashboards', procor: true, competitor1: true, competitor2: true },
 		{ feature: 'Mobile App', procor: true, competitor1: true, competitor2: false },

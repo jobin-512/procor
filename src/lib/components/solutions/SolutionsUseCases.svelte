@@ -18,7 +18,7 @@
 
 	const useCases = [
 		{ icon: Globe, title: 'Remote Work Management', desc: 'Manage distributed teams with virtual offices, async collaboration tools, and timezone-aware scheduling.' },
-		{ icon: Banknote, title: 'Global Payroll', desc: 'Process payroll across 150+ countries with automated tax calculations, multi-currency support, and local compliance.' },
+		{ icon: Banknote, title: 'Global Payroll', 		desc: 'Process payroll across many countries with automated tax calculations, multi-currency support, and local compliance.' },
 		{ icon: Target, title: 'Talent Acquisition', desc: 'AI-powered recruitment with job board syndication, candidate scoring, and automated interview scheduling.' },
 		{ icon: BarChart3, title: 'Performance Management', desc: 'Continuous feedback, OKR tracking, 360 reviews, and performance-based compensation planning.' },
 		{ icon: Shield, title: 'Compliance Management', desc: 'Automated policy acknowledgments, regulatory tracking, and audit-ready documentation across all jurisdictions.' },

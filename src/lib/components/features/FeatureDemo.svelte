@@ -21,7 +21,7 @@
 			icon: DollarSign,
 			color: '#10b981',
 			description: 'Run global payroll in minutes, not hours. Automated calculations, compliance checks, and direct deposit setup.',
-			items: ['140+ country support', 'Auto tax calculations', 'Batch processing engine', 'Error detection AI', 'One-click bank transfers']
+			items: ['Global country support', 'Auto tax calculations', 'Batch processing engine', 'Error detection AI', 'One-click bank transfers']
 		},
 		{
 			title: 'Talent Pipeline',

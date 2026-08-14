@@ -43,7 +43,7 @@
 		{
 			icon: Globe,
 			title: 'Global Scale',
-			description: 'Process payroll in 150+ countries with local compliance.',
+			description: 'Process payroll in many countries with local compliance.',
 			gradient: 'from-sky-500 to-cyan-500'
 		},
 		{
@@ -80,14 +80,14 @@
 	];
 
 	const kpis = [
-		{ icon: Users, label: 'Active Employees', value: '12,847', change: '+8.3%', color: 'text-sky-400', bg: 'bg-sky-500/10' },
-		{ icon: Clock, label: 'Avg Time-to-Hire', value: '18 days', change: '-22%', color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
-		{ icon: DollarSign, label: 'Payroll Accuracy', value: '99.97%', change: '+0.12%', color: 'text-blue-400', bg: 'bg-blue-500/10' },
-		{ icon: Activity, label: 'Satisfaction', value: '91%', change: '+12pts', color: 'text-amber-400', bg: 'bg-amber-500/10' }
+		{ icon: Users, label: 'Active Employees', value: 'Thousands', color: 'text-sky-400', bg: 'bg-sky-500/10' },
+		{ icon: Clock, label: 'Avg Time-to-Hire', value: 'Faster', color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+		{ icon: DollarSign, label: 'Payroll Accuracy', value: 'Reliable', color: 'text-blue-400', bg: 'bg-blue-500/10' },
+		{ icon: Activity, label: 'Satisfaction', value: 'High', color: 'text-amber-400', bg: 'bg-amber-500/10' }
 	];
 
 	const benefits = [
-		'14-day free trial',
+		'Free to get started',
 		'No credit card required',
 		'Full feature access',
 		'Dedicated onboarding'
@@ -96,7 +96,7 @@
 	const trustBadges = [
 		{ icon: Shield, label: 'SOC 2 Certified' },
 		{ icon: Globe, label: 'GDPR Compliant' },
-		{ icon: Clock, label: '99.99% Uptime' }
+		{ icon: Clock, label: 'Built to Stay Up' }
 	];
 
 	async function handleSubmit(e) {
@@ -344,10 +344,7 @@
 											</div>
 										</div>
 										<p class="text-2xl font-bold text-white mb-1">{kpi.value}</p>
-										<div class="flex items-center justify-between">
-											<span class="text-xs text-white/40">{kpi.label}</span>
-											<span class="text-xs font-semibold text-emerald-400">{kpi.change}</span>
-										</div>
+										<span class="text-xs text-white/40">{kpi.label}</span>
 									</div>
 								{/each}
 							</div>
@@ -417,7 +414,7 @@
 			</h2>
 			
 			<p class="text-xl text-white/50 mb-12 max-w-2xl mx-auto">
-				Join 2,500+ organizations that trust PROCOR. Start your free trial today.
+				Join the organizations that trust PROCOR. Start your free trial today.
 			</p>
 
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">

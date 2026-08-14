@@ -23,10 +23,9 @@ import Calendar from '@lucide/svelte/icons/calendar';
 	let activeTimelineIndex = $state(0);
 
 	const stats = [
-		{ value: '2019', label: 'Founded', icon: Calendar },
-		{ value: '500+', label: 'Team Members', icon: Users },
-		{ value: '2,500+', label: 'Clients', icon: Globe },
-		{ value: '150+', label: 'Countries', icon: MapPin }
+		{ value: 'Since 2018', label: 'Building PROCOR', icon: Calendar },
+		{ value: 'Global', label: 'Team & Reach', icon: Globe },
+		{ value: 'People-First', label: 'Our Philosophy', icon: Heart }
 	];
 
 	const values = [
@@ -69,12 +68,11 @@ import Calendar from '@lucide/svelte/icons/calendar';
 	];
 
 	const timeline = [
-		{ year: '2019', title: 'The Beginning', description: 'Founded in a small garage with a vision to transform HR technology.', icon: Rocket },
-		{ year: '2020', title: 'First 100 Clients', description: 'Achieved product-market fit and raised Series A funding.', icon: TrendingUp },
-		{ year: '2021', title: 'Global Expansion', description: 'Opened offices in London, Singapore, and Dubai.', icon: Globe },
-		{ year: '2022', title: 'AI Revolution', description: 'Launched neural matching engine and predictive analytics.', icon: Lightbulb },
-		{ year: '2023', title: 'Industry Leader', description: 'Recognized as a Leader in Gartner Magic Quadrant for HCM.', icon: Award },
-		{ year: '2024', title: 'The Future', description: 'Expanding to 150+ countries with autonomous HR capabilities.', icon: Star }
+		{ year: '2018', title: 'PROCOR Compliance', description: 'PROCOR began in 2018 as a compliance-first company, built to help organizations navigate complex regulatory requirements with confidence.', icon: Shield },
+		{ year: '2019', title: 'Solving Compliance Services', description: 'We took on the market’s toughest compliance-service challenges, turning fragmented, manual processes into one trusted system.', icon: CheckCircle },
+		{ year: '2020', title: 'First 100 Clients', description: 'Achieved product-market fit and reached our first 100 clients.', icon: TrendingUp },
+		{ year: '2021', title: 'Global Expansion', description: 'Expanded into London, Singapore, and Dubai.', icon: Globe },
+		{ year: '2022', title: 'The HRMS Revolution', description: 'Launched PROCOR HRMS — reimagining workforce management with AI at its core.', icon: Rocket }
 	];
 
 	import abhishekImg from '$lib/assets/about/1.webp';
@@ -165,14 +163,16 @@ import Calendar from '@lucide/svelte/icons/calendar';
 			</p>
 
 			<!-- Stats -->
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+			<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
 				{#each stats as stat}
-					<div class="group p-6 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-500">
-						<div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-							<svelte:component this={stat.icon} size={22} class="text-blue-400" />
+					<div class="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-500">
+						<div class="w-10 h-10 flex-shrink-0 rounded-xl bg-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+							<svelte:component this={stat.icon} size={18} class="text-blue-400" />
 						</div>
-						<div class="text-3xl md:text-4xl font-black text-white mb-1">{stat.value}</div>
-						<div class="text-sm text-white/50">{stat.label}</div>
+						<div>
+							<div class="text-xl md:text-2xl font-black text-white leading-none">{stat.value}</div>
+							<div class="text-xs text-white/50 mt-1">{stat.label}</div>
+						</div>
 					</div>
 				{/each}
 			</div>
@@ -312,37 +312,6 @@ import Calendar from '@lucide/svelte/icons/calendar';
 							</a>
 							</div>
 						</div>
-					</div>
-				{/each}
-			</div>
-		</div>
-	</section>
-
-	<!-- OFFICES SECTION -->
-	<section class="relative py-32 px-6 md:px-12">
-		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-950/10 to-transparent"></div>
-		
-		<div class="max-w-6xl mx-auto relative z-10">
-			<div class="reveal-section text-center mb-20">
-				<div class="inline-flex items-center gap-2 px-5 py-2 bg-emerald-500/20 border border-emerald-500/20 rounded-full text-sm font-semibold text-emerald-300 mb-8">
-					<Globe size={16} />
-					<span>Global Presence</span>
-				</div>
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
-					Offices <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">worldwide</span>
-				</h2>
-			</div>
-
-			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-				{#each offices as office}
-					<div class="reveal-section group p-6 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] hover:border-emerald-500/30 transition-all duration-500">
-						<div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-							<MapPin size={22} class="text-emerald-400" />
-						</div>
-						<div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2">{office.type}</div>
-						<h3 class="text-xl font-bold text-white mb-1">{office.city}</h3>
-						<p class="text-white/50 text-sm">{office.country}</p>
-						<p class="text-white/30 text-sm mt-2">{office.address}</p>
 					</div>
 				{/each}
 			</div>

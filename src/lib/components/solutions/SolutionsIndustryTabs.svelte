@@ -88,7 +88,7 @@
 				{ icon: BarChart3, title: 'Performance Management', desc: 'Multi-rater feedback, goal cascading, and compensation benchmarking for regulated environments.' },
 				{ icon: Shield, title: 'Data Security Controls', desc: 'SOC 2 compliant HR data management with role-based access and encrypted PII handling.' }
 			],
-			stat: { value: '99.9%', label: 'Audit Pass Rate' },
+			stat: { value: 'Strong', label: 'Audit Pass Rate' },
 			caseStudy: 'FinServ Corp achieved perfect audit scores for 3 consecutive years with PROCOR.',
 			gradient: 'from-emerald-500/20 via-teal-600/20 to-cyan-700/20',
 			accentColor: 'emerald'

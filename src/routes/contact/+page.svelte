@@ -44,10 +44,10 @@
 		{
 			icon: Phone,
 			title: 'Call Us',
-			value: 'xxxxx',
+			value: '9871420148',
 			description: 'Mon-Fri, 9am-6pm EST',
 			gradient: 'from-blue-500 to-blue-600',
-			action: 'tel:xxxxx'
+			action: 'tel:9871420148'
 		},
 		{
 			icon: MessageSquare,
@@ -68,10 +68,10 @@
 	];
 
 	const offices = [
-		{ city: 'San Francisco', country: 'USA', address: '123 Market Street, Suite 400', timezone: 'PST', phone: 'xxxxx' },
-		{ city: 'London', country: 'UK', address: '45 Canary Wharf, Floor 12', timezone: 'GMT', phone: 'xxxxx' },
-		{ city: 'Singapore', country: 'Singapore', address: '88 Marina Bay Sands, Tower 2', timezone: 'SGT', phone: 'xxxxx' },
-		{ city: 'Dubai', country: 'UAE', address: 'DIFC Tower 5, Level 8', timezone: 'GST', phone: 'xxxxx' }
+		{ city: 'San Francisco', country: 'USA', address: '123 Market Street, Suite 400', timezone: 'PST', phone: '9871420148' },
+		{ city: 'London', country: 'UK', address: '45 Canary Wharf, Floor 12', timezone: 'GMT', phone: '9871420148' },
+		{ city: 'Singapore', country: 'Singapore', address: '88 Marina Bay Sands, Tower 2', timezone: 'SGT', phone: '9871420148' },
+		{ city: 'Dubai', country: 'UAE', address: 'DIFC Tower 5, Level 8', timezone: 'GST', phone: '9871420148' }
 	];
 
 	const faqs = [
@@ -379,7 +379,7 @@
 							<MessageSquare size={20} />
 							Start Live Chat
 						</a>
-						<a href="tel:xxxxx" class="px-8 py-4 bg-white/[0.05] border border-white/[0.1] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/[0.1] transition-all">
+						<a href="tel:9871420148" class="px-8 py-4 bg-white/[0.05] border border-white/[0.1] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/[0.1] transition-all">
 							<Phone size={20} />
 							Call Support
 						</a>

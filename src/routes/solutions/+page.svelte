@@ -138,10 +138,10 @@
 	];
 
 	const stats = [
-		{ value: '2,500+', label: 'Clients', icon: Building2 },
-		{ value: '150+', label: 'Countries', icon: Globe },
-		{ value: '99.9%', label: 'Uptime', icon: Shield },
-		{ value: '40%', label: 'Cost Savings', icon: TrendingUp }
+		{ value: 'Trusted', label: 'By Teams Worldwide', icon: Building2 },
+		{ value: 'Global', label: 'Coverage', icon: Globe },
+		{ value: 'Reliable', label: 'By Design', icon: Shield },
+		{ value: 'Efficient', label: 'Operations', icon: TrendingUp }
 	];
 
 	function calculateROI() {

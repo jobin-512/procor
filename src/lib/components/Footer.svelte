@@ -124,7 +124,7 @@
 			</div>
 			<div class="flex items-center gap-2">
 				<Phone size={16} class="text-blue-400/60" />
-				<span>xxxxx</span>
+				<span>9871420148</span>
 			</div>
 			<div class="flex items-center gap-2">
 				<MapPin size={16} class="text-blue-400/60" />
