@@ -12,8 +12,8 @@
 	import Award from '@lucide/svelte/icons/award';
 	import TrendingUp from '@lucide/svelte/icons/trending-up';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-import MapPin from '@lucide/svelte/icons/map-pin';
-import Calendar from '@lucide/svelte/icons/calendar';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import Calendar from '@lucide/svelte/icons/calendar';
 	import CheckCircle from '@lucide/svelte/icons/check-circle';
 	import Zap from '@lucide/svelte/icons/zap';
 	import Shield from '@lucide/svelte/icons/shield';
@@ -32,87 +32,148 @@ import Calendar from '@lucide/svelte/icons/calendar';
 		{
 			icon: Heart,
 			title: 'People First',
-			description: 'We believe technology should enhance human connection, not replace it. Every feature we build starts with empathy.',
+			description:
+				'We believe technology should enhance human connection, not replace it. Every feature we build starts with empathy.',
 			gradient: 'from-rose-500 to-pink-500'
 		},
 		{
 			icon: Lightbulb,
 			title: 'Innovation',
-			description: 'We challenge conventions and push boundaries. Our AI-first approach transforms how organizations manage talent.',
+			description:
+				'We challenge conventions and push boundaries. Our AI-first approach transforms how organizations manage talent.',
 			gradient: 'from-amber-500 to-orange-500'
 		},
 		{
 			icon: Target,
 			title: 'Excellence',
-			description: 'Good enough is never enough. We obsess over details and continuously raise the bar for quality.',
+			description:
+				'Good enough is never enough. We obsess over details and continuously raise the bar for quality.',
 			gradient: 'from-blue-500 to-blue-600'
 		},
 		{
 			icon: Shield,
 			title: 'Trust',
-			description: 'Security and privacy are non-negotiable. We earn trust through transparency and unwavering integrity.',
+			description:
+				'Security and privacy are non-negotiable. We earn trust through transparency and unwavering integrity.',
 			gradient: 'from-emerald-500 to-green-500'
 		},
 		{
 			icon: Users,
 			title: 'Collaboration',
-			description: 'The best solutions emerge when diverse minds work together. We foster inclusive environments where everyone thrives.',
+			description:
+				'The best solutions emerge when diverse minds work together. We foster inclusive environments where everyone thrives.',
 			gradient: 'from-sky-500 to-cyan-500'
 		},
 		{
 			icon: Zap,
 			title: 'Speed',
-			description: 'In a fast-moving world, agility wins. We ship fast, learn faster, and iterate relentlessly.',
+			description:
+				'In a fast-moving world, agility wins. We ship fast, learn faster, and iterate relentlessly.',
 			gradient: 'from-indigo-500 to-blue-500'
 		}
 	];
 
 	const timeline = [
-		{ year: '2018', title: 'PROCOR Compliance', description: 'PROCOR began in 2018 as a compliance-first company, built to help organizations navigate complex regulatory requirements with confidence.', icon: Shield },
-		{ year: '2019', title: 'Solving Compliance Services', description: 'We took on the market’s toughest compliance-service challenges, turning fragmented, manual processes into one trusted system.', icon: CheckCircle },
-		{ year: '2020', title: 'First 100 Clients', description: 'Achieved product-market fit and reached our first 100 clients.', icon: TrendingUp },
-		{ year: '2021', title: 'Global Expansion', description: 'Expanded into London, Singapore, and Dubai.', icon: Globe },
-		{ year: '2026', title: 'The HRMS Revolution', description: 'Launched PROCOR HRMS — reimagining workforce management with AI at its core.', icon: Rocket }
+		{
+			year: '2018',
+			title: 'PROCOR Compliance',
+			description:
+				'PROCOR began in 2018 as a compliance-first company, built to help organizations navigate complex regulatory requirements with confidence.',
+			icon: Shield
+		},
+		{
+			year: '2019',
+			title: 'Solving Compliance Services',
+			description:
+				'We took on the market’s toughest compliance-service challenges, turning fragmented, manual processes into one trusted system.',
+			icon: CheckCircle
+		},
+		{
+			year: '2020',
+			title: 'First 100 Clients',
+			description: 'Achieved product-market fit and reached our first 100 clients.',
+			icon: TrendingUp
+		},
+		{
+			year: '2021',
+			title: 'Global Expansion',
+			description: 'Expanded into Australia and the United States.',
+			icon: Globe
+		},
+		{
+			year: '2026',
+			title: 'The HRMS Revolution',
+			description: 'Launched PROCOR HRMS — reimagining workforce management with AI at its core.',
+			icon: Rocket
+		}
 	];
 
 	import abhishekImg from '$lib/assets/about/1.webp';
 	import parasImg from '$lib/assets/about/2.webp';
 
 	const team = [
-		{ name: 'Abhishek Kumar Jha', role: 'CEO & Founder', image: abhishekImg, bio: 'Visionary leader driving the future of HR technology with AI-first approach.', linkedin: 'https://www.linkedin.com/in/abhishek-kumar-jha-06347b101' },
-		{ name: 'Paras Kumar', role: 'CFO & Founder', image: parasImg, bio: 'Financial strategist building sustainable growth for global HR transformation.', linkedin: 'https://www.linkedin.com/in/paras-kumar-a78633264?utm_source=share_via&utm_content=profile&utm_medium=member_ios' }
+		{
+			name: 'Abhishek Kumar Jha',
+			role: 'CEO & Co-Founder',
+			image: abhishekImg,
+			bio: 'Visionary leader driving the future of HR technology with AI-first approach.',
+			linkedin: 'https://www.linkedin.com/in/abhishek-kumar-jha-06347b101'
+		},
+		{
+			name: 'Paras Kumar',
+			role: 'CFO & Co-Founder',
+			image: parasImg,
+			bio: 'Financial strategist building sustainable growth for global HR transformation.',
+			linkedin:
+				'https://www.linkedin.com/in/paras-kumar-a78633264?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
+		}
 	];
 
 	const offices = [
 		{ city: 'San Francisco', country: 'USA', address: '123 Market Street', type: 'HQ' },
-		{ city: 'London', country: 'UK', address: '45 Canary Wharf', type: 'EMEA' },
-		{ city: 'Singapore', country: 'Singapore', address: '88 Marina Bay', type: 'APAC' },
-		{ city: 'Dubai', country: 'UAE', address: 'DIFC Tower 5', type: 'MEA' }
+		{ city: 'Sydney', country: 'Australia', address: '100 George Street', type: 'APAC' }
 	];
 
 	const openPositions = [
-		{ title: 'Senior Software Engineer', department: 'Engineering', location: 'Remote', type: 'Full-time' },
-		{ title: 'Product Designer', department: 'Design', location: 'San Francisco', type: 'Full-time' },
+		{
+			title: 'Senior Software Engineer',
+			department: 'Engineering',
+			location: 'Remote',
+			type: 'Full-time'
+		},
+		{
+			title: 'Product Designer',
+			department: 'Design',
+			location: 'San Francisco',
+			type: 'Full-time'
+		},
 		{ title: 'AI/ML Engineer', department: 'Engineering', location: 'Remote', type: 'Full-time' },
-		{ title: 'Customer Success Manager', department: 'Customer Success', location: 'London', type: 'Full-time' },
+		{
+			title: 'Customer Success Manager',
+			department: 'Customer Success',
+			location: 'London',
+			type: 'Full-time'
+		},
 		{ title: 'Sales Development Rep', department: 'Sales', location: 'New York', type: 'Full-time' }
 	];
 
 	onMount(() => {
 		const ctx = gsap.context(() => {
 			// Hero animations
-			gsap.fromTo('.hero-content > *', 
+			gsap.fromTo(
+				'.hero-content > *',
 				{ y: 50, opacity: 0 },
 				{ y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
 			);
 
 			// Scroll-triggered animations
 			gsap.utils.toArray('.reveal-section').forEach((section) => {
-				gsap.fromTo(section, 
+				gsap.fromTo(
+					section,
 					{ y: 60, opacity: 0 },
-					{ 
-						y: 0, 
-						opacity: 1, 
+					{
+						y: 0,
+						opacity: 1,
 						duration: 0.8,
 						scrollTrigger: {
 							trigger: section,
@@ -142,31 +203,43 @@ import Calendar from '@lucide/svelte/icons/calendar';
 
 	<!-- HERO SECTION -->
 	<section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 md:px-12">
-		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050810]/50 to-[#050810] z-[1]"></div>
-		
+		<div
+			class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050810]/50 to-[#050810] z-[1]"
+		></div>
+
 		<div class="hero-content max-w-5xl mx-auto text-center relative z-10">
-			<div class="inline-flex items-center gap-3 px-6 py-3 bg-blue-500/20 border border-blue-500/30 rounded-full text-sm font-semibold text-blue-300 mb-10 backdrop-blur-xl">
+			<div
+				class="inline-flex items-center gap-3 px-6 py-3 bg-blue-500/20 border border-blue-500/30 rounded-full text-sm font-semibold text-blue-300 mb-10 backdrop-blur-xl"
+			>
 				<Sparkles size={18} class="text-blue-400" />
 				<span>Our Story</span>
 			</div>
 
-			<h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] font-display mb-8">
+			<h1
+				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] font-display mb-8"
+			>
 				<span class="block">Building the</span>
-				<span class="block bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+				<span
+					class="block bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent"
+				>
 					future of work
 				</span>
 			</h1>
 
 			<p class="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-				We're on a mission to humanize technology and transform how organizations 
-				connect with their most valuable asset — their people.
+				We're on a mission to humanize technology and transform how organizations connect with their
+				most valuable asset — their people.
 			</p>
 
 			<!-- Stats -->
 			<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
 				{#each stats as stat}
-					<div class="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-500">
-						<div class="w-10 h-10 flex-shrink-0 rounded-xl bg-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+					<div
+						class="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-500"
+					>
+						<div
+							class="w-10 h-10 flex-shrink-0 rounded-xl bg-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform"
+						>
 							<svelte:component this={stat.icon} size={18} class="text-blue-400" />
 						</div>
 						<div>
@@ -183,21 +256,32 @@ import Calendar from '@lucide/svelte/icons/calendar';
 	<section class="relative py-32 px-6 md:px-12">
 		<div class="max-w-7xl mx-auto">
 			<div class="reveal-section text-center mb-20">
-				<div class="inline-flex items-center gap-2 px-5 py-2 bg-rose-500/20 border border-rose-500/20 rounded-full text-sm font-semibold text-rose-300 mb-8">
+				<div
+					class="inline-flex items-center gap-2 px-5 py-2 bg-rose-500/20 border border-rose-500/20 rounded-full text-sm font-semibold text-rose-300 mb-8"
+				>
 					<Heart size={16} />
 					<span>Our Values</span>
 				</div>
 				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
-					What drives <span class="bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent">everything</span> we do
+					What drives <span
+						class="bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent"
+						>everything</span
+					> we do
 				</h2>
 			</div>
 
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{#each values as value, i}
 					<div class="reveal-section group relative">
-						<div class="absolute -inset-0.5 rounded-3xl bg-gradient-to-r {value.gradient} opacity-0 group-hover:opacity-40 blur-xl transition-all duration-500"></div>
-						<div class="relative p-8 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl h-full hover:bg-white/[0.06] hover:border-white/[0.15] transition-all duration-500">
-							<div class="w-14 h-14 rounded-2xl bg-gradient-to-br {value.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+						<div
+							class="absolute -inset-0.5 rounded-3xl bg-gradient-to-r {value.gradient} opacity-0 group-hover:opacity-40 blur-xl transition-all duration-500"
+						></div>
+						<div
+							class="relative p-8 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl h-full hover:bg-white/[0.06] hover:border-white/[0.15] transition-all duration-500"
+						>
+							<div
+								class="w-14 h-14 rounded-2xl bg-gradient-to-br {value.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+							>
 								<svelte:component this={value.icon} size={26} class="text-white" />
 							</div>
 							<h3 class="text-xl font-bold text-white mb-3">{value.title}</h3>
@@ -211,35 +295,51 @@ import Calendar from '@lucide/svelte/icons/calendar';
 
 	<!-- TIMELINE SECTION -->
 	<section class="relative py-32 px-6 md:px-12 overflow-hidden">
-		<div class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent"></div>
-		
+		<div
+			class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/20 to-transparent"
+		></div>
+
 		<div class="max-w-6xl mx-auto relative z-10">
 			<div class="reveal-section text-center mb-20">
-				<div class="inline-flex items-center gap-2 px-5 py-2 bg-amber-500/20 border border-amber-500/20 rounded-full text-sm font-semibold text-amber-300 mb-8">
+				<div
+					class="inline-flex items-center gap-2 px-5 py-2 bg-amber-500/20 border border-amber-500/20 rounded-full text-sm font-semibold text-amber-300 mb-8"
+				>
 					<Calendar size={16} />
 					<span>Our Journey</span>
 				</div>
 				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
-					From startup to <span class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">industry leader</span>
+					From startup to <span
+						class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent"
+						>industry leader</span
+					>
 				</h2>
 			</div>
 
 			<!-- Timeline -->
 			<div class="relative">
 				<!-- Timeline line -->
-				<div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent hidden lg:block"></div>
+				<div
+					class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent hidden lg:block"
+				></div>
 
 				<div class="space-y-8">
 					{#each timeline as item, i}
-						<div 
-							class="reveal-section relative flex flex-col lg:flex-row items-center gap-8 {i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}"
+						<div
+							class="reveal-section relative flex flex-col lg:flex-row items-center gap-8 {i % 2 ===
+							0
+								? 'lg:flex-row'
+								: 'lg:flex-row-reverse'}"
 						>
 							<!-- Content -->
 							<div class="flex-1 {i % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}">
-								<div 
-									class="p-6 rounded-2xl transition-all duration-500 {activeTimelineIndex === i ? 'bg-white/[0.06] border border-blue-500/30' : 'bg-white/[0.02] border border-white/[0.06]'}"
+								<div
+									class="p-6 rounded-2xl transition-all duration-500 {activeTimelineIndex === i
+										? 'bg-white/[0.06] border border-blue-500/30'
+										: 'bg-white/[0.02] border border-white/[0.06]'}"
 								>
-									<div class="text-3xl font-black bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent mb-2">
+									<div
+										class="text-3xl font-black bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent mb-2"
+									>
 										{item.year}
 									</div>
 									<h3 class="text-xl font-bold text-white mb-2">{item.title}</h3>
@@ -248,7 +348,12 @@ import Calendar from '@lucide/svelte/icons/calendar';
 							</div>
 
 							<!-- Center icon -->
-							<div class="relative z-10 w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30 {activeTimelineIndex === i ? 'scale-110' : 'scale-100'} transition-transform duration-300">
+							<div
+								class="relative z-10 w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/30 {activeTimelineIndex ===
+								i
+									? 'scale-110'
+									: 'scale-100'} transition-transform duration-300"
+							>
 								<svelte:component this={item.icon} size={24} class="text-white" />
 							</div>
 
@@ -262,8 +367,10 @@ import Calendar from '@lucide/svelte/icons/calendar';
 				<div class="flex justify-center gap-3 mt-12">
 					{#each timeline as _, i}
 						<button
-							onclick={() => activeTimelineIndex = i}
-							class="w-3 h-3 rounded-full transition-all duration-300 {activeTimelineIndex === i ? 'bg-blue-500 scale-125' : 'bg-white/20 hover:bg-white/40'}"
+							onclick={() => (activeTimelineIndex = i)}
+							class="w-3 h-3 rounded-full transition-all duration-300 {activeTimelineIndex === i
+								? 'bg-blue-500 scale-125'
+								: 'bg-white/20 hover:bg-white/40'}"
 							aria-label="Go to {timeline[i].year}"
 						></button>
 					{/each}
@@ -276,40 +383,63 @@ import Calendar from '@lucide/svelte/icons/calendar';
 	<section class="relative py-32 px-6 md:px-12">
 		<div class="max-w-7xl mx-auto">
 			<div class="reveal-section text-center mb-20">
-				<div class="inline-flex items-center gap-2 px-5 py-2 bg-sky-500/20 border border-sky-500/20 rounded-full text-sm font-semibold text-sky-300 mb-8">
+				<div
+					class="inline-flex items-center gap-2 px-5 py-2 bg-sky-500/20 border border-sky-500/20 rounded-full text-sm font-semibold text-sky-300 mb-8"
+				>
 					<Users size={16} />
 					<span>Leadership Team</span>
 				</div>
 				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
-					Meet the <span class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">visionaries</span>
+					Meet the <span
+						class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent"
+						>visionaries</span
+					>
 				</h2>
 			</div>
 
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{#each team as member}
 					<div class="reveal-section group">
-						<div class="relative rounded-3xl overflow-hidden bg-white/[0.03] border border-white/[0.08] hover:border-sky-500/30 transition-all duration-500">
+						<div
+							class="relative rounded-3xl overflow-hidden bg-white/[0.03] border border-white/[0.08] hover:border-sky-500/30 transition-all duration-500"
+						>
 							<!-- Image -->
 							<div class="relative h-72 overflow-hidden">
-								<img 
-									src={member.image} 
+								<img
+									src={member.image}
 									alt={member.name}
 									class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
 								/>
-								<div class="absolute inset-0 bg-gradient-to-t from-[#050810] via-transparent to-transparent"></div>
+								<div
+									class="absolute inset-0 bg-gradient-to-t from-[#050810] via-transparent to-transparent"
+								></div>
 							</div>
-							
+
 							<!-- Content -->
 							<div class="relative p-6 -mt-12">
 								<h3 class="text-xl font-bold text-white mb-1">{member.name}</h3>
 								<p class="text-sky-400 font-semibold text-sm mb-3">{member.role}</p>
-							<p class="text-white/50 text-sm">{member.bio}</p>
-							
-							<!-- Social link -->
-							<a href={member.linkedin || '/'} target={member.linkedin ? '_blank' : undefined} rel={member.linkedin ? 'noopener noreferrer' : undefined} class="inline-flex items-center gap-2 mt-4 text-white/40 hover:text-sky-400 transition-colors">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-								<span class="text-sm">Connect</span>
-							</a>
+								<p class="text-white/50 text-sm">{member.bio}</p>
+
+								<!-- Social link -->
+								<a
+									href={member.linkedin || '/'}
+									target={member.linkedin ? '_blank' : undefined}
+									rel={member.linkedin ? 'noopener noreferrer' : undefined}
+									class="inline-flex items-center gap-2 mt-4 text-white/40 hover:text-sky-400 transition-colors"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="18"
+										height="18"
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										><path
+											d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+										/></svg
+									>
+									<span class="text-sm">Connect</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -322,12 +452,17 @@ import Calendar from '@lucide/svelte/icons/calendar';
 	<section class="relative py-32 px-6 md:px-12">
 		<div class="max-w-5xl mx-auto">
 			<div class="reveal-section text-center mb-16">
-				<div class="inline-flex items-center gap-2 px-5 py-2 bg-blue-500/20 border border-blue-500/20 rounded-full text-sm font-semibold text-blue-300 mb-8">
+				<div
+					class="inline-flex items-center gap-2 px-5 py-2 bg-blue-500/20 border border-blue-500/20 rounded-full text-sm font-semibold text-blue-300 mb-8"
+				>
 					<Rocket size={16} />
 					<span>Join Us</span>
 				</div>
 				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
-					Build the <span class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">future with us</span>
+					Build the <span
+						class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"
+						>future with us</span
+					>
 				</h2>
 				<p class="text-xl text-white/50 max-w-2xl mx-auto">
 					We're always looking for exceptional people to join our mission.
@@ -336,10 +471,17 @@ import Calendar from '@lucide/svelte/icons/calendar';
 
 			<div class="reveal-section space-y-4">
 				{#each openPositions as job}
-					<a href="/" class="group block p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-blue-500/30 transition-all duration-300">
+					<a
+						href="/"
+						class="group block p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-blue-500/30 transition-all duration-300"
+					>
 						<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
 							<div>
-								<h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">{job.title}</h3>
+								<h3
+									class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors"
+								>
+									{job.title}
+								</h3>
 								<div class="flex items-center gap-4 mt-2 text-sm text-white/50">
 									<span>{job.department}</span>
 									<span>•</span>
@@ -348,7 +490,9 @@ import Calendar from '@lucide/svelte/icons/calendar';
 									<span>{job.type}</span>
 								</div>
 							</div>
-							<div class="flex items-center gap-2 text-white/50 group-hover:text-blue-400 transition-colors">
+							<div
+								class="flex items-center gap-2 text-white/50 group-hover:text-blue-400 transition-colors"
+							>
 								<span class="text-sm font-semibold">Apply</span>
 								<ArrowRight size={18} class="group-hover:translate-x-1 transition-transform" />
 							</div>
@@ -358,7 +502,10 @@ import Calendar from '@lucide/svelte/icons/calendar';
 			</div>
 
 			<div class="reveal-section text-center mt-12">
-				<a href="/" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all group">
+				<a
+					href="/"
+					class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all group"
+				>
 					View All Openings
 					<ArrowRight size={18} class="group-hover:translate-x-1 transition-transform" />
 				</a>
@@ -367,30 +514,40 @@ import Calendar from '@lucide/svelte/icons/calendar';
 	</section>
 
 	<!-- FINAL CTA -->
-<section class="relative py-32 px-6 md:px-12">
+	<section class="relative py-32 px-6 md:px-12">
 		<div class="absolute inset-0">
-			<div class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent"></div>
+			<div
+				class="absolute inset-0 bg-gradient-to-t from-blue-950/30 via-transparent to-transparent"
+			></div>
 		</div>
 
 		<div class="reveal-section max-w-4xl mx-auto text-center relative z-10">
 			<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-8">
 				Ready to transform your
-				<span class="block bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
+				<span
+					class="block bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"
+				>
 					HR operations?
 				</span>
 			</h2>
-			
+
 			<p class="text-xl text-white/50 mb-12 max-w-2xl mx-auto">
 				Join thousands of organizations that trust PROCOR to power their people operations.
 			</p>
 
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="/demo" class="group relative px-10 py-5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:shadow-xl hover:shadow-blue-500/30 transition-all">
+				<a
+					href="/demo"
+					class="group relative px-10 py-5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:shadow-xl hover:shadow-blue-500/30 transition-all"
+				>
 					<Rocket size={22} />
 					Start Free Trial
 					<ArrowRight size={20} class="group-hover:translate-x-1 transition-transform" />
 				</a>
-				<a href="/contact" class="px-10 py-5 bg-white/[0.05] border border-white/[0.1] text-white rounded-2xl font-semibold text-lg hover:bg-white/[0.1] transition-all">
+				<a
+					href="/contact"
+					class="px-10 py-5 bg-white/[0.05] border border-white/[0.1] text-white rounded-2xl font-semibold text-lg hover:bg-white/[0.1] transition-all"
+				>
 					Contact Sales
 				</a>
 			</div>
