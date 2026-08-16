@@ -197,14 +197,14 @@
 	});
 </script>
 
-<div bind:this={pageEl} class="min-h-screen bg-[#050810] selection:bg-blue-500/30 overflow-hidden">
+<div bind:this={pageEl} class="min-h-screen bg-bg selection:bg-blue-500/30 overflow-hidden">
 	<!-- WebGL Background -->
 	<PageWebGL theme="blue" intensity={0.8} particleCount={800} />
 
 	<!-- HERO SECTION -->
 	<section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 md:px-12">
 		<div
-			class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050810]/50 to-[#050810] z-[1]"
+			class="absolute inset-0 bg-gradient-to-b from-transparent via-bg/50 to-bg z-[1]"
 		></div>
 
 		<div class="hero-content max-w-5xl mx-auto text-center relative z-10">
@@ -216,7 +216,7 @@
 			</div>
 
 			<h1
-				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] font-display mb-8"
+				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-fg leading-[0.9] font-display mb-8"
 			>
 				<span class="block">Building the</span>
 				<span
@@ -226,7 +226,7 @@
 				</span>
 			</h1>
 
-			<p class="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-16 leading-relaxed">
+			<p class="text-xl md:text-2xl text-fg/60 max-w-3xl mx-auto mb-16 leading-relaxed">
 				We're on a mission to humanize technology and transform how organizations connect with their
 				most valuable asset — their people.
 			</p>
@@ -235,7 +235,7 @@
 			<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
 				{#each stats as stat}
 					<div
-						class="group flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl hover:bg-white/[0.06] hover:border-blue-500/30 transition-all duration-500"
+						class="group flex items-center gap-4 p-4 rounded-2xl bg-surface-2 border border-line backdrop-blur-xl hover:bg-surface-2 hover:border-blue-500/30 transition-all duration-500"
 					>
 						<div
 							class="w-10 h-10 flex-shrink-0 rounded-xl bg-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform"
@@ -243,8 +243,8 @@
 							<svelte:component this={stat.icon} size={18} class="text-blue-400" />
 						</div>
 						<div>
-							<div class="text-xl md:text-2xl font-black text-white leading-none">{stat.value}</div>
-							<div class="text-xs text-white/50 mt-1">{stat.label}</div>
+							<div class="text-xl md:text-2xl font-black text-fg leading-none">{stat.value}</div>
+							<div class="text-xs text-fg/50 mt-1">{stat.label}</div>
 						</div>
 					</div>
 				{/each}
@@ -262,7 +262,7 @@
 					<Heart size={16} />
 					<span>Our Values</span>
 				</div>
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-6">
 					What drives <span
 						class="bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent"
 						>everything</span
@@ -277,15 +277,15 @@
 							class="absolute -inset-0.5 rounded-3xl bg-gradient-to-r {value.gradient} opacity-0 group-hover:opacity-40 blur-xl transition-all duration-500"
 						></div>
 						<div
-							class="relative p-8 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl h-full hover:bg-white/[0.06] hover:border-white/[0.15] transition-all duration-500"
+							class="relative p-8 rounded-3xl bg-surface-2 border border-line backdrop-blur-xl h-full hover:bg-surface-2 hover:border-line transition-all duration-500"
 						>
 							<div
 								class="w-14 h-14 rounded-2xl bg-gradient-to-br {value.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
 							>
-								<svelte:component this={value.icon} size={26} class="text-white" />
+								<svelte:component this={value.icon} size={26} class="text-fg" />
 							</div>
-							<h3 class="text-xl font-bold text-white mb-3">{value.title}</h3>
-							<p class="text-white/50 leading-relaxed">{value.description}</p>
+							<h3 class="text-xl font-bold text-fg mb-3">{value.title}</h3>
+							<p class="text-fg/50 leading-relaxed">{value.description}</p>
 						</div>
 					</div>
 				{/each}
@@ -307,7 +307,7 @@
 					<Calendar size={16} />
 					<span>Our Journey</span>
 				</div>
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-6">
 					From startup to <span
 						class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent"
 						>industry leader</span
@@ -334,16 +334,16 @@
 							<div class="flex-1 {i % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}">
 								<div
 									class="p-6 rounded-2xl transition-all duration-500 {activeTimelineIndex === i
-										? 'bg-white/[0.06] border border-blue-500/30'
-										: 'bg-white/[0.02] border border-white/[0.06]'}"
+										? 'bg-surface-2 border border-blue-500/30'
+										: 'bg-surface-2 border border-line'}"
 								>
 									<div
 										class="text-3xl font-black bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent mb-2"
 									>
 										{item.year}
 									</div>
-									<h3 class="text-xl font-bold text-white mb-2">{item.title}</h3>
-									<p class="text-white/50">{item.description}</p>
+									<h3 class="text-xl font-bold text-fg mb-2">{item.title}</h3>
+									<p class="text-fg/50">{item.description}</p>
 								</div>
 							</div>
 
@@ -354,7 +354,7 @@
 									? 'scale-110'
 									: 'scale-100'} transition-transform duration-300"
 							>
-								<svelte:component this={item.icon} size={24} class="text-white" />
+								<svelte:component this={item.icon} size={24} class="text-fg" />
 							</div>
 
 							<!-- Spacer for alignment -->
@@ -370,7 +370,7 @@
 							onclick={() => (activeTimelineIndex = i)}
 							class="w-3 h-3 rounded-full transition-all duration-300 {activeTimelineIndex === i
 								? 'bg-blue-500 scale-125'
-								: 'bg-white/20 hover:bg-white/40'}"
+								: 'bg-surface-2 hover:bg-surface-2'}"
 							aria-label="Go to {timeline[i].year}"
 						></button>
 					{/each}
@@ -389,7 +389,7 @@
 					<Users size={16} />
 					<span>Leadership Team</span>
 				</div>
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-6">
 					Meet the <span
 						class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent"
 						>visionaries</span
@@ -401,7 +401,7 @@
 				{#each team as member}
 					<div class="reveal-section group">
 						<div
-							class="relative rounded-3xl overflow-hidden bg-white/[0.03] border border-white/[0.08] hover:border-sky-500/30 transition-all duration-500"
+							class="relative rounded-3xl overflow-hidden bg-surface-2 border border-line hover:border-sky-500/30 transition-all duration-500"
 						>
 							<!-- Image -->
 							<div class="relative h-72 overflow-hidden">
@@ -411,22 +411,22 @@
 									class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
 								/>
 								<div
-									class="absolute inset-0 bg-gradient-to-t from-[#050810] via-transparent to-transparent"
+									class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent"
 								></div>
 							</div>
 
 							<!-- Content -->
 							<div class="relative p-6 -mt-12">
-								<h3 class="text-xl font-bold text-white mb-1">{member.name}</h3>
+								<h3 class="text-xl font-bold text-fg mb-1">{member.name}</h3>
 								<p class="text-sky-400 font-semibold text-sm mb-3">{member.role}</p>
-								<p class="text-white/50 text-sm">{member.bio}</p>
+								<p class="text-fg/50 text-sm">{member.bio}</p>
 
 								<!-- Social link -->
 								<a
 									href={member.linkedin || '/'}
 									target={member.linkedin ? '_blank' : undefined}
 									rel={member.linkedin ? 'noopener noreferrer' : undefined}
-									class="inline-flex items-center gap-2 mt-4 text-white/40 hover:text-sky-400 transition-colors"
+									class="inline-flex items-center gap-2 mt-4 text-fg/40 hover:text-sky-400 transition-colors"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -458,13 +458,13 @@
 					<Rocket size={16} />
 					<span>Join Us</span>
 				</div>
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-6">
 					Build the <span
 						class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"
 						>future with us</span
 					>
 				</h2>
-				<p class="text-xl text-white/50 max-w-2xl mx-auto">
+				<p class="text-xl text-fg/50 max-w-2xl mx-auto">
 					We're always looking for exceptional people to join our mission.
 				</p>
 			</div>
@@ -473,16 +473,16 @@
 				{#each openPositions as job}
 					<a
 						href="/"
-						class="group block p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-blue-500/30 transition-all duration-300"
+						class="group block p-6 rounded-2xl bg-surface-2 border border-line hover:bg-surface-2 hover:border-blue-500/30 transition-all duration-300"
 					>
 						<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
 							<div>
 								<h3
-									class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors"
+									class="text-lg font-bold text-fg group-hover:text-blue-400 transition-colors"
 								>
 									{job.title}
 								</h3>
-								<div class="flex items-center gap-4 mt-2 text-sm text-white/50">
+								<div class="flex items-center gap-4 mt-2 text-sm text-fg/50">
 									<span>{job.department}</span>
 									<span>•</span>
 									<span>{job.location}</span>
@@ -491,7 +491,7 @@
 								</div>
 							</div>
 							<div
-								class="flex items-center gap-2 text-white/50 group-hover:text-blue-400 transition-colors"
+								class="flex items-center gap-2 text-fg/50 group-hover:text-blue-400 transition-colors"
 							>
 								<span class="text-sm font-semibold">Apply</span>
 								<ArrowRight size={18} class="group-hover:translate-x-1 transition-transform" />
@@ -522,7 +522,7 @@
 		</div>
 
 		<div class="reveal-section max-w-4xl mx-auto text-center relative z-10">
-			<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-8">
+			<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-8">
 				Ready to transform your
 				<span
 					class="block bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"
@@ -531,7 +531,7 @@
 				</span>
 			</h2>
 
-			<p class="text-xl text-white/50 mb-12 max-w-2xl mx-auto">
+			<p class="text-xl text-fg/50 mb-12 max-w-2xl mx-auto">
 				Join thousands of organizations that trust PROCOR to power their people operations.
 			</p>
 
@@ -546,7 +546,7 @@
 				</a>
 				<a
 					href="/contact"
-					class="px-10 py-5 bg-white/[0.05] border border-white/[0.1] text-white rounded-2xl font-semibold text-lg hover:bg-white/[0.1] transition-all"
+					class="px-10 py-5 bg-surface-2 border border-line text-fg rounded-2xl font-semibold text-lg hover:bg-surface-2 transition-all"
 				>
 					Contact Sales
 				</a>

@@ -50,29 +50,29 @@
 	<div class="max-w-3xl mx-auto relative z-10">
 		<div class="text-center mb-16">
 			<SectionBadge variant="dark">FAQ</SectionBadge>
-			<h2 class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4 tracking-tight">
+			<h2 class="text-3xl md:text-5xl font-black text-fg font-display mt-6 mb-4 tracking-tight">
 				Contact <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">questions</span>
 			</h2>
-			<p class="text-neutral-500 font-medium">Quick answers to common inquiries.</p>
+			<p class="text-fg/70 font-medium">Quick answers to common inquiries.</p>
 		</div>
 
 		<div class="faq-list space-y-4">
 			{#each faqs as faq, i}
-				<div class="faq-item rounded-2xl bg-white/[0.03] border {openFaq === i ? 'border-sky-500/30 bg-sky-500/5' : 'border-white/[0.06]'} transition-all duration-500 overflow-hidden">
+				<div class="faq-item rounded-2xl bg-surface-2 border {openFaq === i ? 'border-sky-500/30 bg-sky-500/5' : 'border-line'} transition-all duration-500 overflow-hidden">
 					<button
-						class="w-full flex items-center justify-between p-7 text-left cursor-pointer hover:bg-white/[0.02] transition-colors"
+						class="w-full flex items-center justify-between p-7 text-left cursor-pointer hover:bg-surface-2 transition-colors"
 						onclick={() => openFaq = openFaq === i ? null : i}
 					>
-						<span class="text-base font-bold text-white pr-6">{faq.q}</span>
+						<span class="text-base font-bold text-fg pr-6">{faq.q}</span>
 						{#if openFaq === i}
 							<Minus size={18} class="text-sky-400 shrink-0" />
 						{:else}
-							<Plus size={18} class="text-neutral-500 shrink-0" />
+							<Plus size={18} class="text-fg/70 shrink-0" />
 						{/if}
 					</button>
 					{#if openFaq === i}
 						<div class="px-7 pb-7">
-							<p class="text-neutral-400 leading-relaxed font-medium text-sm">{faq.a}</p>
+							<p class="text-fg/80 leading-relaxed font-medium text-sm">{faq.a}</p>
 						</div>
 					{/if}
 				</div>

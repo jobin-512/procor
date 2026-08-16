@@ -46,7 +46,7 @@
 	</div>
 
 	<div class="mx-auto max-w-4xl text-center" data-reveal>
-		<div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm font-medium text-white/70 backdrop-blur">
+		<div class="inline-flex items-center gap-2 rounded-full border border-line bg-surface-2 px-4 py-2 text-sm font-medium text-fg/70 backdrop-blur">
 			<span class="relative flex h-2 w-2">
 				<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
 				<span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
@@ -54,14 +54,14 @@
 			Next-Generation HR Platform
 		</div>
 
-		<h1 class="mt-8 text-4xl font-black leading-[1.04] tracking-tight text-white font-display sm:text-5xl md:text-7xl">
+		<h1 class="mt-8 text-4xl font-black leading-[1.04] tracking-tight text-fg font-display sm:text-5xl md:text-7xl">
 			The future of
 			<span class="mt-1 block bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
 				{typedText}<span class="animate-blink text-blue-400">|</span>
 			</span>
 		</h1>
 
-		<p class="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/60">
+		<p class="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-fg/60">
 			PROCOR brings your people, performance, and processes together in one calm, intelligent workspace — built for teams of every size, everywhere they work.
 		</p>
 
@@ -70,14 +70,14 @@
 				Start Free Trial
 				<ArrowRight size={18} class="transition group-hover:translate-x-0.5" />
 			</a>
-			<a href="/contact" class="group inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/[0.03] px-7 py-3.5 font-semibold text-white/90 transition hover:-translate-y-0.5 hover:bg-white/[0.07]">
+			<a href="/contact" class="group inline-flex items-center gap-2 rounded-xl border border-line bg-surface-2 px-7 py-3.5 font-semibold text-fg/90 transition hover:-translate-y-0.5 hover:bg-surface-2">
 				<Play size={16} /> Talk to Sales
 			</a>
 		</div>
 
 		<div class="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
 			{#each pillars as p}
-				<div class="flex items-center gap-2 text-sm text-white/50">
+				<div class="flex items-center gap-2 text-sm text-fg/50">
 					<svelte:component this={p.icon} size={16} class="text-blue-400" />
 					{p.label}
 				</div>
@@ -86,7 +86,7 @@
 	</div>
 
 	<div class="mt-20 flex justify-center">
-		<a href="#principles" class="flex flex-col items-center gap-2 text-white/30 transition hover:text-white/60">
+		<a href="#principles" class="flex flex-col items-center gap-2 text-fg/30 transition hover:text-fg/60">
 			<span class="text-[10px] font-semibold uppercase tracking-[0.3em]">Explore</span>
 			<ChevronDown size={18} class="animate-bounce" />
 		</a>

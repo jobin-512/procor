@@ -36,32 +36,32 @@
 	<div class="max-w-7xl mx-auto relative z-10">
 		<div class="text-center mb-16">
 			<SectionBadge variant="dark">Our Offices</SectionBadge>
-			<h2 class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4 tracking-tight">
+			<h2 class="text-3xl md:text-5xl font-black text-fg font-display mt-6 mb-4 tracking-tight">
 				Find us <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">worldwide</span>
 			</h2>
-			<p class="text-neutral-500 font-medium max-w-lg mx-auto">Four offices across three continents, one unified team.</p>
+			<p class="text-fg/70 font-medium max-w-lg mx-auto">Four offices across three continents, one unified team.</p>
 		</div>
 
 		<div class="offices-grid grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 			{#each offices as office, i}
 				<div class="office-card group">
-					<div class="relative rounded-2xl border border-white/[0.06] bg-white/[0.02] overflow-hidden transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.04]">
+					<div class="relative rounded-2xl border border-line bg-surface-2 overflow-hidden transition-all duration-500 hover:border-line hover:bg-surface-2">
 						<div class="relative h-40 bg-gradient-to-br {office.gradient} overflow-hidden">
 							<div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22%3E%3Cpath d=%22M0 0h60v60H0z%22 fill=%22none%22/%3E%3Cpath d=%22M0 60L60 0%22 stroke=%22white%22 stroke-width=%22.3%22 fill=%22none%22/%3E%3C/svg%3E'); background-size: 30px 30px;"></div>
 							<div class="absolute inset-0 flex items-center justify-center">
-								<MapPin size={32} class="text-white/60 group-hover:text-white/90 group-hover:scale-110 transition-all duration-500" />
+								<MapPin size={32} class="text-fg/60 group-hover:text-fg/90 group-hover:scale-110 transition-all duration-500" />
 							</div>
 							{#if office.tag}
-								<span class="absolute top-3 right-3 px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-[9px] font-black text-white uppercase tracking-wider">
+								<span class="absolute top-3 right-3 px-3 py-1 bg-surface-2 backdrop-blur-sm rounded-full text-[9px] font-black text-fg uppercase tracking-wider">
 									{office.tag}
 								</span>
 							{/if}
 						</div>
 
 						<div class="p-6">
-							<h4 class="text-lg font-bold text-white mb-1">{office.city}</h4>
-							<p class="text-sm text-neutral-500 font-medium mb-3">{office.address}</p>
-							<p class="text-xs text-neutral-600 font-medium">{office.phone}</p>
+							<h4 class="text-lg font-bold text-fg mb-1">{office.city}</h4>
+							<p class="text-sm text-fg/70 font-medium mb-3">{office.address}</p>
+							<p class="text-xs text-fg/60 font-medium">{office.phone}</p>
 						</div>
 					</div>
 				</div>

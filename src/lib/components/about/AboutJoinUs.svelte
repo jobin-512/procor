@@ -36,11 +36,11 @@
 	<div class="max-w-5xl mx-auto relative z-10">
 		<div class="text-center mb-16">
 			<h2
-				class="text-3xl sm:text-4xl md:text-6xl font-black font-display text-white tracking-tight"
+				class="text-3xl sm:text-4xl md:text-6xl font-black font-display text-fg tracking-tight"
 			>
 				Join Our Team
 			</h2>
-			<p class="mt-4 text-lg text-white/50 max-w-xl mx-auto font-medium">
+			<p class="mt-4 text-lg text-fg/50 max-w-xl mx-auto font-medium">
 				We're always looking for extraordinary people who want to do the best work of their
 				lives.
 			</p>
@@ -49,22 +49,22 @@
 		<div class="space-y-3 mb-12">
 			{#each openPositions as position, i}
 				<div
-					class="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-[var(--radius-lg)] bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12] hover:bg-white/[0.06] transition-all duration-500 cursor-pointer"
+					class="group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-[var(--radius-lg)] bg-surface-2 border border-line hover:border-line hover:bg-surface-2 transition-all duration-500 cursor-pointer"
 				>
 					<div class="flex-1">
 						<h4
-							class="text-lg font-black font-display text-white group-hover:text-sky-300 transition-colors"
+							class="text-lg font-black font-display text-fg group-hover:text-sky-300 transition-colors"
 						>
 							{position.title}
 						</h4>
 						<div class="flex items-center gap-4 mt-2">
-							<span class="text-sm text-white/40 font-bold">{position.team}</span>
-							<span class="w-1 h-1 rounded-full bg-white/20"></span>
-							<span class="text-sm text-white/40 font-bold">{position.location}</span>
+							<span class="text-sm text-fg/40 font-bold">{position.team}</span>
+							<span class="w-1 h-1 rounded-full bg-surface-2"></span>
+							<span class="text-sm text-fg/40 font-bold">{position.location}</span>
 						</div>
 					</div>
 					<div
-						class="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-white/30 group-hover:text-sky-400 group-hover:border-sky-500/30 group-hover:bg-sky-500/10 group-hover:translate-x-1 transition-all duration-300"
+						class="w-10 h-10 rounded-xl bg-surface-2 border border-line flex items-center justify-center text-fg/30 group-hover:text-sky-400 group-hover:border-sky-500/30 group-hover:bg-sky-500/10 group-hover:translate-x-1 transition-all duration-300"
 					>
 						<ArrowRight size={18} />
 					</div>

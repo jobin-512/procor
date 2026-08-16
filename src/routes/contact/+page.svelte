@@ -27,6 +27,7 @@
 		email: '',
 		company: '',
 		employees: '',
+		phone: '',
 		message: ''
 	});
 
@@ -134,14 +135,14 @@
 	});
 </script>
 
-<div bind:this={pageEl} class="min-h-screen bg-[#050810] selection:bg-blue-500/30 overflow-hidden">
+<div bind:this={pageEl} class="min-h-screen bg-bg selection:bg-blue-500/30 overflow-hidden">
 	<!-- WebGL Background -->
 	<PageWebGL theme="blue" intensity={0.8} particleCount={800} />
 
 	<!-- HERO -->
 	<section class="relative min-h-[80vh] flex items-center justify-center pt-32 pb-20 px-6 md:px-12">
 		<div
-			class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050810]/50 to-[#050810] z-[1]"
+			class="absolute inset-0 bg-gradient-to-b from-transparent via-bg/50 to-bg z-[1]"
 		></div>
 
 		<div class="hero-content max-w-4xl mx-auto text-center relative z-10">
@@ -153,7 +154,7 @@
 			</div>
 
 			<h1
-				class="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-[0.9] font-display mb-8"
+				class="text-5xl sm:text-6xl md:text-7xl font-black text-fg leading-[0.9] font-display mb-8"
 			>
 				<span class="block">Let's start a</span>
 				<span
@@ -163,7 +164,7 @@
 				</span>
 			</h1>
 
-			<p class="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+			<p class="text-xl md:text-2xl text-fg/60 max-w-2xl mx-auto leading-relaxed">
 				Have a question? Want a demo? Our team is here to help you transform your HR operations.
 			</p>
 		</div>
@@ -172,11 +173,11 @@
 	<!-- CONTACT METHODS -->
 	<section class="relative py-20 px-6 md:px-12">
 		<div class="max-w-6xl mx-auto">
-			<div class="reveal-section grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+			<div class="reveal-section grid md:grid-cols-3 gap-6">
 				{#each contactMethods as method}
 					<a
 						href={method.action}
-						class="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] hover:border-white/[0.15] transition-all duration-500"
+						class="group relative p-6 rounded-2xl bg-surface-2 border border-line hover:bg-surface-2 hover:border-line transition-all duration-500"
 					>
 						<div
 							class="absolute -inset-0.5 rounded-2xl bg-gradient-to-r {method.gradient} opacity-0 group-hover:opacity-30 blur-xl transition-all duration-500"
@@ -185,11 +186,11 @@
 							<div
 								class="w-12 h-12 rounded-xl bg-gradient-to-br {method.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
 							>
-								<svelte:component this={method.icon} size={22} class="text-white" />
+								<svelte:component this={method.icon} size={22} class="text-fg" />
 							</div>
-							<h3 class="text-lg font-bold text-white mb-1">{method.title}</h3>
-							<p class="text-white/80 font-medium mb-1">{method.value}</p>
-							<p class="text-sm text-white/40">{method.description}</p>
+							<h3 class="text-lg font-bold text-fg mb-1">{method.title}</h3>
+							<p class="text-fg/80 font-medium mb-1">{method.value}</p>
+							<p class="text-sm text-fg/40">{method.description}</p>
 						</div>
 					</a>
 				{/each}
@@ -203,7 +204,7 @@
 			<div class="grid lg:grid-cols-2 gap-12">
 				<!-- Form -->
 				<div class="reveal-section">
-					<h2 class="text-3xl font-black text-white mb-8">Send us a message</h2>
+					<h2 class="text-3xl font-black text-fg mb-8">Send us a message</h2>
 
 					{#if formStatus === 'success'}
 						<div class="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-center">
@@ -212,66 +213,75 @@
 							>
 								<CheckCircle size={32} class="text-emerald-400" />
 							</div>
-							<h3 class="text-xl font-bold text-white mb-2">Message Sent!</h3>
-							<p class="text-white/60">We'll get back to you within 24 hours.</p>
+							<h3 class="text-xl font-bold text-fg mb-2">Message Sent!</h3>
+							<p class="text-fg/60">We'll get back to you within 24 hours.</p>
 						</div>
 					{:else}
 						<form onsubmit={handleSubmit} class="space-y-6">
 							<div class="grid md:grid-cols-2 gap-6">
 								<div>
-									<label class="block text-sm font-semibold text-white/70 mb-2">Full Name</label>
+									<label class="block text-sm font-semibold text-fg/70 mb-2">Full Name</label>
 									<input
 										type="text"
 										bind:value={formData.name}
 										required
-										class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all"
+										class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all"
 										placeholder="John Doe"
 									/>
 								</div>
 								<div>
-									<label class="block text-sm font-semibold text-white/70 mb-2">Work Email</label>
+									<label class="block text-sm font-semibold text-fg/70 mb-2">Work Email</label>
 									<input
 										type="email"
 										bind:value={formData.email}
 										required
-										class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all"
+										class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all"
 										placeholder="john@company.com"
 									/>
 								</div>
 							</div>
 
-							<div class="grid md:grid-cols-2 gap-6">
-								<div>
-									<label class="block text-sm font-semibold text-white/70 mb-2">Company</label>
-									<input
-										type="text"
-										bind:value={formData.company}
-										class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all"
-										placeholder="Acme Inc."
-									/>
-								</div>
-								<div>
-									<label class="block text-sm font-semibold text-white/70 mb-2">Company Size</label>
-									<select
-										bind:value={formData.employees}
-										class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all appearance-none"
-									>
-										<option value="" class="bg-[#0a0f1a]">Select size</option>
-										<option value="1-50" class="bg-[#0a0f1a]">1-50 employees</option>
-										<option value="51-200" class="bg-[#0a0f1a]">51-200 employees</option>
-										<option value="201-1000" class="bg-[#0a0f1a]">201-1,000 employees</option>
-										<option value="1001-5000" class="bg-[#0a0f1a]">1,001-5,000 employees</option>
-										<option value="5000+" class="bg-[#0a0f1a]">5,000+ employees</option>
-									</select>
-								</div>
+						<div class="grid md:grid-cols-3 gap-6">
+							<div>
+								<label class="block text-sm font-semibold text-fg/70 mb-2">Company</label>
+								<input
+									type="text"
+									bind:value={formData.company}
+									class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all"
+									placeholder="Acme Inc."
+								/>
 							</div>
+							<div>
+								<label class="block text-sm font-semibold text-fg/70 mb-2">Company Size</label>
+								<select
+									bind:value={formData.employees}
+									class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all appearance-none"
+								>
+									<option value="" class="bg-bg">Select size</option>
+									<option value="1-50" class="bg-bg">1-50 employees</option>
+									<option value="51-200" class="bg-bg">51-200 employees</option>
+									<option value="201-1000" class="bg-bg">201-1,000 employees</option>
+									<option value="1001-5000" class="bg-bg">1,001-5,000 employees</option>
+									<option value="5000+" class="bg-bg">5,000+ employees</option>
+								</select>
+							</div>
+							<div>
+								<label class="block text-sm font-semibold text-fg/70 mb-2">Phone</label>
+								<input
+									type="tel"
+									bind:value={formData.phone}
+									class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all"
+									placeholder="+91 99999 99999"
+								/>
+							</div>
+						</div>
 
 							<div>
-								<label class="block text-sm font-semibold text-white/70 mb-2">Message</label>
+								<label class="block text-sm font-semibold text-fg/70 mb-2">Message</label>
 								<textarea
 									bind:value={formData.message}
 									rows="4"
-									class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all resize-none"
+									class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all resize-none"
 									placeholder="Tell us about your HR challenges..."
 								></textarea>
 							</div>
@@ -295,22 +305,22 @@
 
 				<!-- FAQ -->
 				<div class="reveal-section">
-					<h2 class="text-3xl font-black text-white mb-8">Frequently Asked</h2>
+					<h2 class="text-3xl font-black text-fg mb-8">Frequently Asked</h2>
 
 					<div class="space-y-4">
 						{#each faqs as faq, i}
 							<div
-								class="rounded-xl bg-white/[0.02] border {openFaq === i
+								class="rounded-xl bg-surface-2 border {openFaq === i
 									? 'border-rose-500/30 bg-rose-500/[0.02]'
-									: 'border-white/[0.06]'} transition-all duration-300 overflow-hidden"
+									: 'border-line'} transition-all duration-300 overflow-hidden"
 							>
 								<button
-									class="w-full flex items-center justify-between p-5 text-left cursor-pointer hover:bg-white/[0.02] transition-colors"
+									class="w-full flex items-center justify-between p-5 text-left cursor-pointer hover:bg-surface-2 transition-colors"
 									onclick={() => (openFaq = openFaq === i ? null : i)}
 								>
-									<span class="font-semibold text-white/90 pr-4">{faq.q}</span>
+									<span class="font-semibold text-fg/90 pr-4">{faq.q}</span>
 									<div
-										class="shrink-0 w-8 h-8 rounded-lg bg-white/[0.05] border border-white/[0.1] flex items-center justify-center transition-all duration-300 {openFaq ===
+										class="shrink-0 w-8 h-8 rounded-lg bg-surface-2 border border-line flex items-center justify-center transition-all duration-300 {openFaq ===
 										i
 											? 'bg-rose-500/20 border-rose-500/30'
 											: ''}"
@@ -318,13 +328,13 @@
 										{#if openFaq === i}
 											<Minus size={16} class="text-rose-400" />
 										{:else}
-											<Plus size={16} class="text-white/50" />
+											<Plus size={16} class="text-fg/50" />
 										{/if}
 									</div>
 								</button>
 								{#if openFaq === i}
 									<div class="px-5 pb-5">
-										<p class="text-white/60 leading-relaxed">{faq.a}</p>
+										<p class="text-fg/60 leading-relaxed">{faq.a}</p>
 									</div>
 								{/if}
 							</div>
@@ -343,21 +353,21 @@
 					class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-rose-500/30 via-pink-500/30 to-fuchsia-500/30 blur-2xl"
 				></div>
 				<div
-					class="relative p-8 md:p-12 rounded-3xl bg-white/[0.03] border border-white/[0.1] backdrop-blur-xl text-center"
+					class="relative p-8 md:p-12 rounded-3xl bg-surface-2 border border-line backdrop-blur-xl text-center"
 				>
 					<div
 						class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-500 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-rose-500/30"
 					>
-						<Headphones size={32} class="text-white" />
+						<Headphones size={32} class="text-fg" />
 					</div>
-					<h2 class="text-3xl font-black text-white mb-4">Need immediate help?</h2>
-					<p class="text-white/60 mb-8 max-w-xl mx-auto">
+					<h2 class="text-3xl font-black text-fg mb-4">Need immediate help?</h2>
+					<p class="text-fg/60 mb-8 max-w-xl mx-auto">
 						Our support team is available 24/7 to help you with any questions or issues.
 					</p>
 					<div class="flex flex-col sm:flex-row gap-4 justify-center">
 						<a
 							href="tel:9999954416"
-							class="px-8 py-4 bg-white/[0.05] border border-white/[0.1] text-white rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-white/[0.1] transition-all"
+							class="px-8 py-4 bg-surface-2 border border-line text-fg rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-surface-2 transition-all"
 						>
 							<Phone size={20} />
 							Call Support

@@ -46,18 +46,18 @@
 		<div class="text-center mb-20">
 			<SectionBadge variant="dark">Our Journey</SectionBadge>
 			<h2
-				class="text-3xl sm:text-4xl md:text-6xl font-black font-display text-white mt-6 tracking-tight"
+				class="text-3xl sm:text-4xl md:text-6xl font-black font-display text-fg mt-6 tracking-tight"
 			>
 				From Idea to Impact
 			</h2>
-			<p class="mt-4 text-lg text-white/50 max-w-xl mx-auto font-medium">
+			<p class="mt-4 text-lg text-fg/50 max-w-xl mx-auto font-medium">
 				A timeline of bold bets, breakthroughs, and relentless progress.
 			</p>
 		</div>
 
 		<div class="timeline-container relative">
 			<div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2">
-				<div class="absolute inset-0 bg-white/[0.06]"></div>
+				<div class="absolute inset-0 bg-surface-2"></div>
 				<div
 					bind:this={timelineLine}
 					class="absolute top-0 left-0 w-full bg-gradient-to-b from-sky-500 via-blue-500 to-blue-600 origin-top"
@@ -80,11 +80,11 @@
 									{item.year}
 								</span>
 								<h3
-									class="text-xl md:text-2xl font-black font-display text-white mb-2 group-hover:text-sky-300 transition-colors duration-300"
+									class="text-xl md:text-2xl font-black font-display text-fg mb-2 group-hover:text-sky-300 transition-colors duration-300"
 								>
 									{item.title}
 								</h3>
-								<p class="text-white/50 leading-relaxed font-medium text-sm md:text-base">
+								<p class="text-fg/50 leading-relaxed font-medium text-sm md:text-base">
 									{item.description}
 								</p>
 							</div>
@@ -92,7 +92,7 @@
 
 						<div class="relative z-10 flex-shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2">
 							<div
-								class="w-12 h-12 rounded-full bg-[var(--surface-dark)] border-2 border-white/10 flex items-center justify-center group-hover:border-sky-500/50 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all duration-500"
+								class="w-12 h-12 rounded-full bg-[var(--surface-dark)] border-2 border-line flex items-center justify-center group-hover:border-sky-500/50 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all duration-500"
 							>
 								<svelte:component this={item.icon} size={18} class="text-sky-400/70" />
 							</div>

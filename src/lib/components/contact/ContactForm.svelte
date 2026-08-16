@@ -89,10 +89,10 @@
 			<div class="form-section lg:col-span-3">
 				<div class="mb-10">
 					<SectionBadge variant="dark">Contact Us</SectionBadge>
-					<h2 class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4 tracking-tight">
+					<h2 class="text-3xl md:text-5xl font-black text-fg font-display mt-6 mb-4 tracking-tight">
 						Send us a <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">message</span>
 					</h2>
-					<p class="text-neutral-500 font-medium">Fill out the form and we'll get back to you within 2 hours.</p>
+					<p class="text-fg/70 font-medium">Fill out the form and we'll get back to you within 2 hours.</p>
 				</div>
 
 				<form bind:this={formEl} onsubmit={handleSubmit} class="space-y-6">
@@ -101,10 +101,10 @@
 							type="text"
 							id="name"
 							required
-							class="peer w-full px-6 py-5 bg-white/[0.03] border border-white/[0.08] rounded-2xl text-white text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-white/[0.06] focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent"
+							class="peer w-full px-6 py-5 bg-surface-2 border border-line rounded-2xl text-fg text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-surface-2 focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent"
 							placeholder="Full Name"
 						/>
-						<label for="name" class="absolute left-6 top-5 text-neutral-500 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-neutral-500 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
+						<label for="name" class="absolute left-6 top-5 text-fg/70 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-fg/70 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
 							Full Name
 						</label>
 						<div class="absolute inset-0 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-500 pointer-events-none" style="background: radial-gradient(circle at 50% 50%, rgba(56,189,248,0.06), transparent 70%);"></div>
@@ -116,10 +116,10 @@
 								type="email"
 								id="email"
 								required
-								class="peer w-full px-6 py-5 bg-white/[0.03] border border-white/[0.08] rounded-2xl text-white text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-white/[0.06] focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent"
+								class="peer w-full px-6 py-5 bg-surface-2 border border-line rounded-2xl text-fg text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-surface-2 focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent"
 								placeholder="Email"
 							/>
-							<label for="email" class="absolute left-6 top-5 text-neutral-500 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-neutral-500 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
+							<label for="email" class="absolute left-6 top-5 text-fg/70 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-fg/70 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
 								Email
 							</label>
 						</div>
@@ -127,10 +127,10 @@
 							<input
 								type="text"
 								id="company"
-								class="peer w-full px-6 py-5 bg-white/[0.03] border border-white/[0.08] rounded-2xl text-white text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-white/[0.06] focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent"
+								class="peer w-full px-6 py-5 bg-surface-2 border border-line rounded-2xl text-fg text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-surface-2 focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent"
 								placeholder="Company"
 							/>
-							<label for="company" class="absolute left-6 top-5 text-neutral-500 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-neutral-500 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
+							<label for="company" class="absolute left-6 top-5 text-fg/70 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-fg/70 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
 								Company
 							</label>
 						</div>
@@ -141,10 +141,10 @@
 							<input
 								type="tel"
 								id="phone"
-								class="peer w-full px-6 py-5 bg-white/[0.03] border border-white/[0.08] rounded-2xl text-white text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-white/[0.06] focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent"
+								class="peer w-full px-6 py-5 bg-surface-2 border border-line rounded-2xl text-fg text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-surface-2 focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent"
 								placeholder="Phone"
 							/>
-							<label for="phone" class="absolute left-6 top-5 text-neutral-500 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-neutral-500 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
+							<label for="phone" class="absolute left-6 top-5 text-fg/70 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-fg/70 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
 								Phone
 							</label>
 						</div>
@@ -152,15 +152,15 @@
 							<select
 								id="subject"
 								required
-								class="w-full px-6 py-5 bg-white/[0.03] border border-white/[0.08] rounded-2xl text-white text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-white/[0.06] focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] appearance-none cursor-pointer"
+								class="w-full px-6 py-5 bg-surface-2 border border-line rounded-2xl text-fg text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-surface-2 focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] appearance-none cursor-pointer"
 							>
-								<option value="" disabled selected class="bg-[#0f172a] text-neutral-400">Subject</option>
-								<option value="general" class="bg-[#0f172a] text-white">General Inquiry</option>
-								<option value="sales" class="bg-[#0f172a] text-white">Sales</option>
-								<option value="support" class="bg-[#0f172a] text-white">Support</option>
-								<option value="partnership" class="bg-[#0f172a] text-white">Partnership</option>
+								<option value="" disabled selected class="bg-bg text-fg/80">Subject</option>
+								<option value="general" class="bg-bg text-fg">General Inquiry</option>
+								<option value="sales" class="bg-bg text-fg">Sales</option>
+								<option value="support" class="bg-bg text-fg">Support</option>
+								<option value="partnership" class="bg-bg text-fg">Partnership</option>
 							</select>
-							<ChevronDown size={18} class="absolute right-5 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none" />
+							<ChevronDown size={18} class="absolute right-5 top-1/2 -translate-y-1/2 text-fg/70 pointer-events-none" />
 						</div>
 					</div>
 
@@ -169,10 +169,10 @@
 							id="message"
 							rows="5"
 							required
-							class="peer w-full px-6 py-5 bg-white/[0.03] border border-white/[0.08] rounded-2xl text-white text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-white/[0.06] focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent resize-none"
+							class="peer w-full px-6 py-5 bg-surface-2 border border-line rounded-2xl text-fg text-base font-medium outline-none transition-all duration-300 focus:border-sky-500/50 focus:bg-surface-2 focus:shadow-[0_0_30px_-10px_rgba(56,189,248,0.3)] placeholder-transparent resize-none"
 							placeholder="Message"
 						></textarea>
-						<label for="message" class="absolute left-6 top-5 text-neutral-500 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-neutral-500 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
+						<label for="message" class="absolute left-6 top-5 text-fg/70 text-base font-medium pointer-events-none transition-all duration-300 peer-focus:top-1.5 peer-focus:text-[10px] peer-focus:text-sky-400 peer-focus:tracking-wider peer-focus:uppercase peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-[10px] peer-[:not(:placeholder-shown)]:text-fg/70 peer-[:not(:placeholder-shown)]:tracking-wider peer-[:not(:placeholder-shown)]:uppercase">
 							Message
 						</label>
 					</div>
@@ -202,8 +202,8 @@
 
 			<div class="lg:col-span-2 space-y-4">
 				<div class="mb-10">
-					<h3 class="text-2xl font-bold text-white font-display mb-3">Other ways to reach us</h3>
-					<p class="text-neutral-500 font-medium text-sm">Pick whatever works best for you.</p>
+					<h3 class="text-2xl font-bold text-fg font-display mb-3">Other ways to reach us</h3>
+					<p class="text-fg/70 font-medium text-sm">Pick whatever works best for you.</p>
 				</div>
 
 				<div class="info-cards-grid space-y-4">
@@ -214,12 +214,12 @@
 						>
 							<GlowCard glowColor={info.glow} className="hover-lift">
 								<div class="flex items-start gap-5">
-									<div class="w-12 h-12 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center shrink-0 group-hover:bg-white/[0.1] transition-colors duration-300">
+									<div class="w-12 h-12 rounded-xl bg-surface-2 border border-line flex items-center justify-center shrink-0 group-hover:bg-surface-2 transition-colors duration-300">
 										<info.icon size={20} class="text-sky-400" />
 									</div>
 									<div class="min-w-0">
-										<p class="text-[10px] font-bold text-neutral-500 uppercase tracking-[0.2em] mb-1">{info.label}</p>
-										<p class="text-white font-semibold text-sm leading-snug">{info.value}</p>
+										<p class="text-[10px] font-bold text-fg/70 uppercase tracking-[0.2em] mb-1">{info.label}</p>
+										<p class="text-fg font-semibold text-sm leading-snug">{info.value}</p>
 									</div>
 								</div>
 							</GlowCard>

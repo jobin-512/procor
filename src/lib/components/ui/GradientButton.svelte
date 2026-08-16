@@ -6,9 +6,9 @@
 		primary:
 			'bg-gradient-to-r from-procor-blue to-procor-blue-dark text-white shadow-lg hover:shadow-xl hover:shadow-procor-blue/20 hover:scale-[1.02] active:scale-[0.98]',
 		secondary:
-			'bg-white border-2 border-slate-200 text-procor-navy hover:border-procor-blue/40 hover:shadow-xl hover:-translate-y-0.5',
-		ghost: 'bg-white/[0.06] border border-white/10 text-white hover:bg-white/[0.1]',
-		'ghost-brand': 'bg-white/[0.08] border border-white/20 text-white hover:bg-white/[0.14]'
+			'bg-surface border-2 border-line text-fg hover:border-procor-blue/40 hover:shadow-xl hover:-translate-y-0.5',
+		ghost: 'bg-surface-2 border border-line text-fg hover:bg-surface-2',
+		'ghost-brand': 'bg-surface-2 border border-line text-fg hover:bg-surface-2'
 	};
 
 	const sizes = {

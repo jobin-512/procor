@@ -122,16 +122,16 @@
 	});
 </script>
 
-<section id="industry-tabs" class="relative py-24 md:py-32 px-6 md:px-12 bg-[#030408]">
+<section id="industry-tabs" class="relative py-24 md:py-32 px-6 md:px-12 bg-bg">
 	<div class="max-w-7xl mx-auto">
 		<div class="text-center mb-16">
 			<SectionBadge variant="sky">Industry Solutions</SectionBadge>
 			<TextReveal
 				text="Tailored for your world"
 				as="h2"
-				class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4"
+				class="text-3xl md:text-5xl font-black text-fg font-display mt-6 mb-4"
 			/>
-			<p class="text-white/60 text-lg max-w-xl mx-auto">Select your industry to discover how PROCOR adapts to your specific workforce challenges.</p>
+			<p class="text-fg/60 text-lg max-w-xl mx-auto">Select your industry to discover how PROCOR adapts to your specific workforce challenges.</p>
 		</div>
 
 		<div class="flex flex-wrap justify-center gap-3 mb-12">
@@ -139,7 +139,7 @@
 				<button
 					class="tab-trigger flex items-center gap-2.5 px-5 py-3 rounded-xl text-sm font-bold transition-all duration-300 cursor-pointer {activeTab === i
 						? 'bg-gradient-to-r from-sky-500/20 to-indigo-600/20 border border-sky-500/30 text-white shadow-lg shadow-sky-500/10'
-						: 'bg-white/[0.04] border border-white/[0.06] text-white/50 hover:bg-white/[0.07] hover:text-white/70'}"
+						: 'bg-surface-2 border border-line text-fg/50 hover:bg-surface-2 hover:text-fg/70'}"
 					onclick={() => activeTab = i}
 				>
 					<svelte:component this={industry.icon} size={18} />
@@ -153,26 +153,26 @@
 			<div class="grid lg:grid-cols-2 gap-8 items-start">
 				<GlowCard className="p-8 md:p-10" glowColor="rgba(117, 194, 246, 0.15)">
 					<div class="flex items-center gap-4 mb-6">
-						<div class="w-14 h-14 rounded-2xl bg-gradient-to-br {ind.gradient} flex items-center justify-center border border-white/10">
-							<svelte:component this={ind.icon} size={28} class="text-white" />
+						<div class="w-14 h-14 rounded-2xl bg-gradient-to-br {ind.gradient} flex items-center justify-center border border-line">
+							<svelte:component this={ind.icon} size={28} class="text-fg" />
 						</div>
 						<div>
-							<h3 class="text-2xl font-black text-white font-display">{ind.name}</h3>
-							<p class="text-white/50 text-sm font-medium">{ind.tagline}</p>
+							<h3 class="text-2xl font-black text-fg font-display">{ind.name}</h3>
+							<p class="text-fg/50 text-sm font-medium">{ind.tagline}</p>
 						</div>
 					</div>
 
-					<p class="text-white/70 text-base leading-relaxed mb-8">{ind.description}</p>
+					<p class="text-fg/70 text-base leading-relaxed mb-8">{ind.description}</p>
 
 					<div class="grid gap-5 mb-8">
 						{#each ind.features as feature}
-							<div class="flex gap-4 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.05] transition-colors duration-300">
-								<div class="w-10 h-10 rounded-lg bg-white/[0.06] flex items-center justify-center flex-shrink-0 mt-0.5">
+							<div class="flex gap-4 p-4 rounded-xl bg-surface-2 border border-line hover:bg-surface-2 transition-colors duration-300">
+								<div class="w-10 h-10 rounded-lg bg-surface-2 flex items-center justify-center flex-shrink-0 mt-0.5">
 									<svelte:component this={feature.icon} size={20} class="text-sky-400" />
 								</div>
 								<div>
-									<h4 class="text-white font-bold text-sm mb-1">{feature.title}</h4>
-									<p class="text-white/50 text-sm leading-relaxed">{feature.desc}</p>
+									<h4 class="text-fg font-bold text-sm mb-1">{feature.title}</h4>
+									<p class="text-fg/50 text-sm leading-relaxed">{feature.desc}</p>
 								</div>
 							</div>
 						{/each}
@@ -184,16 +184,16 @@
 				</GlowCard>
 
 				<div class="space-y-6">
-					<div class="relative rounded-3xl overflow-hidden aspect-[16/10] border border-white/[0.06]">
+					<div class="relative rounded-3xl overflow-hidden aspect-[16/10] border border-line">
 						<div class="absolute inset-0 bg-gradient-to-br {ind.gradient}"></div>
-						<div class="absolute inset-0 bg-gradient-to-br from-slate-900/40 to-transparent"></div>
+						<div class="absolute inset-0 bg-gradient-to-br from-surface/40 to-transparent"></div>
 						<div class="absolute inset-0 opacity-[0.04] grid-overlay"></div>
 						<div class="absolute inset-0 flex items-center justify-center">
 							<div class="text-center">
-								<div class="w-20 h-20 mx-auto rounded-2xl bg-white/[0.1] backdrop-blur-sm flex items-center justify-center border border-white/10 mb-4">
-									<svelte:component this={ind.icon} size={40} class="text-white/80" />
+								<div class="w-20 h-20 mx-auto rounded-2xl bg-surface-2 backdrop-blur-sm flex items-center justify-center border border-line mb-4">
+									<svelte:component this={ind.icon} size={40} class="text-fg/80" />
 								</div>
-								<p class="text-white/60 font-bold text-sm uppercase tracking-wider">{ind.name} Solutions</p>
+								<p class="text-fg/60 font-bold text-sm uppercase tracking-wider">{ind.name} Solutions</p>
 							</div>
 						</div>
 					</div>
@@ -203,13 +203,13 @@
 							<p class="text-3xl md:text-4xl font-black text-white font-display bg-gradient-to-b from-sky-400 to-sky-600 bg-clip-text text-transparent">
 								{ind.stat.value}
 							</p>
-							<p class="text-white/50 text-xs font-bold uppercase tracking-wider mt-1">{ind.stat.label}</p>
+							<p class="text-fg/50 text-xs font-bold uppercase tracking-wider mt-1">{ind.stat.label}</p>
 						</GlowCard>
 						<GlowCard className="p-6 text-center" glowColor="rgba(139, 92, 246, 0.2)">
 							<p class="text-3xl md:text-4xl font-black text-white font-display bg-gradient-to-b from-violet-400 to-violet-600 bg-clip-text text-transparent">
 								500+
 							</p>
-							<p class="text-white/50 text-xs font-bold uppercase tracking-wider mt-1">{ind.name} Clients</p>
+							<p class="text-fg/50 text-xs font-bold uppercase tracking-wider mt-1">{ind.name} Clients</p>
 						</GlowCard>
 					</div>
 
@@ -220,7 +220,7 @@
 							</div>
 							<div>
 								<p class="text-[10px] font-bold text-emerald-400 uppercase tracking-[0.2em] mb-1">Success Story</p>
-								<p class="text-white/80 text-sm leading-relaxed">{ind.caseStudy}</p>
+								<p class="text-fg/80 text-sm leading-relaxed">{ind.caseStudy}</p>
 							</div>
 						</div>
 					</GlowCard>

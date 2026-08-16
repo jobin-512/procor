@@ -100,7 +100,7 @@
 			<SectionBadge variant="sky">Features</SectionBadge>
 		</div>
 
-		<h1 class="mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-white leading-[1.05] animate-fade-in-up delay-100 font-display">
+		<h1 class="mt-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-fg leading-[1.05] animate-fade-in-up delay-100 font-display">
 			Powerful Features,
 			<br />
 			<span class="text-gradient-brand">Infinite Possibilities</span>
@@ -128,7 +128,7 @@
 							<div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background: {card.color}15;">
 								<card.icon size={24} style="color: {card.color}" />
 							</div>
-							<span class="text-sm font-semibold text-white">{card.label}</span>
+							<span class="text-sm font-semibold text-fg">{card.label}</span>
 						</div>
 					</TiltCard>
 				{/each}

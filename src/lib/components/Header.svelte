@@ -3,8 +3,11 @@
 	import { gsap } from 'gsap';
 	import Menu from '@lucide/svelte/icons/menu';
 	import X from '@lucide/svelte/icons/x';
+	import Sun from '@lucide/svelte/icons/sun';
+	import Moon from '@lucide/svelte/icons/moon';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import logo from '$lib/assets/image.webp';
+	import { theme } from '$lib/stores/theme';
 
 	let { isMenuOpen = $bindable() } = $props();
 	let isScrolled = $state(false);
@@ -39,7 +42,7 @@
 
 <nav
 	class="fixed w-full z-50 px-4 sm:px-6 md:px-10 transition-all duration-500
-		{isScrolled ? 'py-3 bg-[#080c15]/90 backdrop-blur-2xl border-b border-white/[0.06]' : 'py-5 bg-transparent'}"
+		{isScrolled ? 'py-3 bg-bg backdrop-blur-2xl border-b border-line' : 'py-5 bg-transparent'}"
 >
 	<div class="max-w-7xl mx-auto flex justify-between items-center nav-container">
 		<!-- Logo -->
@@ -48,7 +51,7 @@
 				<img src={logo} alt="PROCOR HRMS" class="h-9 w-auto" />
 			</div>
 			<div class="hidden sm:flex flex-col">
-				<span class="text-xl font-extrabold tracking-tight text-white font-display leading-none uppercase group-hover:text-blue-400 transition-colors duration-300">PROCOR</span>
+				<span class="text-xl font-extrabold tracking-tight text-fg font-display leading-none uppercase group-hover:text-blue-400 transition-colors duration-300">PROCOR</span>
 				<span class="text-[9px] font-semibold tracking-[0.3em] text-blue-400 uppercase leading-none mt-0.5">HRMS</span>
 			</div>
 		</a>
@@ -58,7 +61,7 @@
 			{#each navLinks as link}
 				<a
 					href={link.href}
-					class="relative px-4 py-2 text-sm font-medium text-white/60 hover:text-white transition-colors duration-300 group"
+					class="relative px-4 py-2 text-sm font-medium text-fg/60 hover:text-fg transition-colors duration-300 group"
 				>
 					{link.label}
 					<span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-blue-400 group-hover:w-4/5 transition-all duration-300 rounded-full"></span>
@@ -74,16 +77,29 @@
 			</a>
 		</div>
 
+		<!-- Theme Toggle -->
+		<button
+			class="relative w-11 h-11 flex items-center justify-center rounded-xl bg-surface-2 hover:bg-surface-2 border border-line transition-all duration-300"
+			onclick={() => theme.toggle()}
+			aria-label="Toggle theme"
+		>
+			{#if $theme === 'light'}
+				<Moon size={18} class="text-fg/70" />
+			{:else}
+				<Sun size={18} class="text-fg/70" />
+			{/if}
+		</button>
+
 		<!-- Mobile Toggle -->
 		<button
-			class="md:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] transition-all duration-300"
+			class="md:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-surface-2 hover:bg-surface-2 border border-line transition-all duration-300"
 			onclick={toggleMenu}
 			aria-label="Toggle menu"
 		>
 			{#if isMenuOpen}
-				<X size={20} class="text-white" />
+				<X size={20} class="text-fg" />
 			{:else}
-				<Menu size={20} class="text-white/70" />
+				<Menu size={20} class="text-fg/70" />
 			{/if}
 		</button>
 	</div>
@@ -91,12 +107,12 @@
 
 <!-- Mobile Menu -->
 {#if isMenuOpen}
-	<div class="fixed inset-0 z-[60] flex flex-col md:hidden bg-[#080c15]/98 backdrop-blur-xl">
+	<div class="fixed inset-0 z-[60] flex flex-col md:hidden bg-bg backdrop-blur-xl">
 		<div class="flex-1 flex flex-col items-center justify-center gap-3 px-6">
 			{#each navLinks as link}
 <a
 				href={link.href}
-				class="text-3xl font-bold text-white/80 hover:text-blue-400 transition-colors duration-300 py-3"
+				class="text-3xl font-bold text-fg/80 hover:text-blue-400 transition-colors duration-300 py-3"
 				onclick={() => (isMenuOpen = false)}
 			>
 					{link.label}
@@ -113,7 +129,7 @@
 
 		<button
 			onclick={() => (isMenuOpen = false)}
-			class="absolute top-6 right-6 w-11 h-11 flex items-center justify-center bg-white/[0.05] border border-white/[0.1] rounded-xl text-white hover:bg-white/[0.1] transition-all"
+			class="absolute top-6 right-6 w-11 h-11 flex items-center justify-center bg-surface-2 border border-line rounded-xl text-fg hover:bg-surface-2 transition-all"
 			aria-label="Close menu"
 		>
 			<X size={20} />

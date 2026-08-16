@@ -29,23 +29,23 @@
 	});
 </script>
 
-<section class="relative py-24 md:py-32 px-6 md:px-12 bg-[#030408] overflow-hidden">
+<section class="relative py-24 md:py-32 px-6 md:px-12 bg-bg overflow-hidden">
 	<div class="max-w-7xl mx-auto relative z-10">
 		<div class="text-center mb-14">
 			<SectionBadge variant="dark">Integrations</SectionBadge>
 			<TextReveal
 				text="Plays well with others"
 				as="h2"
-				class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4"
+				class="text-3xl md:text-5xl font-black text-fg font-display mt-6 mb-4"
 			/>
-			<p class="text-white/60 text-lg max-w-xl mx-auto">Seamlessly connects with the tools your team already uses.</p>
+			<p class="text-fg/60 text-lg max-w-xl mx-auto">Seamlessly connects with the tools your team already uses.</p>
 		</div>
 
 		<div class="partners-grid grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
 			{#each partners as partner}
 				<div class="partner-logo group">
-					<div class="aspect-[3/2] rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center hover:bg-white/[0.06] hover:border-white/[0.12] transition-all duration-300 p-4">
-						<span class="text-white/40 font-bold text-sm group-hover:text-white/70 transition-colors text-center">{partner}</span>
+					<div class="aspect-[3/2] rounded-xl bg-surface-2 border border-line flex items-center justify-center hover:bg-surface-2 hover:border-line transition-all duration-300 p-4">
+						<span class="text-fg/40 font-bold text-sm group-hover:text-fg/70 transition-colors text-center">{partner}</span>
 					</div>
 				</div>
 			{/each}

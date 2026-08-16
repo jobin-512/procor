@@ -28,7 +28,7 @@
 		<div class="text-center mb-20">
 			<SectionBadge variant="sky">Life at PROCOR</SectionBadge>
 			<h2
-				class="text-3xl sm:text-4xl md:text-6xl font-black font-display text-white mt-6 tracking-tight"
+				class="text-3xl sm:text-4xl md:text-6xl font-black font-display text-fg mt-6 tracking-tight"
 			>
 				Why People Love<br class="hidden sm:block" /> Working Here
 			</h2>
@@ -39,15 +39,15 @@
 				<div class="culture-card">
 					<TiltCard tiltAmount={8} glareOpacity={0.1}>
 						<div
-							class="relative overflow-hidden rounded-[var(--radius-lg)] p-8 h-full group cursor-default bg-white/[0.03] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500"
+							class="relative overflow-hidden rounded-[var(--radius-lg)] p-8 h-full group cursor-default bg-surface-2 border border-line hover:border-line transition-all duration-500"
 						>
 							<div
-								class="w-12 h-12 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
+								class="w-12 h-12 rounded-xl bg-surface-2 border border-line flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
 							>
 								<svelte:component this={pillar.icon} size={20} class="text-sky-400" />
 							</div>
-							<h3 class="text-lg font-black font-display text-white mb-2">{pillar.title}</h3>
-							<p class="text-white/40 text-sm leading-relaxed">{pillar.description}</p>
+							<h3 class="text-lg font-black font-display text-fg mb-2">{pillar.title}</h3>
+							<p class="text-fg/40 text-sm leading-relaxed">{pillar.description}</p>
 						</div>
 					</TiltCard>
 				</div>

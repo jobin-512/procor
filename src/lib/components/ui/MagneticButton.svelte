@@ -20,8 +20,8 @@
 		primary:
 			'bg-gradient-to-r from-procor-brand to-procor-navy text-white shadow-[0_0_20px_rgba(117,194,246,0.15)] hover:shadow-[0_0_30px_rgba(117,194,246,0.3)]',
 		secondary:
-			'border border-white/10 bg-white/[0.04] text-white hover:border-white/20 hover:bg-white/[0.08]',
-		ghost: 'text-white/70 hover:text-white hover:bg-white/[0.06]'
+			'border border-line bg-surface-2 text-fg hover:border-line hover:bg-surface-2',
+		ghost: 'text-fg/70 hover:text-fg hover:bg-surface-2'
 	};
 
 	const sizes = {

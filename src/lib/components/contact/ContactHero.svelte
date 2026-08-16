@@ -40,7 +40,7 @@
 	</div>
 
 	<div class="absolute inset-0 pointer-events-none z-[2] overflow-hidden">
-		<div class="absolute top-[20%] left-[10%] w-24 h-24 border border-white/[0.06] rounded-2xl rotate-45" style="animation: float-orb 15s ease-in-out infinite alternate;"></div>
+		<div class="absolute top-[20%] left-[10%] w-24 h-24 border border-line rounded-2xl rotate-45" style="animation: float-orb 15s ease-in-out infinite alternate;"></div>
 		<div class="absolute top-[60%] right-[15%] w-16 h-16 border border-sky-400/10 rounded-full" style="animation: float-orb 12s ease-in-out infinite alternate-reverse;"></div>
 		<div class="absolute bottom-[25%] left-[20%] w-12 h-12 border border-procor-blue/10 rounded-lg rotate-12" style="animation: float-orb 18s ease-in-out infinite alternate;"></div>
 	</div>
@@ -50,12 +50,12 @@
 	<div class="absolute inset-0 z-[3] pointer-events-none opacity-[0.06] grid-overlay"></div>
 
 	<div class="max-w-5xl mx-auto w-full relative z-10 text-center" style="perspective: 1000px;">
-		<div class="contact-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/20 via-procor-blue/20 to-procor-blue-light/20 border border-white/[0.15] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-12 shadow-[0_0_40px_-10px_rgba(37,59,218,0.3)]">
+		<div class="contact-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/20 via-procor-blue/20 to-procor-blue-light/20 border border-line backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-12 shadow-[0_0_40px_-10px_rgba(37,59,218,0.3)]">
 			<MessageSquare size={14} class="text-sky-300" />
-			<span class="text-white">Get in Touch</span>
+			<span class="text-fg">Get in Touch</span>
 		</div>
 
-		<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] font-black text-white leading-[0.88] font-display mb-10 tracking-tight">
+		<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] font-black text-fg leading-[0.88] font-display mb-10 tracking-tight">
 			{#each headlineWords as word, i}
 				<span
 					class="hero-word inline-block {i === 3 || i === 4
@@ -66,7 +66,7 @@
 			{/each}
 		</h1>
 
-		<p class="hero-subtitle text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+		<p class="hero-subtitle text-lg md:text-xl text-fg/70 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
 			Have a question, want a demo, or just want to say hi? We'd love to hear from you. Our team is ready to help.
 		</p>
 

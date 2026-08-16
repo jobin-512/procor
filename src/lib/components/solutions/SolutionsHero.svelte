@@ -58,7 +58,7 @@
 	});
 </script>
 
-<section class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 px-6 md:px-12 bg-[#030408] overflow-hidden">
+<section class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 px-6 md:px-12 bg-bg overflow-hidden">
 	<FloatingOrb color="rgba(117, 194, 246, 0.2)" size="40rem" speed={22} className="top-[-10%] right-[-10%]" />
 	<FloatingOrb color="rgba(37, 59, 218, 0.15)" size="35rem" speed={28} className="bottom-[-10%] left-[-10%]" />
 	<FloatingOrb color="rgba(59, 91, 255, 0.1)" size="30rem" speed={18} className="top-[40%] left-[60%]" />
@@ -69,7 +69,7 @@
 				class="floating-icon-wrap absolute opacity-20"
 				style="left: {iconItem.x}%; top: {iconItem.y}%; animation: float-orb {15 + i * 3}s ease-in-out infinite alternate; animation-delay: {iconItem.delay}s;"
 			>
-				<svelte:component this={iconItem.icon} size={iconItem.size} class="text-white/30" />
+				<svelte:component this={iconItem.icon} size={iconItem.size} class="text-fg/30" />
 			</div>
 		{/each}
 	</div>
@@ -79,19 +79,19 @@
 	<div class="absolute inset-0 z-[3] pointer-events-none opacity-[0.06] grid-overlay"></div>
 
 	<div class="max-w-7xl mx-auto w-full relative z-10 text-center">
-		<div class="solutions-hero-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/25 via-procor-blue/25 to-procor-blue-light/25 border border-white/[0.2] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35),inset_0_1px_0_rgba(255,255,255,0.1)]">
+		<div class="solutions-hero-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/25 via-procor-blue/25 to-procor-blue-light/25 border border-line backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-10 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35),inset_0_1px_0_rgba(255,255,255,0.1)]">
 			<Sparkles size={16} class="text-sky-300" />
-			<span class="text-white" style="text-shadow: 0px 0px 20px rgba(255,255,255,0.4);">Industry-Specific Solutions</span>
+			<span class="text-fg" style="text-shadow: 0px 0px 20px rgba(255,255,255,0.4);">Industry-Specific Solutions</span>
 		</div>
 
-		<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] font-black text-white leading-[0.9] font-display mb-8 tracking-tight">
+		<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] font-black text-fg leading-[0.9] font-display mb-8 tracking-tight">
 			<span class="solutions-hero-title block">Solutions Built for</span>
 			<span class="solutions-hero-title block bg-gradient-to-r from-sky-400 via-procor-blue to-procor-blue-light bg-clip-text text-transparent italic min-h-[1.2em]">
 				Your Industry
 			</span>
 		</h1>
 
-		<p class="solutions-hero-sub text-lg md:text-xl text-white/75 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+		<p class="solutions-hero-sub text-lg md:text-xl text-fg/75 mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
 			Every industry faces unique workforce challenges. PROCOR delivers tailored solutions that solve your specific problems — not generic HR templates.
 		</p>
 
@@ -106,7 +106,7 @@
 	</div>
 
 	<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-		<span class="text-[9px] font-bold text-neutral-500 uppercase tracking-[0.3em]">Explore</span>
-		<ChevronDown size={16} class="text-neutral-500 animate-bounce" />
+		<span class="text-[9px] font-bold text-fg/70 uppercase tracking-[0.3em]">Explore</span>
+		<ChevronDown size={16} class="text-fg/70 animate-bounce" />
 	</div>
 </section>

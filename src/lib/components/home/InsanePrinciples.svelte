@@ -49,24 +49,24 @@
 <section id="principles" class="px-6 py-24 md:px-12 md:py-32" data-reveal>
 	<div class="mx-auto max-w-7xl">
 		<div class="mb-16 text-center">
-			<h2 class="text-4xl font-black leading-tight text-white font-display sm:text-5xl md:text-6xl">
+			<h2 class="text-4xl font-black leading-tight text-fg font-display sm:text-5xl md:text-6xl">
 				<span class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
 					Why teams choose PROCOR
 				</span>
 			</h2>
-			<p class="mx-auto mt-5 max-w-2xl text-lg text-white/50">
+			<p class="mx-auto mt-5 max-w-2xl text-lg text-fg/50">
 				Principles we refuse to compromise on — no vanity metrics, just the substance behind the platform.
 			</p>
 		</div>
 
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each principles as principle}
-				<div class="group rounded-3xl border border-white/[0.08] bg-white/[0.02] p-8 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/[0.15] hover:bg-white/[0.04]">
+				<div class="group rounded-3xl border border-line bg-surface-2 p-8 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-line hover:bg-surface-2">
 					<div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br {principle.gradient} shadow-lg transition group-hover:scale-110">
-						<svelte:component this={principle.icon} size={26} class="text-white" />
+						<svelte:component this={principle.icon} size={26} class="text-fg" />
 					</div>
-					<h3 class="mb-3 text-xl font-bold text-white">{principle.title}</h3>
-					<p class="text-sm leading-relaxed text-white/50">{principle.desc}</p>
+					<h3 class="mb-3 text-xl font-bold text-fg">{principle.title}</h3>
+					<p class="text-sm leading-relaxed text-fg/50">{principle.desc}</p>
 				</div>
 			{/each}
 		</div>

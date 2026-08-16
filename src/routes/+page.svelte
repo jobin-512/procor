@@ -96,7 +96,7 @@
 	});
 </script>
 
-<div class="relative min-h-screen bg-[#080c15] text-white">
+<div class="relative min-h-screen bg-bg text-fg">
 	<HomeHero />
 
 	<InsanePrinciples />
@@ -111,22 +111,22 @@
 					<Sparkles size={16} class="text-emerald-400" />
 					<span>A simple path</span>
 				</div>
-				<h2 class="text-4xl font-black leading-tight text-white font-display sm:text-5xl md:text-6xl">
+				<h2 class="text-4xl font-black leading-tight text-fg font-display sm:text-5xl md:text-6xl">
 					Get started in <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">four steps</span>
 				</h2>
-				<p class="mx-auto mt-5 max-w-2xl text-lg text-white/50">
+				<p class="mx-auto mt-5 max-w-2xl text-lg text-fg/50">
 					From first conversation to ongoing optimization, we keep the journey smooth for your whole organization.
 				</p>
 			</div>
 
 			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
 				{#each steps as step, i}
-					<div class="group relative rounded-2xl border border-white/[0.08] bg-white/[0.02] p-7 transition duration-300 hover:-translate-y-1 hover:border-white/[0.15] hover:bg-white/[0.04]">
-						<div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br {step.gradient} text-2xl font-black text-white shadow-lg">
+					<div class="group relative rounded-2xl border border-line bg-surface-2 p-7 transition duration-300 hover:-translate-y-1 hover:border-line hover:bg-surface-2">
+						<div class="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br {step.gradient} text-2xl font-black text-fg shadow-lg">
 							{step.step}
 						</div>
-						<h3 class="mb-3 text-lg font-bold text-white">{step.title}</h3>
-						<p class="text-sm leading-relaxed text-white/50">{step.desc}</p>
+						<h3 class="mb-3 text-lg font-bold text-fg">{step.title}</h3>
+						<p class="text-sm leading-relaxed text-fg/50">{step.desc}</p>
 					</div>
 				{/each}
 			</div>
@@ -141,24 +141,24 @@
 					<BarChart3 size={16} class="text-blue-400" />
 					<span>Live workspace</span>
 				</div>
-				<h2 class="text-4xl font-black leading-tight text-white font-display sm:text-5xl md:text-6xl">
+				<h2 class="text-4xl font-black leading-tight text-fg font-display sm:text-5xl md:text-6xl">
 					Insights at a <span class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">glance</span>
 				</h2>
-				<p class="mx-auto mt-5 max-w-2xl text-lg text-white/50">Real-time workforce analytics that help your team make clearer decisions.</p>
+				<p class="mx-auto mt-5 max-w-2xl text-lg text-fg/50">Real-time workforce analytics that help your team make clearer decisions.</p>
 			</div>
 
-			<div class="rounded-3xl border border-white/[0.08] bg-white/[0.02] shadow-2xl shadow-black/40 backdrop-blur-xl">
-				<div class="flex items-center gap-4 border-b border-white/[0.06] bg-white/[0.02] px-6 py-4">
+			<div class="rounded-3xl border border-line bg-surface-2 shadow-2xl shadow-black/40 backdrop-blur-xl">
+				<div class="flex items-center gap-4 border-b border-line bg-surface-2 px-6 py-4">
 					<div class="flex gap-2">
 						<div class="h-3 w-3 rounded-full bg-rose-500/80"></div>
 						<div class="h-3 w-3 rounded-full bg-amber-500/80"></div>
 						<div class="h-3 w-3 rounded-full bg-emerald-500/80"></div>
 					</div>
-					<div class="flex flex-1 justify-center">
-						<div class="rounded-lg border border-white/[0.08] bg-white/[0.05] px-4 py-1.5">
-							<span class="font-mono text-xs text-white/40">dashboard.procor.io</span>
-						</div>
+				<div class="flex flex-1 justify-center">
+					<div class="rounded-lg border border-line bg-surface-2 px-4 py-1.5">
+						<span class="font-mono text-xs text-fg/40">PROCOR Workspace</span>
 					</div>
+				</div>
 					<div class="flex items-center gap-2">
 						<div class="h-2 w-2 rounded-full bg-emerald-400"></div>
 						<span class="text-[10px] font-semibold uppercase tracking-wider text-emerald-400">Live</span>
@@ -168,36 +168,36 @@
 				<div class="p-8">
 					<div class="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
 						{#each dashboardCards as card}
-							<div class="group rounded-2xl border border-white/[0.06] bg-white/[0.03] p-6 transition hover:border-white/[0.12] hover:bg-white/[0.06]">
+							<div class="group rounded-2xl border border-line bg-surface-2 p-6 transition hover:border-line hover:bg-surface-2">
 								<div class="mb-4 flex items-center gap-3">
 									<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 transition group-hover:scale-110">
 										<card.icon size={18} class="text-blue-400" />
 									</div>
 								</div>
-								<p class="text-sm font-semibold text-white/80">{card.label}</p>
-								<div class="mt-3 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
+								<p class="text-sm font-semibold text-fg/80">{card.label}</p>
+								<div class="mt-3 h-1.5 overflow-hidden rounded-full bg-surface-2">
 									<div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-blue-500"></div>
 								</div>
 							</div>
 						{/each}
 					</div>
 
-					<div class="rounded-2xl border border-white/[0.05] bg-white/[0.02] p-6">
+					<div class="rounded-2xl border border-line bg-surface-2 p-6">
 						<div class="mb-6 flex items-center justify-between">
 							<div class="flex items-center gap-2">
 								<BarChart3 size={18} class="text-sky-400" />
-								<span class="text-sm font-semibold text-white/70">Module Health</span>
+								<span class="text-sm font-semibold text-fg/70">Module Health</span>
 							</div>
-							<span class="text-xs text-white/30">Always updating</span>
+							<span class="text-xs text-fg/30">Always updating</span>
 						</div>
 						<div class="space-y-5">
 							{#each dashboardModules as bar, i}
 								<div>
 									<div class="mb-2 flex items-center justify-between">
-										<span class="text-sm text-white/60">{bar.label}</span>
+										<span class="text-sm text-fg/60">{bar.label}</span>
 										<span class="text-xs font-semibold text-emerald-400">Active</span>
 									</div>
-									<div class="h-3 overflow-hidden rounded-full bg-white/[0.05]">
+									<div class="h-3 overflow-hidden rounded-full bg-surface-2">
 										<div
 											class="h-full rounded-full bg-gradient-to-r {bar.color} transition-all duration-1000 ease-out"
 											style="width: {barsAnimated ? [82, 91, 97, 88][i] : 0}%; transition-delay: {i * 150}ms;"
@@ -216,41 +216,41 @@
 	<section class="px-6 py-24 md:px-12 md:py-32" data-reveal>
 		<div class="mx-auto max-w-3xl">
 			<div class="mb-16 text-center">
-				<div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-5 py-2 text-sm font-semibold text-white/60">
+				<div class="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-surface-2 px-5 py-2 text-sm font-semibold text-fg/60">
 					<span>Frequently Asked Questions</span>
 				</div>
-				<h2 class="text-4xl font-black leading-tight text-white font-display sm:text-5xl md:text-6xl">
+				<h2 class="text-4xl font-black leading-tight text-fg font-display sm:text-5xl md:text-6xl">
 					Got <span class="bg-gradient-to-r from-sky-400 to-blue-400 bg-clip-text text-transparent">questions?</span>
 				</h2>
 			</div>
 
 			<div class="space-y-4">
 				{#each faqs as faq, i}
-					<div class="group overflow-hidden rounded-2xl border {openFaq === i ? 'border-blue-500/30 bg-blue-500/[0.02]' : 'border-white/[0.06]'} bg-white/[0.02] backdrop-blur-xl transition-all duration-300">
+					<div class="group overflow-hidden rounded-2xl border {openFaq === i ? 'border-blue-500/30 bg-blue-500/[0.02]' : 'border-line'} bg-surface-2 backdrop-blur-xl transition-all duration-300">
 						<button
-							class="flex w-full cursor-pointer items-center justify-between p-6 text-left transition-colors hover:bg-white/[0.02]"
+							class="flex w-full cursor-pointer items-center justify-between p-6 text-left transition-colors hover:bg-surface-2"
 							onclick={() => (openFaq = openFaq === i ? null : i)}
 						>
-							<span class="pr-4 text-lg font-semibold text-white/90">{faq.q}</span>
-							<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] transition-all duration-300 {openFaq === i ? 'rotate-180 border-blue-500/30 bg-blue-500/20' : ''}">
+							<span class="pr-4 text-lg font-semibold text-fg/90">{faq.q}</span>
+							<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-line bg-surface-2 transition-all duration-300 {openFaq === i ? 'rotate-180 border-blue-500/30 bg-blue-500/20' : ''}">
 								{#if openFaq === i}
 									<Minus size={18} class="text-blue-400" />
 								{:else}
-									<Plus size={18} class="text-white/50" />
+									<Plus size={18} class="text-fg/50" />
 								{/if}
 							</div>
 						</button>
 						{#if openFaq === i}
 							<div class="animate-fadeIn px-6 pb-6">
-								<p class="leading-relaxed text-white/60">{faq.a}</p>
+								<p class="leading-relaxed text-fg/60">{faq.a}</p>
 							</div>
 						{/if}
 					</div>
 				{/each}
 			</div>
 
-			<div class="mt-12 rounded-2xl border border-white/[0.08] bg-gradient-to-r from-blue-500/10 to-blue-600/10 p-8 text-center">
-				<p class="mb-4 font-medium text-white/60">Still have questions?</p>
+			<div class="mt-12 rounded-2xl border border-line bg-gradient-to-r from-blue-500/10 to-blue-600/10 p-8 text-center">
+				<p class="mb-4 font-medium text-fg/60">Still have questions?</p>
 				<a href="/contact" class="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4 font-semibold text-white transition-all hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-500/25 group">
 					Talk to our team <ArrowRight size={18} class="transition group-hover:translate-x-1" />
 				</a>

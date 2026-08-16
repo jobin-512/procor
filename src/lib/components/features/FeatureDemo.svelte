@@ -99,7 +99,7 @@
 	<div class="max-w-7xl mx-auto px-6 relative z-10">
 		<div class="text-center mb-14" data-reveal>
 			<SectionBadge variant="blue">Interactive Demo</SectionBadge>
-			<h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-black text-white font-display">
+			<h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-black text-fg font-display">
 				See It In Action
 			</h2>
 			<p class="mt-4 text-[var(--text-secondary)] max-w-xl mx-auto text-base md:text-lg">
@@ -113,8 +113,8 @@
 					<button
 						class="w-full text-left p-4 md:p-5 rounded-2xl border transition-all duration-300 cursor-pointer group
 							{activeDemoFeature === i
-								? 'bg-white/[0.1] border-{feat.color}/40 shadow-lg shadow-{feat.color}/20'
-								: 'bg-white/[0.04] border-white/[0.1] hover:bg-white/[0.08] hover:border-white/20'}"
+								? 'bg-surface-2 border-{feat.color}/40 shadow-lg shadow-{feat.color}/20'
+								: 'bg-surface-2 border-line hover:bg-surface-2 hover:border-line'}"
 						onclick={() => (activeDemoFeature = i)}
 					>
 						<div class="flex items-center gap-3">
@@ -122,7 +122,7 @@
 								<feat.icon size={20} style="color: {feat.color}" />
 							</div>
 							<div>
-								<span class="text-sm font-bold transition-colors {activeDemoFeature === i ? 'text-white' : 'text-[var(--text-secondary)]'}">
+								<span class="text-sm font-bold transition-colors {activeDemoFeature === i ? 'text-fg' : 'text-[var(--text-secondary)]'}">
 									{feat.title}
 								</span>
 								{#if activeDemoFeature === i}
@@ -136,7 +136,7 @@
 
 			<div class="lg:col-span-3" data-reveal>
 				<GlowCard glowColor="rgba(117, 194, 246, 0.4)" glowSize={350}>
-					<div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/[0.1]">
+					<div class="flex items-center gap-3 mb-6 pb-4 border-b border-line">
 						<div class="flex gap-1.5">
 							<div class="w-3 h-3 rounded-full bg-rose-500/60"></div>
 							<div class="w-3 h-3 rounded-full bg-amber-500/60"></div>
@@ -152,7 +152,7 @@
 							<svelte:component this={demoFeatures[activeDemoFeature].icon} size={24} style="color: {demoFeatures[activeDemoFeature].color}" />
 						</div>
 						<div>
-							<h3 class="text-xl md:text-2xl font-bold text-white mb-1 font-display">
+							<h3 class="text-xl md:text-2xl font-bold text-fg mb-1 font-display">
 								{demoFeatures[activeDemoFeature].title}
 							</h3>
 							<p class="text-sm text-[var(--text-secondary)] leading-relaxed">

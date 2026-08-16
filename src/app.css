@@ -17,12 +17,28 @@
 
 	--font-sans: 'Inter', 'sans-serif';
 	--font-display: 'Outfit', 'sans-serif';
+
+	/* ── Semantic Theme Tokens (theme-aware via :root / html.light) ── */
+	--color-bg: var(--bg);
+	--color-surface: var(--surface);
+	--color-surface-2: var(--surface-2);
+	--color-fg: var(--fg);
+	--color-line: var(--line);
+	--color-line-strong: var(--line-strong);
 }
 
 /* ─────────────────────────────────────────────
    DESIGN SYSTEM — CSS Custom Properties
    ───────────────────────────────────────────── */
 :root {
+	/* ── Semantic Theme Tokens (DARK default) ── */
+	--bg: #080c15;
+	--surface: #0d1424;
+	--surface-2: rgba(255, 255, 255, 0.05);
+	--fg: #ffffff;
+	--line: rgba(255, 255, 255, 0.1);
+	--line-strong: rgba(255, 255, 255, 0.18);
+
 	/* ── Brand Palette ── */
 	--color-navy: #1a1f36;
 	--color-navy-light: #2d3250;
@@ -95,6 +111,36 @@
 }
 
 /* ─────────────────────────────────────────────
+   LIGHT THEME OVERRIDES
+   ───────────────────────────────────────────── */
+html.light {
+	color-scheme: light;
+
+	--bg: #f5f7fb;
+	--surface: #ffffff;
+	--surface-2: rgba(15, 23, 42, 0.04);
+	--fg: #0b1220;
+	--line: rgba(15, 23, 42, 0.1);
+	--line-strong: rgba(15, 23, 42, 0.16);
+
+	--surface-dark: #ffffff;
+	--surface-dark-elevated: #f5f7fb;
+	--surface-dark-card: rgba(15, 23, 42, 0.03);
+	--surface-dark-card-hover: rgba(15, 23, 42, 0.06);
+
+	--border-dark: rgba(15, 23, 42, 0.08);
+	--border-dark-hover: rgba(15, 23, 42, 0.16);
+	--border-accent: rgba(37, 59, 218, 0.35);
+
+	--text-primary: #0b1220;
+	--text-secondary: rgba(15, 23, 42, 0.7);
+	--text-muted: rgba(15, 23, 42, 0.55);
+	--text-faint: rgba(15, 23, 42, 0.35);
+
+	--gradient-hero: linear-gradient(180deg, #f5f7fb 0%, #eef2f9 100%);
+}
+
+/* ─────────────────────────────────────────────
    GLOBAL RESETS & BASE
    ───────────────────────────────────────────── */
 *,
@@ -110,10 +156,12 @@ html {
 }
 
 body {
-	background-color: var(--surface-dark);
-	color: var(--text-primary);
+	background-color: var(--bg);
+	color: var(--fg);
 	overflow-x: hidden;
 	font-family: var(--font-sans);
+	transition: background-color var(--duration-normal) var(--ease-smooth),
+		color var(--duration-normal) var(--ease-smooth);
 }
 
 /* ── Selection ── */
@@ -176,15 +224,15 @@ body {
    CARD STYLES
    ───────────────────────────────────────────── */
 .card-dark {
-	background: var(--surface-dark-card);
-	border: 1px solid var(--border-dark);
+	background: var(--surface-2);
+	border: 1px solid var(--line);
 	backdrop-filter: blur(12px);
 	transition: all var(--duration-normal) var(--ease-smooth);
 }
 
 .card-dark:hover {
-	background: var(--surface-dark-card-hover);
-	border-color: var(--border-dark-hover);
+	background: var(--surface-2);
+	border-color: var(--line-strong);
 	transform: translateY(-2px);
 }
 
@@ -207,9 +255,9 @@ body {
 }
 
 .btn-secondary {
-	background: rgba(255, 255, 255, 0.05);
-	border: 1px solid var(--border-dark-hover);
-	color: white;
+	background: var(--surface-2);
+	border: 1px solid var(--line-strong);
+	color: var(--fg);
 	font-weight: 600;
 	padding: 0.875rem 2rem;
 	border-radius: var(--radius-xl);
@@ -218,8 +266,9 @@ body {
 }
 
 .btn-secondary:hover {
-	background: rgba(255, 255, 255, 0.1);
-	border-color: rgba(255, 255, 255, 0.25);
+	background: var(--surface-2);
+	border-color: var(--line-strong);
+	color: var(--fg);
 }
 
 .btn-blue {
@@ -365,14 +414,14 @@ body {
    UTILITY PATTERNS
    ───────────────────────────────────────────── */
 .glass-effect {
-	background: rgba(255, 255, 255, 0.03);
+	background: var(--surface-2);
 	backdrop-filter: blur(20px);
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	border: 1px solid var(--line);
 }
 
 .divider-gradient {
 	height: 1px;
-	background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+	background: linear-gradient(to right, transparent, var(--line-strong), transparent);
 }
 
 .glow-blue {
@@ -515,25 +564,25 @@ body {
    GLASSMORPHISM VARIANTS
    ───────────────────────────────────────────── */
 .glass-dark {
-	background: rgba(5, 8, 16, 0.8);
+	background: var(--surface);
 	backdrop-filter: blur(24px) saturate(180%);
-	border: 1px solid rgba(255, 255, 255, 0.06);
+	border: 1px solid var(--line);
 }
 
 .glass-light {
-	background: rgba(255, 255, 255, 0.05);
+	background: var(--surface-2);
 	backdrop-filter: blur(24px) saturate(150%);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--line);
 }
 
 .glass-gradient {
 	background: linear-gradient(
 		135deg,
-		rgba(255, 255, 255, 0.05) 0%,
-		rgba(255, 255, 255, 0.02) 100%
+		var(--surface-2) 0%,
+		var(--surface) 100%
 	);
 	backdrop-filter: blur(20px);
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	border: 1px solid var(--line);
 }
 
 /* ─────────────────────────────────────────────

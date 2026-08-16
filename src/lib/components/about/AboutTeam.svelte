@@ -24,11 +24,11 @@
 		<div class="text-center mb-20">
 			<SectionBadge variant="violet">Our People</SectionBadge>
 			<h2
-				class="text-3xl sm:text-4xl md:text-6xl font-black font-display text-white mt-6 tracking-tight"
+				class="text-3xl sm:text-4xl md:text-6xl font-black font-display text-fg mt-6 tracking-tight"
 			>
 				Meet the Team
 			</h2>
-			<p class="mt-4 text-lg text-white/50 max-w-xl mx-auto font-medium">
+			<p class="mt-4 text-lg text-fg/50 max-w-xl mx-auto font-medium">
 				A diverse group of builders, dreamers, and leaders united by one mission.
 			</p>
 		</div>
@@ -41,26 +41,26 @@
 							<div
 								class="w-24 h-24 rounded-full bg-gradient-to-br {member.gradient} mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500"
 							>
-								<span class="text-2xl font-black text-white font-display"
+								<span class="text-2xl font-black text-fg font-display"
 									>{member.initials}</span
 								>
 							</div>
 
 							<h4
-								class="text-lg font-black font-display text-white mb-1 group-hover:text-sky-300 transition-colors"
+								class="text-lg font-black font-display text-fg mb-1 group-hover:text-sky-300 transition-colors"
 							>
 								{member.name}
 							</h4>
 							<p class="text-xs font-bold text-sky-400/70 uppercase tracking-[0.15em] mb-4">
 								{member.title}
 							</p>
-							<p class="text-white/40 text-sm leading-relaxed mb-6">
+							<p class="text-fg/40 text-sm leading-relaxed mb-6">
 								{member.bio}
 							</p>
 
 							<a
 								href="#"
-								class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/[0.06] border border-white/[0.08] text-white/30 hover:text-sky-400 hover:border-sky-500/30 hover:bg-sky-500/10 transition-all duration-300"
+								class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-surface-2 border border-line text-fg/30 hover:text-sky-400 hover:border-sky-500/30 hover:bg-sky-500/10 transition-all duration-300"
 								aria-label="LinkedIn profile"
 							>
 								<Link size={16} />

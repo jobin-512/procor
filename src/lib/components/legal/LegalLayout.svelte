@@ -7,7 +7,7 @@
 	let { title, updated, children } = $props();
 </script>
 
-<div class="min-h-screen bg-[#050810] selection:bg-blue-500/30 overflow-hidden">
+<div class="min-h-screen bg-bg selection:bg-blue-500/30 overflow-hidden">
 	<PageWebGL theme="blue" intensity={0.6} particleCount={500} />
 
 	<section class="relative pt-32 pb-10 px-6 md:px-12">
@@ -15,8 +15,8 @@
 			<div class="inline-flex items-center gap-2 px-5 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-sm font-semibold text-blue-300 mb-8 backdrop-blur-xl">
 				<span>Legal</span>
 			</div>
-			<h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-4">{title}</h1>
-			<p class="text-white/40 text-sm">Last updated: {updated}</p>
+			<h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-4">{title}</h1>
+			<p class="text-fg/40 text-sm">Last updated: {updated}</p>
 		</div>
 	</section>
 
@@ -27,10 +27,10 @@
 	</section>
 
 	<section class="relative px-6 md:px-12 pb-32">
-		<div class="max-w-3xl mx-auto rounded-3xl border border-white/[0.08] bg-white/[0.02] p-8 text-center">
-			<h3 class="text-xl font-bold text-white mb-2">Contact Us</h3>
-			<p class="text-white/50 text-sm mb-6">Questions about this policy? Our team is here to help.</p>
-			<div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-white/60">
+		<div class="max-w-3xl mx-auto rounded-3xl border border-line bg-surface-2 p-8 text-center">
+			<h3 class="text-xl font-bold text-fg mb-2">Contact Us</h3>
+			<p class="text-fg/50 text-sm mb-6">Questions about this policy? Our team is here to help.</p>
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-fg/60">
 				<div class="flex items-center gap-2">
 					<Mail size={16} class="text-blue-400/60" />
 					<span>info@procorhrms.com</span>
@@ -52,7 +52,7 @@
 	.prose-legal :global(h2) {
 		font-size: 1.5rem;
 		font-weight: 800;
-		color: #fff;
+		color: var(--fg);
 		margin-top: 2.5rem;
 		margin-bottom: 1rem;
 		font-family: var(--font-display, 'Outfit', sans-serif);
@@ -60,12 +60,12 @@
 	.prose-legal :global(h3) {
 		font-size: 1.15rem;
 		font-weight: 700;
-		color: rgba(255, 255, 255, 0.9);
+		color: var(--fg);
 		margin-top: 1.75rem;
 		margin-bottom: 0.75rem;
 	}
 	.prose-legal :global(p) {
-		color: rgba(255, 255, 255, 0.55);
+		color: color-mix(in srgb, var(--fg) 72%, transparent);
 		line-height: 1.75;
 		margin-bottom: 1rem;
 		font-size: 0.95rem;
@@ -74,7 +74,7 @@
 		list-style: disc;
 		padding-left: 1.5rem;
 		margin-bottom: 1rem;
-		color: rgba(255, 255, 255, 0.55);
+		color: color-mix(in srgb, var(--fg) 72%, transparent);
 	}
 	.prose-legal :global(ul li) {
 		margin-bottom: 0.5rem;
@@ -85,6 +85,6 @@
 		text-decoration: underline;
 	}
 	.prose-legal :global(strong) {
-		color: rgba(255, 255, 255, 0.85);
+		color: var(--fg);
 	}
 </style>

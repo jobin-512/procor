@@ -178,14 +178,14 @@
 	});
 </script>
 
-<div bind:this={pageEl} class="min-h-screen bg-[#050810] selection:bg-amber-500/30 overflow-hidden">
+<div bind:this={pageEl} class="min-h-screen bg-bg selection:bg-amber-500/30 overflow-hidden">
 	<!-- WebGL Background -->
 	<PageWebGL theme="amber" intensity={0.8} particleCount={800} />
 
 	<!-- HERO -->
 	<section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-12">
 		<div
-			class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050810]/50 to-[#050810] z-[1]"
+			class="absolute inset-0 bg-gradient-to-b from-transparent via-bg/50 to-bg z-[1]"
 		></div>
 
 		<div class="max-w-7xl mx-auto w-full relative z-10">
@@ -200,7 +200,7 @@
 					</div>
 
 					<h1
-						class="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[0.95] font-display mb-6"
+						class="text-4xl sm:text-5xl md:text-6xl font-black text-fg leading-[0.95] font-display mb-6"
 					>
 						<span class="block">See PROCOR</span>
 						<span
@@ -210,7 +210,7 @@
 						</span>
 					</h1>
 
-					<p class="text-xl text-white/60 mb-8 leading-relaxed">
+					<p class="text-xl text-fg/60 mb-8 leading-relaxed">
 						Experience the future of HR management. Get a personalized demo tailored to your
 						organization's needs.
 					</p>
@@ -218,7 +218,7 @@
 					<!-- Benefits -->
 					<div class="flex flex-wrap gap-4 mb-8">
 						{#each benefits as benefit}
-							<div class="flex items-center gap-2 text-white/60">
+							<div class="flex items-center gap-2 text-fg/60">
 								<CheckCircle size={16} class="text-emerald-400" />
 								<span class="text-sm">{benefit}</span>
 							</div>
@@ -229,10 +229,10 @@
 					<div class="flex flex-wrap gap-4">
 						{#each trustBadges as badge}
 							<div
-								class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.08]"
+								class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-2 border border-line"
 							>
 								<svelte:component this={badge.icon} size={16} class="text-amber-400" />
-								<span class="text-xs font-medium text-white/60">{badge.label}</span>
+								<span class="text-xs font-medium text-fg/60">{badge.label}</span>
 							</div>
 						{/each}
 					</div>
@@ -245,7 +245,7 @@
 							class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-amber-500/30 via-orange-500/30 to-red-500/30 blur-2xl"
 						></div>
 						<div
-							class="relative p-8 rounded-3xl bg-white/[0.03] border border-white/[0.1] backdrop-blur-xl"
+							class="relative p-8 rounded-3xl bg-surface-2 border border-line backdrop-blur-xl"
 						>
 							{#if formStatus === 'success'}
 								<div class="text-center py-8">
@@ -254,8 +254,8 @@
 									>
 										<CheckCircle size={32} class="text-emerald-400" />
 									</div>
-									<h3 class="text-2xl font-bold text-white mb-2">You're all set!</h3>
-									<p class="text-white/60 mb-6">Check your email for demo access instructions.</p>
+									<h3 class="text-2xl font-bold text-fg mb-2">You're all set!</h3>
+									<p class="text-fg/60 mb-6">Check your email for demo access instructions.</p>
 									<a
 										href="/"
 										class="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors"
@@ -265,7 +265,7 @@
 									</a>
 								</div>
 							{:else}
-								<h2 class="text-2xl font-bold text-white mb-6">Start your free trial</h2>
+								<h2 class="text-2xl font-bold text-fg mb-6">Start your free trial</h2>
 
 								<form onsubmit={handleSubmit} class="space-y-5">
 									<div>
@@ -274,7 +274,7 @@
 											bind:value={formData.name}
 											required
 											placeholder="Full Name"
-											class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/30 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+											class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
 										/>
 									</div>
 									<div>
@@ -283,7 +283,7 @@
 											bind:value={formData.email}
 											required
 											placeholder="Work Email"
-											class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/30 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+											class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
 										/>
 									</div>
 									<div>
@@ -291,17 +291,18 @@
 											type="text"
 											bind:value={formData.company}
 											placeholder="Company Name"
-											class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/30 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+											class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
 										/>
 									</div>
-									<div>
-										<input
-											type="tel"
-											bind:value={formData.phone}
-											placeholder="Phone Number (Optional)"
-											class="w-full px-5 py-4 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder:text-white/30 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
-										/>
-									</div>
+								<div>
+									<input
+										type="tel"
+										bind:value={formData.phone}
+										required
+										placeholder="Phone Number"
+										class="w-full px-5 py-4 rounded-xl bg-surface-2 border border-line text-fg placeholder:text-fg/30 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+									/>
+								</div>
 
 									<button
 										type="submit"
@@ -318,7 +319,7 @@
 									</button>
 								</form>
 
-								<p class="text-center text-xs text-white/40 mt-4">
+								<p class="text-center text-xs text-fg/40 mt-4">
 									By signing up, you agree to our Terms & Privacy Policy
 								</p>
 							{/if}
@@ -339,7 +340,7 @@
 					<BarChart3 size={16} />
 					<span>Interactive Preview</span>
 				</div>
-				<h2 class="text-4xl sm:text-5xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl font-black text-fg font-display mb-6">
 					Experience the <span
 						class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"
 						>power</span
@@ -357,7 +358,7 @@
 							class="flex items-center gap-2 px-5 py-3 rounded-xl transition-all duration-300 {activeTab ===
 							i
 								? 'bg-blue-500/20 border border-blue-500/30 text-white'
-								: 'text-white/50 hover:text-white hover:bg-white/[0.05]'}"
+								: 'text-fg/50 hover:text-fg hover:bg-surface-2'}"
 						>
 							<svelte:component this={tab.icon} size={18} />
 							{tab.label}
@@ -371,7 +372,7 @@
 						class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-500/20 via-blue-600/20 to-sky-500/20 blur-2xl"
 					></div>
 					<div
-						class="relative rounded-3xl bg-white/[0.02] border border-white/[0.1] overflow-hidden"
+						class="relative rounded-3xl bg-surface-2 border border-line overflow-hidden"
 					>
 						<!-- Dashboard Content -->
 						<div class="p-8">
@@ -379,7 +380,7 @@
 							<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
 								{#each kpis as kpi}
 									<div
-										class="group p-5 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] transition-all"
+										class="group p-5 rounded-xl bg-surface-2 border border-line hover:bg-surface-2 transition-all"
 									>
 										<div class="flex items-center gap-3 mb-3">
 											<div
@@ -388,14 +389,14 @@
 												<svelte:component this={kpi.icon} size={18} class={kpi.color} />
 											</div>
 										</div>
-										<p class="text-2xl font-bold text-white mb-1">{kpi.value}</p>
-										<span class="text-xs text-white/40">{kpi.label}</span>
+										<p class="text-2xl font-bold text-fg mb-1">{kpi.value}</p>
+										<span class="text-xs text-fg/40">{kpi.label}</span>
 									</div>
 								{/each}
 							</div>
 
 							<!-- Chart Placeholder -->
-							<div class="p-6 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+							<div class="p-6 rounded-xl bg-surface-2 border border-line">
 								<div class="flex items-center justify-between mb-6">
 									<div class="flex items-center gap-2">
 										<svelte:component
@@ -403,11 +404,11 @@
 											size={18}
 											class="text-blue-400"
 										/>
-										<span class="text-sm font-semibold text-white/70"
+										<span class="text-sm font-semibold text-fg/70"
 											>{demoTabs[activeTab].label} Overview</span
 										>
 									</div>
-									<span class="text-xs text-white/30">Last 30 days</span>
+									<span class="text-xs text-fg/30">Last 30 days</span>
 								</div>
 								<div class="h-48 flex items-end justify-around gap-4">
 									{#each [65, 80, 45, 90, 70, 85, 60, 95, 75, 88, 55, 92] as value, i}
@@ -433,7 +434,7 @@
 
 		<div class="max-w-6xl mx-auto relative z-10">
 			<div class="reveal-section text-center mb-16">
-				<h2 class="text-4xl sm:text-5xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl font-black text-fg font-display mb-6">
 					Why teams <span
 						class="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent"
 						>love PROCOR</span
@@ -444,15 +445,15 @@
 			<div class="reveal-section grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{#each features as feature}
 					<div
-						class="group p-6 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] hover:border-white/[0.15] transition-all duration-500"
+						class="group p-6 rounded-2xl bg-surface-2 border border-line hover:bg-surface-2 hover:border-line transition-all duration-500"
 					>
 						<div
 							class="w-12 h-12 rounded-xl bg-gradient-to-br {feature.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
 						>
-							<svelte:component this={feature.icon} size={22} class="text-white" />
+							<svelte:component this={feature.icon} size={22} class="text-fg" />
 						</div>
-						<h3 class="text-lg font-bold text-white mb-2">{feature.title}</h3>
-						<p class="text-white/50 text-sm">{feature.description}</p>
+						<h3 class="text-lg font-bold text-fg mb-2">{feature.title}</h3>
+						<p class="text-fg/50 text-sm">{feature.description}</p>
 					</div>
 				{/each}
 			</div>
@@ -468,7 +469,7 @@
 		</div>
 
 		<div class="reveal-section max-w-4xl mx-auto text-center relative z-10">
-			<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-8">
+			<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-8">
 				Ready to get
 				<span
 					class="block bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent"
@@ -477,7 +478,7 @@
 				</span>
 			</h2>
 
-			<p class="text-xl text-white/50 mb-12 max-w-2xl mx-auto">
+			<p class="text-xl text-fg/50 mb-12 max-w-2xl mx-auto">
 				Join the organizations that trust PROCOR. Start your free trial today.
 			</p>
 
@@ -492,7 +493,7 @@
 				</a>
 				<a
 					href="/contact"
-					class="px-10 py-5 bg-white/[0.05] border border-white/[0.1] text-white rounded-2xl font-semibold text-lg hover:bg-white/[0.1] transition-all flex items-center justify-center gap-2"
+					class="px-10 py-5 bg-surface-2 border border-line text-fg rounded-2xl font-semibold text-lg hover:bg-surface-2 transition-all flex items-center justify-center gap-2"
 				>
 					<Calendar size={20} />
 					Schedule a Call

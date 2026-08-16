@@ -90,7 +90,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 </svelte:head>
 
-<div class="antialiased bg-[#080c15]">
+<div class="antialiased bg-bg">
 	<Header bind:isMenuOpen />
 	{@render children()}
 	<Footer />
@@ -99,11 +99,11 @@
 <style>
 	:global(html) {
 		scroll-behavior: initial;
-		background-color: #080c15;
+		background-color: var(--bg);
 	}
 
 	:global(body) {
-		background-color: #080c15;
+		background-color: var(--bg);
 	}
 
 	:global(.lenis.lenis-smooth) {

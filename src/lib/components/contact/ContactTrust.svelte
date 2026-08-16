@@ -28,17 +28,17 @@
 
 <section class="relative py-16 px-6 md:px-12 bg-[var(--surface-dark)]">
 	<div class="max-w-4xl mx-auto relative z-10">
-		<div class="trust-bar flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 py-10 px-8 rounded-3xl bg-white/[0.02] border border-white/[0.06]">
+		<div class="trust-bar flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 py-10 px-8 rounded-3xl bg-surface-2 border border-line">
 			{#each trustBadges as badge, i}
 				<div class="trust-item flex items-center gap-3">
 					<div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
 						<badge.icon size={18} class="text-emerald-400" />
 					</div>
-					<span class="text-sm font-bold text-white">{badge.text}</span>
+					<span class="text-sm font-bold text-fg">{badge.text}</span>
 				</div>
 			{/each}
 		</div>
-		<p class="trust-item text-center mt-6 text-sm text-neutral-500 font-medium">
+		<p class="trust-item text-center mt-6 text-sm text-fg/70 font-medium">
 			Your data is safe with us. We follow industry-leading security practices.
 		</p>
 	</div>

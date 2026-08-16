@@ -28,7 +28,7 @@
 	<div class="max-w-5xl mx-auto px-6 relative z-10">
 		<div class="text-center mb-14" data-reveal>
 			<SectionBadge variant="emerald">Why PROCOR</SectionBadge>
-			<h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-black text-white font-display">
+			<h2 class="mt-6 text-3xl md:text-4xl lg:text-5xl font-black text-fg font-display">
 				Compare & Decide
 			</h2>
 			<p class="mt-4 text-[var(--text-secondary)] max-w-xl mx-auto text-base md:text-lg">
@@ -36,10 +36,10 @@
 			</p>
 		</div>
 
-		<div class="overflow-x-auto rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl" data-reveal>
+		<div class="overflow-x-auto rounded-2xl border border-line bg-surface-2 backdrop-blur-xl" data-reveal>
 			<table class="w-full text-left border-collapse">
 				<thead>
-					<tr class="border-b border-white/10 bg-white/5">
+					<tr class="border-b border-line bg-surface-2">
 						<th class="py-4 px-4 text-sm font-bold text-[var(--text-muted)] w-2/5">Feature</th>
 						<th class="py-4 px-4 text-center">
 							<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-procor-sky/15 border border-procor-sky/30 text-procor-sky text-xs font-black tracking-wider uppercase">
@@ -56,7 +56,7 @@
 				</thead>
 				<tbody>
 					{#each comparisonData as row}
-						<tr class="compare-row border-b border-white/5 hover:bg-white/5 transition-colors">
+						<tr class="compare-row border-b border-line hover:bg-surface-2 transition-colors">
 							<td class="py-3.5 px-4 text-sm text-[var(--text-secondary)]">{row.feature}</td>
 							<td class="py-3.5 px-4 text-center">
 								{#if row.procor}

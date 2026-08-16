@@ -61,7 +61,7 @@
 </script>
 
 <section
-	class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-16 px-6 md:px-12 overflow-hidden bg-[#030408]"
+	class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-16 px-6 md:px-12 overflow-hidden bg-bg"
 >
 	<div class="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
 		<div
@@ -88,16 +88,16 @@
 
 	<div class="max-w-7xl mx-auto w-full relative z-10 text-center">
 		<div
-			class="about-hero-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/25 via-violet-500/25 to-indigo-500/25 border border-white/[0.2] backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-14 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35),inset_0_1px_0_rgba(255,255,255,0.1)]"
+			class="about-hero-badge inline-flex items-center gap-3 px-6 py-2.5 bg-gradient-to-r from-sky-500/25 via-violet-500/25 to-indigo-500/25 border border-line backdrop-blur-xl rounded-full text-[11px] font-extrabold tracking-[0.15em] uppercase mb-14 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35),inset_0_1px_0_rgba(255,255,255,0.1)]"
 		>
 			<Sparkles size={16} class="text-sky-300" />
-			<span class="text-white" style="text-shadow: 0px 0px 20px rgba(255,255,255,0.4);">
+			<span class="text-fg" style="text-shadow: 0px 0px 20px rgba(255,255,255,0.4);">
 				About PROCOR HRMS
 			</span>
 		</div>
 
 		<h1
-			class="text-4xl sm:text-5xl md:text-7xl lg:text-[7rem] font-black text-white leading-[0.85] font-display mb-12 tracking-tight perspective-1000"
+			class="text-4xl sm:text-5xl md:text-7xl lg:text-[7rem] font-black text-fg leading-[0.85] font-display mb-12 tracking-tight perspective-1000"
 		>
 			{#each heroWords as word, i}
 				<span
@@ -112,7 +112,7 @@
 		</h1>
 
 		<p
-			class="hero-subtitle text-lg md:text-xl text-white/75 mb-16 max-w-2xl mx-auto leading-relaxed font-medium"
+			class="hero-subtitle text-lg md:text-xl text-fg/75 mb-16 max-w-2xl mx-auto leading-relaxed font-medium"
 		>
 			We're on a mission to transform how organizations connect, manage, and empower
 			their people — through intelligent design and cutting-edge technology.
@@ -127,7 +127,7 @@
 						{stat.value}
 					</p>
 					<p
-						class="text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] mt-2 group-hover:text-white/70 transition-colors duration-500"
+						class="text-[10px] font-bold text-fg/40 uppercase tracking-[0.2em] mt-2 group-hover:text-fg/70 transition-colors duration-500"
 					>
 						{stat.label}
 					</p>
@@ -137,8 +137,8 @@
 
 		<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
 			<div class="flex flex-col items-center gap-2 opacity-40">
-				<span class="text-[9px] font-bold text-neutral-500 uppercase tracking-[0.3em]">Scroll</span>
-				<ChevronDown size={16} class="text-neutral-500 animate-bounce" />
+				<span class="text-[9px] font-bold text-fg/70 uppercase tracking-[0.3em]">Scroll</span>
+				<ChevronDown size={16} class="text-fg/70 animate-bounce" />
 			</div>
 		</div>
 	</div>

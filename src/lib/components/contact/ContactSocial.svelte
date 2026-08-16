@@ -10,7 +10,7 @@
 		socials = [
 			{ icon: Link, label: 'LinkedIn', handle: '@procor', href: '#', color: 'hover:text-sky-400 hover:border-sky-400/30 hover:shadow-sky-400/10' },
 			{ icon: AtSign, label: 'X / Twitter', handle: '@procorhr', href: '#', color: 'hover:text-sky-300 hover:border-sky-300/30 hover:shadow-sky-300/10' },
-			{ icon: Code, label: 'GitHub', handle: 'procor', href: '#', color: 'hover:text-white hover:border-white/30 hover:shadow-white/10' },
+			{ icon: Code, label: 'GitHub', handle: 'procor', href: '#', color: 'hover:text-fg hover:border-line hover:shadow-white/10' },
 			{ icon: Video, label: 'YouTube', handle: '@procor', href: '#', color: 'hover:text-rose-400 hover:border-rose-400/30 hover:shadow-rose-400/10' }
 		]
 	} = $props();
@@ -33,10 +33,10 @@
 	<div class="max-w-5xl mx-auto relative z-10">
 		<div class="text-center mb-16">
 			<SectionBadge variant="dark">Follow Us</SectionBadge>
-			<h2 class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4 tracking-tight">
+			<h2 class="text-3xl md:text-5xl font-black text-fg font-display mt-6 mb-4 tracking-tight">
 				Join the <span class="bg-gradient-to-r from-procor-sky to-procor-blue bg-clip-text text-transparent">community</span>
 			</h2>
-			<p class="text-neutral-500 font-medium max-w-lg mx-auto">Stay connected and follow our journey on social media.</p>
+			<p class="text-fg/70 font-medium max-w-lg mx-auto">Stay connected and follow our journey on social media.</p>
 		</div>
 
 		<div class="socials-grid grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -45,12 +45,12 @@
 					href={social.href}
 					class="social-card group block"
 				>
-					<div class="relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7 text-center transition-all duration-500 {social.color} hover:bg-white/[0.04] hover:shadow-xl">
-						<div class="w-14 h-14 rounded-2xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-500">
+					<div class="relative rounded-2xl border border-line bg-surface-2 p-7 text-center transition-all duration-500 {social.color} hover:bg-surface-2 hover:shadow-xl">
+						<div class="w-14 h-14 rounded-2xl bg-surface-2 border border-line flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-500">
 							<social.icon size={24} />
 						</div>
-						<p class="text-sm font-bold text-white mb-1">{social.label}</p>
-						<p class="text-xs text-neutral-600 font-medium mb-4">{social.handle}</p>
+						<p class="text-sm font-bold text-fg mb-1">{social.label}</p>
+						<p class="text-xs text-fg/60 font-medium mb-4">{social.handle}</p>
 						<MagneticButton variant="secondary" size="sm" className="w-full">
 							Follow
 						</MagneticButton>

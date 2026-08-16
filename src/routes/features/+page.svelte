@@ -220,14 +220,14 @@
 	});
 </script>
 
-<div bind:this={pageEl} class="min-h-screen bg-[#050810] selection:bg-sky-500/30 overflow-hidden">
+<div bind:this={pageEl} class="min-h-screen bg-bg selection:bg-sky-500/30 overflow-hidden">
 	<!-- WebGL Background -->
 	<PageWebGL theme="cyan" intensity={0.8} particleCount={800} />
 
 	<!-- HERO -->
 	<section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 md:px-12">
 		<div
-			class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050810]/50 to-[#050810] z-[1]"
+			class="absolute inset-0 bg-gradient-to-b from-transparent via-bg/50 to-bg z-[1]"
 		></div>
 
 		<div class="hero-content max-w-5xl mx-auto text-center relative z-10">
@@ -239,7 +239,7 @@
 			</div>
 
 			<h1
-				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] font-display mb-8"
+				class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-fg leading-[0.9] font-display mb-8"
 			>
 				<span class="block">Everything you need.</span>
 				<span
@@ -249,7 +249,7 @@
 				</span>
 			</h1>
 
-			<p class="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-12 leading-relaxed">
+			<p class="text-xl md:text-2xl text-fg/60 max-w-3xl mx-auto mb-12 leading-relaxed">
 				Six powerful modules working in perfect harmony. Each one designed to solve real problems
 				for modern HR teams.
 			</p>
@@ -264,7 +264,7 @@
 				</a>
 				<a
 					href="/contact"
-					class="px-10 py-5 bg-white/[0.05] border border-white/[0.1] text-white rounded-2xl font-semibold text-lg hover:bg-white/[0.1] transition-all flex items-center justify-center gap-3"
+					class="px-10 py-5 bg-surface-2 border border-line text-fg rounded-2xl font-semibold text-lg hover:bg-surface-2 transition-all flex items-center justify-center gap-3"
 				>
 					Talk to Sales
 					<ArrowRight size={20} />
@@ -277,7 +277,7 @@
 	<section class="relative py-32 px-6 md:px-12">
 		<div class="max-w-7xl mx-auto">
 			<div class="reveal-section text-center mb-20">
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-6">
 					Six modules, <span
 						class="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent"
 						>infinite possibilities</span
@@ -292,8 +292,8 @@
 						onclick={() => (activeCategory = i)}
 						class="px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 {activeCategory ===
 						i
-							? 'bg-gradient-to-r ' + category.gradient + ' text-white shadow-lg'
-							: 'bg-white/[0.05] text-white/60 hover:bg-white/[0.1] hover:text-white'}"
+							? 'bg-gradient-to-r ' + category.gradient + ' text-fg shadow-lg'
+							: 'bg-surface-2 text-fg/60 hover:bg-surface-2 hover:text-fg'}"
 					>
 						{category.title}
 					</button>
@@ -306,25 +306,25 @@
 					class="w-16 h-16 rounded-2xl bg-gradient-to-br {categories[activeCategory]
 						.gradient} flex items-center justify-center mb-6 shadow-lg"
 				>
-					<svelte:component this={categories[activeCategory].icon} size={32} class="text-white" />
+					<svelte:component this={categories[activeCategory].icon} size={32} class="text-fg" />
 				</div>
-				<h3 class="text-3xl md:text-4xl font-black text-white mb-4">
+				<h3 class="text-3xl md:text-4xl font-black text-fg mb-4">
 					{categories[activeCategory].title}
 				</h3>
-				<p class="text-xl text-white/60 mb-8">{categories[activeCategory].description}</p>
+				<p class="text-xl text-fg/60 mb-8">{categories[activeCategory].description}</p>
 
 				<div class="grid sm:grid-cols-2 gap-4">
 					{#each categories[activeCategory].features as feature}
 						<div
-							class="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]"
+							class="flex items-center gap-3 p-4 rounded-xl bg-surface-2 border border-line"
 						>
 							<div
 								class="w-8 h-8 rounded-lg bg-gradient-to-br {categories[activeCategory]
 									.gradient} flex items-center justify-center"
 							>
-								<Check size={16} class="text-white" />
+								<Check size={16} class="text-fg" />
 							</div>
-							<span class="text-white/80 font-medium">{feature}</span>
+							<span class="text-fg/80 font-medium">{feature}</span>
 						</div>
 					{/each}
 				</div>
@@ -354,13 +354,13 @@
 					<Play size={16} />
 					<span>See it in action</span>
 				</div>
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-6">
 					A tour of the <span
 						class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"
 						>product</span
 					>
 				</h2>
-				<p class="text-white/50 max-w-2xl mx-auto">
+				<p class="text-fg/50 max-w-2xl mx-auto">
 					Explore real product screens — login, dashboard, profile, reimbursement, attendance and
 					leave.
 				</p>
@@ -378,7 +378,7 @@
 							class="px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-300 {activeDemoTab ===
 							i
 								? 'bg-blue-500/20 border border-blue-500/30 text-white'
-								: 'text-white/50 hover:text-white hover:bg-white/[0.05]'}"
+								: 'text-fg/50 hover:text-fg hover:bg-surface-2'}"
 						>
 							{tab.label}
 						</button>
@@ -391,10 +391,10 @@
 						class="absolute -inset-1 bg-gradient-to-r from-blue-500/30 via-blue-600/30 to-sky-500/30 blur-2xl"
 					></div>
 					<div
-						class="relative bg-white/[0.02] border border-white/[0.1] rounded-3xl overflow-hidden"
+						class="relative bg-surface-2 border border-line rounded-3xl overflow-hidden"
 					>
 						<!-- Demo Content -->
-						<div class=" bg-[#050810] flex items-center justify-center overflow-hidden">
+						<div class=" bg-bg flex items-center justify-center overflow-hidden">
 							{#if !imgFailed}
 								<img
 									src={`/see-it-in-action/${demoTabs[activeDemoTab].slug}.png`}
@@ -406,12 +406,12 @@
 							{:else}
 								<div class="text-center px-6">
 									<div
-										class="w-20 h-20 rounded-3xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] flex items-center justify-center mx-auto mb-6 border border-white/10"
+										class="w-20 h-20 rounded-3xl bg-gradient-to-br from-white/[0.05] to-white/[0.02] flex items-center justify-center mx-auto mb-6 border border-line"
 									>
-										<Play size={32} class="text-white/30" />
+										<Play size={32} class="text-fg/30" />
 									</div>
-									<h3 class="text-xl font-bold text-white mb-2">{demoTabs[activeDemoTab].label}</h3>
-									<p class="text-white/40 text-sm">
+									<h3 class="text-xl font-bold text-fg mb-2">{demoTabs[activeDemoTab].label}</h3>
+									<p class="text-fg/40 text-sm">
 										Add screenshot at <code class="text-sky-400"
 											>static/see-it-in-action/{demoTabs[activeDemoTab].slug}.png</code
 										>
@@ -435,7 +435,7 @@
 					<Award size={16} />
 					<span>Why PROCOR</span>
 				</div>
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-6">
 					How we <span
 						class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"
 						>compare</span
@@ -447,7 +447,7 @@
 				<table class="w-full">
 					<thead>
 						<tr>
-							<th class="text-left py-4 px-6 text-white/50 font-semibold">Feature</th>
+							<th class="text-left py-4 px-6 text-fg/50 font-semibold">Feature</th>
 							<th class="text-center py-4 px-6">
 								<div
 									class="inline-block px-4 py-2 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-bold"
@@ -455,14 +455,14 @@
 									PROCOR
 								</div>
 							</th>
-							<th class="text-center py-4 px-6 text-white/50 font-semibold">Competitor A</th>
-							<th class="text-center py-4 px-6 text-white/50 font-semibold">Competitor B</th>
+							<th class="text-center py-4 px-6 text-fg/50 font-semibold">Competitor A</th>
+							<th class="text-center py-4 px-6 text-fg/50 font-semibold">Competitor B</th>
 						</tr>
 					</thead>
 					<tbody>
 						{#each comparison as row, i}
-							<tr class="border-t border-white/[0.06] {i % 2 === 0 ? 'bg-white/[0.01]' : ''}">
-								<td class="py-4 px-6 text-white/80">{row.feature}</td>
+							<tr class="border-t border-line {i % 2 === 0 ? 'bg-surface-2' : ''}">
+								<td class="py-4 px-6 text-fg/80">{row.feature}</td>
 								<td class="text-center py-4 px-6">
 									{#if row.procor}
 										<div
@@ -480,16 +480,16 @@
 								</td>
 								<td class="text-center py-4 px-6">
 									{#if row.competitor1}
-										<Check size={18} class="text-white/30 mx-auto" />
+										<Check size={18} class="text-fg/30 mx-auto" />
 									{:else}
-										<X size={18} class="text-white/20 mx-auto" />
+										<X size={18} class="text-fg/20 mx-auto" />
 									{/if}
 								</td>
 								<td class="text-center py-4 px-6">
 									{#if row.competitor2}
-										<Check size={18} class="text-white/30 mx-auto" />
+										<Check size={18} class="text-fg/30 mx-auto" />
 									{:else}
-										<X size={18} class="text-white/20 mx-auto" />
+										<X size={18} class="text-fg/20 mx-auto" />
 									{/if}
 								</td>
 							</tr>
@@ -514,7 +514,7 @@
 					<Zap size={16} />
 					<span>200+ Integrations</span>
 				</div>
-				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-6">
+				<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-6">
 					Works with your <span
 						class="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent"
 						>favorite tools</span
@@ -525,7 +525,7 @@
 			<div class="reveal-section flex flex-wrap justify-center gap-4">
 				{#each integrations as integration}
 					<div
-						class="px-6 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white/60 font-medium hover:bg-white/[0.06] hover:border-indigo-500/30 hover:text-white transition-all duration-300"
+						class="px-6 py-3 rounded-xl bg-surface-2 border border-line text-fg/60 font-medium hover:bg-surface-2 hover:border-indigo-500/30 hover:text-fg transition-all duration-300"
 					>
 						{integration}
 					</div>
@@ -543,7 +543,7 @@
 		</div>
 
 		<div class="reveal-section max-w-4xl mx-auto text-center relative z-10">
-			<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-white font-display mb-8">
+			<h2 class="text-4xl sm:text-5xl md:text-6xl font-black text-fg font-display mb-8">
 				Ready to see all features
 				<span
 					class="block bg-gradient-to-r from-sky-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent"
@@ -552,7 +552,7 @@
 				</span>
 			</h2>
 
-			<p class="text-xl text-white/50 mb-12 max-w-2xl mx-auto">
+			<p class="text-xl text-fg/50 mb-12 max-w-2xl mx-auto">
 				Start your free trial today. No credit card required.
 			</p>
 
@@ -567,7 +567,7 @@
 				</a>
 				<a
 					href="/contact"
-					class="px-10 py-5 bg-white/[0.05] border border-white/[0.1] text-white rounded-2xl font-semibold text-lg hover:bg-white/[0.1] transition-all"
+					class="px-10 py-5 bg-surface-2 border border-line text-fg rounded-2xl font-semibold text-lg hover:bg-surface-2 transition-all"
 				>
 					Schedule Demo
 				</a>

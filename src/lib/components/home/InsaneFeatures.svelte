@@ -63,34 +63,34 @@
 <section class="px-6 py-24 md:px-12 md:py-32" data-reveal>
 	<div class="mx-auto max-w-7xl">
 		<div class="mx-auto mb-16 max-w-3xl text-center">
-			<div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-blue-500/10 px-5 py-2 text-sm font-semibold text-white/80 backdrop-blur-xl">
+			<div class="mb-6 inline-flex items-center gap-3 rounded-full border border-line bg-blue-500/10 px-5 py-2 text-sm font-semibold text-white/80 backdrop-blur-xl">
 				<Sparkles size={16} class="text-blue-400" />
 				<span>Supercharged Capabilities</span>
 			</div>
-			<h2 class="text-4xl font-black leading-[1.05] text-white font-display sm:text-5xl md:text-6xl">
+			<h2 class="text-4xl font-black leading-[1.05] text-fg font-display sm:text-5xl md:text-6xl">
 				Everything you need.<br />
 				<span class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Nothing you don't.</span>
 			</h2>
-			<p class="mx-auto mt-5 max-w-2xl text-lg text-white/50">
+			<p class="mx-auto mt-5 max-w-2xl text-lg text-fg/50">
 				Six powerful modules working in harmony — each built to solve real problems, not create new ones.
 			</p>
 		</div>
 
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each features as feature}
-				<div class="group rounded-3xl border border-white/[0.08] bg-white/[0.02] p-8 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/[0.15] hover:bg-white/[0.04]">
+				<div class="group rounded-3xl border border-line bg-surface-2 p-8 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-line hover:bg-surface-2">
 					<div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br {feature.gradient} shadow-lg transition group-hover:scale-110">
-						<svelte:component this={feature.icon} size={26} class="text-white" />
+						<svelte:component this={feature.icon} size={26} class="text-fg" />
 					</div>
-					<h3 class="mb-3 text-xl font-bold text-white">{feature.title}</h3>
-					<p class="mb-6 text-sm leading-relaxed text-white/50">{feature.desc}</p>
-					<div class="flex items-center justify-between border-t border-white/[0.06] pt-5">
+					<h3 class="mb-3 text-xl font-bold text-fg">{feature.title}</h3>
+					<p class="mb-6 text-sm leading-relaxed text-fg/50">{feature.desc}</p>
+					<div class="flex items-center justify-between border-t border-line pt-5">
 						<div>
 							<div class="text-lg font-black text-transparent bg-gradient-to-r {feature.gradient} bg-clip-text">{feature.stat}</div>
-							<div class="text-xs font-medium uppercase tracking-wider text-white/40">{feature.statLabel}</div>
+							<div class="text-xs font-medium uppercase tracking-wider text-fg/40">{feature.statLabel}</div>
 						</div>
-						<div class="flex h-10 w-10 translate-x-4 items-center justify-center rounded-full border border-white/10 bg-white/5 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-							<ArrowRight size={16} class="text-white/70" />
+						<div class="flex h-10 w-10 translate-x-4 items-center justify-center rounded-full border border-line bg-surface-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+							<ArrowRight size={16} class="text-fg/70" />
 						</div>
 					</div>
 				</div>
@@ -98,7 +98,7 @@
 		</div>
 
 		<div class="mt-12 text-center">
-			<a href="/features" class="group inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-8 py-4 font-semibold text-white transition hover:border-white/20 hover:bg-white/10">
+			<a href="/features" class="group inline-flex items-center gap-3 rounded-full border border-line bg-surface-2 px-8 py-4 font-semibold text-fg transition hover:border-line hover:bg-surface-2">
 				<span>Explore All Features</span>
 				<ArrowRight size={18} class="transition group-hover:translate-x-1" />
 			</a>

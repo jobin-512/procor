@@ -18,7 +18,7 @@
 	});
 </script>
 
-<section class="relative py-32 px-6 md:px-12 bg-white">
+<section class="relative py-32 px-6 md:px-12 bg-surface">
 	<div class="max-w-7xl mx-auto">
 		<div class="text-center mb-20">
 			<SectionBadge variant="sky">Our Values</SectionBadge>
@@ -27,7 +27,7 @@
 			>
 				What We Stand For
 			</h2>
-			<p class="mt-4 text-lg text-slate-500 max-w-xl mx-auto font-medium">
+			<p class="mt-4 text-lg text-fg/70 max-w-xl mx-auto font-medium">
 				Every decision we make is rooted in these four pillars. They guide our product, our
 				people, and our promise to the world.
 			</p>
@@ -52,11 +52,11 @@
 							</div>
 
 							<h3
-								class="relative z-10 text-xl md:text-2xl font-black font-display text-slate-900 mb-3"
+								class="relative z-10 text-xl md:text-2xl font-black font-display text-fg mb-3"
 							>
 								{value.title}
 							</h3>
-							<p class="relative z-10 text-slate-500 leading-relaxed font-medium text-sm md:text-base">
+							<p class="relative z-10 text-fg/70 leading-relaxed font-medium text-sm md:text-base">
 								{value.description}
 							</p>
 

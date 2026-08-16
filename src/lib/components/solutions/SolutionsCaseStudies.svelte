@@ -44,7 +44,7 @@
 	});
 </script>
 
-<section class="case-studies-section relative py-24 md:py-32 px-6 md:px-12 bg-[#030408] overflow-hidden">
+<section class="case-studies-section relative py-24 md:py-32 px-6 md:px-12 bg-bg overflow-hidden">
 	<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
 		<div class="absolute top-[30%] right-[-10%] w-[40rem] h-[40rem] bg-rose-600/8 rounded-full blur-[180px]"></div>
 	</div>
@@ -55,9 +55,9 @@
 			<TextReveal
 				text="Real results, real companies"
 				as="h2"
-				class="text-3xl md:text-5xl font-black text-white font-display mt-6 mb-4"
+				class="text-3xl md:text-5xl font-black text-fg font-display mt-6 mb-4"
 			/>
-			<p class="text-white/60 text-lg max-w-xl mx-auto">See how leading organizations transformed their workforce operations with PROCOR.</p>
+			<p class="text-fg/60 text-lg max-w-xl mx-auto">See how leading organizations transformed their workforce operations with PROCOR.</p>
 		</div>
 
 		<div class="grid md:grid-cols-3 gap-6">
@@ -66,13 +66,13 @@
 					<GlowCard className="h-full flex flex-col" glowColor="rgba(117, 194, 246, 0.15)">
 						<div class="relative h-48 rounded-xl overflow-hidden mb-6">
 							<div class="absolute inset-0 bg-gradient-to-br {cs.gradient}"></div>
-							<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+							<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
 							<div class="absolute inset-0 flex items-end p-5">
 								<div>
-									<span class="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full text-[10px] font-bold text-white/80 uppercase tracking-wider mb-2">
+									<span class="inline-block px-3 py-1 bg-surface-2 backdrop-blur-sm border border-line rounded-full text-[10px] font-bold text-fg/80 uppercase tracking-wider mb-2">
 										{cs.industry}
 									</span>
-									<h3 class="text-white font-black text-xl font-display">{cs.company}</h3>
+									<h3 class="text-fg font-black text-xl font-display">{cs.company}</h3>
 								</div>
 							</div>
 						</div>

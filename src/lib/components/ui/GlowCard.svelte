@@ -54,11 +54,11 @@
 <div
 	bind:this={card}
 	class={cn(
-		'glow-card group relative overflow-hidden rounded-2xl border p-6 text-white',
+		'glow-card group relative overflow-hidden rounded-2xl border p-6 text-fg',
 		'transition-all duration-300',
 		'backdrop-blur-xl',
-		'bg-white/10 border-white/20',
-		isHovering && 'bg-white/15 border-white/30 shadow-xl',
+		'bg-surface-2 border-line',
+		isHovering && 'bg-surface-2 border-line shadow-xl',
 		isHovering && 'shadow-glow-sky',
 		className
 	)}
