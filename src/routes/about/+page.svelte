@@ -114,7 +114,7 @@
 	const team = [
 		{
 			name: 'Abhishek Kumar Jha',
-			role: 'CEO & Co-Founder',
+			role: 'Co-Founder',
 			image: abhishekImg,
 			bio: 'Visionary leader driving the future of HR technology with AI-first approach.',
 			linkedin: 'https://www.linkedin.com/in/abhishek-kumar-jha-06347b101'
