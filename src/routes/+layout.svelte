@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import favicon from '$lib/assets/favicon.ico';
 	import { onMount, tick } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import Lenis from 'lenis';
@@ -83,6 +84,7 @@
 </script>
 
 <svelte:head>
+	<link rel="icon" href={favicon} />
 	<title>PROCOR HRMS - The Future of Workforce Management</title>
 	<meta name="description" content="Empowering Human Resources for Organisational Growth through intelligent automation and modern design." />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
