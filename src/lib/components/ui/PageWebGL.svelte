@@ -5,6 +5,7 @@
 
 	let { 
 		theme = 'default', 
+		accent = null,
 		intensity = 1,
 		particleCount = 1000,
 		enableMouse = true
@@ -51,10 +52,29 @@
 		}
 	};
 
+	const isLightMode = () =>
+		typeof document !== 'undefined' && !document.documentElement.classList.contains('dark');
+
+	/* Build a theme from an arbitrary accent hex (per-module / per-route color). */
+	function buildAccentTheme(hex) {
+		const base = new THREE.Color(hex);
+		const lighter = base.clone().offsetHSL(0.04, 0.05, 0.12);
+		const deeper = base.clone().offsetHSL(-0.02, 0.05, -0.12);
+		const pale = base.clone().lerp(new THREE.Color(0xffffff), 0.55);
+		return {
+			colors: [base.getHex(), lighter.getHex(), pale.getHex(), deeper.getHex()],
+			bgGradient: [base.getHex(), deeper.getHex()],
+			coreColor: base.getHex()
+		};
+	}
+
 	onMount(() => {
 		if (!canvas) return;
 
-		const currentTheme = themes[theme] || themes.default;
+		const currentTheme = accent ? buildAccentTheme(accent) : themes[theme] || themes.default;
+		const light = isLightMode();
+		/* Light mode: additive glow would blow out on near-white bg — fade it. */
+		const visibility = light ? 0.4 : 1;
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 		camera.position.z = 80;
@@ -149,6 +169,7 @@
 			uniform float uTime;
 			uniform vec3 uColor1;
 			uniform vec3 uColor2;
+			uniform float uVisibility;
 			varying vec3 vPosition;
 			varying vec3 vNormal;
 			varying float vNoise;
@@ -160,7 +181,7 @@
 				float fresnel = pow(1.0 - abs(dot(normalize(vNormal), vec3(0.0, 0.0, 1.0))), 2.0);
 				color += fresnel * uColor2 * 0.5;
 				
-				float alpha = 0.08 + fresnel * 0.15;
+				float alpha = (0.08 + fresnel * 0.15) * uVisibility;
 				gl_FragColor = vec4(color, alpha);
 			}
 		`;
@@ -173,7 +194,8 @@
 				uTime: { value: 0 },
 				uMouse: { value: new THREE.Vector2(0, 0) },
 				uColor1: { value: new THREE.Color(currentTheme.bgGradient[0]) },
-				uColor2: { value: new THREE.Color(currentTheme.bgGradient[1]) }
+				uColor2: { value: new THREE.Color(currentTheme.bgGradient[1]) },
+				uVisibility: { value: visibility }
 			},
 			transparent: true,
 			side: THREE.DoubleSide,
@@ -235,11 +257,12 @@
 
 		const particleFragmentShader = `
 			varying vec3 vColor;
+			uniform float uAlpha;
 			
 			void main() {
 				float dist = length(gl_PointCoord - vec2(0.5));
 				if (dist > 0.5) discard;
-				float alpha = 1.0 - smoothstep(0.1, 0.5, dist);
+				float alpha = (1.0 - smoothstep(0.1, 0.5, dist)) * uAlpha;
 				gl_FragColor = vec4(vColor * 1.5, alpha * 0.6);
 			}
 		`;
@@ -247,7 +270,7 @@
 		const particleMaterial = new THREE.ShaderMaterial({
 			vertexShader: particleVertexShader,
 			fragmentShader: particleFragmentShader,
-			uniforms: { uTime: { value: 0 } },
+			uniforms: { uTime: { value: 0 }, uAlpha: { value: visibility } },
 			transparent: true,
 			vertexColors: true,
 			blending: THREE.AdditiveBlending,
@@ -266,7 +289,7 @@
 			const ringMaterial = new THREE.MeshBasicMaterial({
 				color: currentTheme.colors[i % currentTheme.colors.length],
 				transparent: true,
-				opacity: 0.1,
+				opacity: 0.1 * visibility,
 				blending: THREE.AdditiveBlending
 			});
 			const ring = new THREE.Mesh(ringGeometry, ringMaterial);
@@ -293,7 +316,7 @@
 				color: currentTheme.colors[i % currentTheme.colors.length],
 				wireframe: true,
 				transparent: true,
-				opacity: 0.15
+				opacity: 0.15 * visibility
 			});
 			const mesh = new THREE.Mesh(geo, mat);
 			const angle = (i / 6) * Math.PI * 2;
@@ -386,8 +409,20 @@
 
 		animate();
 
+		// ── Live light/dark switching ──
+		const applyMode = (isLight) => {
+			const v = isLight ? 0.4 : 1;
+			coreMaterial.uniforms.uVisibility.value = v;
+			particleMaterial.uniforms.uAlpha.value = v;
+			rings.forEach((r) => (r.material.opacity = 0.1 * v));
+			floatingShapes.forEach((s) => (s.material.opacity = 0.15 * v));
+		};
+		const modeObserver = new MutationObserver(() => applyMode(isLightMode()));
+		modeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
 		return () => {
 			cancelAnimationFrame(animId);
+			modeObserver.disconnect();
 			window.removeEventListener('mousemove', onMouseMove);
 			window.removeEventListener('resize', onResize);
 			coreGeometry.dispose();

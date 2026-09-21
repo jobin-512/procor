@@ -11,6 +11,14 @@
 	const MOUSE_INFLUENCE_RADIUS = 200;
 	const MOUSE_REPEL_STRENGTH = 0.8;
 
+	const DARK_PALETTE = [0x38bdf8, 0x253bda, 0x3b5bff, 0x4a6bff, 0x1a2ba0];
+	const LIGHT_PALETTE = [0x93c5fd, 0x60a5fa, 0x38bdf8, 0x818cf8, 0x3b5bff];
+	const DARK_LINE = 0x253bda;
+	const LIGHT_LINE = 0x93c5fd;
+
+	const isLightMode = () =>
+		typeof document !== 'undefined' && document.documentElement.classList.contains('light');
+
 	onMount(() => {
 		if (!canvas) return;
 
@@ -40,13 +48,8 @@
 		const colors = new Float32Array(PARTICLE_COUNT * 3);
 		const sizes = new Float32Array(PARTICLE_COUNT);
 
-		const palette = [
-			new THREE.Color(0x38bdf8), // sky
-			new THREE.Color(0x253BDA), // procor blue
-			new THREE.Color(0x3B5BFF), // procor blue light
-			new THREE.Color(0x4A6BFF), // procor blue lighter
-			new THREE.Color(0x1A2BA0) // procor blue dark
-		];
+		const palette = (isLightMode() ? LIGHT_PALETTE : DARK_PALETTE).map((c) => new THREE.Color(c));
+		let lineColorBase = new THREE.Color(isLightMode() ? LIGHT_LINE : DARK_LINE);
 
 		for (let i = 0; i < PARTICLE_COUNT; i++) {
 			const i3 = i * 3;
@@ -74,8 +77,8 @@
 			size: 2.5,
 			vertexColors: true,
 			transparent: true,
-			opacity: 0.7,
-			blending: THREE.AdditiveBlending,
+			opacity: isLightMode() ? 0.45 : 0.7,
+			blending: isLightMode() ? THREE.NormalBlending : THREE.AdditiveBlending,
 			depthWrite: false,
 			sizeAttenuation: true
 		});
@@ -94,8 +97,8 @@
 		const lineMaterial = new THREE.LineBasicMaterial({
 			vertexColors: true,
 			transparent: true,
-			opacity: 0.3,
-			blending: THREE.AdditiveBlending,
+			opacity: isLightMode() ? 0.12 : 0.3,
+			blending: isLightMode() ? THREE.NormalBlending : THREE.AdditiveBlending,
 			depthWrite: false
 		});
 
@@ -105,10 +108,10 @@
 		// ── Floating Wireframe Geometry ──
 		const torusGeometry = new THREE.TorusKnotGeometry(80, 25, 128, 16, 2, 3);
 		const torusMaterial = new THREE.MeshBasicMaterial({
-			color: 0x253BDA,
+			color: 0x253bda,
 			wireframe: true,
 			transparent: true,
-			opacity: 0.08
+			opacity: isLightMode() ? 0.05 : 0.08
 		});
 		const torusKnot = new THREE.Mesh(torusGeometry, torusMaterial);
 		torusKnot.position.set(250, 20, -50);
@@ -117,10 +120,10 @@
 		// Second geometry — smaller icosahedron
 		const icoGeometry = new THREE.IcosahedronGeometry(50, 0);
 		const icoMaterial = new THREE.MeshBasicMaterial({
-			color: 0x3B5BFF,
+			color: 0x3b5bff,
 			wireframe: true,
 			transparent: true,
-			opacity: 0.06
+			opacity: isLightMode() ? 0.04 : 0.06
 		});
 		const icosahedron = new THREE.Mesh(icoGeometry, icoMaterial);
 		icosahedron.position.set(-280, -60, -30);
@@ -210,13 +213,12 @@
 						lp[l3 + 4] = pos[j3 + 1];
 						lp[l3 + 5] = pos[j3 + 2];
 
-						const lineColor = new THREE.Color(0x253BDA);
-						lc[l3] = lineColor.r * alpha;
-						lc[l3 + 1] = lineColor.g * alpha;
-						lc[l3 + 2] = lineColor.b * alpha;
-						lc[l3 + 3] = lineColor.r * alpha;
-						lc[l3 + 4] = lineColor.g * alpha;
-						lc[l3 + 5] = lineColor.b * alpha;
+						lc[l3] = lineColorBase.r * alpha;
+						lc[l3 + 1] = lineColorBase.g * alpha;
+						lc[l3 + 2] = lineColorBase.b * alpha;
+						lc[l3 + 3] = lineColorBase.r * alpha;
+						lc[l3 + 4] = lineColorBase.g * alpha;
+						lc[l3 + 5] = lineColorBase.b * alpha;
 
 						lineIdx++;
 					}
@@ -253,8 +255,34 @@
 
 		animate();
 
+		// ── Live theme switching (light/dark toggle) ──
+		const applyTheme = (light) => {
+			lineColorBase = new THREE.Color(light ? LIGHT_LINE : DARK_LINE);
+			particleMaterial.opacity = light ? 0.45 : 0.7;
+			particleMaterial.blending = light ? THREE.NormalBlending : THREE.AdditiveBlending;
+			particleMaterial.needsUpdate = true;
+			lineMaterial.opacity = light ? 0.12 : 0.3;
+			lineMaterial.blending = light ? THREE.NormalBlending : THREE.AdditiveBlending;
+			lineMaterial.needsUpdate = true;
+			torusMaterial.opacity = light ? 0.05 : 0.08;
+			icoMaterial.opacity = light ? 0.04 : 0.06;
+			const src = (light ? LIGHT_PALETTE : DARK_PALETTE).map((c) => new THREE.Color(c));
+			const colAttr = particleGeometry.attributes.color.array;
+			for (let i = 0; i < PARTICLE_COUNT; i++) {
+				const c = src[Math.floor(Math.random() * src.length)];
+				colAttr[i * 3] = c.r;
+				colAttr[i * 3 + 1] = c.g;
+				colAttr[i * 3 + 2] = c.b;
+			}
+			particleGeometry.attributes.color.needsUpdate = true;
+		};
+
+		const themeObserver = new MutationObserver(() => applyTheme(isLightMode()));
+		themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
 		return () => {
 			cancelAnimationFrame(animId);
+			themeObserver.disconnect();
 			window.removeEventListener('mousemove', onMouseMove);
 			window.removeEventListener('resize', onResize);
 

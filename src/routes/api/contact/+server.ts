@@ -5,9 +5,28 @@ import { sendEmail, generateContactEmailHtml, generateAutoReplyHtml } from '$lib
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const data = await request.json();
-		const { name, email, company, phone, subject, message, employees } = data;
+		const {
+			name,
+			email,
+			company,
+			phone,
+			subject,
+			message,
+			employees,
+			headcount,
+			entities,
+			current,
+			page,
+			fillSeconds,
+			website
+		} = data;
 
-		if (!name || !email || !message) {
+		// Honeypot: bots fill the hidden field — accept quietly, send nothing.
+		if (website) {
+			return json({ success: true, message: 'Message sent successfully' });
+		}
+
+		if (!name || !email) {
 			return json({ error: 'Missing required fields' }, { status: 400 });
 		}
 
@@ -29,7 +48,12 @@ export const POST: RequestHandler = async ({ request }) => {
 			company: company || undefined,
 			phone: phone || undefined,
 			subject: subject ? subjectMap[subject] || subject : `Contact from ${name}`,
-			message: employees ? `Company Size: ${employees}\n\n${message}` : message
+			message: employees ? `Company Size: ${employees}\n\n${message || ''}` : message || undefined,
+			headcount: headcount || undefined,
+			entities: entities || undefined,
+			current: current || undefined,
+			page: page || undefined,
+			fillSeconds: typeof fillSeconds === 'number' ? fillSeconds : undefined
 		});
 
 		const notificationSent = await sendEmail({

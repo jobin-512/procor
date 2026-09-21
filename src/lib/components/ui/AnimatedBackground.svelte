@@ -82,8 +82,8 @@
 		></div>
 	{/each}
 
-	<!-- Vignette overlay -->
+	<!-- Vignette overlay (theme-aware: softens orb edges without darkening light theme) -->
 	<div
-		class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--surface-dark)_75%)]"
+		class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,transparent_70%)] dark:bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(5,8,15,0.55)_78%)]"
 	></div>
 </div>

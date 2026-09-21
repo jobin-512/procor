@@ -1,158 +1,120 @@
 <script>
-	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import Mail from '@lucide/svelte/icons/mail';
-	import ArrowUp from '@lucide/svelte/icons/arrow-up';
-	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import Check from '@lucide/svelte/icons/check';
-	import Phone from '@lucide/svelte/icons/phone';
-	import MapPin from '@lucide/svelte/icons/map-pin';
-	import logo from '$lib/assets/image.webp';
+	import SiteIcon from '$lib/components/SiteIcon.svelte';
+	import { CONFIG } from '$lib/content/site.js';
 
-	let email = $state('');
-	let subscribed = $state(false);
-	let showBackToTop = $state(false);
-
-	const linkGroups = [
-		{ title: 'Product', links: ['Features', 'Solutions', 'Demo'], hrefs: ['/features', '/solutions', '/demo'] },
-		{ title: 'Company', links: ['About Us', 'Careers', 'Contact'], hrefs: ['/about', '/about', '/contact'] },
-		{ title: 'Legal', links: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'SLA'], hrefs: ['/privacy', '/terms', '/cookie', '/sla'] }
-	];
-
-	function handleSubscribe() {
-		if (!email || !email.includes('@')) return;
-		subscribed = true;
-		email = '';
-		setTimeout(() => (subscribed = false), 3000);
-	}
-
-	function scrollToTop() {
-		const lenis = window.__lenis;
-		if (lenis) {
-			lenis.scrollTo(0, { duration: 1.5 });
-		} else {
-			window.scrollTo({ top: 0, behavior: 'smooth' });
-		}
-	}
-
-	onMount(() => {
-		const onScroll = () => {
-			showBackToTop = window.scrollY > 600;
-		};
-		window.addEventListener('scroll', onScroll, { passive: true });
-
-		return () => {
-			window.removeEventListener('scroll', onScroll);
-		};
-	});
+	const tel = CONFIG.phone.replace(/\s/g, '');
 </script>
 
-<footer class="relative bg-bg border-t border-line">
-	<div class="max-w-7xl mx-auto pt-20 pb-10 px-6 md:px-12">
-		<!-- Top section -->
-		<div class="grid lg:grid-cols-2 gap-12 mb-16 pb-16 border-b border-line">
-			<div>
-				<a href="/" class="flex items-center gap-3 mb-6">
-					<img src={logo} alt="PROCOR HRMS" class="h-10 w-auto" />
-					<span class="text-xl font-extrabold tracking-tight text-fg font-display uppercase">PROCOR</span>
-				</a>
-				<p class="text-fg/40 text-sm leading-relaxed max-w-sm mb-6">
-					Empowering Human Resources for Organisational Growth through intelligent automation and modern design.
-				</p>
-			<div class="flex items-center gap-3">
-				<!-- <a href="/" class="w-10 h-10 rounded-xl bg-surface-2 border border-line flex items-center justify-center text-fg/50 hover:text-blue-400 hover:border-blue-400/30 transition-all" aria-label="X (Twitter)">
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-				</a>
-				<a href="/" class="w-10 h-10 rounded-xl bg-surface-2 border border-line flex items-center justify-center text-fg/50 hover:text-blue-400 hover:border-blue-400/30 transition-all" aria-label="LinkedIn">
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-				</a>
-				<a href="/" class="w-10 h-10 rounded-xl bg-surface-2 border border-line flex items-center justify-center text-fg/50 hover:text-blue-400 hover:border-blue-400/30 transition-all" aria-label="GitHub">
-					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-				</a> -->
-			</div>
-			</div>
-			<div>
-				<h5 class="font-bold text-fg/80 text-sm mb-4">Stay Updated</h5>
-				<p class="text-fg/40 text-sm mb-5">Get the latest HR insights and product updates.</p>
-				<div class="flex flex-col sm:flex-row gap-3">
-					<input
-						type="email"
-						bind:value={email}
-						placeholder="Enter your email"
-						class="flex-1 px-5 py-3 rounded-xl bg-surface-2 border border-line text-sm text-fg placeholder:text-fg/30 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/10 transition-all"
-					/>
-					{#if subscribed}
-						<div class="px-6 py-3 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-sm font-semibold flex items-center gap-2">
-							<Check size={16} /> Subscribed!
-						</div>
-					{:else}
-						<button
-							onclick={handleSubscribe}
-							class="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/20 transition-all cursor-pointer group"
-						>
-							Subscribe <ArrowRight size={16} class="group-hover:translate-x-0.5 transition-transform" />
-						</button>
-					{/if}
-				</div>
-			</div>
-		</div>
-
-		<!-- Link columns -->
-		<div class="grid grid-cols-2 md:grid-cols-3 gap-8 mb-16">
-			{#each linkGroups as group}
-				<div>
-					<h5 class="font-semibold text-fg/60 text-xs uppercase tracking-wider mb-5">{group.title}</h5>
-					<ul class="space-y-3">
-						{#each group.links as link, i}
-							<li>
-								<a href={group.hrefs[i] || '/'} class="text-fg/40 text-sm hover:text-fg/70 transition-colors">
-									{link}
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</div>
-			{/each}
-		</div>
-
-		<!-- Contact row -->
-		<div class="flex flex-wrap gap-6 mb-10 text-sm text-fg/40">
-		<div class="flex items-center gap-2">
-			<Mail size={16} class="text-blue-400/60" />
-			<span>info@procor.co.in</span>
-		</div>
-		<div class="flex items-center gap-2">
-			<Phone size={16} class="text-blue-400/60" />
-			<span>9999954416</span>
-		</div>
-			<div class="flex items-center gap-2">
-				<MapPin size={16} class="text-blue-400/60" />
-				<span>New Delhi, India</span>
-			</div>
-		</div>
-
-		<!-- Bottom Bar -->
-		<div class="pt-8 border-t border-line flex flex-col md:flex-row justify-between items-center gap-4">
-			<p class="text-fg/30 text-xs">
-				© 2026 PROCOR HRMS. All rights reserved.
+<footer id="demo" class="scroll-mt-24 border-t border-slate-200/60 bg-white/80 backdrop-blur-xl">
+	<div class="mx-auto max-w-[1320px] px-6 lg:px-10">
+		<div
+			class="flex flex-col gap-10 border-b border-slate-200/60 py-20 md:flex-row md:items-end md:justify-between"
+		>
+			<p
+				class="max-w-2xl font-display text-[clamp(2rem,3.8vw,3.1rem)] leading-[1.05] tracking-[-0.04em] text-ink"
+			>
+				<span class="font-extralight">See it running on</span>
+				<span class="font-bold">your own policies.</span>
 			</p>
-			<div class="flex items-center gap-2 text-fg/30">
-				<span class="relative flex h-2 w-2">
-					<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-					<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-				</span>
-				<span class="text-xs">All Systems Operational</span>
+			<a href="/contact/" class="cta-primary group inline-flex h-12 shrink-0 self-start px-7 text-[15px] md:self-auto">
+				<span class="cta-glow" aria-hidden="true"></span>
+				<span class="relative">Book a demo</span>
+			</a>
+		</div>
+
+		<div class="grid gap-12 py-20 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+			<div class="max-w-sm">
+				<a href="/" class="inline-flex" aria-label="Procor HRMS home">
+					<img
+						src="/assets/logo-full.webp"
+						alt="Procor HRMS — Empowering Human Resource for Organizational Growth"
+						width="86"
+						height="84"
+						class="h-[84px] w-auto dark:hidden"
+						loading="lazy"
+					/>
+					<img
+						src="/assets/logo-full-dark.webp"
+						alt=""
+						aria-hidden="true"
+						width="86"
+						height="84"
+						class="hidden h-[84px] w-auto dark:block"
+						loading="lazy"
+					/>
+				</a>
+				<p class="mt-6 text-[14px] leading-[1.7] text-slate-500">
+					A cloud HR and payroll platform for companies operating across multiple states and
+					legal entities in India, built by a team that delivers payroll and statutory compliance
+					as a service.
+				</p>
+				<address class="mt-6 space-y-2 text-[13.5px] not-italic text-slate-500">
+					<p class="flex items-start gap-2.5">
+						<SiteIcon name="map-pin" size={16} class="mt-0.5 shrink-0 text-slate-400" /><span
+							>{CONFIG.address}</span
+						>
+					</p>
+					<p class="flex items-start gap-2.5">
+						<SiteIcon name="phone" size={16} class="mt-0.5 shrink-0 text-slate-400" /><a
+							href="tel:{tel}"
+							class="transition-colors hover:text-ink">{CONFIG.phone}</a
+						>
+					</p>
+					<p class="flex items-start gap-2.5">
+						<SiteIcon name="mail" size={16} class="mt-0.5 shrink-0 text-slate-400" /><a
+							href="mailto:{CONFIG.salesEmail}"
+							class="transition-colors hover:text-ink">{CONFIG.salesEmail}</a
+						>
+					</p>
+				</address>
+			</div>
+
+			<div>
+				<p class="text-[13px] font-semibold text-ink">Platform</p>
+				<ul class="mt-5 space-y-3.5">
+					<li><a href="/platform/" class="footer-link">Platform overview</a></li>
+					<li><a href="/modules/payroll/" class="footer-link">Payroll</a></li>
+					<li><a href="/modules/attendance/" class="footer-link">Attendance</a></li>
+					<li><a href="/modules/core-hr/" class="footer-link">Core HR</a></li>
+					<li><a href="/#modules" class="footer-link">All eleven modules</a></li>
+					<li><a href="/integrations/" class="footer-link">Integrations</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<p class="text-[13px] font-semibold text-ink">Why Procor</p>
+				<ul class="mt-5 space-y-3.5">
+					<li><a href="/compliance/" class="footer-link">Statutory compliance</a></li>
+					<li><a href="/implementation/" class="footer-link">Implementation &amp; migration</a></li>
+					<li><a href="/industries/" class="footer-link">Industries</a></li>
+					<li><a href="/security/" class="footer-link">Security</a></li>
+					<li><a href="/faq/" class="footer-link">FAQ</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<p class="text-[13px] font-semibold text-ink">Company</p>
+				<ul class="mt-5 space-y-3.5">
+					<li><a href="/company/" class="footer-link">About Procor</a></li>
+					<li><a href="/contact/" class="footer-link">Contact sales</a></li>
+					<li><a href="/contact/" class="footer-link">Support</a></li>
+					<li><a href="/privacy/" class="footer-link">Privacy policy</a></li>
+					<li><a href="/terms/" class="footer-link">Terms of service</a></li>
+					<li><a href="/cookies/" class="footer-link">Cookie policy</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div
+			class="flex flex-col gap-4 border-t border-slate-200/60 py-8 text-[13px] text-slate-400 sm:flex-row sm:items-center sm:justify-between"
+		>
+			<p>&copy; {new Date().getFullYear()} {CONFIG.legalEntity}. All rights reserved.</p>
+			<div class="flex flex-wrap gap-x-6 gap-y-2">
+				<a href="/privacy/" class="transition-colors hover:text-ink">Privacy</a>
+				<a href="/terms/" class="transition-colors hover:text-ink">Terms</a>
+				<a href="/cookies/" class="transition-colors hover:text-ink">Cookies</a>
+				<a href="/contact/" class="transition-colors hover:text-ink">Contact</a>
 			</div>
 		</div>
 	</div>
 </footer>
-
-{#if showBackToTop}
-	<button
-		onclick={scrollToTop}
-		aria-label="Back to top"
-		class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-xl bg-surface-2 border border-line text-fg flex items-center justify-center backdrop-blur-sm hover:bg-surface-2 hover:border-line transition-all cursor-pointer animate-fade-in"
-	>
-		<ArrowUp size={20} />
-	</button>
-{/if}

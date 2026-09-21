@@ -38,8 +38,21 @@ export function generateContactEmailHtml(data: {
 	company?: string;
 	phone?: string;
 	subject?: string;
-	message: string;
+	message?: string;
+	headcount?: string;
+	entities?: string;
+	current?: string;
+	page?: string;
+	fillSeconds?: number;
 }): string {
+	const detailRow = (label: string, value?: string | number) =>
+		value === undefined || value === null || value === ''
+			? ''
+			: `
+			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">${label}</p>
+				<p style="color: #fff; margin: 0; font-size: 16px;">${value}</p>
+			</div>`;
 	return `
 		<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #0f172a; border-radius: 16px;">
 			<h1 style="color: #38bdf8; margin-bottom: 24px; font-size: 24px;">New Contact Form Submission</h1>
@@ -54,79 +67,72 @@ export function generateContactEmailHtml(data: {
 				<p style="color: #fff; margin: 0; font-size: 16px;"><a href="mailto:${data.email}" style="color: #38bdf8; text-decoration: none;">${data.email}</a></p>
 			</div>
 			
-			${data.company ? `
-			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
-				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Company</p>
-				<p style="color: #fff; margin: 0; font-size: 16px;">${data.company}</p>
-			</div>
-			` : ''}
+			${detailRow('Company', data.company)}
+			${detailRow('Phone', data.phone)}
+			${detailRow('Headcount', data.headcount)}
+			${detailRow('Legal entities', data.entities)}
+			${detailRow('Using today', data.current)}
+			${detailRow('Subject', data.subject)}
+			${detailRow('Page', data.page)}
+			${detailRow('Fill seconds', data.fillSeconds)}
 			
-			${data.phone ? `
-			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
-				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Phone</p>
-				<p style="color: #fff; margin: 0; font-size: 16px;">${data.phone}</p>
-			</div>
-			` : ''}
-			
-			${data.subject ? `
-			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
-				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Subject</p>
-				<p style="color: #fff; margin: 0; font-size: 16px;">${data.subject}</p>
-			</div>
-			` : ''}
-			
+			${
+				data.message
+					? `
 			<div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; padding: 20px;">
 				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Message</p>
 				<p style="color: #fff; margin: 0; font-size: 16px; white-space: pre-wrap;">${data.message}</p>
-			</div>
+			</div>`
+					: ''
+			}
 			
 			<p style="color: #64748b; font-size: 12px; margin-top: 24px; text-align: center;">
-				This message was sent via the contact form on procor.io
+				This message was sent via the contact form on www.procorhrms.com
 			</p>
 		</div>
 	`;
 }
 
 export function generateDemoEmailHtml(data: {
-	name: string;
+	name?: string;
 	email: string;
 	company?: string;
 	phone?: string;
+	headcount?: string;
+	page?: string;
+	fillSeconds?: number;
 }): string {
+	const detailRow = (label: string, value?: string | number) =>
+		value === undefined || value === null || value === ''
+			? ''
+			: `
+			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
+				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">${label}</p>
+				<p style="color: #fff; margin: 0; font-size: 16px;">${value}</p>
+			</div>`;
 	return `
 		<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #0f172a; border-radius: 16px;">
 			<h1 style="color: #f59e0b; margin-bottom: 24px; font-size: 24px;">New Demo Request</h1>
 			
-			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
-				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Name</p>
-				<p style="color: #fff; margin: 0; font-size: 16px;">${data.name}</p>
-			</div>
+			${detailRow('Name', data.name)}
 			
 			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
 				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Email</p>
 				<p style="color: #fff; margin: 0; font-size: 16px;"><a href="mailto:${data.email}" style="color: #f59e0b; text-decoration: none;">${data.email}</a></p>
 			</div>
 			
-			${data.company ? `
-			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
-				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Company</p>
-				<p style="color: #fff; margin: 0; font-size: 16px;">${data.company}</p>
-			</div>
-			` : ''}
-			
-			${data.phone ? `
-			<div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px;">
-				<p style="color: #94a3b8; margin: 0 0 4px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Phone</p>
-				<p style="color: #fff; margin: 0; font-size: 16px;">${data.phone}</p>
-			</div>
-			` : ''}
+			${detailRow('Company', data.company)}
+			${detailRow('Phone', data.phone)}
+			${detailRow('Headcount', data.headcount)}
+			${detailRow('Page', data.page)}
+			${detailRow('Fill seconds', data.fillSeconds)}
 			
 			<div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
 				<p style="color: #f59e0b; margin: 0; font-size: 16px; font-weight: 600;">Action Required: Schedule a demo call with this prospect</p>
 			</div>
 			
 			<p style="color: #64748b; font-size: 12px; margin-top: 24px; text-align: center;">
-				This request was submitted via the demo form on procor.io
+				This request was submitted via the demo form on www.procorhrms.com
 			</p>
 		</div>
 	`;
@@ -136,12 +142,12 @@ export function generateAutoReplyHtml(type: 'contact' | 'demo', data: { name: st
 	const content = type === 'contact' 
 		? {
 				title: 'We received your message',
-				message: `Hi ${data.name},<br><br>Thank you for reaching out to PROCOR! We've received your message and will get back to you within 24 hours.<br><br>In the meantime, feel free to explore our <a href="https://procor.io/features" style="color: #38bdf8;">features page</a> or check out our <a href="https://procor.io/demo" style="color: #38bdf8;">interactive demo</a>.`,
+				message: `Hi ${data.name},<br><br>Thank you for reaching out to PROCOR! We've received your message and will get back to you within one business day.<br><br>In the meantime, feel free to explore our <a href="https://www.procorhrms.com/platform/" style="color: #38bdf8;">platform overview</a> or browse the <a href="https://www.procorhrms.com/#modules" style="color: #38bdf8;">eleven modules</a>.`,
 				color: '#38bdf8'
 			}
 		: {
 				title: 'Your demo request is confirmed',
-				message: `Hi ${data.name},<br><br>Thank you for requesting a demo of PROCOR! Our team will reach out within 24 hours to schedule your personalized demo.<br><br>In the meantime, you can:<br>• Explore our <a href="https://procor.io/features" style="color: #f59e0b;">features</a><br>• Read our <a href="https://procor.io/about" style="color: #f59e0b;">customer success stories</a><br>• Check out our <a href="https://procor.io/solutions" style="color: #f59e0b;">solutions</a>`,
+				message: `Hi ${data.name},<br><br>Thank you for requesting a demo of PROCOR! Our team will reach out within one business day to schedule your personalized walkthrough.<br><br>In the meantime, you can:<br>• Explore the <a href="https://www.procorhrms.com/platform/" style="color: #f59e0b;">platform</a><br>• See how <a href="https://www.procorhrms.com/compliance/" style="color: #f59e0b;">compliance</a> works inside the pay run<br>• Read about <a href="https://www.procorhrms.com/implementation/" style="color: #f59e0b;">implementation</a>`,
 				color: '#f59e0b'
 			};
 	
@@ -160,7 +166,7 @@ export function generateAutoReplyHtml(type: 'contact' | 'demo', data: { name: st
 			<div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
 				<p style="color: #64748b; margin: 0 0 12px 0; font-size: 14px;">Best regards,<br><span style="color: #fff; font-weight: 600;">The PROCOR Team</span></p>
 				<p style="color: #64748b; margin: 0; font-size: 12px;">
-					<a href="https://procor.io" style="color: #64748b; text-decoration: none;">procor.io</a>
+					<a href="https://www.procorhrms.com" style="color: #64748b; text-decoration: none;">www.procorhrms.com</a>
 				</p>
 			</div>
 		</div>

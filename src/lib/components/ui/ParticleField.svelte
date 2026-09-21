@@ -39,6 +39,8 @@
 		resize();
 		window.addEventListener('resize', resize);
 
+		// Window-level hover: the canvas sits behind content inside a
+		// pointer-events-none layer, so track the mouse globally.
 		const onMove = (e) => {
 			const rect = canvas.getBoundingClientRect();
 			mouse.x = e.clientX - rect.left;
@@ -50,8 +52,8 @@
 			mouse.y = -1000;
 		};
 
-		canvas.addEventListener('mousemove', onMove);
-		canvas.addEventListener('mouseleave', onLeave);
+		window.addEventListener('mousemove', onMove, { passive: true });
+		document.documentElement.addEventListener('mouseleave', onLeave);
 
 		const parsedColors = colors.map((c) => {
 			const temp = document.createElement('div');
@@ -106,7 +108,7 @@
 
 				ctx.beginPath();
 				ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-				ctx.fillStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, 0.6)`;
+				ctx.fillStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, 0.85)`;
 				ctx.fill();
 			}
 
@@ -117,7 +119,7 @@
 						const dy = particles[i].y - particles[j].y;
 						const dist = Math.sqrt(dx * dx + dy * dy);
 						if (dist < connectionDistance) {
-							const opacity = (1 - dist / connectionDistance) * 0.15;
+							const opacity = (1 - dist / connectionDistance) * 0.3;
 							const c = particles[i].color;
 							ctx.beginPath();
 							ctx.moveTo(particles[i].x, particles[i].y);
@@ -138,8 +140,8 @@
 		onDestroy(() => {
 			cancelAnimationFrame(animId);
 			window.removeEventListener('resize', resize);
-			canvas.removeEventListener('mousemove', onMove);
-			canvas.removeEventListener('mouseleave', onLeave);
+			window.removeEventListener('mousemove', onMove);
+			document.documentElement.removeEventListener('mouseleave', onLeave);
 		});
 	});
 </script>

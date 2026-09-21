@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procor HRMS | HR &amp; Payroll Software for Enterprises in India</title>
+  <meta name="description" content="Eleven modules from core HR to payroll on one cloud platform, with PF, ESI, PT and TDS handled inside the pay run. Built for multi-entity, multi-state teams in India.">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F8FAFC">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#05080F">
+  <link rel="canonical" id="canonical-link" href="https://www.procorhrms.com/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Procor HRMS">
+  <meta property="og:title" content="Procor HRMS | HR &amp; Payroll Software for Enterprises in India">
+  <meta property="og:description" content="Eleven modules from core HR to payroll on one cloud platform, with PF, ESI, PT and TDS handled inside the pay run. Built for multi-entity, multi-state teams in India.">
+  <meta property="og:image" content="https://www.procorhrms.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Procor HRMS — HR and payroll software for enterprises in India">
+  <meta property="og:url" id="og-url" content="https://www.procorhrms.com/">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Procor HRMS | HR &amp; Payroll Software for Enterprises in India">
+  <meta name="twitter:description" content="Eleven modules from core HR to payroll on one cloud platform, with PF, ESI, PT and TDS handled inside the pay run. Built for multi-entity, multi-state teams in India.">
+  <meta name="twitter:image" content="https://www.procorhrms.com/assets/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.procorhrms.com/#organization",
+        "name": "Procor HRMS",
+        "legalName": "Procor Digital Solutions Pvt Ltd",
+        "url": "https://www.procorhrms.com/",
+        "description": "Payroll, HRMS and statutory compliance services for companies operating in India.",
+        "areaServed": "IN",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "New Delhi",
+          "addressLocality": "New Delhi",
+          "addressRegion": "Delhi",
+          "addressCountry": "IN"
+        },
+        "telephone": "+91-99999-54416",
+        "email": "info@procor.co.in",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+91-99999-54416",
+          "email": "info@procor.co.in",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"]
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Procor HRMS",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://www.procorhrms.com/",
+        "publisher": { "@id": "https://www.procorhrms.com/#organization" },
+        "description": "Cloud HR and payroll platform with eleven modules sharing a single employee record, built for multi-entity and multi-state operations in India.",
+        "featureList": "Core HR, Attendance, Leave, Assets, Recruitment, Onboarding, Performance, Payroll, Reimbursement and Expenses, Offboarding, Helpdesk"
+      }
+    ]
+  }
+  </script>
+
+
+  
+
+  <script>
+    /* Applies the saved or system theme before paint — prevents a white flash
+       on dark-mode devices. Kept inline and tiny on purpose. */
+    (function () {
+      try {
+        var saved = localStorage.getItem('procor-theme');
+        var dark = saved ? saved === 'dark' : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+  
+
+  <!-- Compiled with Tailwind CSS v3.4.17 -->
+  
+<script type="application/ld+json" id="faq-schema-static">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does implementation involve, and what do we have to do?","acceptedAnswer":{"@type":"Answer","text":"We map your entities, pay structures, leave policies and approval chains, configure them, migrate your master data and balances, and train your team before the first live run. Your side supplies master data, policy documents and one decision-maker per area. Timelines are scoped per client, because they depend on the size of your workforce and how ready your data is."}},{"@type":"Question","name":"How do you make sure the migrated data is right?","acceptedAnswer":{"@type":"Answer","text":"Employee master, salary structures, leave balances, loan and advance records and year-to-date figures are migrated and then validated against your existing system before anything goes live, so differences are found and explained rather than discovered in a pay run."}},{"@type":"Question","name":"Which statutory deductions and returns do you handle?","acceptedAnswer":{"@type":"Answer","text":"Provident fund, ESI, professional tax and TDS are calculated in the pay run, with challans, returns and statutory registers produced from the same data. Professional tax is handled for every state, Form 16 is generated in-house, and gratuity and bonus are calculated on the same record. Exactly which filings we submit on your behalf is set in your contract."}},{"@type":"Question","name":"Where is our data hosted, and who can see salary information?","acceptedAnswer":{"@type":"Answer","text":"Procor HRMS runs on AWS infrastructure hosted in India, with daily backups. Access is controlled by role. Salary and identity fields are hidden unless a role has an explicit grant, and every change is written to an audit trail with user, timestamp and previous value."}},{"@type":"Question","name":"What happens if a pay run is wrong?","acceptedAnswer":{"@type":"Answer","text":"Pay runs lock only after maker-checker approval. Before lock, inputs are corrected and the run recalculated. After lock, corrections are processed as adjustments in the next cycle, with the full history retained."}},{"@type":"Question","name":"Can we keep our existing attendance devices?","acceptedAnswer":{"@type":"Answer","text":"In most cases yes. Biometric devices that export punch data on a schedule or expose an API can be connected, so you do not need to replace hardware to change platforms."}},{"@type":"Question","name":"How do you handle group companies with different policies?","acceptedAnswer":{"@type":"Answer","text":"Each legal entity carries its own statutory settings, leave policies, pay structures and approval chains while sharing one employee database, so transfers between entities do not create duplicate records."}},{"@type":"Question","name":"What does support look like after go-live?","acceptedAnswer":{"@type":"Answer","text":"You keep a named contact from the delivery team. Employees raise queries through the in-product helpdesk, and your HR team escalates through the same channel with tracked resolution times."}}]}</script><link rel="preload" as="font" type="font/woff2" href="/assets/bricolage-var.woff2" crossorigin=""><link rel="stylesheet" href="/assets/fonts.css"><link rel="stylesheet" href="/assets/site.css"></head>
+
+<body>
+
+  <!-- Cinematic ambient depth -->
+  <div aria-hidden="true" class="blob-a pointer-events-none fixed -left-40 top-[-10%] z-0 h-[620px] w-[620px] rounded-full bg-[#0063D7] opacity-20 blur-[130px]"></div>
+  <div aria-hidden="true" class="blob-b pointer-events-none fixed -right-40 bottom-[-15%] z-0 h-[680px] w-[680px] rounded-full bg-[#3E8EF0] opacity-20 blur-[130px]"></div>
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
+
+<div class="relative z-10">
+
+  <!-- ============================================================
+       1. FLOATING GLASS HEADER + MEGA MENU
+  ============================================================= -->
+  <header class="fixed inset-x-0 top-4 z-50 px-4 sm:top-5">
+    <div class="relative mx-auto max-w-6xl">
+      <nav id="navbar" aria-label="Primary" class="flex h-14 items-center justify-between rounded-full border border-slate-200/60 bg-white/70 pl-4 pr-2 shadow-[0_8px_32px_-12px_rgba(15,23,42,0.12)] backdrop-blur-xl transition-[background-color,box-shadow] duration-300 sm:pl-5">
+
+        <!-- Brand -->
+        <a href="/" class="flex items-center gap-2.5 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/40" aria-label="Procor HRMS home">
+          <img src="/assets/logo-mark.webp" alt="Procor HRMS" width="34" height="36" class="h-9 w-auto dark:hidden" decoding="async">
+          <img src="/assets/logo-mark-dark.webp" alt="" aria-hidden="true" width="34" height="36" class="hidden h-9 w-auto dark:block" decoding="async">
+          <span class="font-display text-[19px] leading-none tracking-[-0.035em]">
+            <span class="font-extrabold text-[#012B61] dark:text-white">PROCOR</span><span class="ml-1.5 font-semibold text-[#0063D7] dark:text-[#7AB0F8]">HRMS</span>
+          </span>
+        </a>
+
+        <!-- Center navigation -->
+        <ul class="hidden items-center gap-0.5 lg:flex">
+          <li id="modules-item">
+            <button id="modules-trigger" type="button" aria-expanded="false" aria-controls="mega-menu" class="nav-link [&amp;[aria-expanded=true]]:bg-slate-900/[0.04] [&amp;[aria-expanded=true]]:text-ink [&amp;[aria-expanded=true]_svg]:rotate-180">
+              Modules
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5 transition-transform duration-300"><svg class="lucide lucide-chevron-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="m6 9 6 6 6-6"></path></svg></svg>
+            </button>
+          </li>
+          <li><a href="/platform/" class="nav-link">Platform</a></li>
+          <li><a href="/security/" class="nav-link">Security</a></li>
+                    <li><a href="/company/" class="nav-link">Company</a></li>
+        </ul>
+
+        <!-- Right actions -->
+        <div class="flex items-center gap-1.5">
+          <button id="theme-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-full text-slate-500 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-900/5 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/40" aria-label="Switch to dark theme" title="Switch theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-moon h-[18px] w-[18px]"><svg class="lucide lucide-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-sun hidden h-[18px] w-[18px]"><svg class="lucide lucide-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="4"></circle> <path d="M12 2v2"></path> <path d="M12 20v2"></path> <path d="m4.93 4.93 1.41 1.41"></path> <path d="m17.66 17.66 1.41 1.41"></path> <path d="M2 12h2"></path> <path d="M20 12h2"></path> <path d="m6.34 17.66-1.41 1.41"></path> <path d="m19.07 4.93-1.41 1.41"></path></svg></svg>
+          </button>
+          <a href="/contact/" class="cta-primary group hidden h-10 px-5 text-[14px] sm:inline-flex">
+            <span class="cta-glow" aria-hidden="true"></span>
+            <span class="relative">Book a demo</span>
+          </a>
+          <button id="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="grid h-10 w-10 place-items-center rounded-full text-ink transition-colors hover:bg-slate-900/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/40 lg:hidden">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-open h-5 w-5"><svg class="lucide lucide-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M4 5h16"></path> <path d="M4 12h16"></path> <path d="M4 19h16"></path></svg></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-close hidden h-5 w-5"><svg class="lucide lucide-x" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 6 6 18"></path> <path d="m6 6 12 12"></path></svg></svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mega menu (desktop) -->
+      <div id="mega-menu" class="menu-panel absolute inset-x-0 top-full mt-3 hidden lg:block" role="region" aria-label="Modules">
+        <div class="overflow-hidden rounded-[28px] border border-slate-200/60 bg-white/90 shadow-[0_40px_90px_-24px_rgba(15,23,42,0.28),0_20px_50px_rgba(8,112,184,0.06)] backdrop-blur-xl">
+          <div class="grid grid-cols-[1fr_1fr_1fr_290px]">
+
+            <!-- Workforce Core -->
+            <div class="p-7">
+              <p class="text-[13px] font-semibold text-ink">Workforce Core</p>
+              <p class="mt-1 text-[12px] text-slate-400">Records, time and equipment</p>
+              <ul class="mt-5 space-y-1">
+                <li>
+                  <a href="/modules/core-hr/" class="mega-link" style="--c: 0 99 215">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-users-round" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 21a8 8 0 0 0-16 0"></path> <circle cx="10" cy="8" r="5"></circle> <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Core HR</span><span class="block text-[12px] text-slate-500">Employee records and org structure</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/modules/attendance/" class="mega-link" style="--c: 62 142 240">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-fingerprint" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path> <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path> <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path> <path d="M2 12a10 10 0 0 1 18-6"></path> <path d="M2 16h.01"></path> <path d="M21.8 16c.2-2 .131-5.354 0-6"></path> <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path> <path d="M8.65 22c.21-.66.45-1.32.57-2"></path> <path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Attendance</span><span class="block text-[12px] text-slate-500">Shifts, clock-ins and overtime</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/modules/leave/" class="mega-link" style="--c: 16 185 129">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-calendar-range" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="3" y="3" width="18" height="18" rx="2"></rect> <path d="M16 2v3"></path> <path d="M3 9h18"></path> <path d="M8 2v3"></path> <path d="M17 13h-6"></path> <path d="M13 17H7"></path> <path d="M7 13h.01"></path> <path d="M17 17h.01"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Leave</span><span class="block text-[12px] text-slate-500">Policies, balances and approvals</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/modules/assets/" class="mega-link" style="--c: 217 119 6">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-laptop" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path> <path d="M20.054 15.987H3.946"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Assets</span><span class="block text-[12px] text-slate-500">Issue, track and recover equipment</span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Talent & Growth -->
+            <div class="border-l border-slate-100 p-7">
+              <p class="text-[13px] font-semibold text-ink">Talent &amp; Growth</p>
+              <p class="mt-1 text-[12px] text-slate-400">From requisition to review</p>
+              <ul class="mt-5 space-y-1">
+                <li>
+                  <a href="/modules/recruitment/" class="mega-link" style="--c: 124 58 237">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-user-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="10" cy="7" r="4"></circle> <path d="M10.3 15H7a4 4 0 0 0-4 4v2"></path> <circle cx="17" cy="17" r="3"></circle> <path d="m21 21-1.9-1.9"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Recruitment</span><span class="block text-[12px] text-slate-500">Requisitions and candidate pipeline</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/modules/onboarding/" class="mega-link" style="--c: 2 132 199">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-rocket" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path> <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path> <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path> <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Onboarding</span><span class="block text-[12px] text-slate-500">From signed offer to day one</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/modules/performance/" class="mega-link" style="--c: 225 29 72">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-target" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <circle cx="12" cy="12" r="6"></circle> <circle cx="12" cy="12" r="2"></circle></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Performance</span><span class="block text-[12px] text-slate-500">Goals and review cycles</span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Finance & Operations -->
+            <div class="border-l border-slate-100 p-7">
+              <p class="text-[13px] font-semibold text-ink">Finance &amp; Operations</p>
+              <p class="mt-1 text-[12px] text-slate-400">Pay, claims, exits and service</p>
+              <ul class="mt-5 space-y-1">
+                <li>
+                  <a href="/modules/payroll/" class="mega-link" style="--c: 1 43 97">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-wallet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Payroll</span><span class="block text-[12px] text-slate-500">Compliant pay runs and payslips</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/modules/reimbursement/" class="mega-link" style="--c: 192 38 211">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-receipt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 17V7"></path> <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path> <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Reimbursement &amp; Expenses</span><span class="block text-[12px] text-slate-500">Claims, approvals and payouts</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/modules/offboarding/" class="mega-link" style="--c: 71 85 105">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-door-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M10 21H2"></path> <path d="M10 3H7a2 2 0 00-2 2v16"></path> <path d="M14 12h.01"></path> <path d="M19 21V5a2 2 0 00-1.675-1.974l-6.163-1.013A1 1 0 0010 3v18a1 1 0 001.124.992z"></path> <path d="M22 21h-3"></path></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Offboarding</span><span class="block text-[12px] text-slate-500">Clearance and full-and-final</span></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/modules/helpdesk/" class="mega-link" style="--c: 234 88 12">
+                    <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-life-buoy" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <path d="m4.93 4.93 4.24 4.24"></path> <path d="m14.83 9.17 4.24-4.24"></path> <path d="m14.83 14.83 4.24 4.24"></path> <path d="m9.17 14.83-4.24 4.24"></path> <circle cx="12" cy="12" r="4"></circle></svg></svg></span>
+                    <span><span class="block text-[14px] font-semibold text-ink">Helpdesk</span><span class="block text-[12px] text-slate-500">Employee queries and FAQ</span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Feature panel -->
+            <div class="relative overflow-hidden border-l border-slate-100 bg-slate-50/80 p-7">
+              <div aria-hidden="true" class="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(0,99,215,0.24),transparent_65%)] blur-xl"></div>
+              <div aria-hidden="true" class="absolute -bottom-24 -left-10 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(62,142,240,0.18),transparent_65%)] blur-xl"></div>
+              <div class="relative flex h-full flex-col">
+                <p class="font-display text-[22px] font-semibold leading-[1.15] tracking-[-0.03em] text-ink">See all eleven modules on your own data model.</p>
+                <p class="mt-3 text-[13px] leading-relaxed text-slate-500">A guided walkthrough configured around your entities, policies and pay cycle.</p>
+                <ul class="mt-5 space-y-2.5 text-[12.5px] text-slate-600">
+                  <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4 text-indigo-600"><svg class="lucide lucide-users-round" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 21a8 8 0 0 0-16 0"></path> <circle cx="10" cy="8" r="5"></circle> <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg></svg>10,000+ users in India</li>
+                  <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4 text-cyan-600"><svg class="lucide lucide-cloud" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></svg>Cloud-based, fully configurable</li>
+                </ul>
+                <a href="#demo" class="mt-auto inline-flex pt-6 text-[13px] font-semibold text-indigo-600 transition-colors hover:text-indigo-700">Book a demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between border-t border-slate-100 px-7 py-3.5 text-[12.5px]">
+            <span class="text-slate-500">Eleven modules sharing one employee record</span>
+            <a href="/#modules" class="mega-close font-semibold text-ink transition-colors hover:text-indigo-600">View the capability matrix</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="menu-panel absolute inset-x-0 top-full mt-3 lg:hidden">
+        <div class="max-h-[calc(100vh-7rem)] overflow-y-auto rounded-[28px] border border-slate-200/60 bg-white/95 p-5 shadow-[0_40px_90px_-24px_rgba(15,23,42,0.28)] backdrop-blur-xl">
+          <div class="space-y-6">
+            <div>
+              <p class="text-[12px] font-semibold text-slate-400">Workforce Core</p>
+              <div class="mt-2 grid grid-cols-2 gap-1">
+                <a href="/modules/core-hr/" class="mega-link mx-0" style="--c: 0 99 215"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-users-round" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 21a8 8 0 0 0-16 0"></path> <circle cx="10" cy="8" r="5"></circle> <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg></svg></span><span class="self-center text-[14px] font-semibold">Core HR</span></a>
+                <a href="/modules/attendance/" class="mega-link mx-0" style="--c: 62 142 240"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-fingerprint" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path> <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path> <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path> <path d="M2 12a10 10 0 0 1 18-6"></path> <path d="M2 16h.01"></path> <path d="M21.8 16c.2-2 .131-5.354 0-6"></path> <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path> <path d="M8.65 22c.21-.66.45-1.32.57-2"></path> <path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg></svg></span><span class="self-center text-[14px] font-semibold">Attendance</span></a>
+                <a href="/modules/leave/" class="mega-link mx-0" style="--c: 16 185 129"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-calendar-range" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="3" y="3" width="18" height="18" rx="2"></rect> <path d="M16 2v3"></path> <path d="M3 9h18"></path> <path d="M8 2v3"></path> <path d="M17 13h-6"></path> <path d="M13 17H7"></path> <path d="M7 13h.01"></path> <path d="M17 17h.01"></path></svg></svg></span><span class="self-center text-[14px] font-semibold">Leave</span></a>
+                <a href="/modules/assets/" class="mega-link mx-0" style="--c: 217 119 6"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-laptop" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path> <path d="M20.054 15.987H3.946"></path></svg></svg></span><span class="self-center text-[14px] font-semibold">Assets</span></a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[12px] font-semibold text-slate-400">Talent &amp; Growth</p>
+              <div class="mt-2 grid grid-cols-2 gap-1">
+                <a href="/modules/recruitment/" class="mega-link mx-0" style="--c: 124 58 237"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-user-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="10" cy="7" r="4"></circle> <path d="M10.3 15H7a4 4 0 0 0-4 4v2"></path> <circle cx="17" cy="17" r="3"></circle> <path d="m21 21-1.9-1.9"></path></svg></svg></span><span class="self-center text-[14px] font-semibold">Recruitment</span></a>
+                <a href="/modules/onboarding/" class="mega-link mx-0" style="--c: 2 132 199"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-rocket" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path> <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path> <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path> <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg></svg></span><span class="self-center text-[14px] font-semibold">Onboarding</span></a>
+                <a href="/modules/performance/" class="mega-link mx-0" style="--c: 225 29 72"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-target" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <circle cx="12" cy="12" r="6"></circle> <circle cx="12" cy="12" r="2"></circle></svg></svg></span><span class="self-center text-[14px] font-semibold">Performance</span></a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[12px] font-semibold text-slate-400">Finance &amp; Operations</p>
+              <div class="mt-2 grid grid-cols-2 gap-1">
+                <a href="/modules/payroll/" class="mega-link mx-0" style="--c: 1 43 97"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-wallet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg></svg></span><span class="self-center text-[14px] font-semibold">Payroll</span></a>
+                <a href="/modules/reimbursement/" class="mega-link mx-0" style="--c: 192 38 211"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-receipt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 17V7"></path> <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path> <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path></svg></svg></span><span class="self-center text-[14px] font-semibold leading-tight">Reimbursement &amp; Expenses</span></a>
+                <a href="/modules/offboarding/" class="mega-link mx-0" style="--c: 71 85 105"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-door-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M10 21H2"></path> <path d="M10 3H7a2 2 0 00-2 2v16"></path> <path d="M14 12h.01"></path> <path d="M19 21V5a2 2 0 00-1.675-1.974l-6.163-1.013A1 1 0 0010 3v18a1 1 0 001.124.992z"></path> <path d="M22 21h-3"></path></svg></svg></span><span class="self-center text-[14px] font-semibold">Offboarding</span></a>
+                <a href="/modules/helpdesk/" class="mega-link mx-0" style="--c: 234 88 12"><span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-life-buoy" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <path d="m4.93 4.93 4.24 4.24"></path> <path d="m14.83 9.17 4.24-4.24"></path> <path d="m14.83 14.83 4.24 4.24"></path> <path d="m9.17 14.83-4.24 4.24"></path> <circle cx="12" cy="12" r="4"></circle></svg></svg></span><span class="self-center text-[14px] font-semibold">Helpdesk</span></a>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-x-5 gap-y-2 border-t border-slate-100 pt-5 text-[14px] font-medium text-slate-600">
+              <a href="/security/" class="hover:text-ink">Security</a>
+              <a href="/company/" class="hover:text-ink">Company</a>
+            </div>
+            <a href="#demo" class="cta-primary group flex h-12 w-full text-[15px]">
+              <span class="cta-glow" aria-hidden="true"></span>
+              <span class="relative">Book a demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="home-view">
+  <main id="top" tabindex="-1"><span id="main-content"></span>
+
+    <!-- ============================================================
+         2. ASYMMETRIC HERO
+    ============================================================= -->
+    <section class="relative isolate overflow-hidden pb-24 pt-32 sm:pt-40 lg:pb-32 lg:pt-44">
+      <!-- Ambient light + grid -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(248,250,252,0.72)_0%,rgba(255,255,255,0.86)_70%)]"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.045)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.045)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_70%_60%_at_72%_32%,#000_0%,transparent_75%)]"></div>
+        <div class="absolute -top-48 right-[-12%] h-[780px] w-[780px] rounded-full bg-[radial-gradient(circle,rgba(0,99,215,0.17),transparent_62%)] blur-3xl"></div>
+        <div class="absolute left-[-14%] top-[38%] h-[640px] w-[640px] rounded-full bg-[radial-gradient(circle,rgba(62,142,240,0.12),transparent_62%)] blur-3xl"></div>
+        <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+      </div>
+
+      <div class="mx-auto grid max-w-[1320px] items-center gap-16 px-6 lg:grid-cols-2 lg:gap-12 lg:px-10 xl:grid-cols-5 xl:gap-16">
+
+        <!-- Left column: 60% -->
+        <div class="xl:col-span-3">
+          <h1 class="font-display text-ink">
+            <span class="block animate-rise text-[clamp(2.1rem,4.4vw,3.5rem)] font-extralight leading-[1.06] tracking-[-0.045em]">HR and payroll that hold up</span>
+            <span class="wdth-condensed block animate-rise text-[clamp(2.4rem,6.2vw,5.1rem)] font-extrabold leading-[0.95] tracking-[-0.04em] [animation-delay:90ms]">across every entity,</span>
+            <span class="wdth-condensed block animate-rise text-[clamp(2.4rem,6.2vw,5.1rem)] font-extrabold leading-[0.95] tracking-[-0.04em] [animation-delay:150ms]">state and pay cycle.</span>
+          </h1>
+
+          <p class="mt-8 max-w-[36rem] animate-rise text-[17px] leading-[1.7] text-slate-600 [animation-delay:260ms] sm:text-lg">
+            Procor HRMS runs core HR, attendance, leave, payroll and exits on a single employee record, with PF, ESI, professional tax and TDS calculated inside the pay run. Built for companies operating across multiple states and legal entities in India.
+          </p>
+
+          <form id="demo-form" class="relative mt-9 max-w-xl animate-rise [animation-delay:340ms]" novalidate="">
+              <div class="absolute -left-[9999px] top-0" aria-hidden="true"><label for="demo-website">Leave this empty</label><input id="demo-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <p class="text-[13px] font-semibold text-ink">See it on your own policies</p>
+            <div class="mt-3 grid gap-2.5 sm:grid-cols-2">
+              <div>
+                <label for="demo-email" class="sr-only">Work email</label>
+                <input id="demo-email" name="email" type="email" inputmode="email" autocomplete="email" required="" placeholder="Work email" class="field">
+              </div>
+              <div>
+                <label for="demo-company" class="sr-only">Company</label>
+                <input id="demo-company" name="company" type="text" autocomplete="organization" required="" placeholder="Company" class="field">
+              </div>
+              <div class="sm:col-span-1">
+                <label for="demo-headcount" class="sr-only">Headcount</label>
+                <select id="demo-headcount" name="headcount" required="" class="field">
+                  <option value="">Headcount</option>
+                  <option>Under 100</option>
+                  <option>100 to 500</option>
+                  <option>500 to 2,000</option>
+                  <option>Over 2,000</option>
+                </select>
+              </div>
+              <button type="submit" class="cta-primary group inline-flex h-[52px] w-full items-center justify-center px-6 text-[15px]">
+                <span class="cta-glow" aria-hidden="true"></span>
+                <span class="relative">Book a demo</span>
+              </button>
+            </div>
+            <p id="demo-msg" class="mt-3 min-h-[20px] text-[13px] text-slate-500" aria-live="polite">A 30-minute walkthrough on your structure and policies. We reply within one business day.</p>
+          </form>
+
+          <div class="mt-5 flex animate-rise flex-wrap items-center gap-x-7 gap-y-3 text-[13.5px] text-slate-500 [animation-delay:420ms]">
+            <span class="inline-flex items-center gap-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4 text-indigo-600"><svg class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path> <path d="m9 12 2 2 4-4"></path></svg></svg>50+ companies, 10,000+ users in India</span>
+            <span class="inline-flex items-center gap-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4 text-cyan-600"><svg class="lucide lucide-building-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M10 12h4"></path> <path d="M10 8h4"></path> <path d="M14 21v-3a2 2 0 0 0-4 0v3"></path> <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path> <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg></svg>Running payroll in India since 2018</span>
+          </div>
+        </div>
+
+        <!-- Right column: product mockup -->
+        <div class="xl:col-span-2">
+          <div class="relative mx-auto h-[680px] w-full max-w-[520px]" role="img" aria-label="Preview of the Procor HRMS dashboard showing payroll distribution, a live activity stream and an onboarding notification">
+
+            <div aria-hidden="true" class="pointer-events-none absolute -right-24 top-6 h-[440px] w-[440px] rounded-full bg-[radial-gradient(circle,rgba(0,99,215,0.30),transparent_65%)] blur-2xl"></div>
+            <div aria-hidden="true" class="pointer-events-none absolute -left-20 bottom-0 h-[380px] w-[380px] rounded-full bg-[radial-gradient(circle,rgba(62,142,240,0.28),transparent_65%)] blur-2xl"></div>
+
+            <!-- Panel B: Payroll distribution -->
+            <div class="absolute right-0 top-16 z-10 w-[94%] animate-rise [animation-delay:280ms]">
+              <div class="rounded-[28px] border border-slate-200/60 bg-white/95 p-6 pt-8 shadow-[0_20px_50px_rgba(8,112,184,0.05),0_50px_90px_-30px_rgba(15,23,42,0.22)]">
+                <div class="flex items-start justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="grid h-9 w-9 place-items-center rounded-xl bg-indigo-50 text-indigo-600 ring-1 ring-inset ring-indigo-100">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-wallet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg></svg>
+                    </div>
+                    <div>
+                      <p class="text-[13px] font-semibold text-ink">Payroll distribution</p>
+                      <p class="text-[11px] text-slate-400">September 2026 cycle</p>
+                    </div>
+                  </div>
+                  <div class="flex shrink-0 rounded-full border border-slate-200/70 bg-slate-50 p-0.5 text-[11px] font-medium">
+                    <span class="rounded-full px-2.5 py-1 text-slate-400">Qtr</span>
+                    <span class="rounded-full bg-white px-2.5 py-1 text-ink shadow-[0_1px_3px_rgba(15,23,42,0.1)]">YTD</span>
+                  </div>
+                </div>
+
+                <div class="mt-6 flex items-end justify-between gap-3">
+                  <div>
+                    <p class="font-display text-[34px] font-semibold leading-none tracking-[-0.03em] text-ink">₹54.82 Cr</p>
+                    <p class="mt-2 text-[12px] text-slate-500">Net disbursed to 1,248 employees</p>
+                  </div>
+                  <span class="inline-flex animate-[float_5s_ease-in-out_infinite] items-center gap-1 rounded-full bg-emerald-50 px-2 py-1 text-[11px] font-semibold text-emerald-600 shadow-[0_10px_24px_-12px_rgba(16,185,129,0.8)] ring-1 ring-inset ring-emerald-100">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3 w-3"><svg class="lucide lucide-trending-up" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M16 7h6v6"></path> <path d="m22 7-8.5 8.5-5-5L2 17"></path></svg></svg>3.4%
+                  </span>
+                </div>
+
+                <div class="mt-4 flex items-center gap-4 text-[11px] text-slate-500">
+                  <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-[3px] bg-gradient-to-t from-indigo-600 to-indigo-400"></span>Fixed pay</span>
+                  <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-[3px] bg-gradient-to-t from-cyan-500 to-cyan-300"></span>Variable pay</span>
+                </div>
+
+                <!-- Chart -->
+                <div class="relative mt-6">
+                  <div aria-hidden="true" class="absolute inset-x-0 top-0 flex h-36 flex-col justify-between">
+                    <div class="border-t border-dashed border-slate-200/80"></div>
+                    <div class="border-t border-dashed border-slate-200/80"></div>
+                    <div class="border-t border-dashed border-slate-200/80"></div>
+                    <div class="border-t border-slate-200/80"></div>
+                  </div>
+                  <div class="relative flex items-end gap-2">
+                    <!-- Jan -->
+                    <div class="flex flex-1 flex-col items-center gap-2">
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:500ms]">
+                        <div class="h-[10%] w-full rounded-[5px] bg-gradient-to-t from-cyan-400/45 to-cyan-300/35"></div>
+                        <div class="h-[48%] w-full rounded-[5px] bg-gradient-to-t from-indigo-500/45 to-indigo-400/30"></div>
+                      </div>
+                      <span class="text-[10px] font-medium text-slate-400">Jan</span>
+                    </div>
+                    <!-- Feb -->
+                    <div class="flex flex-1 flex-col items-center gap-2">
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:560ms]">
+                        <div class="h-[8%] w-full rounded-[5px] bg-gradient-to-t from-cyan-400/45 to-cyan-300/35"></div>
+                        <div class="h-[50%] w-full rounded-[5px] bg-gradient-to-t from-indigo-500/45 to-indigo-400/30"></div>
+                      </div>
+                      <span class="text-[10px] font-medium text-slate-400">Feb</span>
+                    </div>
+                    <!-- Mar -->
+                    <div class="flex flex-1 flex-col items-center gap-2">
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:620ms]">
+                        <div class="h-[18%] w-full rounded-[5px] bg-gradient-to-t from-cyan-400/45 to-cyan-300/35"></div>
+                        <div class="h-[52%] w-full rounded-[5px] bg-gradient-to-t from-indigo-500/45 to-indigo-400/30"></div>
+                      </div>
+                      <span class="text-[10px] font-medium text-slate-400">Mar</span>
+                    </div>
+                    <!-- Apr -->
+                    <div class="flex flex-1 flex-col items-center gap-2">
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:680ms]">
+                        <div class="h-[9%] w-full rounded-[5px] bg-gradient-to-t from-cyan-400/45 to-cyan-300/35"></div>
+                        <div class="h-[55%] w-full rounded-[5px] bg-gradient-to-t from-indigo-500/45 to-indigo-400/30"></div>
+                      </div>
+                      <span class="text-[10px] font-medium text-slate-400">Apr</span>
+                    </div>
+                    <!-- May -->
+                    <div class="flex flex-1 flex-col items-center gap-2">
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:740ms]">
+                        <div class="h-[11%] w-full rounded-[5px] bg-gradient-to-t from-cyan-400/45 to-cyan-300/35"></div>
+                        <div class="h-[56%] w-full rounded-[5px] bg-gradient-to-t from-indigo-500/45 to-indigo-400/30"></div>
+                      </div>
+                      <span class="text-[10px] font-medium text-slate-400">May</span>
+                    </div>
+                    <!-- Jun -->
+                    <div class="flex flex-1 flex-col items-center gap-2">
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:800ms]">
+                        <div class="h-[16%] w-full rounded-[5px] bg-gradient-to-t from-cyan-400/45 to-cyan-300/35"></div>
+                        <div class="h-[58%] w-full rounded-[5px] bg-gradient-to-t from-indigo-500/45 to-indigo-400/30"></div>
+                      </div>
+                      <span class="text-[10px] font-medium text-slate-400">Jun</span>
+                    </div>
+                    <!-- Jul -->
+                    <div class="flex flex-1 flex-col items-center gap-2">
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:860ms]">
+                        <div class="h-[10%] w-full rounded-[5px] bg-gradient-to-t from-cyan-400/45 to-cyan-300/35"></div>
+                        <div class="h-[60%] w-full rounded-[5px] bg-gradient-to-t from-indigo-500/45 to-indigo-400/30"></div>
+                      </div>
+                      <span class="text-[10px] font-medium text-slate-400">Jul</span>
+                    </div>
+                    <!-- Aug -->
+                    <div class="flex flex-1 flex-col items-center gap-2">
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:920ms]">
+                        <div class="h-[12%] w-full rounded-[5px] bg-gradient-to-t from-cyan-400/45 to-cyan-300/35"></div>
+                        <div class="h-[62%] w-full rounded-[5px] bg-gradient-to-t from-indigo-500/45 to-indigo-400/30"></div>
+                      </div>
+                      <span class="text-[10px] font-medium text-slate-400">Aug</span>
+                    </div>
+                    <!-- Sep (current) -->
+                    <div class="relative flex flex-1 flex-col items-center gap-2">
+                      <span class="absolute right-full top-2 z-10 mr-2 animate-[float_5s_ease-in-out_infinite] whitespace-nowrap rounded-lg bg-ink px-2 py-1 text-[10px] font-semibold text-white shadow-[0_8px_20px_-6px_rgba(15,23,42,0.5)]">₹54.82 Cr</span>
+                      <div class="flex h-36 w-full origin-bottom animate-grow flex-col justify-end gap-[3px] [animation-delay:980ms]">
+                        <div class="h-[20%] w-full rounded-[5px] bg-gradient-to-t from-cyan-500 to-cyan-300 shadow-[0_0_18px_-2px_rgba(62,142,240,0.6)]"></div>
+                        <div class="h-[66%] w-full rounded-[5px] bg-gradient-to-t from-indigo-600 to-indigo-400 shadow-[0_10px_24px_-6px_rgba(0,99,215,0.65)]"></div>
+                      </div>
+                      <span class="text-[10px] font-semibold text-ink">Sep</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel A: Glass activity stream -->
+            <div class="absolute bottom-2 left-0 z-20 w-[80%] animate-rise [animation-delay:460ms] sm:w-[64%] xl:-left-12">
+              <div class="rounded-[24px] border border-white/70 bg-white/55 p-5 shadow-[0_20px_50px_rgba(8,112,184,0.08),0_36px_70px_-28px_rgba(15,23,42,0.30)] ring-1 ring-slate-900/[0.04] backdrop-blur-2xl">
+                <div class="flex items-center justify-between">
+                  <p class="text-[13px] font-semibold text-ink">Live activity</p>
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-medium text-emerald-600">
+                    <span class="relative flex h-2 w-2">
+                      <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70"></span>
+                      <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                    </span>
+                    Streaming
+                  </span>
+                </div>
+                <ul class="mt-4 space-y-3.5">
+                  <li class="flex items-center gap-3">
+                    <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-500 text-[11px] font-semibold text-white ring-2 ring-white">AS</span>
+                    <div class="min-w-0 flex-1">
+                      <p class="truncate text-[12.5px] text-ink"><span class="font-semibold">Ananya S.</span> clocked in</p>
+                      <p class="truncate text-[11px] text-slate-500">Gurugram office</p>
+                    </div>
+                    <span class="text-[10px] tabular-nums text-slate-400">09:02</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-400 text-[11px] font-semibold text-white ring-2 ring-white">RK</span>
+                    <div class="min-w-0 flex-1">
+                      <p class="truncate text-[12.5px] text-ink"><span class="font-semibold">Rohan K.</span> leave approved</p>
+                      <p class="truncate text-[11px] text-slate-500">3 days of casual leave</p>
+                    </div>
+                    <span class="text-[10px] tabular-nums text-slate-400">08:57</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-white text-indigo-600 ring-1 ring-inset ring-indigo-100">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-file-check-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6"></path> <path d="M14 2v5a1 1 0 0 0 1 1h5"></path> <path d="m14 20 2 2 4-4"></path></svg></svg>
+                    </span>
+                    <div class="min-w-0 flex-1">
+                      <p class="truncate text-[12.5px] font-semibold text-ink">Payslips published</p>
+                      <p class="truncate text-[11px] text-slate-500">September cycle, all entities</p>
+                    </div>
+                    <span class="text-[10px] tabular-nums text-slate-400">08:40</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br from-amber-500 to-orange-400 text-[11px] font-semibold text-white ring-2 ring-white">MI</span>
+                    <div class="min-w-0 flex-1">
+                      <p class="truncate text-[12.5px] text-ink"><span class="font-semibold">Meera I.</span> filed a travel claim</p>
+                      <p class="truncate text-[11px] text-slate-500">₹4,850 awaiting approval</p>
+                    </div>
+                    <span class="text-[10px] tabular-nums text-slate-400">08:31</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Panel C: Floating notification -->
+            <div class="absolute left-0 top-6 z-30 animate-rise [animation-delay:760ms] sm:-left-3 xl:-left-8">
+              <div class="relative animate-float">
+                <div aria-hidden="true" class="absolute -inset-x-3 -bottom-8 top-6 rounded-[28px] bg-[radial-gradient(ellipse_at_center,rgba(0,99,215,0.50),rgba(62,142,240,0.28)_45%,transparent_72%)] blur-2xl"></div>
+                <div class="relative flex max-w-[300px] items-center gap-3 rounded-2xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 py-3 pl-3 pr-5 text-white shadow-[0_18px_40px_-10px_rgba(0,99,215,0.70),0_6px_14px_-6px_rgba(62,142,240,0.55)] ring-1 ring-white/20 sm:max-w-none">
+                  <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/15 ring-1 ring-inset ring-white/25">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-5 w-5"><svg class="lucide lucide-user-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="m16 11 2 2 4-4"></path> <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path> <circle cx="9" cy="7" r="4"></circle></svg></svg>
+                  </span>
+                  <div>
+                    <p class="text-[13.5px] font-semibold leading-snug">Onboarding Complete: 12 New Members 🎉</p>
+                    <p class="mt-0.5 text-[11px] text-white/75">Documents verified, assets assigned</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Procor HRMS at a glance" class="border-y border-slate-200/60 bg-white/70 backdrop-blur-[2px]">
+      <div class="mx-auto grid max-w-[1320px] gap-10 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
+        <div>
+          <p class="font-display text-[30px] font-semibold leading-none tracking-[-0.035em] text-ink">50+</p>
+          <p class="mt-2.5 text-[14px] text-slate-500">companies live on the platform</p>
+        </div>
+        <div class="lg:border-l lg:border-slate-200/60 lg:pl-10">
+          <p class="font-display text-[30px] font-semibold leading-none tracking-[-0.035em] text-ink">10,000+</p>
+          <p class="mt-2.5 text-[14px] text-slate-500">users across those companies</p>
+        </div>
+        <div class="lg:border-l lg:border-slate-200/60 lg:pl-10">
+          <p class="font-display text-[30px] font-semibold leading-none tracking-[-0.035em] text-ink">Since 2018</p>
+          <p class="mt-2.5 text-[14px] text-slate-500">running payroll in India</p>
+        </div>
+        <div class="lg:border-l lg:border-slate-200/60 lg:pl-10">
+          <p class="font-display text-[30px] font-semibold leading-none tracking-[-0.035em] text-ink">All states</p>
+          <p class="mt-2.5 text-[14px] text-slate-500">professional tax handled</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. BENTO CAPABILITY MATRIX
+    ============================================================= -->
+    <section id="modules" class="relative isolate scroll-mt-24 overflow-hidden bg-white/70 py-28 backdrop-blur-[2px] sm:py-36">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -left-40 top-24 h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle,rgba(0,99,215,0.07),transparent_62%)] blur-3xl"></div>
+        <div class="absolute -right-40 bottom-10 h-[720px] w-[720px] rounded-full bg-[radial-gradient(circle,rgba(62,142,240,0.08),transparent_62%)] blur-3xl"></div>
+      </div>
+
+      <div class="mx-auto max-w-[1320px] px-6 lg:px-10">
+
+        <!-- Section header -->
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <h2 class="font-display text-ink lg:col-span-8">
+            <span class="block text-[clamp(2.2rem,4.6vw,3.9rem)] font-extralight leading-[1.02] tracking-[-0.045em]">Eleven modules.</span>
+            <span class="wdth-condensed block text-[clamp(2.6rem,6vw,5.1rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">One employee record.</span>
+          </h2>
+          <p class="max-w-md text-[17px] leading-[1.7] text-slate-600 lg:col-span-4 lg:pb-2">
+            Deploy all eleven or start with payroll and attendance. Every module writes to the same record, so an approved leave updates attendance, attendance feeds payroll, and an exit closes out assets and settlement without anyone re-entering data.
+          </p>
+        </div>
+
+        <div class="mt-20 space-y-24 sm:mt-28">
+
+          <!-- ======== Band: Workforce Core ======== -->
+          <div id="workforce-core" class="grid scroll-mt-28 gap-8 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-12">
+            <div class="lg:sticky lg:top-28 lg:self-start">
+              <div class="h-[2px] w-12 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500"></div>
+              <h3 class="mt-5 font-display text-[28px] font-semibold leading-tight tracking-[-0.03em] text-ink">Workforce Core</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-slate-500">The records, time and equipment every other process depends on.</p>
+              <ul class="mt-6 hidden space-y-2 lg:block">
+                <li><a href="/modules/core-hr/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#0063D7]"></span>Core HR</a></li>
+                <li><a href="/modules/attendance/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#3E8EF0]"></span>Attendance</a></li>
+                <li><a href="/modules/leave/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#10B981]"></span>Leave</a></li>
+                <li><a href="/modules/assets/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#D97706]"></span>Assets</a></li>
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-1 gap-5 md:auto-rows-[minmax(250px,auto)] md:grid-cols-3">
+
+              <!-- Core HR -->
+              <article id="core-hr" data-route="/modules/core-hr/" class="bento-card scroll-mt-28 md:col-span-2 cursor-pointer" style="--c: 0 99 215" role="link" tabindex="0" aria-label="Read about Core HR">
+                <div class="pat pat-grid"></div>
+                <div class="glow-corner"></div>
+                <div class="grid h-full gap-8 sm:grid-cols-2">
+                  <div class="flex flex-col">
+                    <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-users-round" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 21a8 8 0 0 0-16 0"></path> <circle cx="10" cy="8" r="5"></circle> <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg></svg></div>
+                    <div class="mt-10 sm:mt-auto">
+                      <h4 class="bento-title">Core HR</h4>
+                      <p class="bento-copy">A single verified employee record that every module reads from, so data is entered once and trusted everywhere.</p>
+                    </div>
+                  </div>
+                  <div aria-hidden="true" class="flex flex-col justify-center">
+                    <div class="mini-panel p-4">
+                      <div class="flex items-center gap-3">
+                        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-cyan-400 text-xs font-semibold text-white">AS</span>
+                        <div class="min-w-0">
+                          <p class="truncate text-sm font-semibold text-ink">Ananya Sharma</p>
+                          <p class="truncate text-xs text-slate-400">Senior Analyst, Finance</p>
+                        </div>
+                        <span class="ml-auto rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-600 ring-1 ring-inset ring-emerald-100">Active</span>
+                      </div>
+                      <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-slate-100 pt-4 text-xs">
+                        <div><dt class="text-slate-400">Employee ID</dt><dd class="mt-0.5 font-medium tabular-nums text-ink">EMP-10482</dd></div>
+                        <div><dt class="text-slate-400">Reports to</dt><dd class="mt-0.5 font-medium text-ink">Vikram Rao</dd></div>
+                        <div><dt class="text-slate-400">Location</dt><dd class="mt-0.5 font-medium text-ink">Gurugram</dd></div>
+                        <div><dt class="text-slate-400">Joined</dt><dd class="mt-0.5 font-medium tabular-nums text-ink">14 Mar 2022</dd></div>
+                      </dl>
+                    </div>
+                    <div class="mt-3 flex flex-wrap items-center gap-1.5">
+                      <span class="mr-1 text-[11px] text-slate-400">Synced with</span>
+                      <span class="chip"><span class="h-1.5 w-1.5 rounded-full bg-indigo-500"></span>Payroll</span>
+                      <span class="chip"><span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>Attendance</span>
+                      <span class="chip"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>Leave</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Attendance -->
+              <article id="attendance" data-route="/modules/attendance/" class="bento-card scroll-mt-28 md:row-span-2 cursor-pointer" style="--c: 62 142 240" role="link" tabindex="0" aria-label="Read about Attendance">
+                <div class="pat pat-dots"></div>
+                <div class="glow-corner"></div>
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-fingerprint" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"></path> <path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path> <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path> <path d="M2 12a10 10 0 0 1 18-6"></path> <path d="M2 16h.01"></path> <path d="M21.8 16c.2-2 .131-5.354 0-6"></path> <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path> <path d="M8.65 22c.21-.66.45-1.32.57-2"></path> <path d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg></svg></div>
+                <div class="mt-8">
+                  <h4 class="bento-title">Attendance</h4>
+                  <p class="bento-copy">Shift schedules, clock-ins and overtime captured as they happen and passed straight to payroll.</p>
+                </div>
+                <div aria-hidden="true" class="mt-auto pt-8">
+                  <div class="mini-panel p-4">
+                    <div class="flex items-center justify-between gap-2 text-[11px]">
+                      <span class="font-semibold text-ink">This week</span>
+                      <span class="text-slate-400">General shift</span>
+                    </div>
+                    <div class="mt-4 space-y-3">
+                      <div class="flex items-center gap-3">
+                        <span class="w-7 text-[10px] font-medium text-slate-400">Mon</span>
+                        <div class="relative h-2 flex-1 rounded-full bg-slate-100"><div class="absolute inset-y-0 left-[8%] right-[14%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="w-7 text-[10px] font-medium text-slate-400">Tue</span>
+                        <div class="relative h-2 flex-1 rounded-full bg-slate-100"><div class="absolute inset-y-0 left-[6%] right-[12%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="w-7 text-[10px] font-medium text-slate-400">Wed</span>
+                        <div class="relative h-2 flex-1 rounded-full bg-slate-100"><div class="absolute inset-y-0 left-[10%] right-[16%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="w-7 text-[10px] font-medium text-slate-400">Thu</span>
+                        <div class="relative h-2 flex-1 rounded-full bg-slate-100">
+                          <div class="absolute inset-y-0 left-[7%] right-[14%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div>
+                          <div class="absolute inset-y-0 left-[88%] right-[2%] rounded-full bg-cyan-300 ring-2 ring-cyan-100"></div>
+                        </div>
+                      </div>
+                      <div class="flex items-center gap-3">
+                        <span class="w-7 text-[10px] font-semibold text-ink">Fri</span>
+                        <div class="relative h-2 flex-1 rounded-full bg-slate-100">
+                          <div class="absolute inset-y-0 left-[8%] right-[46%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div>
+                          <span class="absolute left-[54%] top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-cyan-500 shadow-[0_0_0_4px_rgba(62,142,240,0.2)]"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-[11px]">
+                      <span class="text-slate-500">Overtime sent to payroll</span>
+                      <span class="font-semibold tabular-nums text-ink">2h 15m</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Leave -->
+              <article id="leave" data-route="/modules/leave/" class="bento-card scroll-mt-28 cursor-pointer" style="--c: 16 185 129" role="link" tabindex="0" aria-label="Read about Leave">
+                <div class="pat pat-diagonal"></div>
+                <div class="glow-corner"></div>
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-calendar-range" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <rect x="3" y="3" width="18" height="18" rx="2"></rect> <path d="M16 2v3"></path> <path d="M3 9h18"></path> <path d="M8 2v3"></path> <path d="M17 13h-6"></path> <path d="M13 17H7"></path> <path d="M7 13h.01"></path> <path d="M17 17h.01"></path></svg></svg></div>
+                <div class="mt-auto pt-12">
+                  <h4 class="bento-title">Leave</h4>
+                  <p class="bento-copy">Policy-driven balances that accrue, carry forward and route for approval without manual tracking.</p>
+                </div>
+              </article>
+
+              <!-- Assets -->
+              <article id="assets" data-route="/modules/assets/" class="bento-card scroll-mt-28 cursor-pointer" style="--c: 217 119 6" role="link" tabindex="0" aria-label="Read about Assets">
+                <div class="pat pat-rings"></div>
+                <div class="glow-corner"></div>
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-laptop" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path> <path d="M20.054 15.987H3.946"></path></svg></svg></div>
+                <div class="mt-auto pt-12">
+                  <h4 class="bento-title">Assets</h4>
+                  <p class="bento-copy">Every laptop, phone and access card tracked from issue to return, with custody tied to the employee.</p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- ======== Band: Talent & Growth ======== -->
+          <div id="talent-growth" class="grid scroll-mt-28 gap-8 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-12">
+            <div class="lg:sticky lg:top-28 lg:self-start">
+              <div class="h-[2px] w-12 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500"></div>
+              <h3 class="mt-5 font-display text-[28px] font-semibold leading-tight tracking-[-0.03em] text-ink">Talent &amp; Growth</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-slate-500">Hiring, first days and performance, connected from requisition to review.</p>
+              <ul class="mt-6 hidden space-y-2 lg:block">
+                <li><a href="/modules/recruitment/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#7C3AED]"></span>Recruitment</a></li>
+                <li><a href="/modules/onboarding/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#0284C7]"></span>Onboarding</a></li>
+                <li><a href="/modules/performance/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#E11D48]"></span>Performance</a></li>
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-1 gap-5 md:auto-rows-[minmax(250px,auto)] md:grid-cols-3">
+
+              <!-- Recruitment -->
+              <article id="recruitment" data-route="/modules/recruitment/" class="bento-card scroll-mt-28 md:row-span-2 cursor-pointer" style="--c: 124 58 237" role="link" tabindex="0" aria-label="Read about Recruitment">
+                <div class="pat pat-dots"></div>
+                <div class="glow-corner"></div>
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-user-search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="10" cy="7" r="4"></circle> <path d="M10.3 15H7a4 4 0 0 0-4 4v2"></path> <circle cx="17" cy="17" r="3"></circle> <path d="m21 21-1.9-1.9"></path></svg></svg></div>
+                <div class="mt-8">
+                  <h4 class="bento-title">Recruitment</h4>
+                  <p class="bento-copy">Raise requisitions for new headcount or replacements and move every candidate through one shared pipeline.</p>
+                </div>
+                <div aria-hidden="true" class="mt-auto pt-8">
+                  <div class="mini-panel p-4">
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="font-semibold text-ink">Senior Analyst, Finance</span>
+                      <span class="text-slate-400">Open</span>
+                    </div>
+                    <div class="mt-4 space-y-3">
+                      <div>
+                        <div class="flex justify-between text-[11px]"><span class="text-slate-500">Applied</span><span class="font-semibold tabular-nums text-ink">184</span></div>
+                        <div class="mt-1.5 h-1.5 rounded-full bg-slate-100"><div class="h-full w-full rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between text-[11px]"><span class="text-slate-500">Screened</span><span class="font-semibold tabular-nums text-ink">62</span></div>
+                        <div class="mt-1.5 h-1.5 rounded-full bg-slate-100"><div class="h-full w-[56%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between text-[11px]"><span class="text-slate-500">Interviewing</span><span class="font-semibold tabular-nums text-ink">21</span></div>
+                        <div class="mt-1.5 h-1.5 rounded-full bg-slate-100"><div class="h-full w-[28%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between text-[11px]"><span class="text-slate-500">Offer</span><span class="font-semibold tabular-nums text-ink">4</span></div>
+                        <div class="mt-1.5 h-1.5 rounded-full bg-slate-100"><div class="h-full w-[10%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-1.5 border-t border-slate-100 pt-3">
+                      <span class="chip"><span class="h-1.5 w-1.5 rounded-full bg-violet-500"></span>New headcount</span>
+                      <span class="chip"><span class="h-1.5 w-1.5 rounded-full bg-slate-400"></span>Replacement hire</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Onboarding -->
+              <article id="onboarding" data-route="/modules/onboarding/" class="bento-card scroll-mt-28 md:col-span-2 cursor-pointer" style="--c: 2 132 199" role="link" tabindex="0" aria-label="Read about Onboarding">
+                <div class="pat pat-rings"></div>
+                <div class="glow-corner"></div>
+                <div class="flex items-start justify-between gap-6">
+                  <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-rocket" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path> <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path> <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path> <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg></svg></div>
+                </div>
+                <div class="mt-8">
+                  <h4 class="bento-title">Onboarding</h4>
+                  <p class="bento-copy">A signed offer triggers documents, asset requests and day-one tasks, so new joiners are productive from their first login.</p>
+                </div>
+                <ol aria-label="Example onboarding progress" class="mt-auto grid grid-cols-4 gap-2 pt-8">
+                  <li>
+                    <div class="flex items-center gap-2">
+                      <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-indigo-600 to-cyan-500 text-white shadow-[0_6px_14px_-4px_rgba(0,99,215,0.55)]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5"><svg class="lucide lucide-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20 6 9 17l-5-5"></path></svg></svg></span>
+                      <span class="h-[2px] flex-1 rounded-full bg-gradient-to-r from-indigo-400 to-cyan-400"></span>
+                    </div>
+                    <p class="mt-3 text-[12px] font-semibold leading-tight text-ink">Offer signed</p>
+                    <p class="mt-0.5 text-[11px] text-slate-400">7 days before</p>
+                  </li>
+                  <li>
+                    <div class="flex items-center gap-2">
+                      <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-indigo-600 to-cyan-500 text-white shadow-[0_6px_14px_-4px_rgba(0,99,215,0.55)]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5"><svg class="lucide lucide-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20 6 9 17l-5-5"></path></svg></svg></span>
+                      <span class="h-[2px] flex-1 rounded-full bg-gradient-to-r from-indigo-400 to-cyan-400"></span>
+                    </div>
+                    <p class="mt-3 text-[12px] font-semibold leading-tight text-ink">Documents verified</p>
+                    <p class="mt-0.5 text-[11px] text-slate-400">3 days before</p>
+                  </li>
+                  <li>
+                    <div class="flex items-center gap-2">
+                      <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-indigo-600 to-cyan-500 text-white shadow-[0_6px_14px_-4px_rgba(0,99,215,0.55)]"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5"><svg class="lucide lucide-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20 6 9 17l-5-5"></path></svg></svg></span>
+                      <span class="h-[2px] flex-1 rounded-full bg-slate-200"></span>
+                    </div>
+                    <p class="mt-3 text-[12px] font-semibold leading-tight text-ink">Assets issued</p>
+                    <p class="mt-0.5 text-[11px] text-slate-400">1 day before</p>
+                  </li>
+                  <li>
+                    <div class="flex items-center">
+                      <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full border-2 border-sky-500 bg-white shadow-[0_0_0_5px_rgba(2,132,199,0.12)]"><span class="h-2 w-2 rounded-full bg-sky-500"></span></span>
+                    </div>
+                    <p class="mt-3 text-[12px] font-semibold leading-tight text-ink">Day-one plan</p>
+                    <p class="mt-0.5 text-[11px] text-sky-600">Today</p>
+                  </li>
+                </ol>
+              </article>
+
+              <!-- Performance -->
+              <article id="performance" data-route="/modules/performance/" class="bento-card scroll-mt-28 md:col-span-2 cursor-pointer" style="--c: 225 29 72" role="link" tabindex="0" aria-label="Read about Performance">
+                <div class="pat pat-grid"></div>
+                <div class="glow-corner"></div>
+                <div class="grid h-full gap-8 sm:grid-cols-[1fr_1.05fr] sm:items-end">
+                  <div class="flex h-full flex-col">
+                    <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-target" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <circle cx="12" cy="12" r="6"></circle> <circle cx="12" cy="12" r="2"></circle></svg></svg></div>
+                    <div class="mt-10 sm:mt-auto">
+                      <h4 class="bento-title">Performance</h4>
+                      <p class="bento-copy">Goals and review cycles that connect individual work to company objectives, with ratings ready for appraisal.</p>
+                    </div>
+                  </div>
+                  <div aria-hidden="true" class="mini-panel p-4">
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span class="font-semibold text-ink">Q3 goals</span>
+                      <span class="text-slate-400">Review closes in 9 days</span>
+                    </div>
+                    <div class="mt-4 space-y-3.5">
+                      <div>
+                        <div class="flex justify-between text-[11.5px]"><span class="text-slate-600">Grow enterprise accounts</span><span class="font-semibold tabular-nums text-ink">82%</span></div>
+                        <div class="mt-1.5 h-1.5 rounded-full bg-slate-100"><div class="h-full w-[82%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between text-[11.5px]"><span class="text-slate-600">Reduce attrition in operations</span><span class="font-semibold tabular-nums text-ink">64%</span></div>
+                        <div class="mt-1.5 h-1.5 rounded-full bg-slate-100"><div class="h-full w-[64%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                      <div>
+                        <div class="flex justify-between text-[11.5px]"><span class="text-slate-600">Close the hiring plan</span><span class="font-semibold tabular-nums text-ink">91%</span></div>
+                        <div class="mt-1.5 h-1.5 rounded-full bg-slate-100"><div class="h-full w-[91%] rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- ======== Band: Finance & Operations ======== -->
+          <div id="finance-operations" class="grid scroll-mt-28 gap-8 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-12">
+            <div class="lg:sticky lg:top-28 lg:self-start">
+              <div class="h-[2px] w-12 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500"></div>
+              <h3 class="mt-5 font-display text-[28px] font-semibold leading-tight tracking-[-0.03em] text-ink">Finance &amp; Operations</h3>
+              <p class="mt-3 text-[15px] leading-relaxed text-slate-500">Pay, claims, exits and employee service, reconciled against the same data.</p>
+              <ul class="mt-6 hidden space-y-2 lg:block">
+                <li><a href="/modules/payroll/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#2563EB]"></span>Payroll</a></li>
+                <li><a href="/modules/reimbursement/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#C026D3]"></span>Reimbursement &amp; Expenses</a></li>
+                <li><a href="/modules/offboarding/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#475569]"></span>Offboarding</a></li>
+                <li><a href="/modules/helpdesk/" class="inline-flex items-center gap-2.5 text-[13.5px] text-slate-500 transition-colors hover:text-ink"><span class="h-1.5 w-1.5 rounded-full bg-[#EA580C]"></span>Helpdesk</a></li>
+              </ul>
+            </div>
+
+            <div class="grid grid-cols-1 gap-5 md:auto-rows-[minmax(250px,auto)] md:grid-cols-3">
+
+              <!-- Payroll (flagship) -->
+              <article id="payroll" data-route="/modules/payroll/" class="bento-card scroll-mt-28 md:col-span-2 md:row-span-2 cursor-pointer" style="--c: 1 43 97" role="link" tabindex="0" aria-label="Read about Payroll">
+                <div class="pat pat-dots"></div>
+                <div class="glow-corner"></div>
+                <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(135deg,rgba(0,99,215,0.05)_0%,transparent_45%,rgba(62,142,240,0.06)_100%)]"></div>
+                <div aria-hidden="true" class="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/60 to-transparent"></div>
+
+                <div class="grid h-full gap-10 sm:grid-cols-2">
+                  <div class="flex flex-col">
+                    <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-wallet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg></svg></div>
+                    <div class="mt-10 sm:mt-auto">
+                      <h4 class="bento-title text-[30px]">Payroll</h4>
+                      <p class="bento-copy">Run compliant payroll in a single cycle, with statutory deductions and variable pay calculated alongside attendance, leave and claims.</p>
+                      <div class="mt-6 flex flex-wrap gap-1.5">
+                        <span class="chip">PF</span>
+                        <span class="chip">ESI</span>
+                        <span class="chip">PT</span>
+                        <span class="chip">TDS</span>
+                        <span class="chip"><span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>Variable pay</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div aria-hidden="true" class="flex flex-col justify-center">
+                    <div class="rounded-2xl border border-slate-200/70 bg-white p-5 shadow-[0_28px_56px_-22px_rgba(37,99,235,0.30),0_20px_50px_rgba(8,112,184,0.05)]">
+                      <div class="flex items-center justify-between gap-2">
+                        <div>
+                          <p class="text-[11px] text-slate-400">Payslip, September 2026</p>
+                          <p class="text-sm font-semibold text-ink">Ananya Sharma</p>
+                        </div>
+                        <span class="rounded-full bg-indigo-50 px-2 py-0.5 text-[10px] font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-100">Approved</span>
+                      </div>
+
+                      <p class="mt-5 text-[11px] font-semibold text-slate-400">Earnings</p>
+                      <dl class="mt-2 space-y-2 text-[12.5px]">
+                        <div class="flex justify-between"><dt class="text-slate-500">Basic</dt><dd class="tabular-nums text-ink">₹57,000</dd></div>
+                        <div class="flex justify-between"><dt class="text-slate-500">House rent allowance</dt><dd class="tabular-nums text-ink">₹28,500</dd></div>
+                        <div class="flex justify-between"><dt class="text-slate-500">Special allowance</dt><dd class="tabular-nums text-ink">₹42,000</dd></div>
+                        <div class="flex justify-between"><dt class="inline-flex items-center gap-1.5 text-slate-500"><span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>Variable pay</dt><dd class="tabular-nums text-ink">₹15,000</dd></div>
+                      </dl>
+
+                      <p class="mt-4 border-t border-dashed border-slate-200 pt-4 text-[11px] font-semibold text-slate-400">Deductions</p>
+                      <dl class="mt-2 space-y-2 text-[12.5px]">
+                        <div class="flex justify-between"><dt class="text-slate-500">Provident fund</dt><dd class="tabular-nums text-ink">₹1,800</dd></div>
+                        <div class="flex justify-between"><dt class="text-slate-500">Professional tax</dt><dd class="tabular-nums text-ink">₹200</dd></div>
+                        <div class="flex justify-between"><dt class="text-slate-500">Income tax (TDS)</dt><dd class="tabular-nums text-ink">₹14,320</dd></div>
+                      </dl>
+
+                      <div class="mt-5 flex items-center justify-between rounded-xl bg-gradient-to-r from-indigo-50 to-cyan-50 px-4 py-3 ring-1 ring-inset ring-indigo-100/70">
+                        <span class="text-[12px] font-semibold text-slate-600">Net pay</span>
+                        <span class="font-display text-[22px] font-semibold tabular-nums tracking-[-0.02em] text-ink">₹1,26,180</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Reimbursement & Expenses -->
+              <article id="reimbursement" data-route="/modules/reimbursement/" class="bento-card scroll-mt-28 cursor-pointer" style="--c: 192 38 211" role="link" tabindex="0" aria-label="Read about Reimbursement &amp; Expenses">
+                <div class="pat pat-grid"></div>
+                <div class="glow-corner"></div>
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-receipt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 17V7"></path> <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path> <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path></svg></svg></div>
+                <div class="mt-auto pt-12">
+                  <h4 class="bento-title">Reimbursement &amp; Expenses</h4>
+                  <p class="bento-copy">Claims with receipts move through approval and settle in the next pay run automatically.</p>
+                </div>
+              </article>
+
+              <!-- Offboarding -->
+              <article id="offboarding" data-route="/modules/offboarding/" class="bento-card scroll-mt-28 cursor-pointer" style="--c: 71 85 105" role="link" tabindex="0" aria-label="Read about Offboarding">
+                <div class="pat pat-diagonal"></div>
+                <div class="glow-corner"></div>
+                <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-door-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M10 21H2"></path> <path d="M10 3H7a2 2 0 00-2 2v16"></path> <path d="M14 12h.01"></path> <path d="M19 21V5a2 2 0 00-1.675-1.974l-6.163-1.013A1 1 0 0010 3v18a1 1 0 001.124.992z"></path> <path d="M22 21h-3"></path></svg></svg></div>
+                <div class="mt-auto pt-12">
+                  <h4 class="bento-title">Offboarding</h4>
+                  <p class="bento-copy">Resignations, clearances, asset recovery and full-and-final settlement closed out in one tracked workflow.</p>
+                </div>
+              </article>
+
+              <!-- Helpdesk -->
+              <article id="helpdesk" data-route="/modules/helpdesk/" class="bento-card scroll-mt-28 md:col-span-3 cursor-pointer" style="--c: 234 88 12" role="link" tabindex="0" aria-label="Read about Helpdesk">
+                <div class="pat pat-rings"></div>
+                <div class="glow-corner"></div>
+                <div class="grid h-full items-center gap-8 lg:grid-cols-[1fr_1.35fr] lg:gap-12">
+                  <div>
+                    <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class=""><svg class="lucide lucide-life-buoy" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="12" r="10"></circle> <path d="m4.93 4.93 4.24 4.24"></path> <path d="m14.83 9.17 4.24-4.24"></path> <path d="m14.83 14.83 4.24 4.24"></path> <path d="m9.17 14.83-4.24 4.24"></path> <circle cx="12" cy="12" r="4"></circle></svg></svg></div>
+                    <h4 class="bento-title mt-8">Helpdesk</h4>
+                    <p class="bento-copy">Employees raise HR queries or find answers in the FAQ, and every ticket is tracked through to resolution.</p>
+                  </div>
+                  <ul aria-hidden="true" class="mini-panel divide-y divide-slate-100 overflow-hidden">
+                    <li class="flex items-center gap-4 px-5 py-3.5 text-[13px]">
+                      <span class="w-12 tabular-nums text-slate-400">#2231</span>
+                      <span class="min-w-0 flex-1 truncate font-medium text-ink">Form 16 download for FY 2025-26</span>
+                      <span class="shrink-0 rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-semibold text-emerald-600 ring-1 ring-inset ring-emerald-100">Resolved</span>
+                    </li>
+                    <li class="flex items-center gap-4 px-5 py-3.5 text-[13px]">
+                      <span class="w-12 tabular-nums text-slate-400">#2232</span>
+                      <span class="min-w-0 flex-1 truncate font-medium text-ink">Shift change request for October</span>
+                      <span class="shrink-0 rounded-full bg-sky-50 px-2.5 py-0.5 text-[11px] font-semibold text-sky-600 ring-1 ring-inset ring-sky-100">In progress</span>
+                    </li>
+                    <li class="flex items-center gap-4 px-5 py-3.5 text-[13px]">
+                      <span class="w-12 tabular-nums text-slate-400">#2233</span>
+                      <span class="min-w-0 flex-1 truncate font-medium text-ink">Laptop replacement</span>
+                      <span class="shrink-0 rounded-full bg-orange-50 px-2.5 py-0.5 text-[11px] font-semibold text-orange-600 ring-1 ring-inset ring-orange-100">Assigned to IT</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. COMPLIANCE — the differentiator
+    ============================================================= -->
+    <section class="relative isolate overflow-hidden border-t border-slate-200/60 bg-white/70 py-24 backdrop-blur-[2px] sm:py-32" style="--c: 0 99 215">
+      <div aria-hidden="true" class="pointer-events-none absolute -left-40 top-10 -z-10 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(0,99,215,0.10),transparent_62%)] blur-3xl"></div>
+      <div class="mx-auto max-w-[1320px] px-6 lg:px-10">
+        <div class="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
+          <div>
+            <div class="h-[2px] w-12 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500"></div>
+            <h2 class="mt-6 font-display text-ink">
+              <span class="block text-[clamp(1.8rem,3.4vw,2.7rem)] font-extralight leading-[1.05] tracking-[-0.045em]">Compliance is not a module</span>
+              <span class="wdth-condensed block text-[clamp(2.1rem,4.2vw,3.4rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">bolted on afterwards.</span>
+            </h2>
+            <p class="mt-6 max-w-xl text-[16.5px] leading-[1.75] text-slate-600">
+              Procor has been running payroll in India since 2018, and Procor HRMS is the platform our own compliance team works in. Statutory deductions are calculated in the same run that produces the payslip, professional tax is handled across all states, and Form 16 is generated in-house from the same data.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-2">
+              <span class="chip">Provident fund</span>
+              <span class="chip">ESI</span>
+              <span class="chip">Professional tax</span>
+              <span class="chip">TDS</span>
+              <span class="chip">Challans</span>
+              <span class="chip">Form 16</span>
+              <span class="chip">Statutory registers</span>
+              <span class="chip">Gratuity</span>
+              <span class="chip">Bonus</span>
+            </div>
+            <a href="/compliance/" class="mt-9 inline-flex items-center gap-2 text-[15px] font-semibold text-indigo-600 transition-colors hover:text-indigo-700">How compliance works in Procor HRMS<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="m12 5 7 7-7 7"></path></svg></svg></a>
+          </div>
+
+          <div class="relative">
+            <div aria-hidden="true" class="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] bg-[radial-gradient(circle,rgba(0,99,215,0.16),transparent_70%)] blur-2xl"></div>
+            <div class="overflow-hidden rounded-[28px] border border-slate-200/60 bg-white/90 shadow-[0_20px_50px_rgba(8,112,184,0.05),0_40px_80px_-32px_rgba(1,43,97,0.25)] backdrop-blur">
+              <div class="flex items-center gap-2 border-b border-slate-100 px-6 py-4">
+                <span class="h-2.5 w-2.5 rounded-full bg-slate-200"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-200"></span><span class="h-2.5 w-2.5 rounded-full bg-slate-200"></span>
+                <p class="ml-3 text-[12.5px] font-medium text-slate-500">Statutory summary, one pay run</p>
+                <span class="ml-auto rounded-full bg-indigo-50 px-2.5 py-0.5 text-[11px] font-semibold text-indigo-600 ring-1 ring-inset ring-indigo-100">Sample view</span>
+              </div>
+              <ul class="divide-y divide-slate-100 text-[13.5px]">
+                <li class="flex items-center gap-4 px-6 py-4"><span class="grid h-9 w-9 place-items-center rounded-xl bg-indigo-50 text-indigo-600 ring-1 ring-inset ring-indigo-100"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-shield-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path> <path d="m9 12 2 2 4-4"></path></svg></svg></span><span class="flex-1 font-medium text-ink">Provident fund</span><span class="text-slate-400">ECR ready</span></li>
+                <li class="flex items-center gap-4 px-6 py-4"><span class="grid h-9 w-9 place-items-center rounded-xl bg-indigo-50 text-indigo-600 ring-1 ring-inset ring-indigo-100"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-file-text" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path> <path d="M14 2v5a1 1 0 0 0 1 1h5"></path> <path d="M10 9H8"></path> <path d="M16 13H8"></path> <path d="M16 17H8"></path></svg></svg></span><span class="flex-1 font-medium text-ink">ESI contribution</span><span class="text-slate-400">Eligible employees flagged</span></li>
+                <li class="flex items-center gap-4 px-6 py-4"><span class="grid h-9 w-9 place-items-center rounded-xl bg-indigo-50 text-indigo-600 ring-1 ring-inset ring-indigo-100"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-map-pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path> <circle cx="12" cy="10" r="3"></circle></svg></svg></span><span class="flex-1 font-medium text-ink">Professional tax</span><span class="text-slate-400">State-wise slabs applied</span></li>
+                <li class="flex items-center gap-4 px-6 py-4"><span class="grid h-9 w-9 place-items-center rounded-xl bg-indigo-50 text-indigo-600 ring-1 ring-inset ring-indigo-100"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-receipt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M12 17V7"></path> <path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"></path> <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"></path></svg></svg></span><span class="flex-1 font-medium text-ink">TDS</span><span class="text-slate-400">Declarations and proofs linked</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. IMPLEMENTATION IN BRIEF
+    ============================================================= -->
+    <section class="relative isolate overflow-hidden border-t border-slate-200/60 bg-white/70 py-24 backdrop-blur-[2px] sm:py-28">
+      <div class="mx-auto max-w-[1320px] px-6 lg:px-10">
+        <div class="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+          <div>
+            <h2 class="font-display text-[clamp(1.8rem,3.2vw,2.6rem)] font-bold leading-[1.05] tracking-[-0.035em] text-ink">Switching is the hard part. We plan for that.</h2>
+            <p class="mt-5 max-w-md text-[15.5px] leading-[1.7] text-slate-500">Most HRMS decisions stall on migration risk, not features. Here is the sequence we run with your team, scoped to your headcount and how ready your data is.</p>
+            <a href="/implementation/" class="mt-7 inline-flex items-center gap-2 text-[15px] font-semibold text-indigo-600 transition-colors hover:text-indigo-700">See the full implementation plan<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="m12 5 7 7-7 7"></path></svg></svg></a>
+          </div>
+          <ol class="grid gap-5 sm:grid-cols-3">
+            <li class="bento-card min-h-0" style="--c: 0 99 215">
+              <div class="pat pat-grid"></div><div class="glow-corner"></div>
+              <span class="font-display text-[15px] font-bold text-indigo-600">Step one</span>
+              <h3 class="mt-3 text-[19px] font-semibold tracking-[-0.01em] text-ink">Configure and migrate</h3>
+              <p class="mt-3 text-[14.5px] leading-[1.6] text-slate-500">We map your entities, policies, pay structures and leave rules, then migrate master data and balances.</p>
+            </li>
+            <li class="bento-card min-h-0" style="--c: 62 142 240">
+              <div class="pat pat-dots"></div><div class="glow-corner"></div>
+              <span class="font-display text-[15px] font-bold text-cyan-600">Step two</span>
+              <h3 class="mt-3 text-[19px] font-semibold tracking-[-0.01em] text-ink">Verify before you commit</h3>
+              <p class="mt-3 text-[14.5px] leading-[1.6] text-slate-500">Migrated data and calculations are checked against your existing system, and differences are explained before anyone signs off.</p>
+            </li>
+            <li class="bento-card min-h-0" style="--c: 1 43 97">
+              <div class="pat pat-diagonal"></div><div class="glow-corner"></div>
+              <span class="font-display text-[15px] font-bold text-ink">Step three</span>
+              <h3 class="mt-3 text-[19px] font-semibold tracking-[-0.01em] text-ink">Go live and hand over</h3>
+              <p class="mt-3 text-[14.5px] leading-[1.6] text-slate-500">Employees get self-service, your team gets training, and a named contact stays with you after cutover.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. FAQ
+    ============================================================= -->
+    <section class="relative isolate overflow-hidden border-t border-slate-200/60 bg-white/70 py-24 backdrop-blur-[2px] sm:py-28">
+      <div class="mx-auto max-w-[1320px] px-6 lg:px-10">
+        <div class="grid gap-12 lg:grid-cols-[1fr_1.7fr] lg:gap-16">
+          <div class="lg:sticky lg:top-28 lg:self-start">
+            <h2 class="font-display text-[clamp(1.8rem,3.2vw,2.6rem)] font-bold leading-[1.05] tracking-[-0.035em] text-ink">Questions buyers actually ask</h2>
+            <p class="mt-5 text-[15.5px] leading-[1.7] text-slate-500">If yours is not here, ask it directly and you will get a straight answer, not a brochure.</p>
+            <a href="/contact/" class="mt-7 inline-flex items-center gap-2 text-[15px] font-semibold text-indigo-600 transition-colors hover:text-indigo-700">Talk to our team<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="m12 5 7 7-7 7"></path></svg></svg></a>
+          </div>
+          <div id="home-faq" class="divide-y divide-slate-200/60 border-y border-slate-200/60">
+        <details class="group border-b border-slate-200/60 py-5">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[16.5px] font-semibold text-ink transition-colors hover:text-indigo-600">
+            What does implementation involve, and what do we have to do?
+            <span class="mt-1 shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="M12 5v14"></path></svg></svg></span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-[15.5px] leading-[1.75] text-slate-600">We map your entities, pay structures, leave policies and approval chains, configure them, migrate your master data and balances, and train your team before the first live run. Your side supplies master data, policy documents and one decision-maker per area. Timelines are scoped per client, because they depend on the size of your workforce and how ready your data is.</p>
+        </details>
+        <details class="group border-b border-slate-200/60 py-5">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[16.5px] font-semibold text-ink transition-colors hover:text-indigo-600">
+            How do you make sure the migrated data is right?
+            <span class="mt-1 shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="M12 5v14"></path></svg></svg></span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-[15.5px] leading-[1.75] text-slate-600">Employee master, salary structures, leave balances, loan and advance records and year-to-date figures are migrated and then validated against your existing system before anything goes live, so differences are found and explained rather than discovered in a pay run.</p>
+        </details>
+        <details class="group border-b border-slate-200/60 py-5">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[16.5px] font-semibold text-ink transition-colors hover:text-indigo-600">
+            Which statutory deductions and returns do you handle?
+            <span class="mt-1 shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="M12 5v14"></path></svg></svg></span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-[15.5px] leading-[1.75] text-slate-600">Provident fund, ESI, professional tax and TDS are calculated in the pay run, with challans, returns and statutory registers produced from the same data. Professional tax is handled for every state, Form 16 is generated in-house, and gratuity and bonus are calculated on the same record. Exactly which filings we submit on your behalf is set in your contract.</p>
+        </details>
+        <details class="group border-b border-slate-200/60 py-5">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[16.5px] font-semibold text-ink transition-colors hover:text-indigo-600">
+            Where is our data hosted, and who can see salary information?
+            <span class="mt-1 shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="M12 5v14"></path></svg></svg></span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-[15.5px] leading-[1.75] text-slate-600">Procor HRMS runs on AWS infrastructure hosted in India, with daily backups. Access is controlled by role. Salary and identity fields are hidden unless a role has an explicit grant, and every change is written to an audit trail with user, timestamp and previous value.</p>
+        </details>
+        <details class="group border-b border-slate-200/60 py-5">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[16.5px] font-semibold text-ink transition-colors hover:text-indigo-600">
+            What happens if a pay run is wrong?
+            <span class="mt-1 shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="M12 5v14"></path></svg></svg></span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-[15.5px] leading-[1.75] text-slate-600">Pay runs lock only after maker-checker approval. Before lock, inputs are corrected and the run recalculated. After lock, corrections are processed as adjustments in the next cycle, with the full history retained.</p>
+        </details>
+        <details class="group border-b border-slate-200/60 py-5">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[16.5px] font-semibold text-ink transition-colors hover:text-indigo-600">
+            Can we keep our existing attendance devices?
+            <span class="mt-1 shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="M12 5v14"></path></svg></svg></span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-[15.5px] leading-[1.75] text-slate-600">In most cases yes. Biometric devices that export punch data on a schedule or expose an API can be connected, so you do not need to replace hardware to change platforms.</p>
+        </details>
+        <details class="group border-b border-slate-200/60 py-5">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[16.5px] font-semibold text-ink transition-colors hover:text-indigo-600">
+            How do you handle group companies with different policies?
+            <span class="mt-1 shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="M12 5v14"></path></svg></svg></span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-[15.5px] leading-[1.75] text-slate-600">Each legal entity carries its own statutory settings, leave policies, pay structures and approval chains while sharing one employee database, so transfers between entities do not create duplicate records.</p>
+        </details>
+        <details class="group border-b border-slate-200/60 py-5">
+          <summary class="flex cursor-pointer list-none items-start justify-between gap-6 text-[16.5px] font-semibold text-ink transition-colors hover:text-indigo-600">
+            What does support look like after go-live?
+            <span class="mt-1 shrink-0 text-slate-400 transition-transform duration-300 group-open:rotate-45"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><svg class="lucide lucide-plus" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M5 12h14"></path> <path d="M12 5v14"></path></svg></svg></span>
+          </summary>
+          <p class="mt-4 max-w-3xl text-[15.5px] leading-[1.75] text-slate-600">You keep a named contact from the delivery team. Employees raise queries through the in-product helpdesk, and your HR team escalates through the same channel with tracked resolution times.</p>
+        </details></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  </div><!-- /#home-view -->
+
+  <!-- ============================================================
+       MODULE PAGES (one template, eleven modules)
+  ============================================================= -->
+  <div id="module-view" class="hidden">
+    <main id="module-canvas" tabindex="-1"></main>
+  </div>
+
+  <!-- ============================================================
+       4. MINIMAL CORPORATE FOOTER
+  ============================================================= -->
+  <footer id="demo" class="scroll-mt-24 border-t border-slate-200/60 bg-white/80 backdrop-blur-xl">
+    <div class="mx-auto max-w-[1320px] px-6 lg:px-10">
+
+      <div class="flex flex-col gap-10 border-b border-slate-200/60 py-20 md:flex-row md:items-end md:justify-between">
+        <p class="max-w-2xl font-display text-[clamp(2rem,3.8vw,3.1rem)] leading-[1.05] tracking-[-0.04em] text-ink">
+          <span class="font-extralight">See it running on</span>
+          <span class="font-bold">your own policies.</span>
+        </p>
+        <a href="/contact/" class="cta-primary group inline-flex h-12 shrink-0 self-start px-7 text-[15px] md:self-auto">
+          <span class="cta-glow" aria-hidden="true"></span>
+          <span class="relative">Book a demo</span>
+        </a>
+      </div>
+
+      <div class="grid gap-12 py-20 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+        <div class="max-w-sm">
+          <a href="/" class="inline-flex" aria-label="Procor HRMS home">
+            <img src="/assets/logo-full.webp" alt="Procor HRMS — Empowering Human Resource for Organizational Growth" width="86" height="84" class="h-[84px] w-auto dark:hidden" loading="lazy" decoding="async">
+            <img src="/assets/logo-full-dark.webp" alt="" aria-hidden="true" width="86" height="84" class="hidden h-[84px] w-auto dark:block" loading="lazy" decoding="async">
+          </a>
+          <p class="mt-6 text-[14px] leading-[1.7] text-slate-500">A cloud HR and payroll platform for companies operating across multiple states and legal entities in India, built by a team that delivers payroll and statutory compliance as a service.</p>
+          <address id="company-details" class="mt-6 space-y-2 text-[13.5px] not-italic text-slate-500"><p class="flex items-start gap-2.5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-slate-400"><svg class="lucide lucide-map-pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path> <circle cx="12" cy="10" r="3"></circle></svg></svg><span>New Delhi</span></p><p class="flex items-start gap-2.5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-slate-400"><svg class="lucide lucide-phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></svg><a href="tel:+919999954416" class="transition-colors hover:text-ink">+91 99999 54416</a></p><p class="flex items-start gap-2.5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-slate-400"><svg class="lucide lucide-mail" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path> <rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></svg><a href="mailto:info@procor.co.in" class="transition-colors hover:text-ink">info@procor.co.in</a></p></address>
+        </div>
+
+        <div>
+          <p class="text-[13px] font-semibold text-ink">Platform</p>
+          <ul class="mt-5 space-y-3.5">
+            <li><a href="/platform/" class="footer-link">Platform overview</a></li>
+            <li><a href="/modules/payroll/" class="footer-link">Payroll</a></li>
+            <li><a href="/modules/attendance/" class="footer-link">Attendance</a></li>
+            <li><a href="/modules/core-hr/" class="footer-link">Core HR</a></li>
+            <li><a href="/#modules" class="footer-link">All eleven modules</a></li>
+            <li><a href="/integrations/" class="footer-link">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-[13px] font-semibold text-ink">Why Procor</p>
+          <ul class="mt-5 space-y-3.5">
+            <li><a href="/compliance/" class="footer-link">Statutory compliance</a></li>
+            <li><a href="/implementation/" class="footer-link">Implementation &amp; migration</a></li>
+            <li><a href="/industries/" class="footer-link">Industries</a></li>
+            <li><a href="/security/" class="footer-link">Security</a></li>
+            <li><a href="/faq/" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-[13px] font-semibold text-ink">Company</p>
+          <ul class="mt-5 space-y-3.5">
+            <li><a href="/company/" class="footer-link">About Procor</a></li>
+            <li><a href="/contact/" class="footer-link">Contact sales</a></li>
+            <li><a href="/contact/" class="footer-link">Support</a></li>
+            <li><a href="/privacy/" class="footer-link">Privacy policy</a></li>
+            <li><a href="/terms/" class="footer-link">Terms of service</a></li>
+            <li><a href="/cookies/" class="footer-link">Cookie policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4 border-t border-slate-200/60 py-8 text-[13px] text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <p id="footer-legal">© 2026 Procor Digital Solutions Pvt Ltd. All rights reserved.</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
+          <a href="/privacy/" class="transition-colors hover:text-ink">Privacy</a>
+          <a href="/terms/" class="transition-colors hover:text-ink">Terms</a>
+          <a href="/cookies/" class="transition-colors hover:text-ink">Cookies</a>
+          <a href="/contact/" class="transition-colors hover:text-ink">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div><!-- /site -->
+
+  
+
+
+<script>window.__STATIC__=true;window.__ROUTE__="#top";</script><script src="/assets/app.js" defer=""></script></body></html>

@@ -1,18 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="text-scale" content="scale" />
 		<script>
 			(function () {
 				try {
-					var saved = localStorage.getItem('theme');
-					var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-					var theme = saved || (prefersLight ? 'light' : 'dark');
-					var root = document.documentElement;
-					root.classList.toggle('light', theme === 'light');
-					root.classList.toggle('dark', theme === 'dark');
+					var saved = localStorage.getItem('procor-theme');
+					var dark =
+						saved === 'dark' ||
+						(!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+					if (dark) document.documentElement.classList.add('dark');
 				} catch (e) {}
 			})();
 		</script>
