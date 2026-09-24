@@ -1,5 +1,6 @@
 <script>
 	import { CONFIG } from '$lib/content/site.js';
+	import SuccessPopup from '$lib/components/SuccessPopup.svelte';
 
 	/* Shared lead form — same UX contract as the static site:
 	   validation first, honeypot + fill-seconds anti-spam,
@@ -10,6 +11,8 @@
 	let openedAt = $state(0);
 	let status = $state('idle'); // idle | sending | success | error
 	let message = $state('');
+	let showSuccess = $state(false);
+	let successEmail = $state('');
 	const defaultMessage = $derived(
 		variant === 'demo'
 			? 'A 30-minute walkthrough on your structure and policies. We reply within one business day.'
@@ -46,6 +49,8 @@
 		if (data.website) {
 			status = 'success';
 			message = 'Thanks. We will be in touch within one business day.';
+			successEmail = (data.email || '').trim();
+			showSuccess = true;
 			formEl.reset();
 			return;
 		}
@@ -70,6 +75,8 @@
 			if (!res.ok || result.success === false) throw new Error(result.error || 'bad-status');
 			status = 'success';
 			message = `Thanks. We have your request and will write to ${(data.email || '').trim()} within one business day.`;
+			successEmail = (data.email || '').trim();
+			showSuccess = true;
 			formEl.reset();
 		} catch {
 			const body = Object.entries(payload)
@@ -200,7 +207,12 @@
 			>
 		</button>
 	</div>
-	<p id={msgId} data-state={status} class="mt-1 min-h-[20px] text-[13px] text-slate-500" aria-live="polite">
+	<p
+		id={msgId}
+		data-state={status}
+		class="mt-1 min-h-[20px] text-[13px] text-slate-500"
+		aria-live="polite"
+	>
 		{#if status === 'error' && formEl?.dataset.mailto}
 			We could not send that automatically. Please
 			<a class="font-semibold underline underline-offset-4" href={formEl.dataset.mailto}>
@@ -212,3 +224,5 @@
 		{/if}
 	</p>
 </form>
+
+<SuccessPopup open={showSuccess} email={successEmail} onClose={() => (showSuccess = false)} />
