@@ -238,7 +238,7 @@ export const MODULES = {
 	payroll: {
 		t: 'Payroll',
 		icon: 'wallet',
-		c: '1 43 97',
+		c: '194 39 75',
 		sub: 'One cycle, every entity, statutory deductions included.',
 		d: 'A compliant pay run that pulls attendance, leave and claims automatically, calculates PF, ESI, professional tax and TDS in the same cycle, and publishes payslips across every entity you operate.',
 		cap: ['PF', 'ESI', 'Professional tax', 'TDS', 'Variable pay', 'Form 16', 'Bank files'],

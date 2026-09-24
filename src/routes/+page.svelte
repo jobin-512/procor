@@ -949,7 +949,7 @@
 							href="/modules/payroll/"
 							id="payroll"
 							class="bento-card scroll-mt-28 md:col-span-2 md:row-span-2"
-							style="--c: 1 43 97"
+							style="--c: 194 39 75"
 						>
 							<div class="pat pat-dots"></div>
 							<div class="glow-corner"></div>
